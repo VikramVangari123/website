@@ -1114,8 +1114,7 @@ nav.nav-split:hover svg.icon {
 }
 .home .contact-cta {
   background: none;
-  padding: 0;
-  margin-bottom: 40px;
+  padding-top: 0 !important;
 }
 .home .contact-cta .contact-cta-in {
   background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
@@ -1589,6 +1588,10 @@ nav.nav-split:hover svg.icon {
   -o-transform: scale(1.15);
   position: relative;
   z-index: 5;
+}
+.brands ul li span img {
+  width: 100%;
+  height: 100%;
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
   .brands ul li span {
