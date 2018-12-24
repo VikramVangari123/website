@@ -554,7 +554,7 @@ header .overlay .overlay-content {
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: 24px;
-    color: #f4f4f4;
+    color: #eaeaea;
   }
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content {
     position: absolute;
