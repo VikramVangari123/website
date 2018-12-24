@@ -1,0 +1,178 @@
+$font-stack: 'Roboto', sans-serif;;
+$font-color: #808285;
+$font-size: 15px;
+$font-size2: 16px;
+$font-size3: 18px;
+$fontSize-h1: 30px;
+$fontSizeResp-h1: 24px;
+$link-color: #808285;
+$primary-color: #f5333f; 
+$link-color-hover: #f5333f;
+$placeholder: #808285;
+$white: #fff;
+$black: #989898;
+$primary-background: #f6f6f6;
+$lineheight-normal: 26px;
+$lineheightMedium: 1.5;
+@mixin inline-block{
+    display: inline-block;
+    vertical-align: middle;
+} 
+@mixin flex{
+    display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-center-left{
+    display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    justify-content: left;
+}
+@mixin flex-space-bw{
+    display: flex;
+    -webkit-display: flex;
+    justify-content: space-between;
+}
+@mixin center-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+@mixin bg-position{    
+    background-repeat: no-repeat;
+    background-position: center center;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+@mixin box-shadow{    
+    -webkit-box-shadow: 0 0 12px -4px rgba(0,0,0,.3);
+    box-shadow: 0 0 12px -4px rgba(0,0,0,.3);
+}
+@mixin box-shadow-07 {
+    -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.7);
+}
+@mixin image-scale{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    overflow: hidden;
+}
+@mixin zoomin{
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+@-webkit-keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+/*** media queries **/
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@mixin desktop {
+    @media (min-width: 1281px){
+        @content;
+    }
+}
+  
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+@mixin laptop {
+@media (min-width: 1025px) and (max-width: 1280px) {
+    @content;
+}
+}
+
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+@mixin tablet {
+@media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+}
+}
+@mixin tablet-min {
+@media (min-width: 768px) {
+    @content;
+}
+}
+@mixin tablet-max {
+@media (max-width: 1024px) {
+    @content;
+}
+}
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+@mixin tablet-landscape {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    @content;
+}
+}
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+@mixin mobile {
+    @media (min-width: 480px) and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin mobile-max {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+@mixin smartphone {
+@media (max-width: 479px) {
+    @content;
+}
+}
+
+/**max-height 450px **/
+@mixin max-height450px {
+    @media (max-height: 450px) {
+        @content;
+    }
+}
+
+
+/*********** testimonials *************************/
