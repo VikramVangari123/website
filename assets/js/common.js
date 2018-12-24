@@ -31,17 +31,18 @@ $(function() {
     
         //section height
         $('.full-height').css({
-            'height': (($(window).height()) - 59) + 'px'
+            'height': (($(window).height()) - 60) + 'px'
         });
         $(window).bind('resize', function() {
             $('.full-height').css({
-                'height': (($(window).height()) - 59) + 'px'
+                'height': (($(window).height()) - 60) + 'px'
             });
         });
 
+        var titleHeight = $('.title').height();
         // section inner full height
         var sectionHeight = $('.section').height();
-        $('.section-in').css('height', (sectionHeight) + 'px');
+        $('.section-in').css('height', (sectionHeight - titleHeight) + 'px');
 
         // testimonial 
         var sliderblockHeight = $('.sliderblock-cont').height();

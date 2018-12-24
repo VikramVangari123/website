@@ -18,8 +18,18 @@ $lineheightMedium: 1.5;
 @mixin gradient-bg1{    
     background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
 }
-@mixin gradient-bg2{    
+@mixin home-bg{    
     background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
+    background-position: center;
+}
+@mixin home-bg2{    
+    background-image: linear-gradient(to right, #d5b4f5 0%, #70b0f0 100%);
+    background-position: center;
+}
+@mixin home-text-bg{
+	background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 @mixin gradient-bg3{    
     background-image: linear-gradient(to right, #4cb8c4 0%, #3cd3ad 100%);
@@ -94,31 +104,39 @@ $lineheightMedium: 1.5;
     -webkit-transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
 }
+@mixin transition05 {
+    -webkit-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
 @mixin zoomin{
     -webkit-animation-name: zoomIn;
     animation-name: zoomIn;
 }
 @-webkit-keyframes zoomIn {
-    from {
+    0% {
       opacity: 0;
       -webkit-transform: scale3d(0.3, 0.3, 0.3);
       transform: scale3d(0.3, 0.3, 0.3);
     }
   
-    50% {
+    100% {
       opacity: 1;
+      -webkit-transform: scale3d(0.5, 0.5, 0.5);
+      transform: scale3d(0.5, 0.5, 0.5);
     }
   }
   
   @keyframes zoomIn {
-    from {
+    0% {
       opacity: 0;
       -webkit-transform: scale3d(0.3, 0.3, 0.3);
       transform: scale3d(0.3, 0.3, 0.3);
     }
   
-    50% {
+    100% {
       opacity: 1;
+      -webkit-transform: scale3d(0.5, 0.5, 0.5);
+      transform: scale3d(0.5, 0.5, 0.5);
     }
   }
 /*** media queries **/

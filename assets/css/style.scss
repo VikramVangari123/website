@@ -171,11 +171,19 @@ h1, h2{
 .btn-submit{
   background: #f1f1f1;
 }
+
+
+.home-bg{
+  @include home-bg;
+}
+.home-text-bg{
+	@include home-text-bg;
+}
 /*** header *************************/
 
 header {
   padding: 17px 0;
-  height: 59px;
+  height: 60px;
   width: 100%;
   background: #fff;
   position: fixed;
@@ -212,7 +220,7 @@ header {
       overflow-y: auto;
     }
     a {
-      padding: 0 8px 8px 0;
+      padding: 0;
       text-decoration: none;
       display: block;
       transition: 0.3s;
@@ -231,7 +239,7 @@ header {
       position: absolute;
       top: 20px;
       right: 45px;
-      font-size: 60px;
+      font-size: 50px;
       @include max-height450px{
         font-size: 40px;
         top: 15px;
@@ -262,13 +270,12 @@ header {
         margin: 0 auto;        
         .megamenu-item {
           display: block !important;
-          background-image: linear-gradient(to right, #79f1a4, #0e5cad);
-          border-top: 1px solid #ddd;
+          border-top: 1px solid #f4f4f4;
           // display: inline-block;
           z-index: 11;          
           transition: 0.3s linear;
           h5 {
-            font-size: 18px;
+            font-size: 20px;
             text-align: left;
             cursor:pointer;
             color: $white;
@@ -330,8 +337,6 @@ header {
                 margin: 0;
                 display: block;
                 cursor: pointer;             
-                background-image: linear-gradient(to right, #7bcc98, #0054ab);
-                border-top: 1px solid #7bcc98;
                 position: relative;
                 &:first-child{
                   border-top: 0;
@@ -352,7 +357,7 @@ header {
                   overflow: hidden;
                   white-space: nowrap;
                   text-overflow: ellipsis;
-                  font-size: 20px;
+                  font-size: 18px;
                   padding: 10px 10px 10px 25px; 
                 }
               }      
@@ -361,8 +366,6 @@ header {
                 height: 100%;
                 .megamenu-tabH-in {
                   display: block;
-                  background-image: linear-gradient(to right, #2f7e4b, #1c7de1);
-                  border-top: 1px solid #0b8490;
                   &:first-child{
                     border-top:0;
                   }
@@ -456,22 +459,32 @@ header {
                   white-space: nowrap;
                   text-overflow: ellipsis;
                   font-size: 24px;
-                  color: $font-color;
+                  color: #f4f4f4;
                 }
               }      
               .megamenu-sub-content{
                 position: absolute;
-                width: 100%;
-                height: 100%;
                 top: 60px;
                 left: 0;
                 .megamenu-tabH-in {
                   display: inline-block;
                   background: #fff;
-                  padding: 8px;
+                  padding: 0px;
                   margin-right: 20px;
-                  img {
-                    margin: 40px;
+                  position: relative;
+                  a{
+                    font-size: 16px;
+                    height: 180px;
+                    width: 180px;
+                    img {
+                      margin: 0px;
+                      width: 100%;
+                      height: 100%;
+                    }
+                    &:hover{
+                      @include image-scale;
+                      @include transition;
+                    }
                   }
                 }
               }               
@@ -488,7 +501,10 @@ header {
               }
               .megamenu-sub-content > div p {
                 display: block;
-                color: $font-color;
+                color: $white;
+                position: absolute;
+                bottom: 5px;
+                left: 10px;
               }
             }   
           }

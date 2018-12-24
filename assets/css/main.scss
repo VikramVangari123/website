@@ -5,7 +5,8 @@
     float: left;
     width: 100%;
     overflow: hidden;
-    clear: both;        
+    clear: both;   
+}     
     .title{
         display: flex;
         justify-content: space-between;
@@ -13,9 +14,12 @@
         .view-all {
             font-size: 18px;
             height: 22px;
+            margin-top: 6px;
             img{
                 margin-left: 10px;
                 vertical-align: text-top;
+                width: 16px;
+                margin-top: 3px;
             }
         }
     }
@@ -39,13 +43,29 @@
                 height: auto !important;
             }  
         }
-        h1, h2{
+        h2{
             margin-bottom: 25px;
             font-size: 30px;
             line-height: 36px;
             @include smartphone{
                 font-size: 24px;
                 margin-bottom: 20px;
+            }
+        }
+        h1{
+            color: #fff;
+            max-width: 280px;
+            font-size: 40px;
+            font-weight: normal;
+            line-height: 50px;
+            @include tablet-max{
+                font-size: 36px;
+                line-height: 36px;
+                max-width: 100%;
+            }
+            @include smartphone{
+                font-size: 26px;
+                line-height: 30px;
             }
         }
         p{
@@ -65,6 +85,9 @@
         @include mobile-max{
             font-size: 18px;
         }
+    }
+    h3, h4, h5, h6{
+        font-weight: normal;
     }
     .bg-1{
         background: #f4f4f4;
@@ -142,12 +165,51 @@
         text-align: center;
         color: $white;
         background-color: #c8c8c8;
-        padding: 10px 0; 
+        padding: 10px 0 !important; 
         div div{
             padding-top: 3px;
         }
     }
-     
+
+     nav.nav-split {
+        .icon-wrap {
+        position: relative;
+        display: block;
+        padding: 4px 0;
+        }
+        svg.icon {
+            -webkit-transition: -webkit-transform 0.3s 0.3s;
+            transition: transform 0.3s 0.3s;
+            fill: #fff;
+            width: 16px;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            position: absolute;
+            display: block;
+            outline: none;
+            text-align: left;
+            z-index: 1000;
+            transition: 0.15s linear;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            @include box-shadow;
+            svg {
+                display: block;
+                margin: 0 auto;
+                padding: 0;
+            }
+        }
+        &:hover{
+            svg.icon {
+                -webkit-transition-delay: 0s;
+                transition-delay: 0s;
+            }
+        }
+    }
     /******************************* testimonial **************************************/      
 
     .testimonial{    
@@ -198,42 +260,15 @@
             .icon-wrap {
             position: relative;
             display: block;
-            padding: 45px 5px;
-            @include mobile-max{
-                padding: 45px 0 45px 0;
-            }
-            }
-            svg.icon {
-                -webkit-transition: -webkit-transform 0.3s 0.3s;
-                transition: transform 0.3s 0.3s;
-                fill: #b0b0b0;
-                @include mobile-max{
-                    width: 18px;
-                }
             }
             a {
                 position: absolute;
-                top: 70px;
-                display: block;
-                outline: none;
-                text-align: left;
-                z-index: 1000;
+                top: 105px;
                 @include mobile-max{
-                    top: 15px;
-                }
-                svg {
-                    display: block;
-                    margin: 0 auto;
-                    padding: 0;
+                    top: 55px;
                 }
                 &.prev { left: 0; }
                 &.next { right: 0; }
-            }
-            &:hover{
-                svg.icon {
-                    -webkit-transition-delay: 0s;
-                    transition-delay: 0s;
-                }
             }
         }
         
@@ -276,7 +311,6 @@
             display: none;
             .testi-img {
             width: 180px;
-            background: #efefef;
             height: 180px;
             display: flex;
             justify-content: center;
@@ -351,6 +385,35 @@
             }
             }   
         } 
+    }
+    .home{
+        header {
+            .overlay{
+                @include home-bg;
+            }
+        }
+        .testimonial{
+            .pagination{
+                span{               
+                    &.current { 
+                        box-shadow: none;
+                        @include home-bg;
+                        }
+                    &:hover { 
+                        box-shadow: none;
+                        @include home-bg;
+                        }
+                }
+            }
+        }
+        footer{
+            .footer-top{
+                @include home-bg;
+            }
+            .copy-right{
+                @include home-bg2;
+            }
+        }
     }
 
     /******************************* use-cases **************************************/ 
@@ -745,6 +808,7 @@
                     display: block;
                     width: 130px;
                     height: 100px;
+                    overflow: hidden;
                     background: #fff;
                     margin: 20px 10px;                    
                     -moz-transition:-moz-transform .15s linear;
@@ -779,17 +843,6 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50%;
-            img{
-                width: auto;
-                height: 22px;
-                @include smartphone{
-                    height: 16px;
-                }
-            }
         }
         .sa-left {
             left: 10px;
@@ -813,6 +866,7 @@
         .post-left, .post-right-top, .post-right-btm {
             background: #eeeeee;
             position: relative;
+            background-image: url(../../assets/images/bg.jpg);
             &:after{
                 content: ' ';
                 display: block;
@@ -842,6 +896,7 @@
                 left: 20px;
                 right: 10px;
                 z-index: 10;
+                color: #fff;
                 @include mobile-max{
                     left: 15px;
                     right: 15px;
@@ -857,7 +912,8 @@
                 }
                 a{
                     margin-bottom: 0;
-                    text-decoration: underline;
+                    text-decoration: underline;                    
+                    color: #fff;
                     &:hover{
                         text-decoration: none;
                     }
@@ -912,10 +968,14 @@
                     width: 140px;
                     height: 120px; 
                 }
-                @include zoomin;
-
+                &:hover{
+                    img{
+                        @include image-scale;
+                    }
+                }
                 img{
                     @include box-shadow;
+                    @include transition;
                 }
                 &:after{
                     content: " ";
@@ -1276,7 +1336,7 @@
         .footer-top{
             overflow: hidden;
             width: 100%;
-            background: #f2f2f2;
+            color: #fff;
             .subscribe {
                 width: 49%;
                 @include inline-block;
@@ -1293,6 +1353,7 @@
                 input#subscribe-email{
                     position: relative;
                     z-index: 2;
+                    color: #fff;
                     float: left;
                     margin-bottom: 0;
                     display: block;
@@ -1302,7 +1363,7 @@
                     background-color: transparent;
                     background-image: none;
                     border: 0;
-                    border-bottom: 1px solid #ccc;
+                    border-bottom: 1px solid #fff;
                     border-radius: 0px;
                     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
                     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
@@ -1317,6 +1378,9 @@
                         display: inline-block;
                         float: none;
                     }
+                    &::placeholder{
+                        color: #fff !important;
+                    }
                 }
                 .submit-btn{
                     width: 1%;
@@ -1328,6 +1392,10 @@
                         border: 1px solid #ccc;
                         width: 120px;
                         min-width: 120px;
+                        @include smartphone{
+                            min-width: 100px;
+                            width: 100px;
+                        }
                     }
                     @include mobile-max{
                         display: inline-block;
@@ -1343,6 +1411,9 @@
                 float: right;                
                 h3{
                     margin-bottom: 20px;
+                    @include mobile-max{
+                        margin-top: 15px;
+                    }
                 }
                 @include mobile-max {
                     width: 100%;
@@ -1352,19 +1423,24 @@
                 span {
                     @include inline-block;
                 }
-                h3{
-                    @include mobile-max {
-                        margin-bottom: 3px;
-                    }
-                }
                 .social-icons{
                     span{
-                        background: #dadada;
-                        width: 40px;
-                        height: 40px;
-                        line-height: 20px;
-                        border-radius: 40px;
-                        margin-left: 20px;
+                        margin-left: 30px;
+                        img{
+                            width: 85%;
+                            @include transition05;
+                            @include smartphone{
+                                width: 75%;
+                            }
+                        }
+                        
+                        &:hover{
+                            img{
+                                transform: rotate(360deg);
+                                -webkit-transform: rotate(360deg);
+                            }
+                            
+                        }
                         &:first-child{
                             margin-left: 0;
                         }
@@ -1430,6 +1506,3 @@
     }
 
     /*********************** our works popup *********************************/
-    
-        
-}
