@@ -1427,11 +1427,8 @@
                     span{
                         margin-left: 30px;
                         img{
-                            width: 85%;
+                            width: 75%;
                             @include transition05;
-                            @include smartphone{
-                                width: 75%;
-                            }
                         }
                         
                         &:hover{
