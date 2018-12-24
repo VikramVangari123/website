@@ -13,19 +13,14 @@
             margin: 0 !important;
         }
     </style>
-    <!-- <script>
-        $(document).ready(function(){ 
-            $.get("header.html", function(data) {
-                $("#header").html(data);
-            });
-        });             
-    </script> -->
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script>
+        w3IncludeHTML();
+    </script>
 </head>
 
 <body>
     <div class="content">
-        <!-- <header id="header">
-        </header> -->
         <header>
             <div class="container">
                 <div id="Nav" class="overlay">
@@ -47,19 +42,19 @@
                                             <div class="megamenu-sub-content">
                                                 <div class="megamenu-tabH">
                                                     <div class="megamenu-tabH-in">
-                                                        <a href="#">
+                                                        <a href="industry-publishing.html">
                                                             <img src="assets/images/placeholder.png" alt="" />
                                                             <p>Publishing</p>
                                                         </a>
                                                     </div>
                                                     <div class="megamenu-tabH-in">
-                                                        <a href="#">
+                                                        <a href="industry-marketing.html">
                                                             <img src="assets/images/placeholder.png" alt="" />
                                                             <p>Entertainment</p>
                                                         </a>
                                                     </div>
                                                     <div class="megamenu-tabH-in">
-                                                        <a href="#">
+                                                        <a href="industry-event.html">
                                                             <img src="assets/images/placeholder.png" alt="" />
                                                             <p>Event</p>
                                                         </a>
@@ -98,17 +93,17 @@
                             </div>
                             <div class="megamenu-item">
                                 <h5>
-                                    <a href="javascript:void(0)">How We Work</a>
+                                    <a href="how-we-work.html">How We Work</a>
                                 </h5>
                             </div>
                             <div class="megamenu-item">
                                 <h5>
-                                    <a href="#">Product</a>                                
+                                    <a href="products.html">Product</a>                                
                                     <span class="sub-menu-arrow"></span>
                                 </h5>  
                             </div>
                             <div class="megamenu-item">
-                                <h5><a href="#">Our Work</a></h5>
+                                <h5><a href="javascript:void(0)">Our Work</a></h5>
                             </div>
                             <div class="megamenu-item">
                                 <h5>
@@ -116,13 +111,13 @@
                                 </h5>
                             </div>
                             <div class="megamenu-item">
-                                <h5><a href="#">Blog</a></h5>
+                                <h5><a href="blog.html">Blog</a></h5>
                             </div>
                         </div>
                     </div>
                 </div>
                 <span class="logo">
-                    <img src="assets/images/logo.png" alt="WOWSOME" />
+                    <a href="general.html"><img src="assets/images/logo.png" alt="WOWSOME" /></a>
                 </span>
                 <span style="cursor:pointer" class="openNav" onclick="openNav()">
                     <img src="assets/images/hamburger.png" alt="hamburger" />
