@@ -58,6 +58,31 @@
             font-size: 40px;
             font-weight: normal;
             line-height: 50px;
+            position: relative;
+            &:before{
+                content: '';
+                background: #fff;
+                height: 2px;
+                width: 200px;
+                position: absolute;
+                top: -25px;
+                left: 0;
+                @include tablet-max{
+                    content:  none;
+                }
+            }
+            &:after{
+                content: '';
+                background: #fff;
+                height: 2px;
+                width: 200px;
+                position: absolute;
+                bottom: -25px;
+                left: 0;
+                @include tablet-max{
+                    content: none;
+                }
+            }
             @include tablet-max{
                 font-size: 36px;
                 line-height: 36px;
@@ -132,7 +157,7 @@
     .right60, .right50{
         margin-top: 30px;
     }
-    .interactive-print, .book-free-trial{
+    .interactive-print, .book-free-trial, .contact-cta{
         background: #f1f1f1;
         p.text{
             vertical-align: middle;
@@ -406,6 +431,18 @@
                 }
             }
         }
+        .contact-cta{
+            background: none;
+            padding: 0;
+            margin-bottom: 40px;
+            .contact-cta-in{
+                @include home-bg;
+                padding: 20px;
+                @include box-shadow;
+                border-radius: 3px;
+                color: $white;
+            }
+        } 
         footer{
             .footer-top{
                 @include home-bg;
@@ -861,7 +898,7 @@
     /************** recent blog post ***********/
     .recent-blog-post{
         .section-in{
-            margin: 0 -10px;
+            margin: 0;
         }
         .post-left, .post-right-top, .post-right-btm {
             background: #eeeeee;
@@ -929,6 +966,7 @@
             }
             @include mobile-max {
                 width: 100%;
+                margin: 0;
             }
         }
         .post-right{

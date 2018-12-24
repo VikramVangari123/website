@@ -691,6 +691,35 @@ header .overlay .overlay-content {
   font-size: 40px;
   font-weight: normal;
   line-height: 50px;
+  position: relative;
+}
+.section h1:before {
+  content: "";
+  background: #fff;
+  height: 2px;
+  width: 200px;
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+@media (max-width: 1024px) {
+  .section h1:before {
+    content: none;
+  }
+}
+.section h1:after {
+  content: "";
+  background: #fff;
+  height: 2px;
+  width: 200px;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+}
+@media (max-width: 1024px) {
+  .section h1:after {
+    content: none;
+  }
 }
 @media (max-width: 1024px) {
   .section h1 {
@@ -792,21 +821,21 @@ hr {
   margin-top: 30px;
 }
 
-.interactive-print, .book-free-trial {
+.interactive-print, .book-free-trial, .contact-cta {
   background: #f1f1f1;
 }
-.interactive-print p.text, .book-free-trial p.text {
+.interactive-print p.text, .book-free-trial p.text, .contact-cta p.text {
   vertical-align: middle;
   display: inline-block;
   width: calc(100% - 240px);
 }
 @media (max-width: 767px) {
-  .interactive-print p.text, .book-free-trial p.text {
+  .interactive-print p.text, .book-free-trial p.text, .contact-cta p.text {
     width: 100%;
     display: block;
   }
 }
-.interactive-print p.text + div, .book-free-trial p.text + div {
+.interactive-print p.text + div, .book-free-trial p.text + div, .contact-cta p.text + div {
   vertical-align: middle;
   margin: 0;
   display: inline-block;
@@ -814,17 +843,17 @@ hr {
   width: 236px;
 }
 @media (max-width: 767px) {
-  .interactive-print p.text + div, .book-free-trial p.text + div {
+  .interactive-print p.text + div, .book-free-trial p.text + div, .contact-cta p.text + div {
     width: 100%;
     display: block;
     margin-top: 10px;
     text-align: center;
   }
 }
-.interactive-print p.text + div .btn, .book-free-trial p.text + div .btn {
+.interactive-print p.text + div .btn, .book-free-trial p.text + div .btn, .contact-cta p.text + div .btn {
   margin: 0;
 }
-.interactive-print .btn, .book-free-trial .btn {
+.interactive-print .btn, .book-free-trial .btn, .contact-cta .btn {
   margin: 0;
 }
 
@@ -1082,6 +1111,20 @@ nav.nav-split:hover svg.icon {
   box-shadow: none;
   background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
   background-position: center;
+}
+.home .contact-cta {
+  background: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+.home .contact-cta .contact-cta-in {
+  background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
+  background-position: center;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  color: #fff;
 }
 .home footer .footer-top {
   background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
@@ -1592,7 +1635,7 @@ nav.nav-split:hover svg.icon {
 
 /************** recent blog post ***********/
 .recent-blog-post .section-in {
-  margin: 0 -10px;
+  margin: 0;
 }
 .recent-blog-post .post-left, .recent-blog-post .post-right-top, .recent-blog-post .post-right-btm {
   background: #eeeeee;
@@ -1663,6 +1706,7 @@ nav.nav-split:hover svg.icon {
 @media (max-width: 767px) {
   .recent-blog-post .post-left, .recent-blog-post .post-right {
     width: 100%;
+    margin: 0;
   }
 }
 @media (max-width: 767px) {
