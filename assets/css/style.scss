@@ -179,6 +179,31 @@ h1, h2{
 .home-text-bg{
 	@include home-text-bg;
 }
+.hw-bg {
+  @include hw-bg;
+}
+.hw-text-bg{
+	@include hw-text-bg;
+}
+
+.industry-bg {
+  @include industry-bg;
+}
+.industry-text-bg{
+	@include industry-text-bg;
+}
+.business-area-bg {
+  @include business-area-bg;
+}
+.business-area-text-bg{
+	@include business-area-text-bg;
+}
+.products-bg {
+  @include products-bg;
+}
+.products-text-bg{
+	@include products-text-bg;
+}
 /*** header *************************/
 
 header {

@@ -37,16 +37,67 @@ $lineheightMedium: 1.5;
 @mixin gradient-bg4{    
     background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
 }
-@mixin gradient-bg1{    
+@mixin hw-bg{    
     background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+    background-position: center;
 }
-@mixin gradient-bg2{    
+@mixin hw-bg2{    
+    background-image: linear-gradient(to right, #87e5eb 0%, #5093ef 100%);
+    background-position: center;
+}
+@mixin hw-text-bg{
+	background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin industry-bg{    
+    background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+    background-position: center;
+}
+@mixin industry-bg2{    
+    background-image: linear-gradient(to right, #87e5eb 0%, #5093ef 100%);
+    background-position: center;
+}
+@mixin industry-text-bg{
+	background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin business-area-bg{    
+    background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+    background-position: center;
+}
+@mixin business-area-bg2{    
+    background-image: linear-gradient(to right, #87e5eb 0%, #5093ef 100%);
+    background-position: center;
+}
+@mixin business-area-text-bg{
+	background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin products-bg{    
+    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+    background-position: center;
+}
+@mixin products-bg2{    
+    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+    background-position: center;
+}
+@mixin products-text-bg{
+	background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin gradient-bg6{    
     background-image: linear-gradient(to right, #a8c4fd 0%, #f1848d 100%);
 }
-@mixin gradient-bg3{    
+@mixin gradient-bg7{    
     background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
 }
-@mixin gradient-bg4{    
+@mixin gradient-bg8{    
     background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
 }
 

@@ -33,6 +33,7 @@
         @include smartphone {
             padding: 25px 0 !important;
         }
+    }
         .section-in{            
             display: flex;
             align-items: center;
@@ -52,37 +53,13 @@
                 margin-bottom: 20px;
             }
         }
-        h1{
-            color: #fff;
-            max-width: 280px;
+        h1{            
             font-size: 40px;
             font-weight: normal;
-            line-height: 50px;
+            line-height: 45px;
+            margin-bottom: 25px;
             position: relative;
-            &:before{
-                content: '';
-                background: #fff;
-                height: 2px;
-                width: 200px;
-                position: absolute;
-                top: -25px;
-                left: 0;
-                @include tablet-max{
-                    content:  none;
-                }
-            }
-            &:after{
-                content: '';
-                background: #fff;
-                height: 2px;
-                width: 200px;
-                position: absolute;
-                bottom: -25px;
-                left: 0;
-                @include tablet-max{
-                    content: none;
-                }
-            }
+            color: #fff;
             @include tablet-max{
                 font-size: 36px;
                 line-height: 36px;
@@ -91,6 +68,7 @@
             @include smartphone{
                 font-size: 26px;
                 line-height: 30px;
+                margin-bottom: 20px;
             }
         }
         p{
@@ -98,7 +76,6 @@
                 margin-top:20px;
             }
         }
-    }
     h3{
         font-size: 24px;
         @include mobile-max{
@@ -235,6 +212,211 @@
             }
         }
     }
+    
+    .sec-sm-cta{
+        background: none;
+        padding-top: 0 !important;
+        .sec-sm-cta-in{
+            padding: 30px;
+            @include box-shadow;
+            border-radius: 3px;
+            color: $white;
+
+            p.text {
+                vertical-align: middle;
+                display: inline-block;
+                width: calc(100% - 240px);
+                font-size: 20px;
+                @include mobile-max{
+                    width: 100%;
+                    display: block;
+                }
+            }
+            div {
+                vertical-align: middle;
+                margin: 0;
+                display: inline-block;
+                text-align: right;
+                width: 236px;
+                
+                @include mobile-max{
+                    width: 100%;
+                    display: block;
+                    margin-top:10px;
+                    text-align: center;
+                }
+                .btn {
+                    margin: 0;
+                }
+            }
+        }
+    } 
+    /*************************** home *****************************/
+    
+    .home{
+        header {
+            .overlay{
+                @include home-bg;
+            }
+        }
+        h1{
+            color: #fff;
+            max-width: 280px;
+            font-size: 40px;
+            font-weight: normal;
+            line-height: 50px;
+            position: relative;
+            &:before{
+                content: '';
+                background: #fff;
+                height: 2px;
+                width: 200px;
+                position: absolute;
+                top: -25px;
+                left: 0;
+                @include tablet-max{
+                    content:  none;
+                }
+            }
+            &:after{
+                content: '';
+                background: #fff;
+                height: 2px;
+                width: 200px;
+                position: absolute;
+                bottom: -25px;
+                left: 0;
+                @include tablet-max{
+                    content: none;
+                }
+            }
+        }
+        .testimonial{
+            .pagination{
+                span{               
+                    &.current { 
+                        box-shadow: none;
+                        @include home-bg;
+                        }
+                    &:hover { 
+                        box-shadow: none;
+                        @include home-bg;
+                        }
+                }
+            }
+        }
+        .sec-sm-cta{
+            .sec-sm-cta-in{
+                @include home-bg;
+            }
+        } 
+        footer{
+            .footer-top{
+                @include home-bg;
+            }
+            .copy-right{
+                @include home-bg2;
+            }
+        }
+    }
+
+
+    /****************************** how we work page *******************************/
+    .how-we-work{
+        header {
+            .overlay{
+                @include hw-bg;
+            }
+        }
+        footer{
+            .footer-top{
+                @include hw-bg;
+            }
+            .copy-right{
+                @include hw-bg2;
+            }
+        }
+    }
+    
+    /*************************** industry *****************************/
+    
+    .industry{
+        header {
+            .overlay{
+                @include industry-bg;
+            }
+        }
+        .testimonial{
+            .pagination{
+                span{               
+                    &.current { 
+                        box-shadow: none;
+                        @include industry-bg;
+                        }
+                    &:hover { 
+                        box-shadow: none;
+                        @include industry-bg;
+                        }
+                }
+            }
+        }
+        .sec-sm-cta{
+            .sec-sm-cta-in{
+                @include industry-bg;
+            }
+        } 
+        footer{
+            .footer-top{
+                @include industry-bg;
+            }
+            .copy-right{
+                @include industry-bg2;
+            }
+        }
+    }
+
+    /*************************** home *****************************/
+    
+    .products{
+        header {
+            .overlay{
+                @include products-bg;
+            }
+        }
+        .products-bg:nth-child(1) p{
+            color: #fff;
+            font-size: 18px;
+        }
+        .testimonial{
+            .pagination{
+                span{               
+                    &.current { 
+                        box-shadow: none;
+                        @include products-bg;
+                        }
+                    &:hover { 
+                        box-shadow: none;
+                        @include products-bg;
+                        }
+                }
+            }
+        }
+        .sec-sm-cta{
+            .sec-sm-cta-in{
+                @include products-bg;
+            }
+        } 
+        footer{
+            .footer-top{
+                @include products-bg;
+            }
+            .copy-right{
+                @include products-bg2;
+            }
+        }
+    }
+
+
     /******************************* testimonial **************************************/      
 
     .testimonial{    
@@ -411,46 +593,6 @@
             }   
         } 
     }
-    .home{
-        header {
-            .overlay{
-                @include home-bg;
-            }
-        }
-        .testimonial{
-            .pagination{
-                span{               
-                    &.current { 
-                        box-shadow: none;
-                        @include home-bg;
-                        }
-                    &:hover { 
-                        box-shadow: none;
-                        @include home-bg;
-                        }
-                }
-            }
-        }
-        .contact-cta{
-            background: none;
-            padding-top: 0 !important;
-            .contact-cta-in{
-                @include home-bg;
-                padding: 20px;
-                @include box-shadow;
-                border-radius: 3px;
-                color: $white;
-            }
-        } 
-        footer{
-            .footer-top{
-                @include home-bg;
-            }
-            .copy-right{
-                @include home-bg2;
-            }
-        }
-    }
 
     /******************************* use-cases **************************************/ 
     .use-cases{        
@@ -539,16 +681,16 @@
                 font-size: 50px;
                 top: 50%;
                 transform: translateY(-50%);
-                color: rgba(0, 0, 0, 0.4);
+                color: #fff;
                 transition: 0.15s linear;
                 width: 30px;
                 height: 30px;
                 font-size: 20px;
                 line-height: 20px;
-                background: #dadada;
                 border-radius: 50%;
                 cursor: pointer;
                 @include box-shadow;
+                @include products-bg;
                 &:hover {
                     color: rgba(0, 0, 0, 0.8);
                 }
