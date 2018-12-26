@@ -1489,7 +1489,7 @@
                         white-space: nowrap;
                         width: 100%;
                     }
-                    .post-cont-btm{
+                    .post-info{
                         position: absolute;
                         bottom: -8px;
                         font-size: 13px;
@@ -1518,6 +1518,27 @@
                     right: 0;
                     left: 0;
                     background-image: url(http://wowso.me/wp-content/uploads/2016/02/8402643_l-2.jpg);
+                }
+                .left-cont{
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.3);
+                }
+                .left-cont-in{
+                    position: absolute;
+                    bottom: 10px;
+                    left: 15px;
+                    max-width: 400px;
+                    color: #fff;
+                    h1{
+                        margin-bottom: 0;
+                        font-size: 36px;
+                        line-height: 40px;                        
+                    }
+                    .post-info{
+                        margin-top: 20px;
+                    }
                 }
             }
             .right {

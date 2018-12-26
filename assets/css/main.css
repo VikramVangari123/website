@@ -1275,7 +1275,7 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 .brand-managers footer .copy-right {
-  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
+  background-image: linear-gradient(to right, #283670 0%, #ddaaba 100%);
   background-position: center;
 }
 
@@ -1289,7 +1289,7 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 .blog footer .copy-right {
-  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  background-image: linear-gradient(to right, #ef404b 0%, #ca2f39 100%);
   background-position: center;
 }
 
@@ -2316,7 +2316,7 @@ nav.nav-split:hover svg.icon {
   white-space: nowrap;
   width: 100%;
 }
-.blog-main ul li .entry-content .post-cont-btm {
+.blog-main ul li .entry-content .post-info {
   position: absolute;
   bottom: -8px;
   font-size: 13px;
@@ -2342,6 +2342,27 @@ nav.nav-split:hover svg.icon {
   right: 0;
   left: 0;
   background-image: url(http://wowso.me/wp-content/uploads/2016/02/8402643_l-2.jpg);
+}
+.blog-main .latest-posts .left .left-cont {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+}
+.blog-main .latest-posts .left .left-cont-in {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  max-width: 400px;
+  color: #fff;
+}
+.blog-main .latest-posts .left .left-cont-in h1 {
+  margin-bottom: 0;
+  font-size: 36px;
+  line-height: 40px;
+}
+.blog-main .latest-posts .left .left-cont-in .post-info {
+  margin-top: 20px;
 }
 .blog-main .latest-posts .right {
   float: right;
