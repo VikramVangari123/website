@@ -39,10 +39,9 @@ $(function() {
             });
         });
 
-        var titleHeight = $('.title').height();
         // section inner full height
         var sectionHeight = $('.section').height();
-        $('.section-in').css('height', (sectionHeight - titleHeight) + 'px');
+        $('.section-in').css('height', (sectionHeight) + 'px');
 
         // testimonial 
         var sliderblockHeight = $('.sliderblock-cont').height();
@@ -71,16 +70,16 @@ $(function() {
 
         
         // recent blog post
-        var recentblogpostHeight = $('.recent-blog-post').height();
+        var recentblogpostHeight = $('.post-grid').height();
         $('.post-left').css('height', (recentblogpostHeight - 150) + 'px');
         $('.post-right').css('height', (recentblogpostHeight - 150) + 'px');
             // recent blog post (window width leass than 767px)
         if ($(window).innerWidth() <= 767) {
-            var recentblogpostHeight = $('.recent-blog-post').height();
+            var recentblogpostHeight = $('.post-grid').height();
             $('.post-left').css('height', 'auto');
             $('.post-right').css('height', 'auto');
         } else {
-            var recentblogpostHeight = $('.recent-blog-post').height();
+            var recentblogpostHeight = $('.post-grid').height();
             $('.post-left').css('height', (recentblogpostHeight - 100) + 'px');
             $('.post-right').css('height', (recentblogpostHeight - 100) + 'px');
         }

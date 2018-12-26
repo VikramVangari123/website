@@ -169,7 +169,7 @@ h1, h2{
   color: $white;
 }
 .btn-submit{
-  background: #f1f1f1;
+  background: $white;
 }
 
 
@@ -204,6 +204,19 @@ h1, h2{
 .products-text-bg{
 	@include products-text-bg;
 }
+.brand-mng-bg {
+  @include brand-mng-bg;
+}
+.brand-mng-text-bg{
+	@include brand-mng-text-bg;
+}
+.blog-bg{
+  @include blog-bg;
+}
+.blog-text-bg{
+	@include blog-text-bg;
+}
+
 /*** header *************************/
 
 header {

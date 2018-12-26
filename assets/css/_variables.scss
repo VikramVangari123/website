@@ -18,6 +18,22 @@ $lineheightMedium: 1.5;
 @mixin gradient-bg1{    
     background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
 }
+@mixin gradient-bg3{    
+    background-image: linear-gradient(to right, #4cb8c4 0%, #3cd3ad 100%);
+}
+@mixin gradient-bg4{    
+    background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
+}
+@mixin gradient-bg6{    
+    background-image: linear-gradient(to right, #a8c4fd 0%, #f1848d 100%);
+}
+@mixin gradient-bg7{    
+    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+}
+@mixin gradient-bg8{    
+    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+}
+
 @mixin home-bg{    
     background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
     background-position: center;
@@ -31,12 +47,7 @@ $lineheightMedium: 1.5;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-@mixin gradient-bg3{    
-    background-image: linear-gradient(to right, #4cb8c4 0%, #3cd3ad 100%);
-}
-@mixin gradient-bg4{    
-    background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
-}
+
 @mixin hw-bg{    
     background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
     background-position: center;
@@ -64,6 +75,7 @@ $lineheightMedium: 1.5;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
 @mixin business-area-bg{    
     background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
     background-position: center;
@@ -83,7 +95,7 @@ $lineheightMedium: 1.5;
     background-position: center;
 }
 @mixin products-bg2{    
-    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+    background-image: linear-gradient(to right, #c489ed 0%, #4b2a91 100%);
     background-position: center;
 }
 @mixin products-text-bg{
@@ -91,14 +103,33 @@ $lineheightMedium: 1.5;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-@mixin gradient-bg6{    
-    background-image: linear-gradient(to right, #a8c4fd 0%, #f1848d 100%);
+
+@mixin brand-mng-bg{    
+    background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
+    background-position: center;
 }
-@mixin gradient-bg7{    
-    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+@mixin brand-mng-bg2{    
+    background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
+    background-position: center;
 }
-@mixin gradient-bg8{    
-    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+@mixin brand-mng-text-bg{
+	background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin blog-bg{    
+    background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+    background-position: center;
+}
+@mixin blog-bg2{    
+    background-image: linear-gradient(to right, #ef404b 0%, #ca2f39 100%);
+    background-position: center;
+}
+@mixin blog-text-bg{
+	background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 @mixin inline-block{
