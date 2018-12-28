@@ -226,6 +226,12 @@ h1, h2{
 .about-text-bg{
 	@include about-text-bg;
 }
+.contact-bg{
+  @include contact-bg;
+}
+.contact-text-bg{
+	@include contact-text-bg;
+}
 
 /*** header *************************/
 

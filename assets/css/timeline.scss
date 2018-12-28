@@ -141,6 +141,9 @@
         font-size: 15px;
         line-height: 1.5;
         margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
     .date {
         font-size: 14px;

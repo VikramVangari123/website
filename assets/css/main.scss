@@ -642,8 +642,15 @@
                         display: block;
                         border-radius: 50%;
                         img{
-                            width: 18px;
+                            width: 16px;
                             vertical-align: middle;
+                            @include transition05;
+                        }                        
+                        &:hover{
+                            img{
+                                @include rotate360;
+                            }
+                            
                         }
                     }
                 }
@@ -686,6 +693,118 @@
             }
             .copy-right{
                 @include about-bg2;
+            }
+        }
+    }
+
+    /*************************** about *****************************/
+    
+    .contact{
+        header {
+            .overlay{
+                @include contact-bg;
+            }
+        }
+        h1{
+            color: #fff;
+            max-width: 280px;
+            font-size: 40px;
+            font-weight: normal;
+            line-height: 50px;
+            position: relative;
+            &:before{
+                content: '';
+                background: #fff;
+                height: 2px;
+                width: 200px;
+                position: absolute;
+                top: -25px;
+                left: 0;
+                @include tablet-max{
+                    content:  none;
+                }
+            }
+            &:after{
+                content: '';
+                background: #fff;
+                height: 2px;
+                width: 200px;
+                position: absolute;
+                bottom: -25px;
+                left: 0;
+                @include tablet-max{
+                    content: none;
+                }
+            }
+        }
+        .contact-block{
+            .title{
+                justify-content: center;
+            }
+            .contact-block-in {
+                width: 320px;
+                label{
+                    position: relative;
+                    &:before{
+                        content: "";
+                        width: 20px;
+                        height: 22px;
+                        margin: 0;
+                        position: absolute;
+                    }
+                    &.name{
+                        &:before{                            
+                            background: url(../../assets/images/contact/user.png) center/contain no-repeat;
+                        }
+                    }
+                    &.mobile{
+                        &:before{                            
+                            background: url(../../assets/images/contact/mobile.png) center/contain no-repeat;
+                        }
+                    }
+                    &.email{
+                        &:before{                            
+                            background: url(../../assets/images/contact/email.png) center/contain no-repeat;
+                        }
+                    }
+                    &.query{
+                        &:before{                            
+                            background: url(../../assets/images/contact/query.png) center/contain no-repeat;
+                        }
+                    }
+                    &.brand-name{
+                        &:before{                            
+                            background: url(../../assets/images/contact/brand.png) center/contain no-repeat;
+                        }
+                    }
+                    input, textarea {
+                        width: 100%;
+                        border: 0;
+                        border-bottom: 1px solid #7d7d7d;
+                        padding: 3px 0 3px 30px;
+                        background: 0 0;
+                        margin-bottom: 40px;
+                    }
+                    textarea {
+                        width: 100%;
+                        height: 70px;
+                        resize: none;
+                    }
+                }
+                .btn{
+                    width: 100%;
+                    border: 1px solid transparent;
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+        }
+        footer{
+            .footer-top{
+                @include contact-bg;
+            }
+            .copy-right{
+                @include contact-bg2;
             }
         }
     }
@@ -1920,6 +2039,18 @@
                         }
                     }
                 }
+                ul{
+                    li{
+                        a{
+                            @include transition;
+                            &:hover{
+                                img{
+                                    @include image-scale;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         .post-nav{
@@ -2027,8 +2158,7 @@
                         
                         &:hover{
                             img{
-                                transform: rotate(360deg);
-                                -webkit-transform: rotate(360deg);
+                                @include rotate360;
                             }
                             
                         }

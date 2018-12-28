@@ -146,6 +146,20 @@ $lineheightMedium: 1.5;
 	-webkit-text-fill-color: transparent;
 }
 
+@mixin contact-bg{    
+    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+    background-position: center;
+}
+@mixin contact-bg2{    
+    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+    background-position: center;
+}
+@mixin contact-text-bg{
+	background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 @mixin inline-block{
     display: inline-block;
     vertical-align: middle;
@@ -203,6 +217,10 @@ $lineheightMedium: 1.5;
 @mixin transition05 {
     -webkit-transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
+}
+@mixin rotate360{    
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
 }
 @mixin zoomin{
     -webkit-animation-name: zoomIn;

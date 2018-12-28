@@ -194,6 +194,9 @@
   line-height: 1.5;
   margin-bottom: 10px;
 }
+.timeline__content p:last-child {
+  margin-bottom: 0;
+}
 .timeline__content .date {
   font-size: 14px;
   margin-bottom: 0px;
@@ -678,6 +681,17 @@ h1, h2 {
 
 .about-text-bg {
   background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-bg {
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-position: center;
+}
+
+.contact-text-bg {
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1722,8 +1736,14 @@ nav.nav-split:hover svg.icon {
   border-radius: 50%;
 }
 .about .member-profile .member-info .profile-nav a img {
-  width: 18px;
+  width: 16px;
   vertical-align: middle;
+  -webkit-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+.about .member-profile .member-info .profile-nav a:hover img {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
 }
 .about .core-values .section-in {
   display: block;
@@ -1759,6 +1779,106 @@ nav.nav-split:hover svg.icon {
 }
 .about footer .copy-right {
   background-image: linear-gradient(to right, #ef404b 0%, #ca2f39 100%);
+  background-position: center;
+}
+
+/*************************** about *****************************/
+.contact header .overlay {
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-position: center;
+}
+.contact h1 {
+  color: #fff;
+  max-width: 280px;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 50px;
+  position: relative;
+}
+.contact h1:before {
+  content: "";
+  background: #fff;
+  height: 2px;
+  width: 200px;
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+@media (max-width: 1024px) {
+  .contact h1:before {
+    content: none;
+  }
+}
+.contact h1:after {
+  content: "";
+  background: #fff;
+  height: 2px;
+  width: 200px;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+}
+@media (max-width: 1024px) {
+  .contact h1:after {
+    content: none;
+  }
+}
+.contact .contact-block .title {
+  justify-content: center;
+}
+.contact .contact-block .contact-block-in {
+  width: 320px;
+}
+.contact .contact-block .contact-block-in label {
+  position: relative;
+}
+.contact .contact-block .contact-block-in label:before {
+  content: "";
+  width: 20px;
+  height: 22px;
+  margin: 0;
+  position: absolute;
+}
+.contact .contact-block .contact-block-in label.name:before {
+  background: url(../../assets/images/contact/user.png) center/contain no-repeat;
+}
+.contact .contact-block .contact-block-in label.mobile:before {
+  background: url(../../assets/images/contact/mobile.png) center/contain no-repeat;
+}
+.contact .contact-block .contact-block-in label.email:before {
+  background: url(../../assets/images/contact/email.png) center/contain no-repeat;
+}
+.contact .contact-block .contact-block-in label.query:before {
+  background: url(../../assets/images/contact/query.png) center/contain no-repeat;
+}
+.contact .contact-block .contact-block-in label.brand-name:before {
+  background: url(../../assets/images/contact/brand.png) center/contain no-repeat;
+}
+.contact .contact-block .contact-block-in label input, .contact .contact-block .contact-block-in label textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #7d7d7d;
+  padding: 3px 0 3px 30px;
+  background: 0 0;
+  margin-bottom: 40px;
+}
+.contact .contact-block .contact-block-in label textarea {
+  width: 100%;
+  height: 70px;
+  resize: none;
+}
+.contact .contact-block .contact-block-in .btn {
+  width: 100%;
+  border: 1px solid transparent;
+  color: #fff;
+  font-size: 18px;
+}
+.contact footer .footer-top {
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-position: center;
+}
+.contact footer .copy-right {
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
   background-position: center;
 }
 
@@ -3072,6 +3192,15 @@ nav.nav-split:hover svg.icon {
 }
 .blog-detail .post-cont .social-share .bottom ul li img {
   width: 22px;
+}
+.blog-detail .post-cont .social-share ul li a {
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+.blog-detail .post-cont .social-share ul li a:hover img {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  transform: scale(1.05);
 }
 .blog-detail .post-nav .next, .blog-detail .post-nav .prev {
   margin-bottom: 12px;
