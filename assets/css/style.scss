@@ -1,5 +1,6 @@
 
 @import 'variables';
+@import 'timeline';
 @import 'https://fonts.googleapis.com/css?family=Roboto:100,300';
 
 * {
@@ -110,6 +111,9 @@ h1, h2{
 .float-left {
   float: left;
 }
+.upper-case{
+  text-transform: uppercase;
+}
 .container{
   @include desktop{
     max-width: 1251px;
@@ -215,6 +219,12 @@ h1, h2{
 }
 .blog-text-bg{
 	@include blog-text-bg;
+}
+.about-bg{
+  @include about-bg;
+}
+.about-text-bg{
+	@include about-text-bg;
 }
 
 /*** header *************************/

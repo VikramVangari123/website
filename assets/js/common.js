@@ -83,6 +83,15 @@ $(function() {
             $('.post-left').css('height', (recentblogpostHeight - 100) + 'px');
             $('.post-right').css('height', (recentblogpostHeight - 100) + 'px');
         }
+
+
+        // about/timeline
+        timeline(document.querySelectorAll('.timeline'), {
+            forceVerticalMode: 700,
+            mode: 'horizontal',
+            verticalStartPosition: 'left',
+            visibleItems: 4
+        });
 });
 
 // ========== slider with multiple items ===============
