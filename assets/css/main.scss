@@ -465,6 +465,13 @@
                 }
             }
         }
+        ul.list-style1{ 
+            li{
+                &:before{
+                    @include industry-bg; 
+                }
+            }
+        }
         .sec-sm-cta{
             .sec-sm-cta-in{
                 @include industry-bg;
@@ -499,6 +506,13 @@
                         box-shadow: none;
                         @include business-area-bg;
                         }
+                }
+            }
+        }
+        ul.list-style1{ 
+            li{
+                &:before{
+                    @include business-area-bg; 
                 }
             }
         }

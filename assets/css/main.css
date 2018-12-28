@@ -1572,6 +1572,10 @@ nav.nav-split:hover svg.icon {
   background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
   background-position: center;
 }
+.industry ul.list-style1 li:before {
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
+  background-position: center;
+}
 .industry .sec-sm-cta .sec-sm-cta-in {
   background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
   background-position: center;
@@ -1597,6 +1601,10 @@ nav.nav-split:hover svg.icon {
 }
 .business-area .testimonial .pagination span:hover {
   box-shadow: none;
+  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-position: center;
+}
+.business-area ul.list-style1 li:before {
   background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
   background-position: center;
 }
