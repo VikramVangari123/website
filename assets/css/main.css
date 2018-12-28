@@ -159,7 +159,7 @@
   border-radius: 10px;
   color: #333;
   display: block;
-  padding: 20px;
+  padding: 15px;
   position: relative;
 }
 .timeline__content::before, .timeline__content::after {
@@ -620,12 +620,12 @@ h1, h2 {
 }
 
 .industry-bg {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
   background-position: center;
 }
 
 .industry-text-bg {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1559,28 +1559,56 @@ nav.nav-split:hover svg.icon {
 
 /*************************** industry *****************************/
 .industry header .overlay {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
   background-position: center;
 }
 .industry .testimonial .pagination span.current {
   box-shadow: none;
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
   background-position: center;
 }
 .industry .testimonial .pagination span:hover {
   box-shadow: none;
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
   background-position: center;
 }
 .industry .sec-sm-cta .sec-sm-cta-in {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
   background-position: center;
 }
 .industry footer .footer-top {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
   background-position: center;
 }
 .industry footer .copy-right {
+  background-image: linear-gradient(to right, #e27be6 0%, #ef2628 100%);
+  background-position: center;
+}
+
+/*************************** business area *****************************/
+.business-area header .overlay {
+  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-position: center;
+}
+.business-area .testimonial .pagination span.current {
+  box-shadow: none;
+  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-position: center;
+}
+.business-area .testimonial .pagination span:hover {
+  box-shadow: none;
+  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-position: center;
+}
+.business-area .sec-sm-cta .sec-sm-cta-in {
+  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-position: center;
+}
+.business-area footer .footer-top {
+  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-position: center;
+}
+.business-area footer .copy-right {
   background-image: linear-gradient(to right, #87e5eb 0%, #5093ef 100%);
   background-position: center;
 }
@@ -1710,8 +1738,8 @@ nav.nav-split:hover svg.icon {
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
-  -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 10px 12px -4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 12px -4px rgba(0, 0, 0, 0.3);
 }
 .about .member-profile .member-thumb img {
   width: 100%;
@@ -1719,6 +1747,7 @@ nav.nav-split:hover svg.icon {
 }
 .about .member-profile .member-info {
   margin-top: 20px;
+  color: #000;
 }
 .about .member-profile .member-info .designation {
   margin: 5px 0;
@@ -1753,14 +1782,17 @@ nav.nav-split:hover svg.icon {
 }
 .about .core-values .cv-panel {
   width: calc(100% / 3 - 3px);
-  padding: 15px;
+  padding: 17px 15px;
   display: inline-block;
+  vertical-align: middle;
 }
 .about .core-values .cv-panel .cv-panel-in {
   -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
   padding: 15px;
   border-radius: 8px;
+  height: 185px;
+  overflow: hidden;
 }
 .about .core-values .cv-panel .cv-panel-in .icon img {
   width: 40px;

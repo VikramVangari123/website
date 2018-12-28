@@ -63,15 +63,15 @@ $lineheightMedium: 1.5;
 }
 
 @mixin industry-bg{    
-    background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+    background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
     background-position: center;
 }
 @mixin industry-bg2{    
-    background-image: linear-gradient(to right, #87e5eb 0%, #5093ef 100%);
+    background-image: linear-gradient(to right, #e27be6 0%, #ef2628 100%);
     background-position: center;
 }
 @mixin industry-text-bg{
-	background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+	background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -204,6 +204,10 @@ $lineheightMedium: 1.5;
 @mixin box-shadow-07 {
     -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.7);
+}
+@mixin box-shadow-team{    
+    -webkit-box-shadow: 0 10px 12px -4px rgba(0,0,0,.3);
+    box-shadow: 0 10px 12px -4px rgba(0,0,0,.3);
 }
 @mixin image-scale{
     -webkit-transform: scale(1.05);
