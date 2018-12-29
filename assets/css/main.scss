@@ -43,6 +43,16 @@
                 display: block !important;
                 height: auto !important;
             }  
+            &.flex-col-rev{                
+                @include tablet-max {
+                    display: flex !important;
+                    flex-flow: column-reverse;
+                }  
+                .right60, .right50 {
+                    margin-top: 0;
+                    margin-bottom: 30px;
+                }
+            }
         }
         h2{
             margin-bottom: 25px;
@@ -176,15 +186,21 @@
 
      nav.nav-split {
         .icon-wrap {
-        position: relative;
-        display: block;
-        padding: 4px 0;
+            position: relative;
+            display: block;
+            padding: 4px 0;
+            @include mobile-max{
+                padding: 1px 0;
+            }
         }
         svg.icon {
             -webkit-transition: -webkit-transform 0.3s 0.3s;
             transition: transform 0.3s 0.3s;
             fill: #fff;
             width: 16px;
+            @include mobile-max{
+                width: 12px;
+            }
         }
         a {
             color: #fff;
@@ -200,6 +216,10 @@
             border-radius: 50%;
             cursor: pointer;
             @include box-shadow;
+            @include mobile-max{
+                width: 23px;
+                height: 23px;
+            }
             svg {
                 display: block;
                 margin: 0 auto;
@@ -264,7 +284,7 @@
             display: table-cell;
         }
         @include mobile-max {
-            width: 100%;
+            width: 100% !important;
             text-align: center;
         }
         input#subscribe-email{
@@ -1052,7 +1072,12 @@
         }        
         #mixedSlider {
             position: relative;
-            
+            @include tablet-max{
+                padding: 30px 10px 0px;
+            }
+            @include smartphone{
+                padding: 50px 6px 0px;
+            }
             @keyframes fadeOut {
                 from {
                   opacity: 1;
@@ -1062,9 +1087,12 @@
                 }
               }
             .MS-content {
-            white-space: nowrap;
-            overflow: hidden;
-            margin: 0 -10px;
+                white-space: nowrap;
+                overflow: hidden;
+                margin: 0 -10px;
+                @include mobile-max{
+                    margin: 0;
+                }
             .item {
                 display: inline-block;
                 width: 33.3333%;
@@ -1080,6 +1108,7 @@
                 }
                 @include mobile-max{
                     width: 100%;
+                    padding: 0;
                 }
                 .item-in{
                     background: #fff;
@@ -1088,6 +1117,12 @@
                     @include box-shadow;
                     .item-cont{
                         padding: 20px;
+                        @include laptop{
+                            height: 250px;
+                        }
+                        @include tablet{
+                            height: 230px;
+                        }
                     }
                 }
                 .imgTitle {
@@ -1149,23 +1184,23 @@
                     font-size: 30px;
                 }
                 @include mobile-max{
-                    font-size: 30px;
+                    font-size: 25px;
+                    width: 23px;
+                    height: 23px;
                 }
             }
             .MS-left {
                 left: -15px;
                 padding-right: 2px;
-                @include mobile-max{
-                    left: -10px;  
+                @include tablet-max{
+                    left: -5px;  
                 }
             }
             .MS-right {
                 right: -15px;
                 padding-left: 2px;
-                @include mobile-max{
-                    #mixedSlider .MS-controls .MS-right {
-                      right: -10px;
-                    }
+                @include tablet-max{
+                      right: -5px;
                 }
             }
         }   
@@ -1219,12 +1254,18 @@
                 position: relative;
                 display: block;
                 padding: 4px 0px;
+                    @include mobile-max{
+                        padding: 1px 0;
+                    }
                 }
                 svg.icon {
                     -webkit-transition: -webkit-transform 0.3s 0.3s;
                     transition: transform 0.3s 0.3s;
                     fill: #fff;
                     width: 16px;
+                    @include mobile-max{
+                        width: 12px;
+                    }
                 }
                 a {
                     &:hover{                        
@@ -1315,7 +1356,7 @@
                     overflow: hidden;
                     @include mobile-max{
                         width: 100%;
-                        min-height: 300px;
+                        min-height: auto;
                     }
                 }
                 .sliderblock-cont{
@@ -1325,6 +1366,9 @@
                 margin-left: 20px;
                 @include box-shadow;
                 position: relative;
+                @include tablet-max{
+                    min-height: auto;
+                }
                 @include mobile-max{
                     padding: 20px 20px 90px;
                     min-height: auto;

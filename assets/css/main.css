@@ -1106,6 +1106,16 @@ header .overlay .overlay-content {
     height: auto !important;
   }
 }
+@media (max-width: 1024px) {
+  .section-in.flex-col-rev {
+    display: flex !important;
+    flex-flow: column-reverse;
+  }
+}
+.section-in.flex-col-rev .right60, .section-in.flex-col-rev .right50 {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
 
 h2 {
   margin-bottom: 25px;
@@ -1281,11 +1291,21 @@ nav.nav-split .icon-wrap {
   display: block;
   padding: 4px 0;
 }
+@media (max-width: 767px) {
+  nav.nav-split .icon-wrap {
+    padding: 1px 0;
+  }
+}
 nav.nav-split svg.icon {
   -webkit-transition: -webkit-transform 0.3s 0.3s;
   transition: transform 0.3s 0.3s;
   fill: #fff;
   width: 16px;
+}
+@media (max-width: 767px) {
+  nav.nav-split svg.icon {
+    width: 12px;
+  }
 }
 nav.nav-split a {
   color: #fff;
@@ -1302,6 +1322,12 @@ nav.nav-split a {
   cursor: pointer;
   -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 767px) {
+  nav.nav-split a {
+    width: 23px;
+    height: 23px;
+  }
 }
 nav.nav-split a svg {
   display: block;
@@ -1367,7 +1393,7 @@ nav.nav-split:hover svg.icon {
 }
 @media (max-width: 767px) {
   .subscribe {
-    width: 100%;
+    width: 100% !important;
     text-align: center;
   }
 }
@@ -2128,6 +2154,16 @@ nav.nav-split:hover svg.icon {
 #mixedSlider {
   position: relative;
 }
+@media (max-width: 1024px) {
+  #mixedSlider {
+    padding: 30px 10px 0px;
+  }
+}
+@media (max-width: 479px) {
+  #mixedSlider {
+    padding: 50px 6px 0px;
+  }
+}
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -2140,6 +2176,11 @@ nav.nav-split:hover svg.icon {
   white-space: nowrap;
   overflow: hidden;
   margin: 0 -10px;
+}
+@media (max-width: 767px) {
+  #mixedSlider .MS-content {
+    margin: 0;
+  }
 }
 #mixedSlider .MS-content .item {
   display: inline-block;
@@ -2160,6 +2201,7 @@ nav.nav-split:hover svg.icon {
 @media (max-width: 767px) {
   #mixedSlider .MS-content .item {
     width: 100%;
+    padding: 0;
   }
 }
 #mixedSlider .MS-content .item .item-in {
@@ -2171,6 +2213,16 @@ nav.nav-split:hover svg.icon {
 }
 #mixedSlider .MS-content .item .item-in .item-cont {
   padding: 20px;
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #mixedSlider .MS-content .item .item-in .item-cont {
+    height: 250px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #mixedSlider .MS-content .item .item-in .item-cont {
+    height: 230px;
+  }
 }
 #mixedSlider .MS-content .item .imgTitle {
   position: relative;
@@ -2237,25 +2289,27 @@ nav.nav-split:hover svg.icon {
 }
 @media (max-width: 767px) {
   #mixedSlider .MS-controls button {
-    font-size: 30px;
+    font-size: 25px;
+    width: 23px;
+    height: 23px;
   }
 }
 #mixedSlider .MS-controls .MS-left {
   left: -15px;
   padding-right: 2px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   #mixedSlider .MS-controls .MS-left {
-    left: -10px;
+    left: -5px;
   }
 }
 #mixedSlider .MS-controls .MS-right {
   right: -15px;
   padding-left: 2px;
 }
-@media (max-width: 767px) {
-  #mixedSlider .MS-controls .MS-right #mixedSlider .MS-controls .MS-right {
-    right: -10px;
+@media (max-width: 1024px) {
+  #mixedSlider .MS-controls .MS-right {
+    right: -5px;
   }
 }
 
@@ -2323,11 +2377,21 @@ nav.nav-split:hover svg.icon {
   display: block;
   padding: 4px 0px;
 }
+@media (max-width: 767px) {
+  .case-study nav.nav-split .icon-wrap {
+    padding: 1px 0;
+  }
+}
 .case-study nav.nav-split svg.icon {
   -webkit-transition: -webkit-transform 0.3s 0.3s;
   transition: transform 0.3s 0.3s;
   fill: #fff;
   width: 16px;
+}
+@media (max-width: 767px) {
+  .case-study nav.nav-split svg.icon {
+    width: 12px;
+  }
 }
 .case-study nav.nav-split a:hover {
   -webkit-transform: scale(1.05);
@@ -2417,7 +2481,7 @@ nav.nav-split:hover svg.icon {
 @media (max-width: 767px) {
   .case-study .case-study-in .img {
     width: 100%;
-    min-height: 300px;
+    min-height: auto;
   }
 }
 .case-study .case-study-in .sliderblock-cont {
@@ -2428,6 +2492,11 @@ nav.nav-split:hover svg.icon {
   -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
   position: relative;
+}
+@media (max-width: 1024px) {
+  .case-study .case-study-in .sliderblock-cont {
+    min-height: auto;
+  }
 }
 @media (max-width: 767px) {
   .case-study .case-study-in .sliderblock-cont {
