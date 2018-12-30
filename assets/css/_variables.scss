@@ -131,15 +131,15 @@ $lineheightMedium: 1.5;
 }
 
 @mixin about-bg{    
-    background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+    background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
     background-position: center;
 }
 @mixin about-bg2{    
-    background-image: linear-gradient(to right, #ef404b 0%, #ca2f39 100%);
+    background-image: linear-gradient(to right, #fb8f5a 0%, #f55054 100%);
     background-position: center;
 }
 @mixin about-text-bg{
-	background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+	background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

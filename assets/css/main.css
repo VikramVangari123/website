@@ -209,7 +209,7 @@
   white-space: nowrap;
 }
 .timeline--horizontal .timeline-divider {
-  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
   background-position: center;
   display: block;
   height: 4px;
@@ -294,7 +294,7 @@
 }
 
 .timeline-nav-button {
-  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
   background-position: center;
   border: 1px solid #f5333f;
   border-radius: 50px;
@@ -679,12 +679,12 @@ h1, h2 {
 }
 
 .about-bg {
-  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
   background-position: center;
 }
 
 .about-text-bg {
-  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1099,14 +1099,10 @@ header .overlay .overlay-content {
 }
 
 .section-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-}
-@media (min-width: 1025px) {
-  .section-in {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 @media (max-width: 1024px) {
   .section-in {
@@ -1755,7 +1751,7 @@ nav.nav-split:hover svg.icon {
 
 /*************************** about *****************************/
 .about header .overlay {
-  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
   background-position: center;
 }
 .about header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -1828,7 +1824,7 @@ nav.nav-split:hover svg.icon {
 .about .member-profile .member-info .profile-nav a {
   width: 30px;
   height: 30px;
-  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
   background-position: center;
   display: block;
   border-radius: 50%;
@@ -1875,11 +1871,11 @@ nav.nav-split:hover svg.icon {
   margin-top: 15px;
 }
 .about footer .footer-top {
-  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
   background-position: center;
 }
 .about footer .copy-right {
-  background-image: linear-gradient(to right, #ef404b 0%, #ca2f39 100%);
+  background-image: linear-gradient(to right, #fb8f5a 0%, #f55054 100%);
   background-position: center;
 }
 
@@ -2645,7 +2641,7 @@ nav.nav-split:hover svg.icon {
 .brands ul li span {
   display: block;
   width: 130px;
-  height: 100px;
+  height: auto;
   overflow: hidden;
   background: #fff;
   margin: 20px 10px;
@@ -2972,7 +2968,7 @@ nav.nav-split:hover svg.icon {
 }
 @media (max-width: 1024px) {
   .hw-panel .hw-panel-in img {
-    max-width: 250px;
+    max-width: 100%;
   }
 }
 .hw-panel .hw-panel-in:last-child {
