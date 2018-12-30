@@ -13,9 +13,15 @@
             margin: 0 !important;
         }
     </style>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
     <script>
-        w3IncludeHTML();
+        jQuery(document).ready(function($) {
+            $('#header').load('header.html', function () {
+                console.log('header.html loaded')
+            });
+            $('#footer').load('footer.html', function () {
+                console.log('footer.html loaded')
+            });
+            })
     </script>
 </head>
 
@@ -24,7 +30,9 @@
         <header class="home-bg">
             <div class="container">
                 <div id="Nav" class="overlay">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="container">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    </div>
                     <div class="overlay-content">
                         <div class="mega-menu">
                             <div class="megamenu-item active">
@@ -48,7 +56,7 @@
                                                         </a>
                                                     </div>
                                                     <div class="megamenu-tabH-in">
-                                                        <a href="../industry/entertainment.html">
+                                                        <a href="javascript:void(0);">
                                                             <img src="../assets/images/bg.jpg" alt="" />
                                                             <p>Entertainment</p>
                                                         </a>
@@ -68,7 +76,7 @@
                                             <div class="megamenu-sub-content">
                                                 <div class="megamenu-tabH">
                                                     <div class="megamenu-tabH-in">
-                                                        <a href="../business-area/sales.html">
+                                                        <a href="javascript:void(0);">
                                                             <img src="../assets/images/bg.jpg" alt="" />
                                                             <p>Sales</p>
                                                         </a>
@@ -80,7 +88,7 @@
                                                         </a>
                                                     </div>
                                                     <div class="megamenu-tabH-in">
-                                                        <a href="../business-area/hr.html">
+                                                        <a href="javascript:void(0);">
                                                             <img src="../assets/images/bg.jpg" alt="" />
                                                             <p>HR</p>
                                                         </a>
@@ -107,7 +115,7 @@
                             </div>
                             <div class="megamenu-item">
                                 <h5>
-                                    <a href="javascript:void(0)">About Us</a>
+                                    <a href="../about/index.html">About Us</a>
                                 </h5>
                             </div>
                             <div class="megamenu-item">
@@ -152,7 +160,7 @@
             <div class="section full-height our-work">
                 <div class="container">
 
-                    <div class="title float-right">
+                    <div class="title float-right hidden">
                         <a href="#" class="view-all">View All <img src="../assets/images/go.png" alt="" /></a>
                     </div>
                     <div class="section-in">
@@ -164,21 +172,19 @@
                         </div>
 
                         <div class="right50 text-center">
-                            <div class="ow-videos">
-                                <div class="ow-videos-in">
-                                    <a href="https://youtu.be/XSGBVzeBUbk" data-lity>
-                                        <img src="../assets/images/bg.jpg" alt="" />
-                                    </a>
-                                    <a href="https://youtu.be/XSGBVzeBUbk" data-lity>
-                                        <img src="../assets/images/bg.jpg" alt="" />
-                                    </a>
-                                    <a href="https://youtu.be/XSGBVzeBUbk" data-lity>
-                                        <img src="../assets/images/bg.jpg" alt="" />
-                                    </a>
-                                    <a href="https://youtu.be/XSGBVzeBUbk" data-lity>
-                                        <img src="../assets/images/bg.jpg" alt="" />
-                                    </a>
-                                </div>
+                            <div class="ow-videos-in">
+                                <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" data-lity>
+                                    <img src="../assets/images/bg.jpg" alt="" />
+                                </a>
+                                <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4" data-lity>
+                                    <img src="../assets/images/bg.jpg" alt="" />
+                                </a>
+                                <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/RCB+-+IPL+2018.mp4" data-lity>
+                                    <img src="../assets/images/bg.jpg" alt="" />
+                                </a>
+                                <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/Marketing+video+final+version.mp4" data-lity>
+                                    <img src="../assets/images/bg.jpg" alt="" />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -200,24 +206,47 @@
                                 <div class="slider">
                                     <ul>
                                         <li>
-                                            <span class=""><img src="../assets/images/bg1.jpg" alt=""/></span>
-                                            <span class=""><img src="../assets/images/bg1.jpg" alt="" /></span>
-                                            <span class=""><img src="../assets/images/bg1.jpg" alt="" /></span>
+                                            <span class=""><img src="../assets/images/brands/The-Hindu.png" alt="The Hindu" title="The Hindu" /></span>
+                                            <span class=""><img src="../assets/images/brands/tvs.png" alt="TVS" title="TVS" /></span>
+                                            <span class=""><img src="../assets/images/brands/Mahindra.png" alt="Mahindra" title="Mahindra" /></span>
                                         </li>
                                         <li>
-                                            <span class=""><img src="../assets/images/bg1.jpg" alt="" /></span>
-                                            <span class=""><img src="../assets/images/bg1.jpg" alt="" /></span>
-                                            <span class=""><img src="../assets/images/bg1.jpg" alt="" /></span>
+                                            <span class=""><img src="../assets/images/brands/starmaa.png" alt="starmaa" title="starmaa" /></span>
+                                            <span class=""><img src="../assets/images/brands/Apollo.png" alt="Apollo" title="Apollo" /></span>
+                                            <span class=""><img src="../assets/images/brands/CognitveScale.png" alt="CognitveScale" title="CognitveScale" /></span>
                                         </li>
                                         <li>
-                                            <span class=""><img src="../assets/images/bg1.jpg" alt="" /></span>
-                                            <span class=""><img src="../assets/images/bg1.jpg" alt="" /></span>
-                                            <span class=""><img src="../assets/images/bg1.jpg" alt="" /></span>
+                                            <span class=""><img src="../assets/images/brands/DuPont.png" alt="DuPont" title="DuPont" /></span>
+                                            <span class=""><img src="../assets/images/brands/rcb.png" alt="RCB" title="RCB" /></span>
+                                            <span class=""><img src="../assets/images/brands/zee.png" alt="SUPERSONIC" title="SUPERSONIC" /></span>
                                         </li>
                                         <li>
-                                            <span class=""><img src="../assets/images/bg1.jpg" alt="" /></span>
-                                            <span class=""><img src="../assets/images/bg1.jpg" alt="" /></span>
-                                            <span class=""><img src="../assets/images/bg1.jpg" alt="" /></span>
+                                            <span class=""><img src="../assets/images/brands/tedx.png" alt="TEDx Hyderabad" title="TEDx Hyderabad" /></span>
+                                            <span class=""><img src="../assets/images/brands/tplink.png" alt="tp-link" title="tp-link" /></span>
+                                            <span class=""><img src="../assets/images/brands/supersonic.png" alt="viacomm 18" title="viacomm 18" /></span>
+                                        </li>
+                                        <li>
+                                            <span class=""><img src="../assets/images/brands/ballentine.png" alt="Ballentine's" title="Ballentine's" /></span>
+                                            <span class=""><img src="../assets/images/brands/blackdog.png" alt="BLACK DOG" title="BLACK DOG" /></span>
+                                            <span class=""><img src="../assets/images/brands/Budwesier.png" alt="Budwesier" title="Budwesier" /></span>
+                                        </li>
+                                        <li>
+                                            <span class=""><img src="../assets/images/brands/cbs.png" alt="CBS TELEVISION STUDIOS" title="CBS TELEVISION STUDIOS" /></span>
+                                            <span class=""><img src="../assets/images/brands/citi.png" alt="citibank" title="citibank" /></span>
+                                            <span class=""><img src="../assets/images/brands/dna.png" alt="dna" title="dna" /></span>
+                                        </li>
+                                        <li>
+                                            <span class=""><img src="../assets/images/brands/fastrack.png" alt="fastrack" title="fastrack" /></span>
+                                            <span class=""><img src="../assets/images/brands/forum.png" alt="FORUM" title="FORUM" /></span>
+                                            <span class=""><img src="../assets/images/brands/Jaguar.png" alt="JAGUAR" title="JAGUAR" /></span>
+                                        </li>
+                                        <li>
+                                            <span class=""><img src="../assets/images/brands/P&G.png" alt="P&G" title="P&G" /></span>
+                                            <span class=""><img src="../assets/images/brands/posterscope.png" alt="Posterscope" title="Posterscope" /></span>
+                                            <span class=""><img src="../assets/images/brands/pwc.png" alt="pwc" title="pwc" /></span>
+                                        </li>
+                                        <li>
+                                            <span class=""><img src="../assets/images/brands/viacomm.png" alt="P&G" title="P&G" /></span>
                                         </li>
                                     </ul>
                                 </div>

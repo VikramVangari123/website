@@ -47,11 +47,11 @@
                 @include tablet-max {
                     display: flex !important;
                     flex-flow: column-reverse;
+                    .right60, .right50 {
+                        margin-top: 0;
+                        margin-bottom: 30px;
+                    }
                 }  
-                .right60, .right50 {
-                    margin-top: 0;
-                    margin-bottom: 30px;
-                }
             }
         }
         h2{
@@ -381,12 +381,18 @@
     .home{
         header {
             .overlay{
-                @include home-bg;
+                @include home-bg;                
+                .overlay-content .mega-menu .megamenu-item.active h5 a{
+                    color: #5d9fea;
+                }
+                .container{
+                    position: relative;
+                }
             }
         }
         h1{
             color: #fff;
-            max-width: 280px;
+            max-width: 320px;
             font-size: 40px;
             font-weight: normal;
             line-height: 50px;
@@ -450,7 +456,10 @@
     .how-we-work{
         header {
             .overlay{
-                @include hw-bg;
+                @include hw-bg;              
+                .overlay-content .mega-menu .megamenu-item.active h5 a{
+                    color: #448cef;
+                }
             }
         }
         footer{
@@ -468,7 +477,10 @@
     .industry{
         header {
             .overlay{
-                @include industry-bg;
+                @include industry-bg;               
+                .overlay-content .mega-menu .megamenu-item.active h5 a{
+                    color: #f53437;
+                }
             }
         }
         .testimonial{
@@ -512,7 +524,10 @@
     .business-area{
         header {
             .overlay{
-                @include business-area-bg;
+                @include business-area-bg;             
+                .overlay-content .mega-menu .megamenu-item.active h5 a{
+                    color: #4b96fb;
+                }
             }
         }
         .testimonial{
@@ -556,7 +571,10 @@
     .products{
         header {
             .overlay{
-                @include products-bg;
+                @include products-bg;             
+                .overlay-content .mega-menu .megamenu-item.active h5 a{
+                    color: #412a6d;
+                }
             }
         }
         .products-bg:nth-child(1) p{
@@ -590,12 +608,15 @@
         }
     }
 
-    /*************************** products *****************************/
+    /*************************** brand-managers *****************************/
     
     .brand-managers{
         header {
             .overlay{
-                @include brand-mng-bg;
+                @include brand-mng-bg;             
+                .overlay-content .mega-menu .megamenu-item.active h5 a{
+                    color: #ec8eab;
+                }
             }
         }
         .pagination{
@@ -630,7 +651,10 @@
     .blog{
         header {
             .overlay{
-                @include blog-bg;
+                @include blog-bg;             
+                .overlay-content .mega-menu .megamenu-item.active h5 a{
+                    color: #7bc7f1;
+                }
             }
         }
         footer{
@@ -649,6 +673,9 @@
         header {
             .overlay{
                 @include about-bg;
+                .overlay-content .mega-menu .megamenu-item.active h5 a{
+                    color: #7bc7f1;
+                }
             }
         }
         h1{
@@ -777,6 +804,9 @@
         header {
             .overlay{
                 @include contact-bg;
+                .overlay-content .mega-menu .megamenu-item.active h5 a{
+                    color: #f54548;
+                }
             }
         }
         h1{
@@ -988,7 +1018,7 @@
                 height: 120px;
             }
             img {
-                width: 80px;
+                width: 100px;
                 @include mobile-max{
                     width: 50px;
                 }
@@ -1646,7 +1676,7 @@
                     width: 100%;
                     height: 100%;
                     z-index: 1;
-                    opacity: 0.3;
+                    opacity: 1;
                     background-image: url(../../assets/images/play.png);
                     background-repeat: no-repeat;
                     background-position: 50%;
@@ -1746,7 +1776,14 @@
             padding: 20px;
             margin: 0 auto 40px auto;
             width: 90%;
-            @include box-shadow-07;
+            overflow: hidden;
+            @include box-shadow-hw;
+            img{
+                max-width: 300px;
+                @include tablet-max{
+                    max-width: 100%;
+                }
+            }
             &:last-child{
                 margin-bottom: 0;
             }

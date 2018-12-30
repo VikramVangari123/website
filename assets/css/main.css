@@ -397,7 +397,7 @@
 }
 
 body {
-  font-size: 15px;
+  font-size: 16px;
   font-family: "Roboto", sans-serif;
   color: #808285;
   line-height: 26px;
@@ -520,6 +520,10 @@ h1, h2 {
 
 .upper-case {
   text-transform: uppercase;
+}
+
+.hidden {
+  display: none !important;
 }
 
 @media (min-width: 1281px) {
@@ -763,15 +767,15 @@ header .overlay a:hover, header .overlay a:focus {
 }
 header .overlay .closebtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 50px;
+  top: 21px;
+  right: 15px;
+  font-size: 45px;
 }
 @media (max-height: 450px) {
   header .overlay .closebtn {
     font-size: 40px;
     top: 15px;
-    right: 35px;
+    right: 15px;
   }
 }
 @media (max-width: 767px) {
@@ -1095,10 +1099,14 @@ header .overlay .overlay-content {
 }
 
 .section-in {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
+}
+@media (min-width: 1025px) {
+  .section-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (max-width: 1024px) {
   .section-in {
@@ -1111,10 +1119,10 @@ header .overlay .overlay-content {
     display: flex !important;
     flex-flow: column-reverse;
   }
-}
-.section-in.flex-col-rev .right60, .section-in.flex-col-rev .right50 {
-  margin-top: 0;
-  margin-bottom: 30px;
+  .section-in.flex-col-rev .right60, .section-in.flex-col-rev .right50 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
 }
 
 h2 {
@@ -1510,9 +1518,15 @@ nav.nav-split:hover svg.icon {
   background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
   background-position: center;
 }
+.home header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #5d9fea;
+}
+.home header .overlay .container {
+  position: relative;
+}
 .home h1 {
   color: #fff;
-  max-width: 280px;
+  max-width: 320px;
   font-size: 40px;
   font-weight: normal;
   line-height: 50px;
@@ -1574,6 +1588,9 @@ nav.nav-split:hover svg.icon {
   background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
   background-position: center;
 }
+.how-we-work header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #448cef;
+}
 .how-we-work footer .footer-top {
   background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
   background-position: center;
@@ -1587,6 +1604,9 @@ nav.nav-split:hover svg.icon {
 .industry header .overlay {
   background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
   background-position: center;
+}
+.industry header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #f53437;
 }
 .industry .testimonial .pagination span.current {
   box-shadow: none;
@@ -1620,6 +1640,9 @@ nav.nav-split:hover svg.icon {
   background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
   background-position: center;
 }
+.business-area header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #4b96fb;
+}
 .business-area .testimonial .pagination span.current {
   box-shadow: none;
   background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
@@ -1652,6 +1675,9 @@ nav.nav-split:hover svg.icon {
   background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
   background-position: center;
 }
+.products header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #412a6d;
+}
 .products .products-bg:nth-child(1) p {
   color: #fff;
   font-size: 18px;
@@ -1679,10 +1705,13 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 
-/*************************** products *****************************/
+/*************************** brand-managers *****************************/
 .brand-managers header .overlay {
   background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
   background-position: center;
+}
+.brand-managers header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #ec8eab;
 }
 .brand-managers .pagination span.current {
   box-shadow: none;
@@ -1712,6 +1741,9 @@ nav.nav-split:hover svg.icon {
   background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
   background-position: center;
 }
+.blog header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #7bc7f1;
+}
 .blog footer .footer-top {
   background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
   background-position: center;
@@ -1725,6 +1757,9 @@ nav.nav-split:hover svg.icon {
 .about header .overlay {
   background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
   background-position: center;
+}
+.about header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #7bc7f1;
 }
 .about h1 {
   color: #fff;
@@ -1852,6 +1887,9 @@ nav.nav-split:hover svg.icon {
 .contact header .overlay {
   background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
   background-position: center;
+}
+.contact header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #f54548;
 }
 .contact h1 {
   color: #fff;
@@ -2070,7 +2108,7 @@ nav.nav-split:hover svg.icon {
   }
 }
 .testimonial .testi-in .testi-img img {
-  width: 80px;
+  width: 100px;
 }
 @media (max-width: 767px) {
   .testimonial .testi-in .testi-img img {
@@ -2807,7 +2845,7 @@ nav.nav-split:hover svg.icon {
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity: 0.3;
+  opacity: 1;
   background-image: url(../../assets/images/play.png);
   background-repeat: no-repeat;
   background-position: 50%;
@@ -2925,8 +2963,17 @@ nav.nav-split:hover svg.icon {
   padding: 20px;
   margin: 0 auto 40px auto;
   width: 90%;
-  -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.12), 0px 6px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.12), 0px 6px 12px rgba(0, 0, 0, 0.08);
+}
+.hw-panel .hw-panel-in img {
+  max-width: 300px;
+}
+@media (max-width: 1024px) {
+  .hw-panel .hw-panel-in img {
+    max-width: 250px;
+  }
 }
 .hw-panel .hw-panel-in:last-child {
   margin-bottom: 0;

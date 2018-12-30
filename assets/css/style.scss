@@ -114,6 +114,9 @@ h1, h2{
 .upper-case{
   text-transform: uppercase;
 }
+.hidden {
+  display: none !important;
+}
 .container{
   @include desktop{
     max-width: 1251px;
@@ -291,13 +294,13 @@ header {
     }
     .closebtn {
       position: absolute;
-      top: 20px;
-      right: 45px;
-      font-size: 50px;
+      top: 21px;
+      right: 15px;
+      font-size: 45px;
       @include max-height450px{
         font-size: 40px;
         top: 15px;
-        right: 35px;
+        right: 15px;
       }
       @include mobile-max{
         top: 6px;
