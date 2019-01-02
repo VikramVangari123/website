@@ -1746,42 +1746,6 @@ nav.nav-split:hover svg.icon {
 .about header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .about header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
   color: #7bc7f1;
 }
-.about h1 {
-  color: #fff;
-  max-width: 280px;
-  font-size: 40px;
-  font-weight: normal;
-  line-height: 50px;
-  position: relative;
-}
-.about h1:before {
-  content: "";
-  background: #fff;
-  height: 2px;
-  width: 200px;
-  position: absolute;
-  top: -25px;
-  left: 0;
-}
-@media (max-width: 1024px) {
-  .about h1:before {
-    content: none;
-  }
-}
-.about h1:after {
-  content: "";
-  background: #fff;
-  height: 2px;
-  width: 200px;
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-}
-@media (max-width: 1024px) {
-  .about h1:after {
-    content: none;
-  }
-}
 .about .member-profile {
   width: 33.333%;
   text-align: center;
@@ -1868,49 +1832,13 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 
-/*************************** about *****************************/
+/*************************** contact *****************************/
 .contact header .overlay {
   background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
   background-position: center;
 }
 .contact header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #f54548;
-}
-.contact h1 {
-  color: #fff;
-  max-width: 280px;
-  font-size: 40px;
-  font-weight: normal;
-  line-height: 50px;
-  position: relative;
-}
-.contact h1:before {
-  content: "";
-  background: #fff;
-  height: 2px;
-  width: 200px;
-  position: absolute;
-  top: -25px;
-  left: 0;
-}
-@media (max-width: 1024px) {
-  .contact h1:before {
-    content: none;
-  }
-}
-.contact h1:after {
-  content: "";
-  background: #fff;
-  height: 2px;
-  width: 200px;
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-}
-@media (max-width: 1024px) {
-  .contact h1:after {
-    content: none;
-  }
 }
 .contact .contact-block .title {
   justify-content: center;

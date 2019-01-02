@@ -733,38 +733,6 @@
                 }
             }
         }
-        h1{
-            color: #fff;
-            max-width: 280px;
-            font-size: 40px;
-            font-weight: normal;
-            line-height: 50px;
-            position: relative;
-            &:before{
-                content: '';
-                background: #fff;
-                height: 2px;
-                width: 200px;
-                position: absolute;
-                top: -25px;
-                left: 0;
-                @include tablet-max{
-                    content:  none;
-                }
-            }
-            &:after{
-                content: '';
-                background: #fff;
-                height: 2px;
-                width: 200px;
-                position: absolute;
-                bottom: -25px;
-                left: 0;
-                @include tablet-max{
-                    content: none;
-                }
-            }
-        }
         .member-profile{
             width: 33.333%;
             text-align: center;
@@ -853,7 +821,7 @@
         }
     }
 
-    /*************************** about *****************************/
+    /*************************** contact *****************************/
     
     .contact{
         header {
@@ -861,38 +829,6 @@
                 @include contact-bg;
                 .overlay-content .mega-menu .megamenu-item.active h5 a{
                     color: #f54548;
-                }
-            }
-        }
-        h1{
-            color: #fff;
-            max-width: 280px;
-            font-size: 40px;
-            font-weight: normal;
-            line-height: 50px;
-            position: relative;
-            &:before{
-                content: '';
-                background: #fff;
-                height: 2px;
-                width: 200px;
-                position: absolute;
-                top: -25px;
-                left: 0;
-                @include tablet-max{
-                    content:  none;
-                }
-            }
-            &:after{
-                content: '';
-                background: #fff;
-                height: 2px;
-                width: 200px;
-                position: absolute;
-                bottom: -25px;
-                left: 0;
-                @include tablet-max{
-                    content: none;
                 }
             }
         }
