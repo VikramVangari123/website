@@ -983,27 +983,30 @@ header .overlay .overlay-content {
   }
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in {
     display: inline-block;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.2);
     padding: 0px;
     margin-right: 20px;
     position: relative;
+    vertical-align: top;
   }
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a {
     font-size: 16px;
     height: 180px;
     width: 180px;
+    display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    justify-content: center;
   }
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a img {
     margin: 0px;
-    width: 100%;
-    height: 100%;
+    -webkit-transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
   }
-  header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a:hover {
+  header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a:hover img {
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
     transform: scale(1.05);
-    -webkit-transition: transform 0.2s ease-in-out;
-    transition: transform 0.2s ease-in-out;
   }
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div {
     position: relative;
@@ -1021,7 +1024,7 @@ header .overlay .overlay-content {
     color: #fff;
     position: absolute;
     bottom: 5px;
-    left: 10px;
+    text-align: center;
   }
   header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub, header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub {
     display: block;
@@ -1518,6 +1521,9 @@ nav.nav-split:hover svg.icon {
 .home header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #5d9fea;
 }
+.home header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .home header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #5d9fea;
+}
 .home header .overlay .container {
   position: relative;
 }
@@ -1569,6 +1575,9 @@ nav.nav-split:hover svg.icon {
 .industry header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #f53437;
 }
+.industry header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .industry header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #f53437;
+}
 .industry .testimonial .pagination span.current {
   box-shadow: none;
   background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
@@ -1602,6 +1611,9 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 .business-area header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #4b96fb;
+}
+.business-area header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .business-area header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
   color: #4b96fb;
 }
 .business-area .testimonial .pagination span.current {
@@ -1639,6 +1651,9 @@ nav.nav-split:hover svg.icon {
 .products header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #412a6d;
 }
+.products header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .products header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #412a6d;
+}
 .products .products-bg:nth-child(1) p {
   color: #fff;
   font-size: 18px;
@@ -1674,6 +1689,9 @@ nav.nav-split:hover svg.icon {
 .brand-managers header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #ec8eab;
 }
+.brand-managers header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .brand-managers header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #ec8eab;
+}
 .brand-managers .pagination span.current {
   box-shadow: none;
   background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
@@ -1705,6 +1723,9 @@ nav.nav-split:hover svg.icon {
 .blog header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #7bc7f1;
 }
+.blog header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .blog header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #7bc7f1;
+}
 .blog footer .footer-top {
   background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
   background-position: center;
@@ -1720,6 +1741,9 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 .about header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #7bc7f1;
+}
+.about header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .about header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
   color: #7bc7f1;
 }
 .about h1 {
@@ -2623,7 +2647,7 @@ nav.nav-split:hover svg.icon {
 }
 .brands ul li span img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
   .brands ul li span {

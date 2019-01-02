@@ -24,7 +24,7 @@ $(function() {
         });
 
         $(".openNav").click(function(){
-            $('.active').removeClass("active");                    
+            $('.mega-menu .active').removeClass("active");                    
             $('.active-submenu').removeClass("active-submenu");      
         });
     }   
@@ -57,7 +57,7 @@ $(function() {
             // testimonial (window width leass than 479px)
         if ($(window).innerWidth() <= 479) {
             var sliderblockHeight = $('.sliderblock-cont').height();
-            $('.slider1').css('height', (sliderblockHeight + 190) + 'px');
+            $('.slider1').css('height', (sliderblockHeight + 230) + 'px');
         } else {
             var sliderblockHeight = $('.sliderblock-cont').height();
             $('.slider1').css('height', (sliderblockHeight + 180) + 'px');

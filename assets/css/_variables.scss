@@ -13,24 +13,13 @@ $primary-background: #f6f6f6;
 $lineheight-normal: 26px;
 $lineheightMedium: 1.5;
 
-@mixin gradient-bg1{    
-    background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
-}
-@mixin gradient-bg3{    
-    background-image: linear-gradient(to right, #4cb8c4 0%, #3cd3ad 100%);
-}
-@mixin gradient-bg4{    
-    background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
-}
-@mixin gradient-bg6{    
-    background-image: linear-gradient(to right, #a8c4fd 0%, #f1848d 100%);
-}
-@mixin gradient-bg7{    
-    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
-}
-@mixin gradient-bg8{    
-    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
-}
+$home-menu-active: #5d9fea;
+$industry-menu-active: #f53437;
+$business-area-menu-active: #4b96fb;
+$products-menu-active: #412a6d;
+$brand-managers-menu-active: #ec8eab;
+$blog-menu-active: #7bc7f1;
+$about-menu-active: #7bc7f1; 
 
 @mixin home-bg{    
     background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);

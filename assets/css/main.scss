@@ -395,7 +395,14 @@
             .overlay{
                 @include home-bg;                
                 .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: #5d9fea;
+                    color: $home-menu-active;
+                }              
+                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
+                    &:hover, &.active{
+                        p{
+                            color: $home-menu-active;
+                        }
+                    }
                 }
                 .container{
                     position: relative;
@@ -483,9 +490,16 @@
     .industry{
         header {
             .overlay{
-                @include industry-bg;               
+                @include industry-bg;             
                 .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: #f53437;
+                    color: $industry-menu-active;
+                }              
+                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
+                    &:hover, &.active{
+                        p{
+                            color: $industry-menu-active;
+                        }
+                    }
                 }
             }
         }
@@ -530,9 +544,16 @@
     .business-area{
         header {
             .overlay{
-                @include business-area-bg;             
+                @include business-area-bg;      
                 .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: #4b96fb;
+                    color: $business-area-menu-active;
+                }              
+                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
+                    &:hover, &.active{
+                        p{
+                            color: $business-area-menu-active;
+                        }
+                    }
                 }
             }
         }
@@ -577,9 +598,16 @@
     .products{
         header {
             .overlay{
-                @include products-bg;             
+                @include products-bg;      
                 .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: #412a6d;
+                    color: $products-menu-active;
+                }              
+                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
+                    &:hover, &.active{
+                        p{
+                            color: $products-menu-active;
+                        }
+                    }
                 }
             }
         }
@@ -619,9 +647,16 @@
     .brand-managers{
         header {
             .overlay{
-                @include brand-mng-bg;             
+                @include brand-mng-bg;  
                 .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: #ec8eab;
+                    color: $brand-managers-menu-active;
+                }              
+                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
+                    &:hover, &.active{
+                        p{
+                            color: $brand-managers-menu-active;
+                        }
+                    }
                 }
             }
         }
@@ -657,9 +692,16 @@
     .blog{
         header {
             .overlay{
-                @include blog-bg;             
+                @include blog-bg; 
                 .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: #7bc7f1;
+                    color: $blog-menu-active;
+                }              
+                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
+                    &:hover, &.active{
+                        p{
+                            color: $blog-menu-active;
+                        }
+                    }
                 }
             }
         }
@@ -680,7 +722,14 @@
             .overlay{
                 @include about-bg;
                 .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: #7bc7f1;
+                    color: $about-menu-active;
+                }              
+                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
+                    &:hover, &.active{
+                        p{
+                            color: $about-menu-active;
+                        }
+                    }
                 }
             }
         }
@@ -1514,7 +1563,7 @@
                     }
                     img{
                         width: 100%;
-                        height: 100%;
+                        height: auto;
                     }
                     @include laptop{
                         width: 130px;

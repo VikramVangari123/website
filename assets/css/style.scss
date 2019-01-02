@@ -525,22 +525,24 @@ header {
                 left: 0;
                 .megamenu-tabH-in {
                   display: inline-block;
-                  background: #fff;
+                  background: rgba(255, 255, 255, 0.2);
                   padding: 0px;
                   margin-right: 20px;
                   position: relative;
+                  vertical-align: top;
                   a{
                     font-size: 16px;
                     height: 180px;
                     width: 180px;
+                    @include flex;
                     img {
                       margin: 0px;
-                      width: 100%;
-                      height: 100%;
+                      @include transition;
                     }
                     &:hover{
-                      @include image-scale;
-                      @include transition;
+                      img{
+                        @include image-scale;
+                      }                      
                     }
                   }
                 }
@@ -561,7 +563,7 @@ header {
                 color: $white;
                 position: absolute;
                 bottom: 5px;
-                left: 10px;
+                text-align: center;
               }
             }   
           }
