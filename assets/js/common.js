@@ -45,26 +45,21 @@ $(function() {
 
         // testimonial 
         var sliderblockHeight = $('.sliderblock-cont').height();
-        $('.slide').css('height', (sliderblockHeight + 100) + 'px');
         $('.slider1').css('height', (sliderblockHeight + 180) + 'px');
             // testimonial (window width leass than 767px)
         if ($(window).innerWidth() <= 767) {
             var sliderblockHeight = $('.sliderblock-cont').height();
-            $('.slide').css('height', (sliderblockHeight + 100) + 'px');
             $('.slider1').css('height', (sliderblockHeight + 240) + 'px');
         } else {
             var sliderblockHeight = $('.sliderblock-cont').height();
-            $('.slide').css('height', (sliderblockHeight + 100) + 'px');
             $('.slider1').css('height', (sliderblockHeight + 180) + 'px');
         }
             // testimonial (window width leass than 479px)
         if ($(window).innerWidth() <= 479) {
             var sliderblockHeight = $('.sliderblock-cont').height();
-            $('.slide').css('height', (sliderblockHeight + 100) + 'px');
             $('.slider1').css('height', (sliderblockHeight + 190) + 'px');
         } else {
             var sliderblockHeight = $('.sliderblock-cont').height();
-            $('.slide').css('height', (sliderblockHeight + 100) + 'px');
             $('.slider1').css('height', (sliderblockHeight + 180) + 'px');
         }
 

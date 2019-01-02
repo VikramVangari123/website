@@ -32,16 +32,16 @@
 	width: 50%;
     z-index: 2;
     &::after {
-        background-color: transparent;
-        border: 3px solid $primary-color;
+        background-color: #fff;
+        border: 3px solid #ff7864;
         border-radius: 50%;
         content: '';
-        height: 40px;
+        height: 20px;
         position: absolute;
         right: -10px;
         transform: translateY(-50%);
         top: 50%;
-        width: 40px;
+        width: 20px;
         z-index: 1;
     }
     &.animated {
@@ -51,21 +51,6 @@
     }
     &.fadeIn {
         animation-name: fadeIn;
-    }
-    .timeline-icon{
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        bottom: -28px;
-        background: #fff;
-        text-align: center;
-        img{
-            width: 22px;
-            height: 22px;;
-        }
     }
 }
 
@@ -107,7 +92,7 @@
     border-radius: 10px;
     color: #333;
 	display: block;
-	padding: 15px;
+	padding: 12px;
     position: relative;
     &::before,
     &::after {
@@ -173,7 +158,7 @@
     .timeline__item {
         display:  inline-block;
         left:0;
-        padding: 0 5px 40px;
+        padding: 0 5px 30px;
         position: relative;
         transition: none;
         vertical-align: top;
@@ -214,7 +199,7 @@
             top: 100%;
         }
         &--bottom {
-            padding: 40px 5px 0;
+            padding: 30px 5px 0;
             &::after {
                 top: 0;
             }
@@ -243,7 +228,7 @@
 
 .timeline-nav-button {
     @include about-bg;
-    border: 1px solid $primary-color;
+    border: 1px solid #FF9966;
 	border-radius: 50px;
     box-sizing:border-box;
 	box-shadow: none;
