@@ -64,15 +64,15 @@ $about-menu-active: #7bc7f1;
 }
 
 @mixin business-area-bg{    
-    background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+    background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
     background-position: center;
 }
 @mixin business-area-bg2{    
-    background-image: linear-gradient(to right, #87e5eb 0%, #5093ef 100%);
+    background-image: linear-gradient(to right, #5fc3cc 0%, #3ff1c4 100%);
     background-position: center;
 }
 @mixin business-area-text-bg{
-	background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+	background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -309,6 +309,11 @@ $about-menu-active: #7bc7f1;
 ##Device = Low Resolution Tablets, Mobiles (Landscape)
 ##Screen = B/w 481px to 767px
 */
+@mixin mobile-tablet {
+    @media (min-width: 480px) and (max-width: 1024px) {
+        @content;
+    }
+}
 @mixin mobile {
     @media (min-width: 480px) and (max-width: 767px) {
         @content;

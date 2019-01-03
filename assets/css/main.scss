@@ -396,6 +396,7 @@
                 @include home-bg;                
                 .overlay-content .mega-menu .megamenu-item.active h5 a{
                     color: $home-menu-active;
+                    font-weight: bold;
                 }              
                 .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
                     &:hover, &.active{
@@ -733,9 +734,25 @@
                 }
             }
         }
+        .our-team{
+            .section-in{
+                @include mobile-tablet{
+                    display: flex !important;
+                }                 
+            }
+        }
         .member-profile{
             width: 33.333%;
             text-align: center;
+            @include smartphone{
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            &:last-child{
+                @include smartphone{
+                    margin-bottom: 0px;
+                }
+            }
             .member-thumb {
                 width: 180px;
                 height: 180px;
@@ -743,6 +760,10 @@
                 border-radius: 50%;
                 overflow: hidden;
                 @include box-shadow-team;
+                @include mobile-tablet{
+                    width: 145px;
+                    height: 145px;
+                }   
                 img{
                     width: 100%;
                     height: 100%;
@@ -751,6 +772,11 @@
             .member-info{
                 margin-top: 20px;
                 color: #000;
+                h3{                    
+                    @include mobile-tablet{
+                        font-size: 20px;
+                    }   
+                }
                 .designation {
                     margin: 5px 0;
                 }
@@ -788,7 +814,15 @@
             .cv-panel {
                 width: calc(100% / 3 - 3px);
                 padding: 17px 15px;
-                @include inline-block;
+                @include inline-block;              
+                @include mobile-max{
+                    width: 100%;
+                }
+                &:last-child{
+                    @include mobile-max{
+                        padding-bottom: 0 !important;
+                    } 
+                }
                 .cv-panel-in{
                     @include box-shadow;
                     padding: 15px;
@@ -807,6 +841,15 @@
                     }
                     .desc{
                         margin-top: 15px;
+                    }
+                    @include laptop{
+                        height: 200px;
+                    }
+                    @include tablet{
+                        height: 250px;
+                    }                    
+                    @include mobile-max{
+                        height: auto;
                     }
                 }
             }
@@ -1655,9 +1698,10 @@
                     }
                 }
                 video{
-                    @include box-shadow;
+                    @include box-shadow-team;
                     @include transition;
                     object-fit: initial;
+                    border-radius: 5px;
                 }
                 &:after{
                     content: " ";
@@ -1780,8 +1824,12 @@
             &:last-child{
                 margin-bottom: 0;
             }
-            @include mobile-max{
+            @include tablet-max{
                 height: auto !important;
+            }
+            @include smartphone{
+                padding: 15px;
+                width: 95%;
             }
         }
     }

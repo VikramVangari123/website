@@ -7,7 +7,7 @@
         box-sizing: inherit;
     }
     &:not(.timeline--horizontal)::before {
-        background-color: #DDD;
+        @include about-bg;
         bottom: 0;
         content: '';
         left: 50%;
@@ -280,8 +280,8 @@
     }
     .timeline__item {
         left: 0;
-        padding-left: 40px;
-        padding-right: 0;
+        padding-left: 35px;
+        padding-right: 4px;
         width: 100%;
         &::after {
             left: 2px;
@@ -294,6 +294,9 @@
                 border-right: 12px solid #CCC; 
                 border-left: none;
                 border-top: 12px solid transparent;
+                @include mobile-max {
+                    border-right: 12px solid #f7f7f7; 
+                }
             }
             &::after {
                 left: -10px;
