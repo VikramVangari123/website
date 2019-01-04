@@ -196,7 +196,7 @@ $about-menu-active: #7bc7f1;
     -webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.12), 0px 6px 12px rgba(0,0,0,0.08);
     box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.12), 0px 6px 12px rgba(0,0,0,0.08);
 }
-@mixin box-shadow-team{    
+@mixin box-shadow-profileimg{    
     -webkit-box-shadow: 0 10px 12px -4px rgba(0,0,0,.3);
     box-shadow: 0 10px 12px -4px rgba(0,0,0,.3);
 }
@@ -216,6 +216,10 @@ $about-menu-active: #7bc7f1;
 @mixin rotate360{    
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
+}
+@mixin ellipsis{    
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 @mixin zoomin{
     -webkit-animation-name: zoomIn;
@@ -274,6 +278,12 @@ $about-menu-active: #7bc7f1;
 @media (min-width: 1025px) and (max-width: 1280px) {
     @content;
 }
+}
+
+@mixin laptop-max {
+    @media (max-width: 1279px) {
+        @content;
+    }
 }
 
 /* 
