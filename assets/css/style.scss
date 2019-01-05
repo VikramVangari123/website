@@ -289,9 +289,6 @@ header {
       @include mobile-max{
         padding:0;
       }
-      &:hover, &:focus {
-        color: $link-color-hover;
-      }
     }
     .closebtn {
       position: absolute;
@@ -342,9 +339,6 @@ header {
             a{
               width: calc(100% - 50px);
               padding: 10px;
-              &:hover {
-                color: $link-color-hover;
-              }
             }
           }
           .sub-menu-arrow{
@@ -352,9 +346,6 @@ header {
             top: 0;
             right: 0;
             text-align: center;
-            &:hover{
-              color: $link-color-hover;
-            }
             &:before{
                 content: '+';
                 width: 50px;
@@ -371,7 +362,6 @@ header {
               .sub-menu-arrow{
                 &:before{
                     content: '\2212';
-                    color: $primary-color;
                 }
               }
             }
@@ -403,7 +393,6 @@ header {
                   .sub-menu-arrow{
                     &:before{
                         content: '\2212';
-                        color: $primary-color;
                     }
                   }
                   .megamenu-tabH{
@@ -451,11 +440,6 @@ header {
                 font-size: 17px;
               }
             }   
-          }
-          &:hover, &.active{
-            h5 a{
-              color: $link-color-hover;
-            }
           }     
         } 
       }

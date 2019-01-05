@@ -1589,7 +1589,10 @@
         .post-left, .post-right-top, .post-right-btm {
             background: #eeeeee;
             position: relative;
-            background-image: url(../../assets/images/bg.jpg);
+            .post-img{
+                overflow: hidden;
+                height: 100%;
+            }
             &:after{
                 content: ' ';
                 display: block;
@@ -1600,7 +1603,6 @@
                 height: 100%;
                 z-index: 1;
                 opacity: 0.3;
-                background-image: url('../../assets/images/placeholder.png');
                 background-repeat: no-repeat;
                 background-position: 50%;
                 // -ms-background-size: cover;

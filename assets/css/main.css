@@ -754,9 +754,6 @@ header .overlay a {
     padding: 0;
   }
 }
-header .overlay a:hover, header .overlay a:focus {
-  color: #f5333f;
-}
 header .overlay .closebtn {
   position: absolute;
   top: 21px;
@@ -816,17 +813,11 @@ header .overlay .overlay-content {
     width: calc(100% - 50px);
     padding: 10px;
   }
-  header .overlay .overlay-content .mega-menu .megamenu-item h5 a:hover {
-    color: #f5333f;
-  }
   header .overlay .overlay-content .mega-menu .megamenu-item .sub-menu-arrow {
     position: absolute;
     top: 0;
     right: 0;
     text-align: center;
-  }
-  header .overlay .overlay-content .mega-menu .megamenu-item .sub-menu-arrow:hover {
-    color: #f5333f;
   }
   header .overlay .overlay-content .mega-menu .megamenu-item .sub-menu-arrow:before {
     content: "+";
@@ -840,7 +831,6 @@ header .overlay .overlay-content {
   }
   header .overlay .overlay-content .mega-menu .megamenu-item.active-submenu h5 .sub-menu-arrow:before {
     content: "−";
-    color: #f5333f;
   }
   header .overlay .overlay-content .mega-menu .megamenu-item.active-submenu .megamenu-sub {
     display: block;
@@ -870,7 +860,6 @@ header .overlay .overlay-content {
   }
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu li.active-submenu .sub-menu-arrow:before {
     content: "−";
-    color: #f5333f;
   }
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu li.active-submenu .megamenu-tabH {
     display: block;
@@ -913,9 +902,6 @@ header .overlay .overlay-content {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div p {
     display: block;
     font-size: 17px;
-  }
-  header .overlay .overlay-content .mega-menu .megamenu-item:hover h5 a, header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
-    color: #f5333f;
   }
 }
 @media (min-width: 768px) {
@@ -2687,7 +2673,10 @@ nav.nav-split:hover svg.icon {
 .post-grid .post-left, .post-grid .post-right-top, .post-grid .post-right-btm {
   background: #eeeeee;
   position: relative;
-  background-image: url(../../assets/images/bg.jpg);
+}
+.post-grid .post-left .post-img, .post-grid .post-right-top .post-img, .post-grid .post-right-btm .post-img {
+  overflow: hidden;
+  height: 100%;
 }
 .post-grid .post-left:after, .post-grid .post-right-top:after, .post-grid .post-right-btm:after {
   content: " ";
@@ -2699,7 +2688,6 @@ nav.nav-split:hover svg.icon {
   height: 100%;
   z-index: 1;
   opacity: 0.3;
-  background-image: url("../../assets/images/placeholder.png");
   background-repeat: no-repeat;
   background-position: 50%;
 }
