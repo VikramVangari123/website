@@ -1476,6 +1476,12 @@
                 display: block;
                 width: 140px;
                 margin: 0 auto 40px;
+                img{
+                    @include transition;
+                    &:hover{
+                        @include image-scale;
+                    }                    
+                }
                 @include smartphone{
                     min-width: 100px;
                     width: 100px;

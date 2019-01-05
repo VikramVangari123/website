@@ -2542,6 +2542,15 @@ nav.nav-split:hover svg.icon {
   width: 140px;
   margin: 0 auto 40px;
 }
+.download-app .download-links a img {
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+.download-app .download-links a img:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  transform: scale(1.05);
+}
 @media (max-width: 479px) {
   .download-app .download-links a {
     min-width: 100px;
