@@ -9,6 +9,7 @@ $link-color-hover: #f5333f;
 $placeholder: #808285;
 $white: #fff;
 $black: #989898;
+$black0: #383838;
 $primary-background: #f6f6f6;
 $lineheight-normal: 26px;
 $lineheightMedium: 1.5;
@@ -19,7 +20,7 @@ $business-area-menu-active: #4b96fb;
 $products-menu-active: #412a6d;
 $brand-managers-menu-active: #ec8eab;
 $blog-menu-active: #7bc7f1;
-$about-menu-active: #7bc7f1; 
+$about-menu-active: #7bc7f1;
 
 @mixin home-bg{    
     background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
@@ -218,8 +219,11 @@ $about-menu-active: #7bc7f1;
     -webkit-transform: rotate(360deg);
 }
 @mixin ellipsis{    
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 2!important;
+    -webkit-box-orient: vertical;
 }
 @mixin zoomin{
     -webkit-animation-name: zoomIn;

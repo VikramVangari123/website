@@ -1846,14 +1846,14 @@
     .blog-main{
         ul{
             li{
-                margin-bottom: 34.5px; 
+                margin-bottom: 50px; 
                 @include flex-space-bw;
                 .entry-thumbnail{
                     vertical-align: top;
                     .post-img {
                         display: block;
-                        width: 120px;
-                        height: 120px;                        
+                        width: 160px;
+                        height: 160px;                        
                         margin: 0 auto;
                         overflow: hidden;
                         @include transition;
@@ -1880,30 +1880,16 @@
                         width: calc(100% - 100px); 
                     }
                     h4.post-title {
-                        font-size: 17px;
+                        font-size: 20px;
                         max-height: 52px;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
                         width: 100%;
                         position: relative;
                         margin-top: -5px;
-                        text-align: justify;
-                        margin-right: -1em;
-                        padding-right: 1em;
-                        &:before {
-                            content: '...';
-                            position: absolute;
-                            right: 5px;
-                            bottom: 0;
-                        }
-                        &:after {
-                            content: '';
-                            position: absolute;
-                            right: 0;
-                            width: 1em;
-                            height: 1em;
-                            margin-top: 0.2em;
-                            background: white;
+                        margin-bottom: 20px;
+                        a{
+                            color: $black0;
+                            @include ellipsis;
+                            font-weight: bold;
                         }
                         a{
                             &:hover, &:focus{
@@ -1912,16 +1898,19 @@
                         }
                     }
                     p{
-                        height: 25px;                        
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
+                        height: 25px;     
                         width: 100%;
+                        @include ellipsis;
+                        font-size: 14px;
                     }
                     .post-info{
                         position: absolute;
-                        bottom: -8px;
+                        bottom: -42px;
                         font-size: 13px;
+                        p:nth-child(1){
+                            color: $black0;
+                            font-weight: bold;
+                        }
                     }
                 } 
                 &:last-child{
@@ -2005,13 +1994,15 @@
                     float: none;
                     margin-top: 40px;
                 }
+
             }            
-            @include tablet-max{
+            @include laptop-max{
                 height: auto !important;
             }
             .section-in{
-                @include tablet-max{
+                @include laptop-max{
                     height: auto !important;
+                    display: block;
                 }
             }
             ul {
@@ -2030,8 +2021,8 @@
                             margin-right: 0;
                             padding-right: 0;
                             text-align: left !important;
-                            height: 25px;
-                            white-space: nowrap;
+                            max-height: 25px !important;
+                            margin-bottom: 5px;
                             &:before{
                                 content: none !important;
                             }
@@ -2040,6 +2031,17 @@
                             }
                             & + p{
                                 font-size: 14px;
+                            }
+                            a{
+                                max-height: 25px;
+                                @include ellipsis;
+                            }
+                        }
+                        .post-info{
+                            bottom: -7px;
+                            font-size: 12px;
+                            p:nth-child(1){
+                                margin-bottom: -4px;
                             }
                         }
                     }
@@ -2100,6 +2102,7 @@
                 }
                 ul {
                     li{
+                        margin-bottom: 25px;
                         .entry-thumbnail {
                             .post-img {
                                 width: 80px;
@@ -2109,6 +2112,9 @@
                         .entry-content {
                             height: 80px;
                             width: calc(100% - 80px);
+                        }
+                        .post-info{
+                            bottom: -5px;
                         }
                     }
                 }
