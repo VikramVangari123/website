@@ -17,10 +17,12 @@ $lineheightMedium: 1.5;
 $home-menu-active: #5d9fea;
 $industry-menu-active: #f53437;
 $business-area-menu-active: #4b96fb;
+$hw-menu-active: #448cef;
 $products-menu-active: #412a6d;
-$brand-managers-menu-active: #ec8eab;
-$blog-menu-active: #7bc7f1;
-$about-menu-active: #7bc7f1;
+$brand-mng-menu-active: #ec8eab;
+$blog-menu-active: #653235;
+$about-menu-active: #ef141a;
+$contact-menu-active: #f54548;
 
 @mixin home-bg{    
     background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);

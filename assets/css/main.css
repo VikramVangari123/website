@@ -754,6 +754,9 @@ header .overlay a {
     padding: 0;
   }
 }
+header .overlay .container {
+  position: relative;
+}
 header .overlay .closebtn {
   position: absolute;
   top: 21px;
@@ -1518,9 +1521,6 @@ nav.nav-split:hover svg.icon {
 .home header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .home header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
   color: #5d9fea;
 }
-.home header .overlay .container {
-  position: relative;
-}
 .home .testimonial .pagination span.current {
   box-shadow: none;
   background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
@@ -1551,6 +1551,16 @@ nav.nav-split:hover svg.icon {
 }
 .how-we-work header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #448cef;
+  font-weight: bold;
+}
+.how-we-work header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .how-we-work header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #448cef;
+}
+.how-we-work header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #448cef;
+}
+.how-we-work header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .how-we-work header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
+  color: #448cef;
 }
 .how-we-work footer .footer-top {
   background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
@@ -1568,8 +1578,15 @@ nav.nav-split:hover svg.icon {
 }
 .industry header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #f53437;
+  font-weight: bold;
 }
 .industry header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .industry header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #f53437;
+}
+.industry header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #f53437;
+}
+.industry header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .industry header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
   color: #f53437;
 }
 .industry .testimonial .pagination span.current {
@@ -1606,8 +1623,15 @@ nav.nav-split:hover svg.icon {
 }
 .business-area header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #4b96fb;
+  font-weight: bold;
 }
 .business-area header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .business-area header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #4b96fb;
+}
+.business-area header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #4b96fb;
+}
+.business-area header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .business-area header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
   color: #4b96fb;
 }
 .business-area .testimonial .pagination span.current {
@@ -1644,8 +1668,15 @@ nav.nav-split:hover svg.icon {
 }
 .products header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #412a6d;
+  font-weight: bold;
 }
 .products header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .products header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #412a6d;
+}
+.products header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #412a6d;
+}
+.products header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .products header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
   color: #412a6d;
 }
 .products .products-bg:nth-child(1) p {
@@ -1682,8 +1713,15 @@ nav.nav-split:hover svg.icon {
 }
 .brand-managers header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #ec8eab;
+  font-weight: bold;
 }
 .brand-managers header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .brand-managers header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #ec8eab;
+}
+.brand-managers header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #ec8eab;
+}
+.brand-managers header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .brand-managers header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
   color: #ec8eab;
 }
 .brand-managers .pagination span.current {
@@ -1715,10 +1753,17 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 .blog header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
-  color: #7bc7f1;
+  color: #653235;
+  font-weight: bold;
 }
 .blog header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .blog header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
-  color: #7bc7f1;
+  color: #653235;
+}
+.blog header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #653235;
+}
+.blog header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .blog header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
+  color: #653235;
 }
 .blog footer .footer-top {
   background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
@@ -1735,10 +1780,17 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 .about header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
-  color: #7bc7f1;
+  color: #ef141a;
+  font-weight: bold;
 }
 .about header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .about header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
-  color: #7bc7f1;
+  color: #ef141a;
+}
+.about header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #ef141a;
+}
+.about header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .about header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
+  color: #ef141a;
 }
 @media (min-width: 480px) and (max-width: 1024px) {
   .about .our-team .section-in {
@@ -1885,6 +1937,16 @@ nav.nav-split:hover svg.icon {
 }
 .contact header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #f54548;
+  font-weight: bold;
+}
+.contact header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .contact header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #f54548;
+}
+.contact header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #f54548;
+}
+.contact header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .contact header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
+  color: #f54548;
 }
 .contact .contact-block .title {
   justify-content: center;
@@ -1903,19 +1965,19 @@ nav.nav-split:hover svg.icon {
   position: absolute;
 }
 .contact .contact-block .contact-block-in label.name:before {
-  background: url(../../assets/images/contact/user.png) center/contain no-repeat;
+  background: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/contact/user.png) center/contain no-repeat;
 }
 .contact .contact-block .contact-block-in label.mobile:before {
-  background: url(../../assets/images/contact/mobile.png) center/contain no-repeat;
+  background: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/contact/mobile.png) center/contain no-repeat;
 }
 .contact .contact-block .contact-block-in label.email:before {
-  background: url(../../assets/images/contact/email.png) center/contain no-repeat;
+  background: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/contact/email.png) center/contain no-repeat;
 }
 .contact .contact-block .contact-block-in label.query:before {
-  background: url(../../assets/images/contact/query.png) center/contain no-repeat;
+  background: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/contact/query.png) center/contain no-repeat;
 }
 .contact .contact-block .contact-block-in label.brand-name:before {
-  background: url(../../assets/images/contact/brand.png) center/contain no-repeat;
+  background: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/contact/brand.png) center/contain no-repeat;
 }
 .contact .contact-block .contact-block-in label input, .contact .contact-block .contact-block-in label textarea {
   width: 100%;
@@ -2687,6 +2749,11 @@ nav.nav-split:hover svg.icon {
   overflow: hidden;
   height: 100%;
 }
+.post-grid .post-left .post-img img, .post-grid .post-right-top .post-img img, .post-grid .post-right-btm .post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .post-grid .post-left:after, .post-grid .post-right-top:after, .post-grid .post-right-btm:after {
   content: " ";
   display: block;
@@ -2708,14 +2775,22 @@ nav.nav-split:hover svg.icon {
 }
 .post-grid .post-left .post-cont, .post-grid .post-right-top .post-cont, .post-grid .post-right-btm .post-cont {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 10px;
+  left: 0;
+  right: 0;
+  top: 0;
   z-index: 10;
   color: #fff;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.post-grid .post-left .post-cont .post-cont-in, .post-grid .post-right-top .post-cont .post-cont-in, .post-grid .post-right-btm .post-cont .post-cont-in {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
 }
 @media (max-width: 767px) {
-  .post-grid .post-left .post-cont, .post-grid .post-right-top .post-cont, .post-grid .post-right-btm .post-cont {
+  .post-grid .post-left .post-cont .post-cont-in, .post-grid .post-right-top .post-cont .post-cont-in, .post-grid .post-right-btm .post-cont .post-cont-in {
     left: 15px;
     right: 15px;
   }
@@ -2729,12 +2804,12 @@ nav.nav-split:hover svg.icon {
 .post-grid .post-left .post-cont .post-date, .post-grid .post-right-top .post-cont .post-date, .post-grid .post-right-btm .post-cont .post-date {
   margin-bottom: 15px;
 }
-.post-grid .post-left .post-cont a, .post-grid .post-right-top .post-cont a, .post-grid .post-right-btm .post-cont a {
+.post-grid .post-left .post-cont .read-more, .post-grid .post-right-top .post-cont .read-more, .post-grid .post-right-btm .post-cont .read-more {
   margin-bottom: 0;
   text-decoration: underline;
   color: #fff;
 }
-.post-grid .post-left .post-cont a:hover, .post-grid .post-right-top .post-cont a:hover, .post-grid .post-right-btm .post-cont a:hover {
+.post-grid .post-left .post-cont .read-more:hover, .post-grid .post-right-top .post-cont .read-more:hover, .post-grid .post-right-btm .post-cont .read-more:hover {
   text-decoration: none;
 }
 .post-grid .post-left, .post-grid .post-right {
@@ -2818,7 +2893,7 @@ nav.nav-split:hover svg.icon {
   height: 100%;
   z-index: 1;
   opacity: 1;
-  background-image: url(../../assets/images/play.png);
+  background-image: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/play.png);
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 30px;
@@ -3301,7 +3376,7 @@ nav.nav-split:hover svg.icon {
   border: none;
   margin: 0px;
   height: auto;
-  background: url("../../assets/images/search-icon.png") left center no-repeat white;
+  background: url("https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/search-icon.png") left center no-repeat white;
   background-size: 20px;
   text-indent: 35px;
   outline: none;
@@ -3337,6 +3412,14 @@ nav.nav-split:hover svg.icon {
 }
 .blog-detail h1 a:hover {
   color: #f5333f;
+}
+.blog-detail h2, .blog-detail h3 {
+  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blog-detail ul {
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .blog-detail .flex-col-rev {

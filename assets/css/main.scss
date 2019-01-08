@@ -405,9 +405,6 @@
                         }
                     }
                 }
-                .container{
-                    position: relative;
-                }
             }
         }
         // h1{
@@ -470,9 +467,35 @@
     .how-we-work{
         header {
             .overlay{
-                @include hw-bg;              
-                .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: #448cef;
+                @include hw-bg; 
+                .overlay-content .mega-menu {
+                    .megamenu-item{
+                        &.active{
+                            h5 a{
+                                color: $hw-menu-active;
+                                font-weight: bold;
+                            } 
+                            .megamenu-tabH-in a{                                
+                                &:hover, &.active{
+                                    p{
+                                        color: $hw-menu-active;
+                                    }
+                                }
+                            } 
+                            .megamenu-sub .megamenu-sub-menu li.active a{
+                                color: $hw-menu-active;
+                            }
+                        }
+                        &:hover{
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &.active, &:hover{
+                                    a{
+                                        color: $hw-menu-active; 
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -491,14 +514,33 @@
     .industry{
         header {
             .overlay{
-                @include industry-bg;             
-                .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: $industry-menu-active;
-                }              
-                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
-                    &:hover, &.active{
-                        p{
-                            color: $industry-menu-active;
+                @include industry-bg; 
+                .overlay-content .mega-menu {
+                    .megamenu-item{
+                        &.active{
+                            h5 a{
+                                color: $industry-menu-active;
+                                font-weight: bold;
+                            } 
+                            .megamenu-tabH-in a{                                
+                                &:hover, &.active{
+                                    p{
+                                        color: $industry-menu-active;
+                                    }
+                                }
+                            } 
+                            .megamenu-sub .megamenu-sub-menu li.active a{
+                                color: $industry-menu-active;
+                            }
+                        }
+                        &:hover{
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &.active, &:hover{
+                                    a{
+                                        color: $industry-menu-active; 
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -545,14 +587,33 @@
     .business-area{
         header {
             .overlay{
-                @include business-area-bg;      
-                .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: $business-area-menu-active;
-                }              
-                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
-                    &:hover, &.active{
-                        p{
-                            color: $business-area-menu-active;
+                @include business-area-bg;
+                .overlay-content .mega-menu {
+                    .megamenu-item{
+                        &.active{
+                            h5 a{
+                                color: $business-area-menu-active;
+                                font-weight: bold;
+                            } 
+                            .megamenu-tabH-in a{                                
+                                &:hover, &.active{
+                                    p{
+                                        color: $business-area-menu-active;
+                                    }
+                                }
+                            } 
+                            .megamenu-sub .megamenu-sub-menu li.active a{
+                                color: $business-area-menu-active;
+                            }
+                        }
+                        &:hover{
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &.active, &:hover{
+                                    a{
+                                        color: $business-area-menu-active; 
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -599,14 +660,33 @@
     .products{
         header {
             .overlay{
-                @include products-bg;      
-                .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: $products-menu-active;
-                }              
-                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
-                    &:hover, &.active{
-                        p{
-                            color: $products-menu-active;
+                @include products-bg;
+                .overlay-content .mega-menu {
+                    .megamenu-item{
+                        &.active{
+                            h5 a{
+                                color: $products-menu-active;
+                                font-weight: bold;
+                            } 
+                            .megamenu-tabH-in a{                                
+                                &:hover, &.active{
+                                    p{
+                                        color: $products-menu-active;
+                                    }
+                                }
+                            } 
+                            .megamenu-sub .megamenu-sub-menu li.active a{
+                                color: $products-menu-active;
+                            }
+                        }
+                        &:hover{
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &.active, &:hover{
+                                    a{
+                                        color: $products-menu-active; 
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -648,14 +728,33 @@
     .brand-managers{
         header {
             .overlay{
-                @include brand-mng-bg;  
-                .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: $brand-managers-menu-active;
-                }              
-                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
-                    &:hover, &.active{
-                        p{
-                            color: $brand-managers-menu-active;
+                @include brand-mng-bg; 
+                .overlay-content .mega-menu {
+                    .megamenu-item{
+                        &.active{
+                            h5 a{
+                                color: $brand-mng-menu-active;
+                                font-weight: bold;
+                            } 
+                            .megamenu-tabH-in a{                                
+                                &:hover, &.active{
+                                    p{
+                                        color: $brand-mng-menu-active;
+                                    }
+                                }
+                            } 
+                            .megamenu-sub .megamenu-sub-menu li.active a{
+                                color: $brand-mng-menu-active;
+                            }
+                        }
+                        &:hover{
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &.active, &:hover{
+                                    a{
+                                        color: $brand-mng-menu-active; 
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -693,17 +792,36 @@
     .blog{
         header {
             .overlay{
-                @include blog-bg; 
-                .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: $blog-menu-active;
-                }              
-                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
-                    &:hover, &.active{
-                        p{
-                            color: $blog-menu-active;
+                @include blog-bg;
+                .overlay-content .mega-menu {
+                    .megamenu-item{
+                        &.active{
+                            h5 a{
+                                color: $blog-menu-active;
+                                font-weight: bold;
+                            } 
+                            .megamenu-tabH-in a{                                
+                                &:hover, &.active{
+                                    p{
+                                        color: $blog-menu-active;
+                                    }
+                                }
+                            } 
+                            .megamenu-sub .megamenu-sub-menu li.active a{
+                                color: $blog-menu-active;
+                            }
+                        }
+                        &:hover{
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &.active, &:hover{
+                                    a{
+                                        color: $blog-menu-active; 
+                                    }
+                                }
+                            }
                         }
                     }
-                }
+                } 
             }
         }
         footer{
@@ -722,16 +840,35 @@
         header {
             .overlay{
                 @include about-bg;
-                .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: $about-menu-active;
-                }              
-                .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a{
-                    &:hover, &.active{
-                        p{
-                            color: $about-menu-active;
+                .overlay-content .mega-menu {
+                    .megamenu-item{
+                        &.active{
+                            h5 a{
+                                color: $about-menu-active;
+                                font-weight: bold;
+                            } 
+                            .megamenu-tabH-in a{                                
+                                &:hover, &.active{
+                                    p{
+                                        color: $about-menu-active;
+                                    }
+                                }
+                            } 
+                            .megamenu-sub .megamenu-sub-menu li.active a{
+                                color: $about-menu-active;
+                            }
+                        }
+                        &:hover{
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &.active, &:hover{
+                                    a{
+                                        color: $about-menu-active; 
+                                    }
+                                }
+                            }
                         }
                     }
-                }
+                }  
             }
         }
         .our-team{
@@ -870,9 +1007,35 @@
         header {
             .overlay{
                 @include contact-bg;
-                .overlay-content .mega-menu .megamenu-item.active h5 a{
-                    color: #f54548;
-                }
+                .overlay-content .mega-menu {
+                    .megamenu-item{
+                        &.active{
+                            h5 a{
+                                color: $contact-menu-active;
+                                font-weight: bold;
+                            } 
+                            .megamenu-tabH-in a{                                
+                                &:hover, &.active{
+                                    p{
+                                        color: $contact-menu-active;
+                                    }
+                                }
+                            } 
+                            .megamenu-sub .megamenu-sub-menu li.active a{
+                                color: $contact-menu-active;
+                            }
+                        }
+                        &:hover{
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &.active, &:hover{
+                                    a{
+                                        color: $contact-menu-active; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }   
             }
         }
         .contact-block{
@@ -892,27 +1055,27 @@
                     }
                     &.name{
                         &:before{                            
-                            background: url(../../assets/images/contact/user.png) center/contain no-repeat;
+                            background: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/contact/user.png) center/contain no-repeat;
                         }
                     }
                     &.mobile{
                         &:before{                            
-                            background: url(../../assets/images/contact/mobile.png) center/contain no-repeat;
+                            background: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/contact/mobile.png) center/contain no-repeat;
                         }
                     }
                     &.email{
                         &:before{                            
-                            background: url(../../assets/images/contact/email.png) center/contain no-repeat;
+                            background: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/contact/email.png) center/contain no-repeat;
                         }
                     }
                     &.query{
                         &:before{                            
-                            background: url(../../assets/images/contact/query.png) center/contain no-repeat;
+                            background: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/contact/query.png) center/contain no-repeat;
                         }
                     }
                     &.brand-name{
                         &:before{                            
-                            background: url(../../assets/images/contact/brand.png) center/contain no-repeat;
+                            background: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/contact/brand.png) center/contain no-repeat;
                         }
                     }
                     input, textarea {
@@ -1598,6 +1761,11 @@
             .post-img{
                 overflow: hidden;
                 height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
             &:after{
                 content: ' ';
@@ -1623,14 +1791,22 @@
             }
             .post-cont {
                 position: absolute;
-                bottom: 20px;
-                left: 20px;
-                right: 10px;
+                left: 0;
+                right: 0;
+                top: 0;
                 z-index: 10;
                 color: #fff;
-                @include mobile-max{
-                    left: 15px;
-                    right: 15px;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                .post-cont-in {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 20px;
+                    right: 20px;
+                    @include mobile-max{
+                        left: 15px;
+                        right: 15px;
+                    }
                 }
                 h4{
                     margin-bottom: 8px;
@@ -1641,7 +1817,7 @@
                 .post-date{
                     margin-bottom: 15px;
                 }
-                a{
+                .read-more{
                     margin-bottom: 0;
                     text-decoration: underline;                    
                     color: #fff;
@@ -1721,7 +1897,7 @@
                     height: 100%;
                     z-index: 1;
                     opacity: 1;
-                    background-image: url(../../assets/images/play.png);
+                    background-image: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/play.png);
                     background-repeat: no-repeat;
                     background-position: 50%;
                     background-size: 30px;
@@ -2143,7 +2319,7 @@
                         border: none; 
                         margin: 0px; 
                         height: auto; 
-                        background: url('../../assets/images/search-icon.png') left center no-repeat rgb(255, 255, 255); 
+                        background: url('https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/search-icon.png') left center no-repeat rgb(255, 255, 255); 
                         background-size: 20px;
                         text-indent: 35px; 
                         outline: none;
@@ -2182,6 +2358,12 @@
                     color: $link-color-hover;
                 }
             }
+        }
+        h2, h3{
+            @include blog-text-bg;
+        }
+        ul{
+            margin-bottom: 20px;
         }
         .flex-col-rev{
             @include tablet{
