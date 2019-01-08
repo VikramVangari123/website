@@ -23,6 +23,7 @@ $brand-mng-menu-active: #ec8eab;
 $blog-menu-active: #653235;
 $about-menu-active: #ef141a;
 $contact-menu-active: #f54548;
+$notfound-menu-active: #805eb9;
 
 @mixin home-bg{    
     background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
@@ -148,6 +149,15 @@ $contact-menu-active: #f54548;
 	background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+@mixin notfound-bg{    
+    background-image: linear-gradient(to right, #443164 0%, #24173a 100%);
+    background-position: center;
+}
+@mixin notfound-bg2{    
+    background-image: linear-gradient(to right, #584082 0%, #24173a 100%);
+    background-position: center;
 }
 
 @mixin inline-block{

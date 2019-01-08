@@ -2,6 +2,7 @@
 @import 'variables';
 @import 'timeline';
 @import 'https://fonts.googleapis.com/css?family=Roboto:100,300';
+@import 'https://fonts.googleapis.com/css?family=Just+Another+Hand';
 
 * {
     margin: 0;
@@ -235,6 +236,9 @@ h1, h2{
 }
 .contact-text-bg{
 	@include contact-text-bg;
+}
+.notfound-bg{
+  @include notfound-bg;
 }
 
 /*** header *************************/

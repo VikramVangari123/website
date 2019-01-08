@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import 'https://fonts.googleapis.com/css?family=Roboto:100,300';
+@import 'https://fonts.googleapis.com/css?family=Just+Another+Hand';
 @-webkit-keyframes zoomIn {
   0% {
     opacity: 0;
@@ -690,6 +691,11 @@ h1, h2 {
   background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.notfound-bg {
+  background-image: linear-gradient(to right, #443164 0%, #24173a 100%);
+  background-position: center;
 }
 
 /*** header *************************/
@@ -2004,6 +2010,33 @@ nav.nav-split:hover svg.icon {
 }
 .contact footer .copy-right {
   background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-position: center;
+}
+
+/*************************** contact *****************************/
+.notfound header .overlay {
+  background-image: linear-gradient(to right, #443164 0%, #24173a 100%);
+  background-position: center;
+}
+.notfound header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #805eb9;
+  font-weight: bold;
+}
+.notfound header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .notfound header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #805eb9;
+}
+.notfound header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #805eb9;
+}
+.notfound header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .notfound header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
+  color: #805eb9;
+}
+.notfound footer .footer-top {
+  background-image: linear-gradient(to right, #584082 0%, #24173a 100%);
+  background-position: center;
+}
+.notfound footer .copy-right {
+  background-image: linear-gradient(to right, #443164 0%, #24173a 100%);
   background-position: center;
 }
 
@@ -3670,6 +3703,219 @@ nav.nav-split:hover svg.icon {
   padding-left: 0;
 }
 
+/************** 404 page *******************/
+.notfound-block {
+  padding: 0;
+}
+@-moz-keyframes rocket-movement {
+  100% {
+    -moz-transform: translate(1200px, -600px);
+  }
+}
+@-webkit-keyframes rocket-movement {
+  100% {
+    -webkit-transform: translate(1200px, -600px);
+  }
+}
+@keyframes rocket-movement {
+  100% {
+    transform: translate(1200px, -600px);
+  }
+}
+@-moz-keyframes spin-earth {
+  100% {
+    -moz-transform: rotate(-360deg);
+    transition: transform 20s;
+  }
+}
+@-webkit-keyframes spin-earth {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transition: transform 20s;
+  }
+}
+@keyframes spin-earth {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    transition: transform 20s;
+  }
+}
+@-moz-keyframes move-astronaut {
+  100% {
+    -moz-transform: translate(-160px, -160px);
+  }
+}
+@-webkit-keyframes move-astronaut {
+  100% {
+    -webkit-transform: translate(-160px, -160px);
+  }
+}
+@keyframes move-astronaut {
+  100% {
+    -webkit-transform: translate(-160px, -160px);
+    transform: translate(-160px, -160px);
+  }
+}
+@-moz-keyframes rotate-astronaut {
+  100% {
+    -moz-transform: rotate(-720deg);
+  }
+}
+@-webkit-keyframes rotate-astronaut {
+  100% {
+    -webkit-transform: rotate(-720deg);
+  }
+}
+@keyframes rotate-astronaut {
+  100% {
+    -webkit-transform: rotate(-720deg);
+    transform: rotate(-720deg);
+  }
+}
+@-moz-keyframes glow-star {
+  40% {
+    -moz-opacity: 0.3;
+  }
+  90%, 100% {
+    -moz-opacity: 1;
+    -moz-transform: scale(1.2);
+  }
+}
+@-webkit-keyframes glow-star {
+  40% {
+    -webkit-opacity: 0.3;
+  }
+  90%, 100% {
+    -webkit-opacity: 1;
+    -webkit-transform: scale(1.2);
+  }
+}
+@keyframes glow-star {
+  40% {
+    -webkit-opacity: 0.3;
+    opacity: 0.3;
+  }
+  90%, 100% {
+    -webkit-opacity: 1;
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    border-radius: 999999px;
+  }
+}
+.notfound-block .spin-earth-on-hover {
+  transition: ease 200s !important;
+  transform: rotate(-3600deg) !important;
+}
+.notfound-block .notfound-block-in {
+  width: 100%;
+}
+.notfound-block .notfound-block-in h1 {
+  margin: 0 auto 25px auto;
+  font-family: "Just Another Hand", cursive;
+  font-size: 50px;
+}
+@media (max-width: 767px) {
+  .notfound-block .notfound-block-in h1 {
+    font-size: 35px;
+  }
+}
+.notfound-block .btn {
+  background-image: linear-gradient(to right, #443164 0%, #24173a 100%);
+  background-position: center;
+}
+.notfound-block .central-body {
+  /*    width: 100%;*/
+  padding: 17% 5% 10% 5%;
+  text-align: center;
+}
+.notfound-block .objects img {
+  z-index: 90;
+  pointer-events: none;
+}
+.notfound-block .object_rocket {
+  z-index: 95;
+  position: absolute;
+  transform: translateX(-50px);
+  top: 75%;
+  pointer-events: none;
+  animation: rocket-movement 200s linear infinite both running;
+}
+.notfound-block .object_earth {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: 90;
+  width: 280px;
+  /*    animation: spin-earth 100s infinite linear both;*/
+}
+.notfound-block .object_astronaut {
+  animation: rotate-astronaut 200s infinite linear both alternate;
+}
+.notfound-block .box_astronaut {
+  z-index: 110 !important;
+  position: absolute;
+  top: 60%;
+  right: 20%;
+  will-change: transform;
+  animation: move-astronaut 50s infinite linear both alternate;
+  width: 240px;
+}
+.notfound-block .image-404 {
+  position: relative;
+  z-index: 100;
+  pointer-events: none;
+}
+.notfound-block .stars {
+  background: url(http://salehriaz.com/404Page/img/overlay_stars.svg);
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: left top;
+}
+.notfound-block .glowing_stars .star {
+  position: absolute;
+  border-radius: 100%;
+  background-color: #fff;
+  width: 3px;
+  height: 3px;
+  opacity: 0.3;
+  will-change: opacity;
+}
+.notfound-block .glowing_stars .star:nth-child(1) {
+  top: 80%;
+  left: 25%;
+  animation: glow-star 2s infinite ease-in-out alternate 1s;
+}
+.notfound-block .glowing_stars .star:nth-child(2) {
+  top: 20%;
+  left: 40%;
+  animation: glow-star 2s infinite ease-in-out alternate 3s;
+}
+.notfound-block .glowing_stars .star:nth-child(3) {
+  top: 25%;
+  left: 25%;
+  animation: glow-star 2s infinite ease-in-out alternate 5s;
+}
+.notfound-block .glowing_stars .star:nth-child(4) {
+  top: 75%;
+  left: 80%;
+  animation: glow-star 2s infinite ease-in-out alternate 7s;
+}
+.notfound-block .glowing_stars .star:nth-child(5) {
+  top: 90%;
+  left: 50%;
+  animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+@media only screen and (max-width: 600px) {
+  .notfound-block .box_astronaut {
+    top: 70%;
+  }
+  .notfound-block .central-body {
+    padding-top: 25%;
+  }
+}
+
 /************** footer *********************/
 footer .footer-top {
   overflow: hidden;
@@ -3787,7 +4033,5 @@ footer .footer-main .col.col-2, footer .footer-main .col.col-3, footer .footer-m
     margin-bottom: 20px;
   }
 }
-
-/*********************** our works popup *********************************/
 
 /*# sourceMappingURL=main.css.map */
