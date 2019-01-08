@@ -2657,7 +2657,8 @@
 
     /************** 404 page *******************/
     .notfound-block{
-        padding:0;
+        padding:0 !important;
+        position: relative;
         @-moz-keyframes rocket-movement { 100% {-moz-transform: translate(1200px,-600px);} }
         @-webkit-keyframes rocket-movement {100% {-webkit-transform: translate(1200px,-600px); } }
         @keyframes rocket-movement { 100% {transform: translate(1200px,-600px);} }
@@ -2741,6 +2742,18 @@
             left: 15%;
             z-index: 90;
             width: 280px;
+            @include tablet{
+                width: 180px;
+                top: 8%;
+            }
+            @include mobile{
+                width: 140px;
+                top: 30px;
+            }
+            @include smartphone{
+                width: 90px;
+                top: 20px;
+            }
         /*    animation: spin-earth 100s infinite linear both;*/
         }
 
@@ -2756,6 +2769,17 @@
             will-change: transform;
             animation: move-astronaut 50s infinite linear both alternate;
             width: 240px;
+            @include tablet{
+                width: 160px;
+            }
+            @include mobile{
+                width: 120px;
+                bottom: 30px;
+            }
+            @include smartphone{
+                width: 70px;
+                bottom: 20px;
+            }
         }
 
         .image-404{

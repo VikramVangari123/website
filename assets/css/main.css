@@ -3705,7 +3705,8 @@ nav.nav-split:hover svg.icon {
 
 /************** 404 page *******************/
 .notfound-block {
-  padding: 0;
+  padding: 0 !important;
+  position: relative;
 }
 @-moz-keyframes rocket-movement {
   100% {
@@ -3850,6 +3851,24 @@ nav.nav-split:hover svg.icon {
   width: 280px;
   /*    animation: spin-earth 100s infinite linear both;*/
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .notfound-block .object_earth {
+    width: 180px;
+    top: 8%;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .notfound-block .object_earth {
+    width: 140px;
+    top: 30px;
+  }
+}
+@media (max-width: 479px) {
+  .notfound-block .object_earth {
+    width: 90px;
+    top: 20px;
+  }
+}
 .notfound-block .object_astronaut {
   animation: rotate-astronaut 200s infinite linear both alternate;
 }
@@ -3861,6 +3880,23 @@ nav.nav-split:hover svg.icon {
   will-change: transform;
   animation: move-astronaut 50s infinite linear both alternate;
   width: 240px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .notfound-block .box_astronaut {
+    width: 160px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .notfound-block .box_astronaut {
+    width: 120px;
+    bottom: 30px;
+  }
+}
+@media (max-width: 479px) {
+  .notfound-block .box_astronaut {
+    width: 70px;
+    bottom: 20px;
+  }
 }
 .notfound-block .image-404 {
   position: relative;
