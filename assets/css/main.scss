@@ -2720,6 +2720,13 @@
         /*    width: 100%;*/
             padding: 17% 5% 10% 5%;
             text-align: center;
+            @include tablet{
+                padding: 27% 5% 20% 5%;
+            }
+            @include mobile-max{
+                padding-top: 120px;
+                padding-bottom: 100px;
+            }
         }
 
         .objects img{
@@ -2739,20 +2746,28 @@
         .object_earth{
             position: absolute;
             top: 20%;
-            left: 15%;
+            left: 10%;
             z-index: 90;
             width: 280px;
+            @include laptop{
+                width: 200px;
+                top: 8%;
+                left: 10%;
+            }
             @include tablet{
                 width: 180px;
                 top: 8%;
+                left: 10%;
             }
             @include mobile{
-                width: 140px;
+                width: 120px;
                 top: 30px;
+                left: 10px;
             }
             @include smartphone{
                 width: 90px;
                 top: 20px;
+                left: 5px;
             }
         /*    animation: spin-earth 100s infinite linear both;*/
         }
@@ -2772,9 +2787,9 @@
             @include tablet{
                 width: 160px;
             }
-            @include mobile{
+            @include mobile-max{
                 width: 120px;
-                bottom: 30px;
+                top: 70%;
             }
             @include smartphone{
                 width: 70px;
@@ -2829,17 +2844,6 @@
             top: 90%;
             left: 50%;
             animation: glow-star 2s infinite ease-in-out alternate 9s;
-        }
-
-        @media only screen and (max-width: 600px){
-            
-            .box_astronaut{
-                top: 70%;
-            }
-            
-            .central-body{
-                padding-top: 25%;
-            }
         }
     }
     

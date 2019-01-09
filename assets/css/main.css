@@ -595,7 +595,7 @@ h1, h2 {
 }
 
 .home-bg {
-  background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: linear-gradient(to right, #f5333f 0%, #cb356b 100%);
   background-position: center;
 }
 
@@ -1517,7 +1517,7 @@ nav.nav-split:hover svg.icon {
 
 /*************************** home *****************************/
 .home header .overlay {
-  background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: linear-gradient(to right, #f5333f 0%, #cb356b 100%);
   background-position: center;
 }
 .home header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -1529,20 +1529,20 @@ nav.nav-split:hover svg.icon {
 }
 .home .testimonial .pagination span.current {
   box-shadow: none;
-  background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: linear-gradient(to right, #f5333f 0%, #cb356b 100%);
   background-position: center;
 }
 .home .testimonial .pagination span:hover {
   box-shadow: none;
-  background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: linear-gradient(to right, #f5333f 0%, #cb356b 100%);
   background-position: center;
 }
 .home .sec-sm-cta .sec-sm-cta-in {
-  background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: linear-gradient(to right, #f5333f 0%, #cb356b 100%);
   background-position: center;
 }
 .home footer .footer-top {
-  background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: linear-gradient(to right, #f5333f 0%, #cb356b 100%);
   background-position: center;
 }
 .home footer .copy-right {
@@ -3831,6 +3831,17 @@ nav.nav-split:hover svg.icon {
   padding: 17% 5% 10% 5%;
   text-align: center;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .notfound-block .central-body {
+    padding: 27% 5% 20% 5%;
+  }
+}
+@media (max-width: 767px) {
+  .notfound-block .central-body {
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+}
 .notfound-block .objects img {
   z-index: 90;
   pointer-events: none;
@@ -3846,27 +3857,37 @@ nav.nav-split:hover svg.icon {
 .notfound-block .object_earth {
   position: absolute;
   top: 20%;
-  left: 15%;
+  left: 10%;
   z-index: 90;
   width: 280px;
   /*    animation: spin-earth 100s infinite linear both;*/
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .notfound-block .object_earth {
+    width: 200px;
+    top: 8%;
+    left: 10%;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .notfound-block .object_earth {
     width: 180px;
     top: 8%;
+    left: 10%;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .notfound-block .object_earth {
-    width: 140px;
+    width: 120px;
     top: 30px;
+    left: 10px;
   }
 }
 @media (max-width: 479px) {
   .notfound-block .object_earth {
     width: 90px;
     top: 20px;
+    left: 5px;
   }
 }
 .notfound-block .object_astronaut {
@@ -3886,10 +3907,10 @@ nav.nav-split:hover svg.icon {
     width: 160px;
   }
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .notfound-block .box_astronaut {
     width: 120px;
-    bottom: 30px;
+    top: 70%;
   }
 }
 @media (max-width: 479px) {
@@ -3942,14 +3963,6 @@ nav.nav-split:hover svg.icon {
   top: 90%;
   left: 50%;
   animation: glow-star 2s infinite ease-in-out alternate 9s;
-}
-@media only screen and (max-width: 600px) {
-  .notfound-block .box_astronaut {
-    top: 70%;
-  }
-  .notfound-block .central-body {
-    padding-top: 25%;
-  }
 }
 
 /************** footer *********************/
