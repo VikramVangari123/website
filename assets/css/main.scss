@@ -56,17 +56,19 @@
         }
         h2{
             margin-bottom: 25px;
-            font-size: 30px;
-            line-height: 36px;
+            font-size: 46px;
+            line-height: 50px;
+            font-weight: lighter;
             @include smartphone{
                 font-size: 24px;
                 margin-bottom: 20px;
             }
         }
         h1{            
-            font-size: 40px;
+            font-size: 46px;
             font-weight: normal;
-            line-height: 45px;
+            line-height: 50px;
+            font-weight: lighter;
             margin-bottom: 25px;
             position: relative;
             color: #fff;
@@ -1741,7 +1743,7 @@
                 -webkit-transition:-webkit-transform .15s linear;
                 span {
                     display: block;
-                    width: 130px;
+                    width: 150px;
                     height: auto;
                     overflow: hidden;
                     background: #fff;
@@ -1905,18 +1907,18 @@
         }
     } 
 
-    /************** our work *******************/
+    /************** our work section *******************/
     .our-work {
         .ow-videos-in{
-            width: 420px;
+            width: 480px;
             margin: 0 auto;
             @include smartphone {
                 width: 290px;
             }
             @include zoomin;
             a{
-                width: 200px;
-                height: 150px;
+                width: 230px;
+                height: 170px;
                 display: inline-block;
                 position: relative;
                 @include smartphone{
@@ -1955,8 +1957,8 @@
                 &:nth-child(1){
                     margin: 0 5px 5px 0;
                     video{
-                        width: 200px;
-                        height: 150px;
+                        width: 230px;
+                        height: 170px;
                         @include smartphone{
                             width: 140px;
                             height: 120px; 
@@ -1974,9 +1976,9 @@
                     vertical-align: top;
                     text-align: left;
                     video{
-                        width: 140px;
+                        width: 160px;
                         height: 110px;
-                        margin-top: 40px;
+                        margin-top: 60px;
                         @include smartphone{
                             width: 120px;
                             height: 90px;
@@ -1984,7 +1986,7 @@
                         }
                     }
                     &:after{
-                        background-position: 56px 74px;
+                        background-position: 66px 94px;
                         @include smartphone{
                             background-position: 46px 54px;
                         }
@@ -1995,7 +1997,7 @@
                     vertical-align: top;
                     text-align: right;
                     video{
-                        width: 140px;
+                        width: 160px;
                         height: 110px;
                         @include smartphone{
                             width: 120px;
@@ -2003,7 +2005,7 @@
                         }
                     }
                     &:after{
-                        background-position: 116px 34px;
+                        background-position: 136px 34px;
                         @include smartphone{
                             background-position: 66px 24px;
                         }
@@ -2017,8 +2019,8 @@
                     vertical-align: top;
                     text-align: right;
                     video{
-                        width: 200px;
-                        height: 150px;                        
+                        width: 230px;
+                        height: 170px;                        
                         @include smartphone{
                             width: 140px;
                             height: 120px; 
@@ -2033,6 +2035,16 @@
                 }
             }
         }        
+    }
+
+    /************** our work gallery ***********/
+    .ourwork-gallery{
+        .ow_gallery-container{
+            position: relative;
+            z-index: 0;
+            min-height: 100px;
+            height: auto;
+        }
     }
 
     /************** How we work ****************/

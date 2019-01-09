@@ -595,12 +595,12 @@ h1, h2 {
 }
 
 .home-bg {
-  background-image: linear-gradient(to right, #f5333f 0%, #cb356b 100%);
+  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
   background-position: center;
 }
 
 .home-text-bg {
-  background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1113,8 +1113,9 @@ header .overlay .overlay-content {
 
 h2 {
   margin-bottom: 25px;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 46px;
+  line-height: 50px;
+  font-weight: lighter;
 }
 @media (max-width: 479px) {
   h2 {
@@ -1124,9 +1125,10 @@ h2 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 46px;
   font-weight: normal;
-  line-height: 45px;
+  line-height: 50px;
+  font-weight: lighter;
   margin-bottom: 25px;
   position: relative;
   color: #fff;
@@ -1517,36 +1519,36 @@ nav.nav-split:hover svg.icon {
 
 /*************************** home *****************************/
 .home header .overlay {
-  background-image: linear-gradient(to right, #f5333f 0%, #cb356b 100%);
+  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
   background-position: center;
 }
 .home header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
-  color: #5d9fea;
+  color: #78cfe2;
   font-weight: bold;
 }
 .home header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .home header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
-  color: #5d9fea;
+  color: #78cfe2;
 }
 .home .testimonial .pagination span.current {
   box-shadow: none;
-  background-image: linear-gradient(to right, #f5333f 0%, #cb356b 100%);
+  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
   background-position: center;
 }
 .home .testimonial .pagination span:hover {
   box-shadow: none;
-  background-image: linear-gradient(to right, #f5333f 0%, #cb356b 100%);
+  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
   background-position: center;
 }
 .home .sec-sm-cta .sec-sm-cta-in {
-  background-image: linear-gradient(to right, #f5333f 0%, #cb356b 100%);
+  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
   background-position: center;
 }
 .home footer .footer-top {
-  background-image: linear-gradient(to right, #f5333f 0%, #cb356b 100%);
+  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
   background-position: center;
 }
 .home footer .copy-right {
-  background-image: linear-gradient(to right, #d5b4f5 0%, #70b0f0 100%);
+  background-image: linear-gradient(to left, #2c344c 20%, #6c7d84 100%);
   background-position: center;
 }
 
@@ -2707,7 +2709,7 @@ nav.nav-split:hover svg.icon {
 }
 .brands ul li span {
   display: block;
-  width: 130px;
+  width: 150px;
   height: auto;
   overflow: hidden;
   background: #fff;
@@ -2879,9 +2881,9 @@ nav.nav-split:hover svg.icon {
   margin-top: 10px;
 }
 
-/************** our work *******************/
+/************** our work section *******************/
 .our-work .ow-videos-in {
-  width: 420px;
+  width: 480px;
   margin: 0 auto;
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
@@ -2892,8 +2894,8 @@ nav.nav-split:hover svg.icon {
   }
 }
 .our-work .ow-videos-in a {
-  width: 200px;
-  height: 150px;
+  width: 230px;
+  height: 170px;
   display: inline-block;
   position: relative;
 }
@@ -2940,8 +2942,8 @@ nav.nav-split:hover svg.icon {
   margin: 0 5px 5px 0;
 }
 .our-work .ow-videos-in a:nth-child(1) video {
-  width: 200px;
-  height: 150px;
+  width: 230px;
+  height: 170px;
 }
 @media (max-width: 479px) {
   .our-work .ow-videos-in a:nth-child(1) video {
@@ -2963,9 +2965,9 @@ nav.nav-split:hover svg.icon {
   text-align: left;
 }
 .our-work .ow-videos-in a:nth-child(2) video {
-  width: 140px;
+  width: 160px;
   height: 110px;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 @media (max-width: 479px) {
   .our-work .ow-videos-in a:nth-child(2) video {
@@ -2975,7 +2977,7 @@ nav.nav-split:hover svg.icon {
   }
 }
 .our-work .ow-videos-in a:nth-child(2):after {
-  background-position: 56px 74px;
+  background-position: 66px 94px;
 }
 @media (max-width: 479px) {
   .our-work .ow-videos-in a:nth-child(2):after {
@@ -2988,7 +2990,7 @@ nav.nav-split:hover svg.icon {
   text-align: right;
 }
 .our-work .ow-videos-in a:nth-child(3) video {
-  width: 140px;
+  width: 160px;
   height: 110px;
 }
 @media (max-width: 479px) {
@@ -2998,7 +3000,7 @@ nav.nav-split:hover svg.icon {
   }
 }
 .our-work .ow-videos-in a:nth-child(3):after {
-  background-position: 116px 34px;
+  background-position: 136px 34px;
 }
 @media (max-width: 479px) {
   .our-work .ow-videos-in a:nth-child(3):after {
@@ -3016,8 +3018,8 @@ nav.nav-split:hover svg.icon {
   text-align: right;
 }
 .our-work .ow-videos-in a:nth-child(4) video {
-  width: 200px;
-  height: 150px;
+  width: 230px;
+  height: 170px;
 }
 @media (max-width: 479px) {
   .our-work .ow-videos-in a:nth-child(4) video {
@@ -3032,6 +3034,14 @@ nav.nav-split:hover svg.icon {
   .our-work .ow-videos-in a:nth-child(4) {
     margin: 3px 0 0 5px;
   }
+}
+
+/************** our work gallery ***********/
+.ourwork-gallery .ow_gallery-container {
+  position: relative;
+  z-index: 0;
+  min-height: 100px;
+  height: auto;
 }
 
 /************** How we work ****************/
