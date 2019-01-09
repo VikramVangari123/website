@@ -700,13 +700,16 @@ h1, h2 {
 
 /*** header *************************/
 header {
-  padding: 17px 0;
+  padding: 35px 0 17px 0;
   height: 60px;
   width: 100%;
-  background: #fff;
   position: fixed;
   z-index: 9999;
+  transition: 0.2s padding ease-out;
+}
+header.fixedheader {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0);
+  padding: 17px 0;
 }
 header .logo {
   text-transform: uppercase;
@@ -1048,11 +1051,14 @@ header .overlay .overlay-content {
 }
 
 .main {
-  margin-top: 60px;
+  margin-top: 59px;
   float: left;
   width: 100%;
   overflow: hidden;
   clear: both;
+}
+.main .section:first-child .right50 img {
+  max-width: 500px;
 }
 
 .title {
@@ -2202,8 +2208,9 @@ nav.nav-split:hover svg.icon {
 }
 .testimonial .testi-in .sliderblock-cont p {
   padding: 65px 75px 20px;
-  font-size: 20px;
+  font-size: 16px;
   font-style: italic;
+  font-family: "georgia", sans-serif;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .testimonial .testi-in .sliderblock-cont p {
@@ -2660,7 +2667,7 @@ nav.nav-split:hover svg.icon {
 .brands .slider-wrap {
   position: relative;
   margin: 0px auto;
-  width: 540px;
+  width: 600px;
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
   .brands .slider-wrap {
@@ -2679,7 +2686,7 @@ nav.nav-split:hover svg.icon {
 }
 .brands .slider {
   position: relative;
-  width: 450px;
+  width: 510px;
   margin: auto;
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -2709,11 +2716,11 @@ nav.nav-split:hover svg.icon {
 }
 .brands ul li span {
   display: block;
-  width: 150px;
+  width: 170px;
   height: auto;
   overflow: hidden;
   background: #fff;
-  margin: 20px 10px;
+  margin: 20px 0px;
   -moz-transition: -moz-transform 0.15s linear;
   -o-transition: -o-transform 0.15s linear;
   -webkit-transition: -webkit-transform 0.15s linear;
@@ -2754,6 +2761,17 @@ nav.nav-split:hover svg.icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background: none;
+  box-shadow: none;
+  height: 50px;
+}
+.brands .slider-arrow svg.icon {
+  fill: #b2b2b2;
+  width: 30px;
+  height: 32px;
+}
+.brands .slider-arrow img {
+  height: 50px;
 }
 .brands .sa-left {
   left: 10px;

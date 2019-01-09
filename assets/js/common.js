@@ -28,6 +28,17 @@ $(function() {
             $('.active-submenu').removeClass("active-submenu");      
         });
     }   
+
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 200) {
+            $("header").addClass("fixedheader");
+        } else {
+            $("header").removeClass("fixedheader");
+        }
+        return false;
+    });
     
         //section height
         $('.full-height').css({

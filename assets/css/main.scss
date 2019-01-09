@@ -1,11 +1,14 @@
 
 @import 'style';
 .main{
-    margin-top: 60px;
+    margin-top: 59px;
     float: left;
     width: 100%;
     overflow: hidden;
     clear: both;   
+    .section:first-child .right50 img {
+        max-width: 500px;
+    }
 }     
     .title{
         display: flex;
@@ -1303,8 +1306,9 @@
             }
             p{
                 padding: 65px 75px 20px;
-                font-size: 20px;
+                font-size: 16px;
                 font-style: italic;
+                font-family: 'georgia', sans-serif;
                 @include tablet{
                     padding: 55px 55px 20px;
                 }
@@ -1708,7 +1712,7 @@
         .slider-wrap {
             position: relative;
             margin: 0px auto;
-            width: 540px;
+            width: 600px;
             @include laptop{
                 width: 480px;
             }
@@ -1721,7 +1725,7 @@
         }
         .slider {
             position: relative;
-            width: 450px;
+            width: 510px;
             margin: auto;
             @include laptop{
                 width: 420px;
@@ -1743,11 +1747,11 @@
                 -webkit-transition:-webkit-transform .15s linear;
                 span {
                     display: block;
-                    width: 150px;
+                    width: 170px;
                     height: auto;
                     overflow: hidden;
                     background: #fff;
-                    margin: 20px 10px;                    
+                    margin: 20px 0px;                    
                     -moz-transition:-moz-transform .15s linear;
                     -o-transition:-o-transform .15s linear;
                     -webkit-transition:-webkit-transform .15s linear;
@@ -1784,6 +1788,17 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            background: none;
+            box-shadow: none;
+            height: 50px;;
+            svg.icon{
+                fill: #b2b2b2;
+                width: 30px;
+                height: 32px;
+            }
+            img{
+                height: 50px;;
+            }
         }
         .sa-left {
             left: 10px;

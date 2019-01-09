@@ -244,13 +244,16 @@ h1, h2{
 /*** header *************************/
 
 header {
-  padding: 17px 0;
+  padding: 35px 0 17px 0;
   height: 60px;
   width: 100%;
-  background: #fff;
   position: fixed;
   z-index: 9999;
-  box-shadow: 0 1px 1px rgba(0,0,0,.2), 0 -1px 1px rgba(0,0,0,.0);
+  transition: 0.2s padding ease-out;
+  &.fixedheader{    
+    box-shadow: 0 1px 1px rgba(0,0,0,.2), 0 -1px 1px rgba(0,0,0,.0);    
+    padding: 17px 0;
+  }
   .logo {
     text-transform: uppercase;
     img{
