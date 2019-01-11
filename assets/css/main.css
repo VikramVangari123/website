@@ -2848,7 +2848,7 @@ nav.nav-split:hover svg.icon {
   z-index: 10;
   color: #fff;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
 }
 .post-grid .post-left .post-cont .post-cont-in, .post-grid .post-right-top .post-cont .post-cont-in, .post-grid .post-right-btm .post-cont .post-cont-in {
   position: absolute;
@@ -2868,8 +2868,12 @@ nav.nav-split:hover svg.icon {
   text-overflow: ellipsis;
   max-height: 51px;
 }
+.post-grid .post-left .post-cont h4 a, .post-grid .post-right-top .post-cont h4 a, .post-grid .post-right-btm .post-cont h4 a {
+  color: #fff;
+}
 .post-grid .post-left .post-cont .post-date, .post-grid .post-right-top .post-cont .post-date, .post-grid .post-right-btm .post-cont .post-date {
   margin-bottom: 15px;
+  color: #fff;
 }
 .post-grid .post-left .post-cont .read-more, .post-grid .post-right-top .post-cont .read-more, .post-grid .post-right-btm .post-cont .read-more {
   margin-bottom: 0;
@@ -2963,11 +2967,11 @@ nav.nav-split:hover svg.icon {
   background-image: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/play.png);
   background-repeat: no-repeat;
   background-position: 50%;
-  background-size: 30px;
+  background-size: 35px;
 }
 @media (max-width: 479px) {
   .our-work .ow-videos-in a:after {
-    background-size: 30px;
+    background-size: 35px;
   }
 }
 .our-work .ow-videos-in a:nth-child(1) {
@@ -3009,7 +3013,7 @@ nav.nav-split:hover svg.icon {
   }
 }
 .our-work .ow-videos-in a:nth-child(2):after {
-  background-position: 66px 94px;
+  background-position: 66px 98px;
 }
 @media (max-width: 479px) {
   .our-work .ow-videos-in a:nth-child(2):after {
@@ -3032,7 +3036,7 @@ nav.nav-split:hover svg.icon {
   }
 }
 .our-work .ow-videos-in a:nth-child(3):after {
-  background-position: 136px 34px;
+  background-position: 136px 38px;
 }
 @media (max-width: 479px) {
   .our-work .ow-videos-in a:nth-child(3):after {

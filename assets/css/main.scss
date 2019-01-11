@@ -1869,7 +1869,7 @@
                 z-index: 10;
                 color: #fff;
                 height: 100%;
-                background: rgba(0, 0, 0, 0.3);
+                background: rgba(0, 0, 0, 0.7);
                 .post-cont-in {
                     position: absolute;
                     bottom: 20px;
@@ -1885,9 +1885,13 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     max-height: 51px;
+                    a{
+                        color: #fff;
+                    }
                 }
                 .post-date{
                     margin-bottom: 15px;
+                    color: #fff;
                 }
                 .read-more{
                     margin-bottom: 0;
@@ -1972,9 +1976,9 @@
                     background-image: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/play.png);
                     background-repeat: no-repeat;
                     background-position: 50%;
-                    background-size: 30px;
+                    background-size: 35px;
                     @include smartphone{
-                        background-size: 30px;
+                        background-size: 35px;
                     }
                 }
                 &:nth-child(1){
@@ -2009,7 +2013,7 @@
                         }
                     }
                     &:after{
-                        background-position: 66px 94px;
+                        background-position: 66px 98px;
                         @include smartphone{
                             background-position: 46px 54px;
                         }
@@ -2028,7 +2032,7 @@
                         }
                     }
                     &:after{
-                        background-position: 136px 34px;
+                        background-position: 136px 38px;
                         @include smartphone{
                             background-position: 66px 24px;
                         }
