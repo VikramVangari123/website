@@ -8,6 +8,12 @@
     clear: both;   
     .section:first-child .right50 img {
         max-width: 500px;
+        @include mobile{
+            max-width: 400px;
+        }
+        @include smartphone{
+            max-width: 300px;
+        }
     }
 }     
     .title{
@@ -65,6 +71,7 @@
             @include smartphone{
                 font-size: 24px;
                 margin-bottom: 20px;
+                line-height: 30px;
             }
         }
         h1{            
@@ -796,6 +803,7 @@
     /****************************** blog main *******************************/
     .blog{
         header {
+            padding: 17px 0;
             .overlay{
                 @include blog-bg;
                 .overlay-content .mega-menu {
@@ -2427,6 +2435,11 @@
         h1{
             color: #000;
             margin-top: 5px;
+            max-width: 100%;
+            font-size: 40px;
+            @include smartphone{
+                font-size: 26px;
+            }
             a{
                 &:hover{
                     color: $link-color-hover;
@@ -2477,6 +2490,9 @@
         }
         .post-info {
             margin-top: 30px;
+            @include mobile-max{
+                margin-bottom: 30px;
+            }
             .img {
                 width: 70px;
                 height: 70px;
@@ -2604,6 +2620,16 @@
                         }
                     }
                 }
+            }
+        }
+        video, .hs-responsive-embed, iframe{
+            @include mobile{
+                max-width: 400px;
+                max-height: 250px;
+            }
+            @include smartphone{
+                max-width: 300px;
+                max-height: 200px;
             }
         }
         .post-nav{
