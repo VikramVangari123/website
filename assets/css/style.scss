@@ -237,6 +237,12 @@ h1, h2{
 .contact-text-bg{
 	@include contact-text-bg;
 }
+.pillarPage-bg{
+  @include pillarPage-bg;
+}
+.pillarPage-text-bg{
+	@include pillarPage-text-bg;
+}
 .notfound-bg{
   @include notfound-bg;
 }

@@ -67,6 +67,7 @@
             margin-bottom: 25px;
             font-size: 46px;
             line-height: 50px;
+            font-weight: normal;
             @include smartphone{
                 font-size: 24px;
                 margin-bottom: 20px;
@@ -81,6 +82,7 @@
             position: relative;
             color: #fff;
             max-width: 410px;
+            font-weight: normal;
             @include tablet-max{
                 font-size: 36px;
                 line-height: 42px;
@@ -169,6 +171,40 @@
     }
     .right60, .right50{
         margin-top: 30px;
+    }
+    .banner-sec{
+        p{
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .social-icons{
+            span{
+                margin-left: 20px;
+                a{
+                    @include inline-block;
+                }
+                img{
+                    width: 75%;
+                    @include transition05;
+                    @include smartphone{
+                        width: 70%;
+                    }
+                }
+                
+                &:hover{
+                    img{
+                        @include rotate360;
+                    }
+                    
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
+                @include tablet-max{
+                    margin-left:8px;
+                }
+            }
+        }
     }
     .interactive-print, .book-free-trial, .contact-cta{
         background: #f1f1f1;
@@ -1126,8 +1162,220 @@
         }
     }
 
+        /*************************** pillarPage *****************************/
     
-    /*************************** contact *****************************/
+        .pillarPage{
+            header {
+                .overlay{
+                    @include pillarPage-bg;
+                    .overlay-content .mega-menu {
+                        .megamenu-item{
+                            &.active{
+                                h5 a{
+                                    color: $pillarPage-menu-active;
+                                    font-weight: bold;
+                                } 
+                                .megamenu-tabH-in a{                                
+                                    &:hover, &.active{
+                                        p{
+                                            color: $pillarPage-menu-active;
+                                        }
+                                    }
+                                } 
+                                .megamenu-sub .megamenu-sub-menu li.active a{
+                                    color: $pillarPage-menu-active;
+                                }
+                            }
+                            &:hover{
+                                .megamenu-sub .megamenu-sub-menu li{
+                                    &.active, &:hover{
+                                        a{
+                                            color: $pillarPage-menu-active; 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }   
+                }
+            }
+            footer{
+                .footer-top{
+                    @include pillarPage-bg;
+                }
+                .copy-right{
+                    @include pillarPage-bg2;
+                }
+            }
+            .pillarPage-main{
+                .left {
+                    width: calc(100% - 420px);
+                    height: 100%;
+                    margin-right: 20px;
+                    float: left;
+                    position: relative;
+                    @include mobile-max{
+                        width: 100%;
+                        float: none;
+                    }
+                    div{
+                        &:nth-child(1){
+                            h2{
+                                margin-top: 0;
+                            }
+                        }
+                    }                
+                    h2{
+                        font-size: 30px;
+                        line-height: 36px;
+                        margin-bottom: 10px;
+                        color: $black0;
+                        margin-top: 30px;
+                    }
+                    hr{
+                        margin: 30px 0;
+                    }
+                    p{
+                        margin-bottom: 15px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                    .box{
+                        padding: 10px;
+                        @include flex;
+                        color: #fff;
+                        margin: 40px 0;
+                        .img{
+                            height: 150px;
+                            width: 150px;
+                            background: #fff;
+                            padding: 10px;
+                            text-align: center;
+                            margin-right: 20px;
+                            @include flex;
+                            overflow: hidden;
+                            @include mobile{
+                                width: 120px;
+                                height: 120px;
+                            }                            
+                            @include smartphone{
+                                width: 100px;
+                                height: 100px;
+                            }
+                        }
+                        .content{
+                            h4{
+                                margin-bottom: 8px;
+                            }
+                            width: calc(100% - 170px);
+                            @include mobile{
+                                width: calc(100% - 140px);
+                            }
+                            @include smartphone{
+                                width: calc(100% - 120px);
+                            }
+                        }
+                        .btn{
+                            margin-bottom: 0;
+                        }
+                    }                    
+                    ul.list-style1{ 
+                        li{
+                            &:before{
+                                @include pillarPage-bg; 
+                            }
+                            &:last-child{
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                    .social-share {
+                        margin-top: 40px;
+                        font-size: 20px;
+                        .social-icons {
+                            @include inline-block;
+                            margin-left: 20px;
+                            span{
+                                @include inline-block;
+                                a{
+                                    width: 70%;
+                                    margin-right: 20px;
+                                    @include inline-block;
+                                    img{
+                                        width: 75%;
+                                        @include smartphone{
+                                            widh: 70%;
+                                        }
+                                    }                               
+                                }
+                            }
+                        }
+                    }
+                }
+                .right{
+                    float: right;
+                    width: 360px;
+                    margin-left: 40px;
+                    h3{
+                        margin-bottom: 20px;
+                        color: $black0;
+                    }
+                    .content-table, .download-guide{
+                        padding: 20px;
+                        @include box-shadow;
+                    }
+                    .content-table{
+                        ol{
+                            list-style-position: outside;
+                            padding-left: 20px;
+                            li{
+                                padding-bottom: 10px;
+                                a{
+                                    &:hover{
+                                        color: $link-color-hover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .download-guide{
+                        margin-top: 30px;
+                        .download-guide-in {
+                            max-width: 320px;
+                            label{
+                                position: relative;
+                                input, textarea{
+                                    width: 100%;
+                                    border: 0;
+                                    border-bottom: 1px solid #7d7d7d;
+                                    padding: 3px 0;
+                                    background: 0 0;
+                                    margin-bottom: 30px;
+                                }
+                            }
+                            .btn{
+                                width: 100%;
+                                border: 1px solid transparent;
+                                color: #fff;
+                                font-size: 18px;
+                                margin-bottom: 0;
+                            }
+                        }
+                        
+                        
+                    }
+                    @include mobile-max{
+                        width: 100%;
+                        float: none;
+                        margin-left: 0;
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+    
+    /*************************** notfound *****************************/
     
     .notfound{
         header {
@@ -2355,15 +2603,19 @@
                         padding-right: 10px;
                     }
                     h4{
-                        margin-bottom: 5px;
-                        a{
-                            max-height: 25px;
+                        @include smartphone{
+                            margin-bottom: 5px;
+                            a{
+                                max-height: 25px;
+                            }
                         }
                     }
                     .post-info{
-                        bottom: -7px;
-                        p:nth-child(1) {
-                            margin-bottom: -4px;
+                        @include smartphone{
+                            bottom: -7px;
+                            p:nth-child(1) {
+                                margin-bottom: -4px;
+                            }
                         }
                     } 
                 }

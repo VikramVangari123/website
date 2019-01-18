@@ -693,6 +693,17 @@ h1, h2 {
   -webkit-text-fill-color: transparent;
 }
 
+.pillarPage-bg {
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-position: center;
+}
+
+.pillarPage-text-bg {
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .notfound-bg {
   background-image: linear-gradient(to right, #443164 0%, #24173a 100%);
   background-position: center;
@@ -1126,6 +1137,7 @@ h2 {
   margin-bottom: 25px;
   font-size: 46px;
   line-height: 50px;
+  font-weight: normal;
 }
 @media (max-width: 479px) {
   h2 {
@@ -1143,6 +1155,7 @@ h1 {
   position: relative;
   color: #fff;
   max-width: 410px;
+  font-weight: normal;
 }
 @media (max-width: 1024px) {
   h1 {
@@ -1265,6 +1278,40 @@ hr {
 
 .right60, .right50 {
   margin-top: 30px;
+}
+
+.banner-sec p {
+  color: #fff;
+  margin-bottom: 15px;
+}
+.banner-sec .social-icons span {
+  margin-left: 20px;
+}
+.banner-sec .social-icons span a {
+  display: inline-block;
+  vertical-align: middle;
+}
+.banner-sec .social-icons span img {
+  width: 75%;
+  -webkit-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+@media (max-width: 479px) {
+  .banner-sec .social-icons span img {
+    width: 70%;
+  }
+}
+.banner-sec .social-icons span:hover img {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+.banner-sec .social-icons span:first-child {
+  margin-left: 0;
+}
+@media (max-width: 1024px) {
+  .banner-sec .social-icons span {
+    margin-left: 8px;
+  }
 }
 
 .interactive-print, .book-free-trial, .contact-cta {
@@ -2034,11 +2081,213 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 .contact footer .copy-right {
-  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%);
   background-position: center;
 }
 
-/*************************** contact *****************************/
+/*************************** pillarPage *****************************/
+.pillarPage header .overlay {
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-position: center;
+}
+.pillarPage header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #f54548;
+  font-weight: bold;
+}
+.pillarPage header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .pillarPage header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #f54548;
+}
+.pillarPage header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #f54548;
+}
+.pillarPage header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .pillarPage header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
+  color: #f54548;
+}
+.pillarPage footer .footer-top {
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-position: center;
+}
+.pillarPage footer .copy-right {
+  background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%);
+  background-position: center;
+}
+.pillarPage .pillarPage-main .left {
+  width: calc(100% - 420px);
+  height: 100%;
+  margin-right: 20px;
+  float: left;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .pillarPage .pillarPage-main .left {
+    width: 100%;
+    float: none;
+  }
+}
+.pillarPage .pillarPage-main .left div:nth-child(1) h2 {
+  margin-top: 0;
+}
+.pillarPage .pillarPage-main .left h2 {
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 10px;
+  color: #383838;
+  margin-top: 30px;
+}
+.pillarPage .pillarPage-main .left hr {
+  margin: 30px 0;
+}
+.pillarPage .pillarPage-main .left p {
+  margin-bottom: 15px;
+}
+.pillarPage .pillarPage-main .left p:last-child {
+  margin-bottom: 0;
+}
+.pillarPage .pillarPage-main .left .box {
+  padding: 10px;
+  display: flex;
+  -webkit-display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 40px 0;
+}
+.pillarPage .pillarPage-main .left .box .img {
+  height: 150px;
+  width: 150px;
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+  margin-right: 20px;
+  display: flex;
+  -webkit-display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .pillarPage .pillarPage-main .left .box .img {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 479px) {
+  .pillarPage .pillarPage-main .left .box .img {
+    width: 100px;
+    height: 100px;
+  }
+}
+.pillarPage .pillarPage-main .left .box .content {
+  width: calc(100% - 170px);
+}
+.pillarPage .pillarPage-main .left .box .content h4 {
+  margin-bottom: 8px;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .pillarPage .pillarPage-main .left .box .content {
+    width: calc(100% - 140px);
+  }
+}
+@media (max-width: 479px) {
+  .pillarPage .pillarPage-main .left .box .content {
+    width: calc(100% - 120px);
+  }
+}
+.pillarPage .pillarPage-main .left .box .btn {
+  margin-bottom: 0;
+}
+.pillarPage .pillarPage-main .left ul.list-style1 li:before {
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-position: center;
+}
+.pillarPage .pillarPage-main .left ul.list-style1 li:last-child {
+  margin-bottom: 15px;
+}
+.pillarPage .pillarPage-main .left .social-share {
+  margin-top: 40px;
+  font-size: 20px;
+}
+.pillarPage .pillarPage-main .left .social-share .social-icons {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+.pillarPage .pillarPage-main .left .social-share .social-icons span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.pillarPage .pillarPage-main .left .social-share .social-icons span a {
+  width: 70%;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.pillarPage .pillarPage-main .left .social-share .social-icons span a img {
+  width: 75%;
+}
+@media (max-width: 479px) {
+  .pillarPage .pillarPage-main .left .social-share .social-icons span a img {
+    widh: 70%;
+  }
+}
+.pillarPage .pillarPage-main .right {
+  float: right;
+  width: 360px;
+  margin-left: 40px;
+}
+.pillarPage .pillarPage-main .right h3 {
+  margin-bottom: 20px;
+  color: #383838;
+}
+.pillarPage .pillarPage-main .right .content-table, .pillarPage .pillarPage-main .right .download-guide {
+  padding: 20px;
+  -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+}
+.pillarPage .pillarPage-main .right .content-table ol {
+  list-style-position: outside;
+  padding-left: 20px;
+}
+.pillarPage .pillarPage-main .right .content-table ol li {
+  padding-bottom: 10px;
+}
+.pillarPage .pillarPage-main .right .content-table ol li a:hover {
+  color: #f5333f;
+}
+.pillarPage .pillarPage-main .right .download-guide {
+  margin-top: 30px;
+}
+.pillarPage .pillarPage-main .right .download-guide .download-guide-in {
+  max-width: 320px;
+}
+.pillarPage .pillarPage-main .right .download-guide .download-guide-in label {
+  position: relative;
+}
+.pillarPage .pillarPage-main .right .download-guide .download-guide-in label input, .pillarPage .pillarPage-main .right .download-guide .download-guide-in label textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #7d7d7d;
+  padding: 3px 0;
+  background: 0 0;
+  margin-bottom: 30px;
+}
+.pillarPage .pillarPage-main .right .download-guide .download-guide-in .btn {
+  width: 100%;
+  border: 1px solid transparent;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .pillarPage .pillarPage-main .right {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+}
+
+/*************************** notfound *****************************/
 .notfound header .overlay {
   background-image: linear-gradient(to right, #443164 0%, #24173a 100%);
   background-position: center;
@@ -3415,17 +3664,21 @@ nav.nav-split:hover svg.icon {
     padding-right: 10px;
   }
 }
-.blog-main .all-posts .left .entry-content h4 {
-  margin-bottom: 5px;
+@media (max-width: 479px) {
+  .blog-main .all-posts .left .entry-content h4 {
+    margin-bottom: 5px;
+  }
+  .blog-main .all-posts .left .entry-content h4 a {
+    max-height: 25px;
+  }
 }
-.blog-main .all-posts .left .entry-content h4 a {
-  max-height: 25px;
-}
-.blog-main .all-posts .left .entry-content .post-info {
-  bottom: -7px;
-}
-.blog-main .all-posts .left .entry-content .post-info p:nth-child(1) {
-  margin-bottom: -4px;
+@media (max-width: 479px) {
+  .blog-main .all-posts .left .entry-content .post-info {
+    bottom: -7px;
+  }
+  .blog-main .all-posts .left .entry-content .post-info p:nth-child(1) {
+    margin-bottom: -4px;
+  }
 }
 .blog-main .all-posts .left .entry-thumbnail img {
   object-fit: cover;

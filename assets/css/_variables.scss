@@ -23,6 +23,7 @@ $brand-mng-menu-active: #ec8eab;
 $blog-menu-active: #653235;
 $about-menu-active: #ef141a;
 $contact-menu-active: #f54548;
+$pillarPage-menu-active: #f54548;
 $notfound-menu-active: #805eb9;
 
 @mixin home-bg{    
@@ -142,10 +143,24 @@ $notfound-menu-active: #805eb9;
     background-position: center;
 }
 @mixin contact-bg2{    
-    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+    background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%);
     background-position: center;
 }
 @mixin contact-text-bg{
+	background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin pillarPage-bg{    
+    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+    background-position: center;
+}
+@mixin pillarPage-bg2{    
+    background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%);
+    background-position: center;
+}
+@mixin pillarPage-text-bg{
 	background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -235,6 +250,13 @@ $notfound-menu-active: #805eb9;
     text-overflow: ellipsis!important;
     display: -webkit-box!important;
     -webkit-line-clamp: 2!important;
+    -webkit-box-orient: vertical;
+}
+@mixin ellipsis1{    
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 1!important;
     -webkit-box-orient: vertical;
 }
 @mixin zoomin{
