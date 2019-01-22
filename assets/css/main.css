@@ -1781,6 +1781,33 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 
+/*************************** products *****************************/
+.ourwork header .overlay {
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  background-position: center;
+}
+.ourwork header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #412a6d;
+  font-weight: bold;
+}
+.ourwork header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .ourwork header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #412a6d;
+}
+.ourwork header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #412a6d;
+}
+.ourwork header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .ourwork header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
+  color: #412a6d;
+}
+.ourwork footer .footer-top {
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  background-position: center;
+}
+.ourwork footer .copy-right {
+  background-image: linear-gradient(to right, #c489ed 0%, #4b2a91 100%);
+  background-position: center;
+}
+
 /*************************** brand-managers *****************************/
 .brand-managers header .overlay {
   background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
@@ -3391,10 +3418,12 @@ nav.nav-split:hover svg.icon {
   overflow: hidden;
   -webkit-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
+  background: rgba(0, 0, 0, 0.7);
 }
 .blog-main ul li .entry-thumbnail .post-img img {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   -webkit-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
 }
@@ -3504,6 +3533,11 @@ nav.nav-split:hover svg.icon {
   position: absolute;
   right: 0;
   left: 0;
+}
+.blog-main .latest-posts .left .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .blog-main .latest-posts .left .left-cont {
   height: 100%;

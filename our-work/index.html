@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="../assets/css/ow-gallery/style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/ow-gallery/effect.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/ow-gallery/flashy.css">
+	<!-- /end css -->
+	<style>
+		.videos-in {
+			width: 100%;
+		}
+		video {
+			width: 100%;
+			height: 100%;
+		}
+		.videos-in a.custom{
+			height: 190px; 
+			overflow: hidden;
+		}
+		.video-block .large{
+			width: 70%;
+			height: 395px;
+			margin: 8px;
+		}
+		.video-block .large a{
+			width: 100%;
+			height: 100%;
+		}
+		.video-block .small{
+			width: 30%;
+			margin: 8px;
+		}
+		.video-block .small a:first-child{
+			margin-bottom: 15px;
+		}
+		.video-block{
+			display: flex;
+		}
+		.video-block:nth-child(even){
+			flex-direction: row-reverse;
+		}
+		.video-blockType2 .large a {
+			float: right;
+		}
+		@media (min-width: 1281px){
+			.container {
+			    max-width: 1251px;
+			    padding: 0 15px;
+			    margin: 0 auto;
+			    width: 100%;
+			}
+		}
+	</style>
+</head>
+
+<body class="ourwork-gallery">
+    <div class="content">
+            <header class="ourwork-bg">
+                <div class="container">
+                    <div id="Nav" class="overlay">
+                        <div class="container">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        </div>
+                        <div class="overlay-content">
+                            <div class="mega-menu">
+                                <div class="megamenu-item active">
+                                    <h5>
+                                        <a href="javascript:void(0);">
+                                            Solutions
+                                        </a>
+                                        <span class="sub-menu-arrow"></span>
+                                    </h5>
+                                    <div class="megamenu-sub">
+                                        <ul class="megamenu-sub-menu">
+                                            <li class="active">
+                                                <a href="../industry/index.html">Industry</a>                                            
+                                                <span class="sub-menu-arrow"></span>
+                                                <div class="megamenu-sub-content">
+                                                    <div class="megamenu-tabH">
+                                                        <div class="megamenu-tabH-in">
+                                                            <a href="../industry/publishing.html">
+                                                                <img src="../assets/images/bg.jpg" alt="" />
+                                                                <p>Publishing</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="megamenu-tabH-in">
+                                                            <a href="javascript:void(0);">
+                                                                <img src="../assets/images/bg.jpg" alt="" />
+                                                                <p>Entertainment</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="megamenu-tabH-in">
+                                                            <a href="../industry/event.html">
+                                                                <img src="../assets/images/bg.jpg" alt="" />
+                                                                <p>Event</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="../business-area/index.html">Business Area</a>
+                                                <span class="sub-menu-arrow"></span>
+                                                <div class="megamenu-sub-content">
+                                                    <div class="megamenu-tabH">
+                                                        <div class="megamenu-tabH-in">
+                                                            <a href="javascript:void(0);">
+                                                                <img src="../assets/images/bg.jpg" alt="" />
+                                                                <p>Sales</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="megamenu-tabH-in">
+                                                            <a href="../business-area/marketing.html">
+                                                                <img src="../assets/images/bg.jpg" alt="" />
+                                                                <p>Marketing</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="megamenu-tabH-in">
+                                                            <a href="javascript:void(0);">
+                                                                <img src="../assets/images/bg.jpg" alt="" />
+                                                                <p>HR</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="megamenu-item">
+                                    <h5>
+                                        <a href="../how-we-work/index.html">How We Work</a>
+                                    </h5>
+                                </div>
+                                <div class="megamenu-item">
+                                    <h5>
+                                        <a href="../products/index.html">Product</a>                                
+                                        <span class="sub-menu-arrow"></span>
+                                    </h5>  
+                                </div>
+                                <div class="megamenu-item">
+                                    <h5><a href="javascript:void(0)">Our Work</a></h5>
+                                </div>
+                                <div class="megamenu-item">
+                                    <h5>
+                                        <a href="../about/index.html">About Us</a>
+                                    </h5>
+                                </div>
+                                <div class="megamenu-item">
+                                    <h5><a href="../blog/index.html">Blog</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="logo">
+                        <a href="../home/index.html"><img src="../assets/images/logo.png" alt="WOWSOME" /></a>
+                    </span>
+                    <span style="cursor:pointer" class="openNav" onclick="openNav()">
+                        <img src="../assets/images/hamburger_w.png" alt="hamburger" />
+                    </span>
+                </div>
+                <script>
+                    function openNav() {
+                        $('.mega-menu').children().first().addClass('active').siblings().removeClass('active');
+                        document.getElementById("Nav").style.height = "100%";
+                    }
+            
+                    function closeNav() {
+                        document.getElementById("Nav").style.height = "0%";
+                    }
+                </script>
+            </header>
+        <div class="main">
+            <div class="section full-height ourwork-block ourwork-bg">
+                <div class="section-in">
+                    <div class="container">
+                        <div class="videos-in">
+                            <div class="video-block">
+                                <span class="large">
+                                    <a class="custom" data-flashy-type="video" href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4">
+                                        <video>
+                                            <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" type="video/mp4">
+                                        </video>
+                                    </a>
+                                </span>
+                                <span class="small">
+                                    <a class="custom" data-flashy-type="video" href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4">
+                                        <video>
+                                            <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" type="video/mp4">
+                                        </video>
+                                    </a>
+                                    <a class="custom" data-flashy-type="video" href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4">
+                                        <video>
+                                            <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" type="video/mp4">
+                                        </video>
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="video-block">
+                                <span class="large">				
+                                    <a class="custom" data-flashy-type="video" href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4">
+                                        <video>
+                                            <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" type="video/mp4">
+                                        </video>
+                                    </a>
+                                </span>
+                                <span class="small">				
+                                    <a class="custom" data-flashy-type="video" href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4">
+                                        <video>
+                                            <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" type="video/mp4">
+                                        </video>
+                                    </a>				
+                                    <a class="custom" data-flashy-type="video" href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4">
+                                        <video>
+                                            <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" type="video/mp4">
+                                        </video>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- footer -->
+            <footer>
+                <div class="footer-top section">
+                    <div class="container">
+                        <div class="subscribe">
+                            <h3>Subscribe to stay updated on latest trends of AR in branding</h3>
+                            <input id="subscribe-email" type="email" placeholder="Email" name="email" />
+                            <span class="submit-btn">
+                            <input type="submit" class="btn btn-submit" value="Subscribe">
+                        </span>
+                        </div>
+                        <div class="followus">
+                            <h3>Follow Us</h3>
+                            <span class="social-icons">
+                                <span>
+                                    <a href="#" target="_blank">
+                                        <img src="../assets/images/twitter.png" alt="twitter" title="twitter" />
+                                    </a>
+                                </span>
+                                <span>
+                                    <a href="#" target="_blank">
+                                        <img src="../assets/images/facebook.png" alt="facebook" title="facebook" />
+                                    </a>
+                                </span>
+                                <span>
+                                    <a href="#" target="_blank">
+                                        <img src="../assets/images/linkedin.png" alt="linkedin" title="linkedin" />
+                                    </a>
+                                </span>
+                                <span>
+                                    <a href="#" target="_blank">
+                                        <img src="../assets/images/instagram.png" alt="instagram" title="instagram" />
+                                    </a>
+                                </span>
+                                <span>                                    
+                                    <a href="#" target="_blank">
+                                        <img src="../assets/images/youtube.png" alt="youtube" title="youtube" />
+                                    </a>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- copyright -->
+                <div class="section copy-right">
+                    <div class="container">
+                        <div>&#9400; 2018 WOWSOME</div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- JavaScripts -->
+
+    <!-- common js -->
+    <script type="text/javascript" src="../assets/js/common.js"></script><!-- scripts-section -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../assets/css/ow-gallery/js/jquery.flashy.js"></script>
+    <script type="text/javascript" src="../assets/css/ow-gallery/js/main.js"></script>
+    <!-- /end scripts-section -->
+
+</body>
+
+</html>

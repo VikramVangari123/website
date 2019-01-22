@@ -774,6 +774,53 @@
         }
     }
 
+    /*************************** products *****************************/
+    
+    .ourwork{
+        header {
+            .overlay{
+                @include ourwork-bg;
+                .overlay-content .mega-menu {
+                    .megamenu-item{
+                        &.active{
+                            h5 a{
+                                color: $ourwork-menu-active;
+                                font-weight: bold;
+                            } 
+                            .megamenu-tabH-in a{                                
+                                &:hover, &.active{
+                                    p{
+                                        color: $ourwork-menu-active;
+                                    }
+                                }
+                            } 
+                            .megamenu-sub .megamenu-sub-menu li.active a{
+                                color: $ourwork-menu-active;
+                            }
+                        }
+                        &:hover{
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &.active, &:hover{
+                                    a{
+                                        color: $ourwork-menu-active; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            .footer-top{
+                @include ourwork-bg;
+            }
+            .copy-right{
+                @include ourwork-bg2;
+            }
+        }
+    }
+
     /*************************** brand-managers *****************************/
     
     .brand-managers{
@@ -2370,9 +2417,9 @@
                         margin: 0 auto;
                         overflow: hidden;
                         @include transition;
+                        background: rgba(0,0,0,0.7);
                         img {
-                            height: 100%;
-                            width: 100%;
+                            @include objectfitCover;
                             @include transition;
                             &:hover, &:focus{
                                 @include image-scale;
@@ -2462,6 +2509,9 @@
                     position: absolute;
                     right: 0;
                     left: 0;
+                    img{
+                        @include objectfitCover;
+                    }
                 }
                 .left-cont{
                     height: 100%;
