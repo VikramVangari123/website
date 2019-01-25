@@ -776,8 +776,9 @@
 
     /*************************** products *****************************/
     
-    .ourwork{
+    .ourwork-gallery{
         header {
+            padding: 17px 0;
             .overlay{
                 @include ourwork-bg;
                 .overlay-content .mega-menu {
@@ -2364,12 +2365,241 @@
 
     /************** our work gallery ***********/
     .ourwork-gallery{
-        .ow_gallery-container{
-            position: relative;
-            z-index: 0;
-            min-height: 100px;
-            height: auto;
-        }
+        .videos-in {
+            width: 100%;
+            .video-block{
+                .custom{
+                    height: 190px; 
+                    overflow: hidden;
+                    float: left;
+                    color: #fff;
+                    background: #000;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+                    text-decoration: none;
+                    position: relative;
+                    video {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:after {
+                        content: " ";
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                        opacity: 1;
+                        background-image: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/play.png);
+                        background-repeat: no-repeat;
+                        background-position: 50%;
+                        background-size: 69px;
+                    }
+                }
+                .large{
+                    width: 70%;
+                    height: 412px;
+                    padding: 8px;  
+                    .custom{
+                        width: 100%;
+                        height: 100%;
+                    }          
+                }
+                .small{
+                    width: 30%;
+                    padding: 8px;
+                }
+                &:nth-child(odd){
+                    .large, .small{
+                        float: left;
+                    }
+                }
+                &:nth-child(even){
+                    .large, .small{
+                        float: right;
+                    }
+                }
+                span {
+                    position: relative;
+                    &.selected{
+                        width: 100%;
+                        height: 466px;
+                        .custom{
+                            height: 450px;
+                            padding-bottom: 22px;
+                        }
+                        .bottom-links {
+                            position: unset;
+                            background-image: none;
+                            visibility: visible;
+                            .cta{
+                                bottom: 8px;
+                                right: 8px;
+                                position: absolute;
+                                padding: 10px;
+                            }
+                            .title{
+                                position: absolute;
+                                top: 8px;
+                                left: 8px;
+                                padding: 10px;
+                            }
+                        }
+                        .right-buttons{
+                            .close-button, .info-button, .share-button{
+                                display: block !important;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    } 
+                    &.sibling{
+                        width: 50%;
+                        height: 366px;
+                        .custom{
+                            height: 350px;
+                        }
+                    } 
+                    &:hover{
+                        .bottom-links{
+                            visibility: visible;
+                        }
+                        .right-buttons{
+                            .info-button{
+                                display: block;
+                            }
+                            .close-button, .share-button{
+                                display: none;
+                            }
+                        }
+                        .custom{
+                            &:after{
+                                @include image-scale;
+                            }                            
+                        }
+                    }                   
+                }
+                &.flex{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    .selected{
+                        order: 1;
+                    }
+                    .sibling{
+                        order: 2;
+                    }
+                }                 
+                .right-buttons {
+                    position: absolute;
+                    top: 8px;
+                    right: 8px;
+                    z-index: 80;
+                    background: rgba(0,0,0,0.8);
+                    padding: 10px;
+                    img {
+                        padding-top: 5px;
+                    }
+                    .share-button, .close-button, .info-button {
+                        width: 22px;
+                        height: 30px;
+                        display: none;
+                    }
+                    .info-button{
+                        position: relative;
+                        .info-tooltip{
+                            visibility: hidden;
+                            position: absolute;
+                            right: 0;
+                            background: #fff;
+                            padding: 8px;
+                            width: 290px;
+                            border-radius: 5px;
+                            top: 100%;
+                            a {
+                                display: inline-block;
+                                width: auto !important;
+                                position: relative;
+                                padding-right: 8px;
+                                margin-right: 5px;
+                                &:after{
+                                    content: '';
+                                    background: #808285;
+                                    width: 2px;
+                                    height: 12px;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                                &:last-child{
+                                    padding-right: 0;
+                                    margin-right: 0;
+                                    &:after{
+                                        content: none;
+                                    }                                    
+                                }
+                            }
+                        }
+                        &:hover{
+                            img{                                
+                                cursor: pointer;
+                            }
+                            .info-tooltip{
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+                .bottom-links {
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-flex-wrap: nowrap;
+                    -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
+                    -ms-flex-pack: end;
+                    justify-content: flex-end;
+                    left: 8px;
+                    right: 8px;
+                    bottom: 8px;
+                    z-index: 59;
+                    position: absolute;
+                    text-shadow: 0 0 2px rgba(0,0,0,.5);
+                    color: #fff;
+                    padding: 10px;
+                    @include ourwork-bg;
+                    visibility: hidden;
+                    a{
+                        color: #fff;
+                    }
+                    .title{
+                        overflow: hidden;
+                        flex: 1;
+                        display: flex;
+                        min-height: 26px;
+                        .title-text{
+                            max-width: 100%;
+                            padding-left: 4px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            word-wrap: normal;
+                            -o-text-overflow: ellipsis;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    .cta{
+                        white-space: nowrap;
+                        padding-left: 15px;
+                        img{
+                            vertical-align: middle;
+                            width: 30px;
+                            margin-left: 2px;
+                        }
+                    }
+                }
+            }            
+		}
     }
 
     /************** How we work ****************/

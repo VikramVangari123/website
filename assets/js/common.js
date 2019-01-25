@@ -39,6 +39,16 @@ $(function() {
         }
         return false;
     });
+    $(window).on('load', function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 200) {
+            $("header").addClass("fixedheader");
+        } else {
+            $("header").removeClass("fixedheader");
+        }
+        return false;
+    });
     
         //section height
         $('.full-height').css({
