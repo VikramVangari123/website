@@ -3382,9 +3382,20 @@ nav.nav-split:hover svg.icon {
   text-decoration: none;
   position: relative;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ourwork-gallery .videos-in .video-block .custom {
+    height: 165px;
+  }
+}
+@media (max-width: 767px) {
+  .ourwork-gallery .videos-in .video-block .custom {
+    height: auto;
+  }
+}
 .ourwork-gallery .videos-in .video-block .custom video {
   width: 100%;
   height: 100%;
+  object-fit: fill;
 }
 .ourwork-gallery .videos-in .video-block .custom:after {
   content: " ";
@@ -3401,10 +3412,27 @@ nav.nav-split:hover svg.icon {
   background-position: 50%;
   background-size: 69px;
 }
+@media (max-width: 479px) {
+  .ourwork-gallery .videos-in .video-block .custom:after {
+    background-size: 50px;
+  }
+}
 .ourwork-gallery .videos-in .video-block .large {
   width: 70%;
   height: 412px;
   padding: 8px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ourwork-gallery .videos-in .video-block .large {
+    height: 362px;
+  }
+}
+@media (max-width: 767px) {
+  .ourwork-gallery .videos-in .video-block .large {
+    width: 100%;
+    height: auto;
+    padding: 8px 0;
+  }
 }
 .ourwork-gallery .videos-in .video-block .large .custom {
   width: 100%;
@@ -3413,6 +3441,12 @@ nav.nav-split:hover svg.icon {
 .ourwork-gallery .videos-in .video-block .small {
   width: 30%;
   padding: 8px;
+}
+@media (max-width: 767px) {
+  .ourwork-gallery .videos-in .video-block .small {
+    width: 100%;
+    padding: 8px 0;
+  }
 }
 .ourwork-gallery .videos-in .video-block:nth-child(odd) .large, .ourwork-gallery .videos-in .video-block:nth-child(odd) .small {
   float: left;
@@ -3425,28 +3459,23 @@ nav.nav-split:hover svg.icon {
 }
 .ourwork-gallery .videos-in .video-block span.selected {
   width: 100%;
-  height: 466px;
+  height: auto;
 }
 .ourwork-gallery .videos-in .video-block span.selected .custom {
-  height: 450px;
-  padding-bottom: 22px;
+  height: auto;
+}
+.ourwork-gallery .videos-in .video-block span.selected .custom:after {
+  content: none;
 }
 .ourwork-gallery .videos-in .video-block span.selected .bottom-links {
-  position: unset;
+  top: 8px;
   background-image: none;
   visibility: visible;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
+  height: 46px;
 }
 .ourwork-gallery .videos-in .video-block span.selected .bottom-links .cta {
-  bottom: 8px;
-  right: 8px;
-  position: absolute;
-  padding: 10px;
-}
-.ourwork-gallery .videos-in .video-block span.selected .bottom-links .title {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  padding: 10px;
+  padding-right: 50px;
 }
 .ourwork-gallery .videos-in .video-block span.selected .right-buttons .close-button, .ourwork-gallery .videos-in .video-block span.selected .right-buttons .info-button, .ourwork-gallery .videos-in .video-block span.selected .right-buttons .share-button {
   display: block !important;
@@ -3489,7 +3518,7 @@ nav.nav-split:hover svg.icon {
   top: 8px;
   right: 8px;
   z-index: 80;
-  background: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
   padding: 10px;
 }
 .ourwork-gallery .videos-in .video-block .right-buttons img {
@@ -3563,6 +3592,12 @@ nav.nav-split:hover svg.icon {
   background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
   background-position: center;
   visibility: hidden;
+}
+@media (max-width: 767px) {
+  .ourwork-gallery .videos-in .video-block .bottom-links {
+    left: 0;
+    right: 0;
+  }
 }
 .ourwork-gallery .videos-in .video-block .bottom-links a {
   color: #fff;
