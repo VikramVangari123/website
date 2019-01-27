@@ -774,7 +774,7 @@
         }
     }
 
-    /*************************** products *****************************/
+    /*************************** our work gallery header *****************************/
     
     .ourwork-gallery{
         header {
@@ -818,6 +818,54 @@
             }
             .copy-right{
                 @include ourwork-bg2;
+            }
+        }
+    }
+
+    /*************************** our work gallery header *****************************/
+    
+    .intprint-gallery{
+        header {
+            padding: 17px 0;
+            .overlay{
+                @include ipgallery-bg;
+                .overlay-content .mega-menu {
+                    .megamenu-item{
+                        &.active{
+                            h5 a{
+                                color: $ipgallery-menu-active;
+                                font-weight: bold;
+                            } 
+                            .megamenu-tabH-in a{                                
+                                &:hover, &.active{
+                                    p{
+                                        color: $ipgallery-menu-active;
+                                    }
+                                }
+                            } 
+                            .megamenu-sub .megamenu-sub-menu li.active a{
+                                color: $ipgallery-menu-active;
+                            }
+                        }
+                        &:hover{
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &.active, &:hover{
+                                    a{
+                                        color: $ipgallery-menu-active; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            .footer-top{
+                @include ipgallery-bg;
+            }
+            .copy-right{
+                @include ipgallery-bg2;
             }
         }
     }
@@ -1760,7 +1808,6 @@
                 border-radius: 50%;
                 cursor: pointer;
                 @include box-shadow;
-                @include products-bg;
                 &:hover {
                     color: rgba(0, 0, 0, 0.8);
                 }
@@ -2368,8 +2415,13 @@
         .videos-in {
             width: 100%;
             .video-block{
+                margin: 0 -8px;
+                @include mobile-max{
+                    margin: 0;
+                }
                 .custom{
                     height: 190px; 
+                    width: 100%;
                     @include tablet{
                         height: 165px;
                     }
@@ -2379,7 +2431,6 @@
                     overflow: hidden;
                     float: left;
                     color: #fff;
-                    background: #000;
                     box-shadow: 0 0 10px rgba(0,0,0,0.2);
                     text-decoration: none;
                     position: relative;
@@ -2387,6 +2438,7 @@
                         width: 100%;
                         height: 100%;
                         object-fit: fill;
+                        float: left;
                     }
                     &:after {
                         content: " ";
@@ -2417,7 +2469,11 @@
                     @include mobile-max{
                         width: 100%;
                         height: auto;
-                        padding: 8px 0;
+                        padding: 0;
+                        margin: 0 0 40px;
+                    }
+                    @include smartphone{
+                        margin: 0 0 25px;
                     }
                     .custom{
                         width: 100%;
@@ -2429,7 +2485,11 @@
                     padding: 8px; 
                     @include mobile-max{
                         width: 100%;
-                        padding: 8px 0;
+                        margin: 0 0 40px;
+                        padding: 0;
+                    }
+                    @include smartphone{
+                        margin: 0 0 25px;
                     }
                 }
                 &:nth-child(odd){
@@ -2448,7 +2508,7 @@
                         width: 100%;
                         height: auto;
                         .custom{
-                            height: auto;
+                            height: 100%;
                             &:after{
                                 content: none;
                             }
@@ -2462,11 +2522,18 @@
                             .cta{
                                 padding-right: 50px;
                             }
+                            @include mobile-max{
+                                top: 0;
+                            }
                         }
                         .right-buttons{
+                            padding: 10px;
                             .close-button, .info-button, .share-button{
                                 display: block !important;
                                 margin-bottom: 10px;
+                            }
+                            .info-button{
+                                display: none !important;
                             }
                         }
                     } 
@@ -2475,6 +2542,13 @@
                         height: 366px;
                         .custom{
                             height: 350px;
+                            @include mobile-max{
+                                height: auto;
+                            }
+                        }
+                        @include mobile-max{
+                            height: auto;
+                            width: 100%;
                         }
                     } 
                     &:hover{
@@ -2506,6 +2580,9 @@
                     .sibling{
                         order: 2;
                     }
+                    @include mobile-max{
+                        display: block;
+                    }
                 }                 
                 .right-buttons {
                     position: absolute;
@@ -2513,7 +2590,10 @@
                     right: 8px;
                     z-index: 80;
                     background: linear-gradient(rgba(0,0,0,.6),transparent);
-                    padding: 10px;
+                    @include mobile-max{
+                        right:0;
+                        top: 0;
+                    }
                     img {
                         padding-top: 5px;
                     }
@@ -2524,6 +2604,7 @@
                     }
                     .info-button{
                         position: relative;
+                        display: none !important;
                         .info-tooltip{
                             visibility: hidden;
                             position: absolute;
@@ -2584,29 +2665,31 @@
                     position: absolute;
                     text-shadow: 0 0 2px rgba(0,0,0,.5);
                     color: #fff;
-                    padding: 10px;
+                    padding: 6px 10px;
+                    align-items: center;
                     @include ourwork-bg;
                     visibility: hidden;
                     @include mobile-max{
                         left: 0;
                         right: 0;
+                        bottom: 0;
                     }
                     a{
                         color: #fff;
+                        font-size: 13px;
                     }
                     .title{
                         overflow: hidden;
                         flex: 1;
                         display: flex;
-                        min-height: 26px;
                         .title-text{
                             max-width: 100%;
                             padding-left: 4px;
-                            overflow: hidden;
-                            white-space: nowrap;
-                            word-wrap: normal;
-                            -o-text-overflow: ellipsis;
-                            text-overflow: ellipsis;
+                            min-height: 20px;
+                            line-height: 17px;
+                            @include ellipsis1;
+                            max-height: 32.8px;
+                            font-size: 13px;
                         }
                     }
                     .cta{
@@ -2614,13 +2697,136 @@
                         padding-left: 15px;
                         img{
                             vertical-align: middle;
-                            width: 30px;
-                            margin-left: 2px;
+                            width: 25px;
+                            margin-left: 3px;
                         }
                     }
                 }
             }            
 		}
+    }
+
+    /************** interactive print gallery **************/
+    .intprint-gallery{
+        .campaigns-main-list, .slider-ipgallery ul{
+            margin-left: -20px;
+            margin-right: -20px;
+            float: left;
+            width: calc(100% + 40px);
+            margin-top: 20px;
+        .camp-list-block{
+            width: 25%;
+            float: left;
+            padding: 0 20px;
+            position: relative;
+            margin: 0 0 40px;
+            .camp-list-block-in{
+                background: #fff;
+                width: 100%;
+                height: 252px;
+                box-shadow: 0 0 10px -3px;
+                position: relative;
+                transition: transform .2s,-webkit-transform .2s;
+                border-radius: 6px;
+                .campaigns-brand{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background: linear-gradient(rgba(0,0,0,.8),transparent);
+                    width: 100%;
+                    padding: 6px 0 36px 6px;
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                    .campaigns-brand-icon{
+                        float: left;
+                        background: 0 0;
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid;
+                        border-radius: 25px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            -o-object-fit: cover;
+                            object-fit: cover;
+                        }
+                    }
+                    .campaigns-name{
+                        display: inline-block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        height: 40px;
+                        width: calc(100% - 45px);
+                        margin-left: 5px;
+                        line-height: 1.4;
+                        padding-top: 3px;
+                        span{
+                            color: #fff;
+                            display: block;
+                        }
+                        .brand-name{
+                            font-size: 14px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        .desc{
+                            font-size: 12px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+                .campaign-img{
+                    height: 100%;
+                    overflow: hidden;
+                    border-radius: 6px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                        border-radius: 6px;
+                    }
+                }
+            }
+        }
+        }        
+        .slider-ipgallery ul{
+            .camp-list-block{
+                width: 100%;
+                margin: 0 0 20px;
+            }
+        }
+        .recent-activations{
+            h2{
+                font-size: 34px;
+                line-height: 34px;
+                color: #000;
+            }
+            .slider-wrap{
+                position: relative;                
+                .nav-split{
+                    .prev, .next{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: #fff
+                    }
+                    .prev{
+                        left: -15px;
+                    }
+                    .next{
+                        right: -15px;
+                    }
+                    svg{
+                        fill: #000;
+                    }
+                }            
+            }
+        }
     }
 
     /************** How we work ****************/

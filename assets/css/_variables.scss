@@ -19,6 +19,7 @@ $industry-menu-active: #f53437;
 $business-area-menu-active: #4b96fb;
 $hw-menu-active: #448cef;
 $ourwork-menu-active: #412a6d;
+$ipgallery-menu-active: #412a6d;
 $products-menu-active: #412a6d;
 $brand-mng-menu-active: #ec8eab;
 $blog-menu-active: #653235;
@@ -26,7 +27,7 @@ $about-menu-active: #ef141a;
 $contact-menu-active: #f54548;
 $pillarPage-menu-active: #f54548;
 $notfound-menu-active: #805eb9;
-
+  
 @mixin home-bg{    
     background-image: linear-gradient(to left, #283048 20%, #859398 100%);
     background-position: center;
@@ -111,6 +112,19 @@ $notfound-menu-active: #805eb9;
 	-webkit-text-fill-color: transparent;
 }
 
+@mixin ipgallery-bg{    
+    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+    background-position: center;
+}
+@mixin ipgallery-bg2{    
+    background-image: linear-gradient(to right, #c489ed 0%, #4b2a91 100%);
+    background-position: center;
+}
+@mixin ipgallery-text-bg{
+	background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 @mixin brand-mng-bg{    
     background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
     background-position: center;
@@ -268,6 +282,7 @@ $notfound-menu-active: #805eb9;
 @mixin ellipsis{    
     overflow: hidden!important;
     text-overflow: ellipsis!important;
+    -o-text-overflow: ellipsis;
     display: -webkit-box!important;
     -webkit-line-clamp: 2!important;
     -webkit-box-orient: vertical;

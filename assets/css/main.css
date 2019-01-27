@@ -664,6 +664,17 @@ h1, h2 {
   -webkit-text-fill-color: transparent;
 }
 
+.ipgallery-bg {
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  background-position: center;
+}
+
+.ipgallery-bg {
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .brand-mng-bg {
   background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
   background-position: center;
@@ -1795,7 +1806,7 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 
-/*************************** products *****************************/
+/*************************** our work gallery header *****************************/
 .ourwork-gallery header {
   padding: 17px 0;
 }
@@ -1821,6 +1832,36 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 .ourwork-gallery footer .copy-right {
+  background-image: linear-gradient(to right, #c489ed 0%, #4b2a91 100%);
+  background-position: center;
+}
+
+/*************************** our work gallery header *****************************/
+.intprint-gallery header {
+  padding: 17px 0;
+}
+.intprint-gallery header .overlay {
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  background-position: center;
+}
+.intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #412a6d;
+  font-weight: bold;
+}
+.intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #412a6d;
+}
+.intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #412a6d;
+}
+.intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
+  color: #412a6d;
+}
+.intprint-gallery footer .footer-top {
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  background-position: center;
+}
+.intprint-gallery footer .copy-right {
   background-image: linear-gradient(to right, #c489ed 0%, #4b2a91 100%);
   background-position: center;
 }
@@ -2684,8 +2725,6 @@ nav.nav-split:hover svg.icon {
   cursor: pointer;
   -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
-  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
-  background-position: center;
 }
 #mixedSlider .MS-controls button:hover {
   color: rgba(0, 0, 0, 0.8);
@@ -3372,12 +3411,20 @@ nav.nav-split:hover svg.icon {
 .ourwork-gallery .videos-in {
   width: 100%;
 }
+.ourwork-gallery .videos-in .video-block {
+  margin: 0 -8px;
+}
+@media (max-width: 767px) {
+  .ourwork-gallery .videos-in .video-block {
+    margin: 0;
+  }
+}
 .ourwork-gallery .videos-in .video-block .custom {
   height: 190px;
+  width: 100%;
   overflow: hidden;
   float: left;
   color: #fff;
-  background: #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   position: relative;
@@ -3396,6 +3443,7 @@ nav.nav-split:hover svg.icon {
   width: 100%;
   height: 100%;
   object-fit: fill;
+  float: left;
 }
 .ourwork-gallery .videos-in .video-block .custom:after {
   content: " ";
@@ -3431,7 +3479,13 @@ nav.nav-split:hover svg.icon {
   .ourwork-gallery .videos-in .video-block .large {
     width: 100%;
     height: auto;
-    padding: 8px 0;
+    padding: 0;
+    margin: 0 0 40px;
+  }
+}
+@media (max-width: 479px) {
+  .ourwork-gallery .videos-in .video-block .large {
+    margin: 0 0 25px;
   }
 }
 .ourwork-gallery .videos-in .video-block .large .custom {
@@ -3445,7 +3499,13 @@ nav.nav-split:hover svg.icon {
 @media (max-width: 767px) {
   .ourwork-gallery .videos-in .video-block .small {
     width: 100%;
-    padding: 8px 0;
+    margin: 0 0 40px;
+    padding: 0;
+  }
+}
+@media (max-width: 479px) {
+  .ourwork-gallery .videos-in .video-block .small {
+    margin: 0 0 25px;
   }
 }
 .ourwork-gallery .videos-in .video-block:nth-child(odd) .large, .ourwork-gallery .videos-in .video-block:nth-child(odd) .small {
@@ -3462,7 +3522,7 @@ nav.nav-split:hover svg.icon {
   height: auto;
 }
 .ourwork-gallery .videos-in .video-block span.selected .custom {
-  height: auto;
+  height: 100%;
 }
 .ourwork-gallery .videos-in .video-block span.selected .custom:after {
   content: none;
@@ -3477,9 +3537,20 @@ nav.nav-split:hover svg.icon {
 .ourwork-gallery .videos-in .video-block span.selected .bottom-links .cta {
   padding-right: 50px;
 }
+@media (max-width: 767px) {
+  .ourwork-gallery .videos-in .video-block span.selected .bottom-links {
+    top: 0;
+  }
+}
+.ourwork-gallery .videos-in .video-block span.selected .right-buttons {
+  padding: 10px;
+}
 .ourwork-gallery .videos-in .video-block span.selected .right-buttons .close-button, .ourwork-gallery .videos-in .video-block span.selected .right-buttons .info-button, .ourwork-gallery .videos-in .video-block span.selected .right-buttons .share-button {
   display: block !important;
   margin-bottom: 10px;
+}
+.ourwork-gallery .videos-in .video-block span.selected .right-buttons .info-button {
+  display: none !important;
 }
 .ourwork-gallery .videos-in .video-block span.sibling {
   width: 50%;
@@ -3487,6 +3558,17 @@ nav.nav-split:hover svg.icon {
 }
 .ourwork-gallery .videos-in .video-block span.sibling .custom {
   height: 350px;
+}
+@media (max-width: 767px) {
+  .ourwork-gallery .videos-in .video-block span.sibling .custom {
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
+  .ourwork-gallery .videos-in .video-block span.sibling {
+    height: auto;
+    width: 100%;
+  }
 }
 .ourwork-gallery .videos-in .video-block span:hover .bottom-links {
   visibility: visible;
@@ -3513,13 +3595,23 @@ nav.nav-split:hover svg.icon {
 .ourwork-gallery .videos-in .video-block.flex .sibling {
   order: 2;
 }
+@media (max-width: 767px) {
+  .ourwork-gallery .videos-in .video-block.flex {
+    display: block;
+  }
+}
 .ourwork-gallery .videos-in .video-block .right-buttons {
   position: absolute;
   top: 8px;
   right: 8px;
   z-index: 80;
   background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
-  padding: 10px;
+}
+@media (max-width: 767px) {
+  .ourwork-gallery .videos-in .video-block .right-buttons {
+    right: 0;
+    top: 0;
+  }
 }
 .ourwork-gallery .videos-in .video-block .right-buttons img {
   padding-top: 5px;
@@ -3531,6 +3623,7 @@ nav.nav-split:hover svg.icon {
 }
 .ourwork-gallery .videos-in .video-block .right-buttons .info-button {
   position: relative;
+  display: none !important;
 }
 .ourwork-gallery .videos-in .video-block .right-buttons .info-button .info-tooltip {
   visibility: hidden;
@@ -3588,7 +3681,8 @@ nav.nav-split:hover svg.icon {
   position: absolute;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   color: #fff;
-  padding: 10px;
+  padding: 6px 10px;
+  align-items: center;
   background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
   background-position: center;
   visibility: hidden;
@@ -3597,25 +3691,30 @@ nav.nav-split:hover svg.icon {
   .ourwork-gallery .videos-in .video-block .bottom-links {
     left: 0;
     right: 0;
+    bottom: 0;
   }
 }
 .ourwork-gallery .videos-in .video-block .bottom-links a {
   color: #fff;
+  font-size: 13px;
 }
 .ourwork-gallery .videos-in .video-block .bottom-links .title {
   overflow: hidden;
   flex: 1;
   display: flex;
-  min-height: 26px;
 }
 .ourwork-gallery .videos-in .video-block .bottom-links .title .title-text {
   max-width: 100%;
   padding-left: 4px;
-  overflow: hidden;
-  white-space: nowrap;
-  word-wrap: normal;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  min-height: 20px;
+  line-height: 17px;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1 !important;
+  -webkit-box-orient: vertical;
+  max-height: 32.8px;
+  font-size: 13px;
 }
 .ourwork-gallery .videos-in .video-block .bottom-links .cta {
   white-space: nowrap;
@@ -3623,8 +3722,123 @@ nav.nav-split:hover svg.icon {
 }
 .ourwork-gallery .videos-in .video-block .bottom-links .cta img {
   vertical-align: middle;
-  width: 30px;
-  margin-left: 2px;
+  width: 25px;
+  margin-left: 3px;
+}
+
+/************** interactive print gallery **************/
+.intprint-gallery .campaigns-main-list, .intprint-gallery .slider-ipgallery ul {
+  margin-left: -20px;
+  margin-right: -20px;
+  float: left;
+  width: calc(100% + 40px);
+  margin-top: 20px;
+}
+.intprint-gallery .campaigns-main-list .camp-list-block, .intprint-gallery .slider-ipgallery ul .camp-list-block {
+  width: 25%;
+  float: left;
+  padding: 0 20px;
+  position: relative;
+  margin: 0 0 40px;
+}
+.intprint-gallery .campaigns-main-list .camp-list-block .camp-list-block-in, .intprint-gallery .slider-ipgallery ul .camp-list-block .camp-list-block-in {
+  background: #fff;
+  width: 100%;
+  height: 252px;
+  box-shadow: 0 0 10px -3px;
+  position: relative;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  border-radius: 6px;
+}
+.intprint-gallery .campaigns-main-list .camp-list-block .camp-list-block-in .campaigns-brand, .intprint-gallery .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaigns-brand {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent);
+  width: 100%;
+  padding: 6px 0 36px 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.intprint-gallery .campaigns-main-list .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-brand-icon, .intprint-gallery .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-brand-icon {
+  float: left;
+  background: 0 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 25px;
+}
+.intprint-gallery .campaigns-main-list .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-brand-icon img, .intprint-gallery .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-brand-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.intprint-gallery .campaigns-main-list .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-name, .intprint-gallery .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-name {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 40px;
+  width: calc(100% - 45px);
+  margin-left: 5px;
+  line-height: 1.4;
+  padding-top: 3px;
+}
+.intprint-gallery .campaigns-main-list .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-name span, .intprint-gallery .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-name span {
+  color: #fff;
+  display: block;
+}
+.intprint-gallery .campaigns-main-list .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-name .brand-name, .intprint-gallery .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-name .brand-name {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.intprint-gallery .campaigns-main-list .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-name .desc, .intprint-gallery .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-name .desc {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.intprint-gallery .campaigns-main-list .camp-list-block .camp-list-block-in .campaign-img, .intprint-gallery .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaign-img {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.intprint-gallery .campaigns-main-list .camp-list-block .camp-list-block-in .campaign-img img, .intprint-gallery .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaign-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.intprint-gallery .slider-ipgallery ul .camp-list-block {
+  width: 100%;
+  margin: 0 0 20px;
+}
+.intprint-gallery .recent-activations h2 {
+  font-size: 34px;
+  line-height: 34px;
+  color: #000;
+}
+.intprint-gallery .recent-activations .slider-wrap {
+  position: relative;
+}
+.intprint-gallery .recent-activations .slider-wrap .nav-split .prev, .intprint-gallery .recent-activations .slider-wrap .nav-split .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+}
+.intprint-gallery .recent-activations .slider-wrap .nav-split .prev {
+  left: -15px;
+}
+.intprint-gallery .recent-activations .slider-wrap .nav-split .next {
+  right: -15px;
+}
+.intprint-gallery .recent-activations .slider-wrap .nav-split svg {
+  fill: #000;
 }
 
 /************** How we work ****************/
@@ -3740,6 +3954,7 @@ nav.nav-split:hover svg.icon {
   color: #383838;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
+  -o-text-overflow: ellipsis;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical;
@@ -3753,6 +3968,7 @@ nav.nav-split:hover svg.icon {
   width: 100%;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
+  -o-text-overflow: ellipsis;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical;
@@ -3827,6 +4043,7 @@ nav.nav-split:hover svg.icon {
   max-height: 80px;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
+  -o-text-overflow: ellipsis;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical;
@@ -3854,6 +4071,7 @@ nav.nav-split:hover svg.icon {
 .blog-main .latest-posts .left .left-cont-in h1 + p {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
+  -o-text-overflow: ellipsis;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical;
@@ -3921,6 +4139,7 @@ nav.nav-split:hover svg.icon {
   max-height: 25px;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
+  -o-text-overflow: ellipsis;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical;

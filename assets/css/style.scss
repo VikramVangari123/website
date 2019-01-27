@@ -189,68 +189,74 @@ h1, h2{
   @include home-bg;
 }
 .home-text-bg{
-	@include home-text-bg;
+    @include home-text-bg;
 }
 .hw-bg {
   @include hw-bg;
 }
 .hw-text-bg{
-	@include hw-text-bg;
+    @include hw-text-bg;
 }
 
 .industry-bg {
   @include industry-bg;
 }
 .industry-text-bg{
-	@include industry-text-bg;
+    @include industry-text-bg;
 }
 .business-area-bg {
   @include business-area-bg;
 }
 .business-area-text-bg{
-	@include business-area-text-bg;
+    @include business-area-text-bg;
 }
 .products-bg {
   @include products-bg;
 }
 .products-text-bg{
-	@include products-text-bg;
+    @include products-text-bg;
 }
 .ourwork-bg {
   @include ourwork-bg;
 }
 .ourwork-text-bg{
-	@include ourwork-text-bg;
+    @include ourwork-text-bg;
+}
+.ipgallery-bg {
+  @include ipgallery-bg;
+}
+.ipgallery-bg{
+    @include ipgallery-text-bg;
 }
 .brand-mng-bg {
   @include brand-mng-bg;
 }
 .brand-mng-text-bg{
-	@include brand-mng-text-bg;
+    @include brand-mng-text-bg;
 }
 .blog-bg{
   @include blog-bg;
 }
 .blog-text-bg{
-	@include blog-text-bg;
+    @include blog-text-bg;
 }
 .about-bg{
   @include about-bg;
 }
 .about-text-bg{
-	@include about-text-bg;
+    @include about-text-bg;
 }
 .contact-bg{
   @include contact-bg;
 }
 .contact-text-bg{
-	@include contact-text-bg;
+    @include contact-text-bg;
 }
 .pillarPage-bg{
   @include pillarPage-bg;
 }
 .pillarPage-text-bg{
-	@include pillarPage-text-bg;
+    @include pillarPage-text-bg;
 }
 .notfound-bg{
   @include notfound-bg;
