@@ -18,8 +18,8 @@ $home-menu-active: #78cfe2;
 $industry-menu-active: #f53437;
 $business-area-menu-active: #4b96fb;
 $hw-menu-active: #448cef;
-$ourwork-menu-active: #412a6d;
-$ipgallery-menu-active: #412a6d;
+$ourwork-menu-active: #9FACE6;
+$ipgallery-menu-active: #F8CDDA;
 $products-menu-active: #412a6d;
 $brand-mng-menu-active: #ec8eab;
 $blog-menu-active: #653235;
@@ -99,29 +99,29 @@ $notfound-menu-active: #805eb9;
 }
 
 @mixin ourwork-bg{    
-    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+    background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%);
     background-position: center;
 }
 @mixin ourwork-bg2{    
-    background-image: linear-gradient(to right, #c489ed 0%, #4b2a91 100%);
+    background-image: linear-gradient(to right, #66dfc8 0%, #92a3ed 100%);
     background-position: center;
 }
 @mixin ourwork-text-bg{
-	background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+	background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
 @mixin ipgallery-bg{    
-    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+    background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%);
     background-position: center;
 }
 @mixin ipgallery-bg2{    
-    background-image: linear-gradient(to right, #c489ed 0%, #4b2a91 100%);
+    background-image: linear-gradient(to right, #203072 0%, #ebbecc 100%);
     background-position: center;
 }
 @mixin ipgallery-text-bg{
-	background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+	background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
