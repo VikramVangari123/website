@@ -3408,6 +3408,16 @@ nav.nav-split:hover svg.icon {
 }
 
 /************** our work gallery ***********/
+.ourwork-gallery h2 {
+  font-size: 34px;
+  line-height: 34px;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .ourwork-gallery h2 {
+    font-size: 26px;
+  }
+}
 .ourwork-gallery .videos-in {
   width: 100%;
 }

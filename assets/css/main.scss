@@ -2412,6 +2412,14 @@
 
     /************** our work gallery ***********/
     .ourwork-gallery{
+        h2{
+            font-size: 34px;
+            line-height: 34px;
+            color: #000;
+            @include mobile-max{
+                font-size: 26px;
+            }
+        }
         .videos-in {
             width: 100%;
             .video-block{
