@@ -261,13 +261,13 @@
     &--prev {
         left: 0;
         &::before {
-            background-image: url('../../assets/images/arrow-left.svg');
+            background-image: url('https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/arrow-left.svg');
         }
     }
     &--next {
         right: 0;
         &::before {
-            background-image: url('../../assets/images/arrow-right.svg');
+            background-image: url('https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/arrow-right.svg');
         }
     }
 }

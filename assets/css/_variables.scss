@@ -262,6 +262,10 @@ $notfound-menu-active: #805eb9;
     -webkit-box-shadow: 0 10px 12px -4px rgba(0,0,0,.3);
     box-shadow: 0 10px 12px -4px rgba(0,0,0,.3);
 }
+@mixin box-shadow-pricing{    
+    -webkit-box-shadow: 0 0 8px -4px rgba(0,0,0,.3);
+    box-shadow: 0 0 8px -4px rgba(0,0,0,.3);
+}
 @mixin image-scale{
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
