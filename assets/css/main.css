@@ -3842,6 +3842,7 @@ ul.tabs li.active {
 .post-grid .post-left .post-img, .post-grid .post-right-top .post-img, .post-grid .post-right-btm .post-img {
   overflow: hidden;
   height: 100%;
+  z-index: 1;
 }
 .post-grid .post-left .post-img img, .post-grid .post-right-top .post-img img, .post-grid .post-right-btm .post-img img {
   width: 100%;
@@ -3871,17 +3872,17 @@ ul.tabs li.active {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
-  z-index: 10;
   color: #fff;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  bottom: 0px;
+  z-index: 9;
 }
 .post-grid .post-left .post-cont .post-cont-in, .post-grid .post-right-top .post-cont .post-cont-in, .post-grid .post-right-btm .post-cont .post-cont-in {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
 }
 @media (max-width: 767px) {
   .post-grid .post-left .post-cont .post-cont-in, .post-grid .post-right-top .post-cont .post-cont-in, .post-grid .post-right-btm .post-cont .post-cont-in {
@@ -3891,16 +3892,22 @@ ul.tabs li.active {
 }
 .post-grid .post-left .post-cont h4, .post-grid .post-right-top .post-cont h4, .post-grid .post-right-btm .post-cont h4 {
   margin-bottom: 8px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 51px;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  -o-text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical;
 }
 .post-grid .post-left .post-cont h4 a, .post-grid .post-right-top .post-cont h4 a, .post-grid .post-right-btm .post-cont h4 a {
   color: #fff;
 }
 .post-grid .post-left .post-cont .post-date, .post-grid .post-right-top .post-cont .post-date, .post-grid .post-right-btm .post-cont .post-date {
-  margin-bottom: 15px;
+  margin-bottom: 0;
   color: #fff;
+  float: left;
+  width: calc(100% - 85px);
+  padding-right: 7px;
 }
 .post-grid .post-left .post-cont .read-more, .post-grid .post-right-top .post-cont .read-more, .post-grid .post-right-btm .post-cont .read-more {
   margin-bottom: 0;
