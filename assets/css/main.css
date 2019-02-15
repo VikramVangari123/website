@@ -1333,12 +1333,16 @@ hr {
   }
 }
 
-.left60 {
-  padding-right: 2%;
+@media (min-width: 1025px) {
+  .right50, .right60, .right40 {
+    padding-left: 1%;
+  }
 }
 
-.right60 {
-  padding-left: 2%;
+@media (min-width: 1025px) {
+  .left50, .left60, .left40 {
+    padding-right: 1%;
+  }
 }
 
 .right40, .left40 {
@@ -3883,6 +3887,7 @@ ul.tabs li.active {
   right: 0;
   background: rgba(0, 0, 0, 0.7);
   padding: 10px;
+  font-size: 14px;
 }
 @media (max-width: 767px) {
   .post-grid .post-left .post-cont .post-cont-in, .post-grid .post-right-top .post-cont .post-cont-in, .post-grid .post-right-btm .post-cont .post-cont-in {
@@ -3892,6 +3897,7 @@ ul.tabs li.active {
 }
 .post-grid .post-left .post-cont h4, .post-grid .post-right-top .post-cont h4, .post-grid .post-right-btm .post-cont h4 {
   margin-bottom: 8px;
+  font-size: 18px;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   -o-text-overflow: ellipsis;
@@ -4095,11 +4101,6 @@ ul.tabs li.active {
 @media (max-width: 479px) {
   .our-work .campaigns-main-list .camp-list-block .camp-list-block-in {
     height: 142px;
-  }
-}
-@media (min-width: 1025px) {
-  .our-work .left50 {
-    padding-right: 30px;
   }
 }
 

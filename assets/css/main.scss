@@ -181,12 +181,15 @@
             width: 100%;
             display: block;
         }
-    }
-    .left60{
-        padding-right: 2%;
-    }
-    .right60{
-        padding-left: 2%;
+    }.right50, .right60, .right40 {
+        @include laptop-min{
+            padding-left: 1%;
+        }
+    }    
+    .left50, .left60, .left40 {
+        @include laptop-min{
+            padding-right: 1%;
+        }
     }
     .right40, .left40{
         width: 40%;
@@ -2792,6 +2795,7 @@
                     right: 0;
                     background: rgba(0, 0, 0, 0.7);
                     padding: 10px;
+                    font-size: 14px;
                     @include mobile-max{
                         left: 15px;
                         right: 15px;
@@ -2799,6 +2803,7 @@
                 }
                 h4{
                     margin-bottom: 8px;
+                    font-size: 18px;
                     @include ellipsis;
                     a{
                         color: #fff;
@@ -2985,11 +2990,6 @@
                     }
                 }
             }
-        }  
-        .left50{
-            @include laptop-min{
-                padding-right: 30px;
-            } 
         }  
     }
 
