@@ -1,11 +1,16 @@
 
 @import 'style';
-.main{
-    margin-top: 59px;
-    float: left;
+.main{  
+    position: absolute;
+    top: 0px;
+    left: 0;
     width: 100%;
-    overflow: hidden;
-    clear: both;   
+    height: 100%;
+    transition: -webkit-transform 1.5s;
+    transition: transform 1.5s;
+    transition: transform 1.5s, -webkit-transform 1.5s;
+    -webkit-perspective: 3000;
+            perspective: 3000;
     .section:first-child .right50 img {
         max-width: 500px;
         @include mobile{
@@ -52,9 +57,14 @@
         }
     }
     .section {      
-        padding: 40px 0;
+        padding: 99px 0 40px 0;
         border: 1px #b0b0b0;
         overflow: hidden;
+        display: table;
+        table-layout: fixed;
+        position: relative;
+        width: 100%;
+        height: calc(100%);   
         @include tablet-max {
             height: auto !important;
         }
@@ -62,22 +72,20 @@
             padding: 25px 0 !important;
         }
     }
-    .sec-first{
-        padding-top: 80px;
-        @include smartphone {
-            padding-top: 50px !important;
-        }
-    }
-    .sec-last{
+    .ctaSec-last{
         padding-bottom: 80px;
         @include smartphone {
             padding-bottom: 50px !important;
         }
     }
+    .inline-table {
+        display: inline-table;
+        table-layout: fixed;
+        width: 100%;
+    }    
         .section-in{            
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: table-cell;
+            vertical-align: middle;
             width: 100%;
             @include tablet-max {
                 display: block !important;
@@ -100,7 +108,7 @@
         h2{
             margin-bottom: 25px;
             font-size: 46px;
-            line-height: 50px;
+            line-height: 52px;
             font-weight: normal;
             @include tablet-max{
                 font-size: 34px;
@@ -514,6 +522,9 @@
             }
         }
     } 
+
+    /*************************** section scrolling ***********************/
+    
     /*************************** home header *****************************/
     
     .home{
@@ -2797,14 +2808,18 @@
                     padding: 10px;
                     font-size: 14px;
                     @include mobile-max{
-                        left: 15px;
-                        right: 15px;
+                        font-size: 13px;
                     }
                 }
                 h4{
                     margin-bottom: 8px;
                     font-size: 18px;
                     @include ellipsis;
+                    @include mobile-max{
+                        line-height: 23px;
+                        font-size: 15px;
+                        @include ellipsis1;
+                    }
                     a{
                         color: #fff;
                     }
@@ -3576,6 +3591,7 @@
                         img {
                             @include objectfitCover;
                             @include transition;
+                            border: 1px solid #ececec;
                             &:hover, &:focus{
                                 @include image-scale;
                             }

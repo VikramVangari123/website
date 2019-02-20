@@ -10,237 +10,6 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.0/dist/aos.css" /> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <style>
-    *, *:before, *:after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    }
-
-    .inner, .nav-panel ul .nav-btn:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    }
-
-    html, body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    }
-
-    @media (max-width: 767px) {
-    body {
-        font-size: 70%;
-    }
-    }
-
-    .wrapper {
-    position: absolute;
-    top: 59px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 59px);
-    transition: -webkit-transform 1.5s;
-    transition: transform 1.5s;
-    transition: transform 1.5s, -webkit-transform 1.5s;
-    -webkit-perspective: 3000;
-            perspective: 3000;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    }
-    .wrapper .page {
-    position: relative;
-    width: 100%;
-    height: calc(100%) !important;
-    /* -webkit-transform: rotateX(180deg) scale(0.3);
-            transform: rotateX(180deg) scale(0.3); */
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    transition: -webkit-transform 1s ease-in-out;
-    transition: transform 1s ease-in-out;
-    transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
-    will-change: transform;
-    }
-    .wrapper.active-page1 {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    }
-    .wrapper.active-page1 .page.page1 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    }
-    .wrapper.active-page2 {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-    }
-    .wrapper.active-page2 .page.page2 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    }
-    .wrapper.active-page3 {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
-    }
-    .wrapper.active-page3 .page.page3 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    }
-    .wrapper.active-page4 {
-    -webkit-transform: translateY(-300%);
-            transform: translateY(-300%);
-    }
-    .wrapper.active-page4 .page.page4 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    }
-    .wrapper.active-page5 {
-    -webkit-transform: translateY(-400%);
-            transform: translateY(-400%);
-    }
-    .wrapper.active-page5 .page.page5 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    }
-    .wrapper.active-page6 {
-    -webkit-transform: translateY(-500%);
-            transform: translateY(-500%);
-    }
-    .wrapper.active-page6 .page.page6 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    }
-    .wrapper.active-page7 {
-    -webkit-transform: translateY(-600%);
-            transform: translateY(-600%);
-    }
-    .wrapper.active-page7 .page.page7 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    }
-    .wrapper.active-page8 {
-    -webkit-transform: translateY(-700%);
-            transform: translateY(-700%);
-    }
-    .wrapper.active-page8 .page.page8 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    }
-    .wrapper.active-page9 {
-    -webkit-transform: translateY(-800%);
-            transform: translateY(-800%);
-    }
-    .wrapper.active-page9 .page.page9 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    }
-    .wrapper.active-page10 {
-    -webkit-transform: translateY(-900%);
-            transform: translateY(-900%);
-    }
-    .wrapper.active-page10 .page.page10 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    }
-
-    .nav-panel {
-    position: fixed;
-    top: 50%;
-    right: 2%;
-    margin-top: 29px;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    z-index: 1000;
-    transition: opacity 0.5s, -webkit-transform 0.5s cubic-bezier(0.57, 1.2, 0.68, 2.6);
-    transition: opacity 0.5s, transform 0.5s cubic-bezier(0.57, 1.2, 0.68, 2.6);
-    transition: opacity 0.5s, transform 0.5s cubic-bezier(0.57, 1.2, 0.68, 2.6), -webkit-transform 0.5s cubic-bezier(0.57, 1.2, 0.68, 2.6);
-    will-change: transform, opacity;
-    }
-    .nav-panel.invisible {
-    opacity: 0;
-    -webkit-transform: translateY(-50%) scale(0.5);
-            transform: translateY(-50%) scale(0.5);
-    }
-    .nav-panel ul {
-    list-style-type: none;
-    }
-    .nav-panel ul .nav-btn {
-    position: relative;
-    width: 1em;
-    height: 1em;
-    margin-bottom: 0.5em;
-    border: 0.12em solid #000;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: border-color, -webkit-transform 0.3s;
-    transition: border-color, transform 0.3s;
-    transition: border-color, transform 0.3s, -webkit-transform 0.3s;
-    will-change: border-color, transform;
-    }
-    .nav-panel ul .nav-btn:after {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.3);
-            transform: translateX(-50%) translateY(-50%) scale(0.3);
-    background-color: #000;
-    opacity: 0;
-    transition: opacity 0.3s, -webkit-transform;
-    transition: transform, opacity 0.3s;
-    transition: transform, opacity 0.3s, -webkit-transform;
-    will-change: transform, opacity;
-    }
-    .nav-panel ul .nav-btn.active:after, .nav-panel ul .nav-btn:hover:after {
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.7);
-            transform: translateX(-50%) translateY(-50%) scale(0.7);
-    opacity: 1;
-    }
-    .nav-panel ul .nav-btn span {
-        display: none;
-        color: #000;
-    }
-    .nav-panel ul .nav-btn:hover span{
-        display: block;
-        position: absolute;
-        right: 22px;
-        white-space: nowrap;
-        top: -7px;
-    }
-    .nav-panel ul .nav-btn:hover {
-    border-color: yellow;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    }
-    .nav-panel ul .nav-btn:hover:after {
-    background-color: yellow;
-    }
-    .nav-panel .scroll-btn {
-    position: absolute;
-    left: 0;
-    width: 1em;
-    height: 1em;
-    border: 0.2em solid #000;
-    border-left: none;
-    border-bottom: none;
-    cursor: pointer;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    transition: border-color 0.3s;
-    }
-    .nav-panel .scroll-btn.up {
-    top: -1.6em;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    }
-    .nav-panel .scroll-btn.down {
-    bottom: -1.2em;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-    }
-
-    </style>  
 </head>
 
 <body class="home">
@@ -359,14 +128,14 @@
                 }
             </script>
         </header>
-        <div class="main wrapper active-page1">
-            <div class="section home-bg page page1">
+        <div class="main" id="pager-holder">
+            <div class="section home-bg block1 page" data-hint-text="Pioneers in Mixed Reality Solutions">
                 <div class="container">
                     <div class="section-in flex-col-rev">
-                        <div class="left50">
+                        <div class="left50" data-aos="slide-up">
                             <h1>Pioneers in Mixed Reality Solutions</h1>
                         </div>
-                        <div class="right50 text-center">
+                        <div class="right50 text-center" data-aos="fade-up">
                             <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/home/home.png" class="resp-img" alt="" />
                         </div>
                     </div>
@@ -374,14 +143,14 @@
             </div>
 
             <!-- our works -->
-            <div class="section our-work page page2">
+            <div class="section our-work block2 page" data-hint-text="Our Work">
                 <div class="container">
 
                     <!-- <div class="title float-right hidden">
                         <a href="#" class="view-all">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a>
                     </div> -->
                     <div class="section-in">
-                        <div class="left50">
+                        <div class="left50" data-aos="slide-up">
                             <h2 class="home-text-bg">Our Work</h2>
                             <p>We craft immersive and innovative experiences powered by Mixed Reality across industries and business areas. With over 1600 campaigns and counting, we have delivered the largest number of mixed reality solutions so far in different
                                 segments.
@@ -391,24 +160,24 @@
                         <div class="right50 text-center">
                             <div class="ow-videos-in">
                                 <div class="ow-videos-in-top">                                
-                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" data-lity>
+                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" data-lity data-aos="fade-right">
                                         <video>
                                             <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4#t=5" type="video/mp4">
                                         </video>
                                     </a>
-                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4" data-lity>
+                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4" data-lity data-aos="slide-down">
                                         <video>
                                             <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4#t=4" type="video/mp4">
                                         </video>
                                     </a>
                                 </div>
                                 <div class="ow-videos-in-btm">  
-                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/RCB+-+IPL+2018.mp4" data-lity>
+                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/RCB+-+IPL+2018.mp4" data-lity data-aos="fade-up">
                                         <video>
                                             <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/RCB+-+IPL+2018.mp4#t=51" type="video/mp4">
                                         </video>
                                     </a>
-                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/Marketing+video+final+version.mp4" data-lity>
+                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/Marketing+video+final+version.mp4" data-lity data-aos="fade-left">
                                         <video>
                                             <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/Marketing+video+final+version.mp4#t=8" type="video/mp4">
                                         </video>
@@ -422,15 +191,15 @@
 
 
             <!-- Brands Powered by WOWSOME -->
-            <div class="section brands page page3">
+            <div class="section brands block3 page" data-hint-text="Brands Powered by WOWSOME">
                 <div class="container">
                     <div class="section-in">
-                        <div class="left40">
+                        <div class="left40" data-aos="slide-up">
                             <h2 class="home-text-bg">Brands Powered by WOWSOME</h2>
                             <p>Trusted by 50+ brands, WOWSOME is proud to partner with these organizations and offer new and exciting solutions to engage with their target audience.</p>
                         </div>
 
-                        <div class="right60 text-center">
+                        <div class="right60 text-center" data-aos="fade-left">
                             <div class="slider-wrap">
                                 <div class="slider">
                                     <ul>
@@ -505,7 +274,7 @@
             </div>
 
             <!-- testimonials -->
-            <div class="section testimonial page page4">
+            <div class="section testimonial block4 page" data-hint-text="Customer Testimonials">
                 <div class="container">
                     <div class="section-in">  
                         <div class="inline-table">  
@@ -521,7 +290,7 @@
                                 <h2 class="home-text-bg">Customer Testimonials</h2>
                                 <!-- <a href="#" class="view-all">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a> -->
                             </div>
-                            <div class="slider1">
+                            <div class="slider1" data-aos="fade-up">
                                 <div class="slide active">
                                     <div class="testi-in">
                                         <div class="testi-img home-bg">
@@ -559,14 +328,14 @@
             </div>
 
             <!-- recent blog post -->
-            <div class="section page page5">
+            <div class="section block5 page" data-hint-text="Recent Blog Posts">
                 <div class="container">
                     <div class="section-in post-grid">
                         <div class="title">
                             <h2 class="home-text-bg">Recent Blog Post</h2>
                             <a href="#" class="view-all home-text-bg">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a>
                         </div>
-                        <div class="post-left">
+                        <div class="post-left" data-aos="slide-up">
                             <div class="post-img">
                                 <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg1.jpg" alt="" />
                             </div>
@@ -580,7 +349,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="post-right">
+                        <div class="post-right" data-aos="slide-up">
                             <div class="post-right-top">                                
                                 <div class="post-img">
                                     <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg1.jpg" alt="" />
@@ -615,7 +384,7 @@
             </div>
             
             <!-- contact cta -->
-            <div class="section sec-sm-cta ctaSec-last page page6">
+            <div class="sec-sm-cta">
                 <div class="container">
                     <div class="sec-sm-cta-in">
                         <p class="text">Take your Events to the future with our Turnkey solutions. Create amazing interactive experiences, generate leads and engage your audience with breathtaking visuals and brand content. Learn more about our products.</p>
@@ -625,7 +394,7 @@
             </div>
             
             <!-- footer -->
-            <footer class="section page page7">
+            <footer>
                 <div class="footer-top section">
                     <div class="container">
                         <div class="subscribe">
@@ -677,30 +446,6 @@
             </footer>
 
         </div>
-        
-        <div class="nav-panel">
-            <!-- <div class="scroll-btn up"></div>
-            <div class="scroll-btn down"></div> -->
-            <nav>
-            <ul>
-                <li data-target="1" class="nav-btn nav-page1 active">
-                    <span>First Section</span>
-                </li>
-                <li data-target="2" class="nav-btn nav-page2">
-                    <span>Second Section</span>
-                </li>
-                <li data-target="3" class="nav-btn nav-page3">
-                    <span>Third Section</span>
-                </li>
-                <li data-target="4" class="nav-btn nav-page4">
-                    <span>Fourth Section</span>
-                </li>
-                <li data-target="5" class="nav-btn nav-page5">
-                    <span>Fifth Section</span>
-                </li>
-            </ul>
-            </nav>
-        </div>
     </div>
 
     <script>
@@ -711,107 +456,37 @@
             autoPlay: true,
             autoPlayDelay: 5
         });
-
-        'use strict';
-$(document).ready(function() {
-  var $wrap = $(".wrapper"),
-      pages = $(".page").length,
-      scrolling = false,
-      currentPage = 1,
-      $navPanel = $(".nav-panel"),
-      $scrollBtn = $(".scroll-btn"),
-      $navBtn = $(".nav-btn");
-
-  /*****************************
-  ***** NAVIGATE FUNCTIONS *****
-  *****************************/
-  function manageClasses() {
-    $wrap.removeClass(function (index, css) {
-      return (css.match (/(^|\s)active-page\S+/g) || []).join(' ');
-    });
-    $wrap.addClass("active-page" + currentPage);
-    $navBtn.removeClass("active");
-    $(".nav-btn.nav-page" + currentPage).addClass("active");
-    $navPanel.addClass("invisible");
-    scrolling = true;
-    setTimeout(function() {
-      $navPanel.removeClass("invisible");
-      scrolling = false;
-    }, 1000);
-  }
-  function navigateUp() {
-    if (currentPage > 1) {
-      currentPage--;
-      if (Modernizr.csstransforms) {
-        manageClasses();
-      } else {
-        $wrap.animate({"top": "-" + ( (currentPage - 1) * 100) + "%"}, 1000);
-      }
-    }
-  }
-
-  function navigateDown() {
-    if (currentPage < pages) {
-      currentPage++;
-      if (Modernizr.csstransforms) {
-        manageClasses();
-      } else {
-        $wrap.animate({"top": "-" + ( (currentPage - 1) * 100) + "%"}, 1000);
-      }
-    }
-  }
-
-  /*********************
-  ***** MOUSEWHEEL *****
-  *********************/
-  $(document).on("mousewheel DOMMouseScroll", function(e) {
-    if (!scrolling) {
-      if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
-        navigateUp();
-      } else { 
-        navigateDown();
-      }
-    }
-  });
-
-  /**************************
-  ***** RIGHT NAVIGATION ****
-  **************************/
-
-  /* NAV UP/DOWN BTN PAGE NAVIGATION */
-  $(document).on("click", ".scroll-btn", function() {
-    if ($(this).hasClass("up")) {
-      navigateUp();
-    } else {
-      navigateDown();
-    }
-  });
-
-  /* NAV CIRCLE DIRECT PAGE BTN */
-  $(document).on("click", ".nav-btn:not(.active)", function() {
-    if (!scrolling) {
-      var target = $(this).attr("data-target");
-      if (Modernizr.csstransforms) {
-        $wrap.removeClass(function (index, css) {
-          return (css.match (/(^|\s)active-page\S+/g) || []).join(' ');
+        
+        $(document).ready(function () {
+			// log for all callbacks
+			$("#pager-holder").neo_pager({
+				autoScrollPages: true,
+				useDefaultCss: true,
+				onDotHide: function () {
+					console.log("onDotHide");
+				},
+				onDotShow: function () {
+					console.log("onDotShow");
+				},
+				onPageIn: function (dot, indNew, indOld) {
+					console.log("onPageIn, ind new: ", indNew, " , ind old: ", indOld, " , dot: ", dot);
+				},
+				onPageOut: function (dot, ind) {
+					console.log("onPageOut, ind: ", ind, " , dot: ", dot);
+				},
+				onAutoScrollStart: function (dot, ind) {
+					console.log("onAutoScrollStart, ind: ", ind, " , dot: ", dot);
+				},
+				onAutoScrollEnd: function (dot, ind) {
+					console.log("onAutoScrollEnd, ind: ", ind, " , dot: ", dot);
+				}
+			});
         });
-        $wrap.addClass("active-page" + target);
-        $navBtn.removeClass("active");
-        $(this).addClass("active");
-        $navPanel.addClass("invisible");
-        currentPage = target;
-        scrolling = true;
-        setTimeout(function() {
-          $navPanel.removeClass("invisible");
-          scrolling = false; 
-        }, 1000);
-      } else {
-        $wrap.animate({"top": "-" + ( (target - 1) * 100) + "%"}, 1000);
-      }
-    }
-  });
-
-});
+        
+        
+        AOS.init({
+            duration: 1200,
+        });
     </script>
     <!-- JavaScripts -->
     
@@ -822,6 +497,7 @@ $(document).ready(function() {
     <!-- testimonial slider -->
     <script type="text/javascript" src="../assets/js/slider1.js"></script>  
     <script type="text/javascript" src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>   
+    <script src="../assets/pagescroll/neo.pager.js"></script>
 
 </body>
 

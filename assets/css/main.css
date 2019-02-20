@@ -1101,11 +1101,16 @@ header .overlay .overlay-content {
 
 /************************* content animations on scroll ***************************************/
 .main {
-  margin-top: 59px;
-  float: left;
+  position: absolute;
+  top: 0px;
+  left: 0;
   width: 100%;
-  overflow: hidden;
-  clear: both;
+  height: 100%;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  -webkit-perspective: 3000;
+  perspective: 3000;
 }
 .main .section:first-child .right50 img {
   max-width: 500px;
@@ -1162,9 +1167,14 @@ header .overlay .overlay-content {
 }
 
 .section {
-  padding: 40px 0;
+  padding: 99px 0 40px 0;
   border: 1px #b0b0b0;
   overflow: hidden;
+  display: table;
+  table-layout: fixed;
+  position: relative;
+  width: 100%;
+  height: calc(100%);
 }
 @media (max-width: 1024px) {
   .section {
@@ -1177,28 +1187,24 @@ header .overlay .overlay-content {
   }
 }
 
-.sec-first {
-  padding-top: 80px;
-}
-@media (max-width: 479px) {
-  .sec-first {
-    padding-top: 50px !important;
-  }
-}
-
-.sec-last {
+.ctaSec-last {
   padding-bottom: 80px;
 }
 @media (max-width: 479px) {
-  .sec-last {
+  .ctaSec-last {
     padding-bottom: 50px !important;
   }
 }
 
+.inline-table {
+  display: inline-table;
+  table-layout: fixed;
+  width: 100%;
+}
+
 .section-in {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: table-cell;
+  vertical-align: middle;
   width: 100%;
 }
 @media (max-width: 1024px) {
@@ -1225,7 +1231,7 @@ header .overlay .overlay-content {
 h2 {
   margin-bottom: 25px;
   font-size: 46px;
-  line-height: 50px;
+  line-height: 52px;
   font-weight: normal;
 }
 @media (max-width: 1024px) {
@@ -1722,6 +1728,7 @@ nav.nav-split:hover svg.icon {
   }
 }
 
+/*************************** section scrolling ***********************/
 /*************************** home header *****************************/
 .home header .overlay {
   background-image: linear-gradient(to left, #283048 20%, #859398 100%);
@@ -3891,8 +3898,7 @@ ul.tabs li.active {
 }
 @media (max-width: 767px) {
   .post-grid .post-left .post-cont .post-cont-in, .post-grid .post-right-top .post-cont .post-cont-in, .post-grid .post-right-btm .post-cont .post-cont-in {
-    left: 15px;
-    right: 15px;
+    font-size: 13px;
   }
 }
 .post-grid .post-left .post-cont h4, .post-grid .post-right-top .post-cont h4, .post-grid .post-right-btm .post-cont h4 {
@@ -3904,6 +3910,17 @@ ul.tabs li.active {
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical;
+}
+@media (max-width: 767px) {
+  .post-grid .post-left .post-cont h4, .post-grid .post-right-top .post-cont h4, .post-grid .post-right-btm .post-cont h4 {
+    line-height: 23px;
+    font-size: 15px;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical;
+  }
 }
 .post-grid .post-left .post-cont h4 a, .post-grid .post-right-top .post-cont h4 a, .post-grid .post-right-btm .post-cont h4 a {
   color: #fff;
@@ -4766,6 +4783,7 @@ ul.tabs li.active {
   object-fit: cover;
   -webkit-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
+  border: 1px solid #ececec;
 }
 .blog-main ul li .entry-thumbnail .post-img img:hover, .blog-main ul li .entry-thumbnail .post-img img:focus {
   -webkit-transform: scale(1.05);

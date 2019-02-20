@@ -51,38 +51,35 @@ $(function() {
     });
     
         //section height
-       $('.full-height-banner').css({
-           'height': (($(window).height()) - 60) + 'px'
+       $('.full-height').css({
+          'height': (($(window).height()) - 60) + 'px'
         });
         $(window).bind('resize', function() {
-           $('.full-height-banner').css({
-               'height': (($(window).height()) - 60) + 'px'
-           });
+          $('.full-height').css({
+              'height': (($(window).height()) - 60) + 'px'
+          });
        });
 
         // section inner full height
         var sectionHeight = $('.section').height();
-        $('.section-in-banner').css('height', (sectionHeight) + 'px');
+        $('.section-in').css('height', (sectionHeight) + 'px');
 
         // testimonial 
         var sliderblockHeight = $('.sliderblock-cont').height();
-        $('.slider1').css('height', (sliderblockHeight + 180) + 'px');
+        $('.slider1').css('height', (sliderblockHeight + 140) + 'px');
             // testimonial (window width leass than 767px)
         if ($(window).innerWidth() <= 767) {
-            var sliderblockHeight = $('.sliderblock-cont').height();
-            $('.slider1').css('height', (sliderblockHeight + 240) + 'px');
-        } else {
-            var sliderblockHeight = $('.sliderblock-cont').height();
-            $('.slider1').css('height', (sliderblockHeight + 180) + 'px');
+           var sliderblockHeight = $('.sliderblock-cont').height();
+           $('.slider1').css('height', (sliderblockHeight + 180) + 'px');
         }
             // testimonial (window width leass than 479px)
-        if ($(window).innerWidth() <= 479) {
-            var sliderblockHeight = $('.sliderblock-cont').height();
-            $('.slider1').css('height', (sliderblockHeight + 230) + 'px');
-        } else {
-            var sliderblockHeight = $('.sliderblock-cont').height();
-            $('.slider1').css('height', (sliderblockHeight + 180) + 'px');
-        }
+        //if ($(window).innerWidth() <= 479) {
+          //  var sliderblockHeight = $('.sliderblock-cont').height();
+          //  $('.slider1').css('height', (sliderblockHeight + 230) + 'px');
+        //} else {
+          //  var sliderblockHeight = $('.sliderblock-cont').height();
+          //  $('.slider1').css('height', (sliderblockHeight + 180) + 'px');
+        //}
 
             //our work gallery 
             //video controls
@@ -550,32 +547,8 @@ $(document).ready(function(){
 
 
 // =========== smooth/elastic scroll =================
-
+$(document).ready(function(){
 AOS.init({
     duration: 1200,
 }); // content animation 
-$(function(){
-
-    var $window = $(window);		//Window object
-    
-    var scrollTime = 1.2;			//Scroll time
-    var scrollDistance = 140;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
-        
-    $window.on("mousewheel DOMMouseScroll", function(event){
-        
-        event.preventDefault();	
-                                        
-        var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
-        var scrollTop = $window.scrollTop();
-        var finalScroll = scrollTop - parseInt(delta*scrollDistance);
-            
-        TweenMax.to($window, scrollTime, {
-            scrollTo : { y: finalScroll, autoKill:true },
-                ease: Power1.easeOut,	
-                autoKill: true,
-                overwrite: 5							
-            });
-                    
-    });
-    
 });
