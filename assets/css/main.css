@@ -1776,6 +1776,12 @@ nav.nav-split:hover svg.icon {
   line-height: 34px;
   margin-bottom: 25px;
 }
+@media (max-width: 767px) {
+  .home .sec-full-cta p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
 .home .sec-full-cta .cta-btn {
   text-align: center;
 }
