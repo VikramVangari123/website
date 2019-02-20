@@ -514,7 +514,7 @@ HINT 4:
 								$(this).removeClass(that.settings.dotInAnimClass);
 								$(this).stop();
 								if (delVal > 0) {
-									if (k >= c) {
+									if (k >= c) { 
 										$(this).delay(delVal).animate({marginLeft: "25px", opacity: "0"}, that.settings.dotAnimSpeed, function () {
 											$(that.repo.dotParent).hide();
 											if (that.settings.onDotHide) {
