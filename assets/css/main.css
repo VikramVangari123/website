@@ -1055,27 +1055,48 @@ header .overlay .overlay-content {
     align-items: center;
     justify-content: center;
   }
+}
+@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+  header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a {
+    width: 130px;
+    height: 150px;
+  }
+}
+@media (min-width: 768px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a img {
     margin: 0px;
     -webkit-transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
   }
+}
+@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+  header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a img {
+    width: 80px;
+  }
+}
+@media (min-width: 768px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a:hover img {
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
     transform: scale(1.05);
   }
+}
+@media (min-width: 768px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div {
     position: relative;
     padding: 5px;
     display: none;
     height: 100%;
   }
+}
+@media (min-width: 768px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div.view {
     display: block;
     width: 100%;
     min-height: 200px;
   }
+}
+@media (min-width: 768px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div p {
     display: block;
     color: #fff;
@@ -1083,6 +1104,8 @@ header .overlay .overlay-content {
     bottom: 5px;
     text-align: center;
   }
+}
+@media (min-width: 768px) {
   header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub, header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub {
     display: block;
     top: 0px;
@@ -1176,7 +1199,7 @@ header .overlay .overlay-content {
 }
 @media (max-width: 479px) {
   .section {
-    padding: 25px 0 25px 0 !important;
+    padding: 85px 0 25px 0 !important;
   }
 }
 
@@ -1199,11 +1222,6 @@ header .overlay .overlay-content {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
-}
-@media (max-width: 1024px) {
-  .section-in {
-    display: block !important;
-  }
 }
 @media (max-width: 1024px) {
   .section-in.flex-col-rev {
@@ -1752,6 +1770,10 @@ nav.nav-split:hover svg.icon {
 .home .sec-sm-cta .sec-sm-cta-in {
   background-image: linear-gradient(to left, #283048 20%, #859398 100%);
   background-position: center;
+}
+.home .sec-full-cta p {
+  font-size: 25px;
+  margin-bottom: 25px;
 }
 .home footer .footer-top {
   background-image: linear-gradient(to left, #283048 20%, #859398 100%);
