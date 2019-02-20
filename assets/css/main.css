@@ -1773,7 +1773,11 @@ nav.nav-split:hover svg.icon {
 }
 .home .sec-full-cta p {
   font-size: 25px;
+  line-height: 34px;
   margin-bottom: 25px;
+}
+.home .sec-full-cta .cta-btn {
+  text-align: center;
 }
 .home footer .footer-top {
   background-image: linear-gradient(to left, #283048 20%, #859398 100%);
