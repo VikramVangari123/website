@@ -52,11 +52,11 @@ $(function() {
     
         //section height
        $('.full-height').css({
-          'height': (($(window).height()) - 60) + 'px'
+          'height': (($(window).height())) + 'px'
         });
         $(window).bind('resize', function() {
           $('.full-height').css({
-              'height': (($(window).height()) - 60) + 'px'
+              'height': (($(window).height())) + 'px'
           });
        });
 
