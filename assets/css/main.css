@@ -1109,8 +1109,6 @@ header .overlay .overlay-content {
   transition: -webkit-transform 1.5s;
   transition: transform 1.5s;
   transition: transform 1.5s, -webkit-transform 1.5s;
-  -webkit-perspective: 3000;
-  perspective: 3000;
 }
 .main .section:first-child .right50 img {
   max-width: 500px;
@@ -1176,23 +1174,18 @@ header .overlay .overlay-content {
   width: 100%;
   height: calc(100%);
 }
-@media (max-width: 1024px) {
-  .section {
-    height: auto !important;
-  }
-}
 @media (max-width: 479px) {
   .section {
-    padding: 25px 0 !important;
+    padding: 25px 0 25px 0 !important;
   }
 }
 
-.ctaSec-last {
-  padding-bottom: 80px;
+.padding-btm {
+  padding-bottom: 40px;
 }
 @media (max-width: 479px) {
-  .ctaSec-last {
-    padding-bottom: 50px !important;
+  .padding-btm {
+    padding-bottom: 25px !important;
   }
 }
 
@@ -1210,7 +1203,6 @@ header .overlay .overlay-content {
 @media (max-width: 1024px) {
   .section-in {
     display: block !important;
-    height: auto !important;
   }
 }
 @media (max-width: 1024px) {
@@ -1222,6 +1214,12 @@ header .overlay .overlay-content {
     margin-top: 0;
     margin-bottom: 30px;
   }
+}
+
+.banner-img {
+  display: inline-table;
+  table-layout: fixed;
+  width: 100%;
 }
 
 .pb0 {
@@ -3845,6 +3843,9 @@ ul.tabs li.active {
     margin: 0;
     width: 100%;
   }
+}
+.post-grid .recent-blog-posts-in {
+  margin: 0 -10px;
 }
 .post-grid .post-left, .post-grid .post-right-top, .post-grid .post-right-btm {
   background: #eeeeee;

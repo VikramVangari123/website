@@ -9,8 +9,6 @@
     transition: -webkit-transform 1.5s;
     transition: transform 1.5s;
     transition: transform 1.5s, -webkit-transform 1.5s;
-    -webkit-perspective: 3000;
-            perspective: 3000;
     .section:first-child .right50 img {
         max-width: 500px;
         @include mobile{
@@ -65,17 +63,14 @@
         position: relative;
         width: 100%;
         height: calc(100%);   
-        @include tablet-max {
-            height: auto !important;
-        }
         @include smartphone {
-            padding: 25px 0 !important;
+            padding: 25px 0 25px 0 !important;
         }
     }
-    .ctaSec-last{
-        padding-bottom: 80px;
+    .padding-btm{
+        padding-bottom: 40px;
         @include smartphone {
-            padding-bottom: 50px !important;
+            padding-bottom: 25px !important;
         }
     }
     .inline-table {
@@ -89,7 +84,6 @@
             width: 100%;
             @include tablet-max {
                 display: block !important;
-                height: auto !important;
             }  
             &.flex-col-rev{                
                 @include tablet-max {
@@ -101,7 +95,12 @@
                     }
                 }  
             }
-        }        
+        }   
+        .banner-img{
+            display: inline-table;
+            table-layout: fixed;
+            width: 100%;
+        }     
         .pb0{
             padding-bottom: 0 !important;
         }
@@ -2756,6 +2755,9 @@
                 margin: 0;
                 width: 100%;
             }
+        }
+        .recent-blog-posts-in{
+            margin: 0 -10px;
         }
         .post-left, .post-right-top, .post-right-btm {
             background: #eeeeee;
