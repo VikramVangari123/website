@@ -149,10 +149,10 @@ HINT 4:
 			dotInAnimClass: "", // used to animate the dot show
 			dotClass: "page-nav-dot", // the main dot holder class,
 			dotSelectionVisible: true, // doe's dot selection bar is visible
-			dotAnimSpeed: 500, // if no animate class is used
-			dotDelay: 100, // if no animate class is used
+			dotAnimSpeed: 600, // if no animate class is used
+			dotDelay: 200, // if no animate class is used
 			pageFactorUp: 0.01, // how we recognize the current page (0.5 = half page, values from 0..1)
-			pageFactorDown: 0.95, // how we recognize the current page (0.5 = half page, values from 0..1)
+			pageFactorDown: 0.99, // how we recognize the current page (0.5 = half page, values from 0..1)
 			autoScrollPages: false, // if true it will auto scroll to next current page
 			pageScrollSpeed: 1000, // animation of page scroll
 			onDotHide: null, // event after dot animation hide finish

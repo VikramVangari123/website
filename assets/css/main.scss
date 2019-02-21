@@ -62,7 +62,8 @@
         table-layout: fixed;
         position: relative;
         width: 100%;
-        height: calc(100%);   
+        height: 100%;
+        transition: transform 1s ease-in-out;
         @include smartphone {
             padding: 85px 0 25px 0 !important;
         }
