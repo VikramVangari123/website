@@ -8,9 +8,9 @@
     <title>WOWSOME</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.0/dist/aos.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <style>
     *, *:before, *:after {
     box-sizing: border-box;
@@ -812,17 +812,38 @@ $(document).ready(function() {
   });
 
 });
+
+$(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 200) {
+            $("header").addClass("fixedheader");
+        } else {
+            $("header").removeClass("fixedheader");
+        }
+        return false;
+    });
+    $(window).on('load', function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 200) {
+            $("header").addClass("fixedheader");
+        } else {
+            $("header").removeClass("fixedheader");
+        }
+        return false;
+    });
     </script>
     <!-- JavaScripts -->
     
     <!-- video popup -->
+    
     <script type="text/javascript" src="../assets/js/video-popup.js"></script>
-    <!-- common js -->
-    <script type="text/javascript" src="../assets/js/common2.js"></script>
     <!-- testimonial slider -->
     <script type="text/javascript" src="../assets/js/slider1.js"></script>  
     <script type="text/javascript" src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>   
-
+    <!-- common js -->
+    <script type="text/javascript" src="../assets/js/common2.js"></script>
 </body>
 
 </html>

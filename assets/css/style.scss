@@ -134,29 +134,19 @@ h1, h2{
   }
 }
 .container{
+  margin: 0 auto;
+  width: 100%;
   @include desktop{
     max-width: 1251px;
     padding: 0 15px;
-    margin: 0 auto;
-    width: 100%;
   }
   @include laptop{
     max-width: 995px;
-    padding: 0 15px;
-    margin: 0 auto;
-    width: 100%;
+    padding: 0 20px;
   }
   @include tablet-max{
     max-width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-    width: 100%;
-  }
-  @include smartphone{
-    max-width: 100%;
-    padding: 0 10px;
-    margin: 0 auto;
-    width: 100%;
+    padding: 0 20px;
   }
 }
 .btn{
@@ -182,6 +172,20 @@ h1, h2{
     height: auto;
     line-height: 35px;
     min-height: 35px;
+  }
+}
+.btn-lg{
+  padding: 0 45px;
+  height: 50px;
+  line-height: 50px;
+  min-width: 220px;
+  font-size: 20px;
+  @include mobile-max{
+    padding: 0 35px;
+    height: 45px;
+    line-height: 45px;
+    min-width: 180px;
+    font-size: 16px;
   }
 }
 .btn-white{

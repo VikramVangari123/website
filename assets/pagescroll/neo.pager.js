@@ -1,8 +1,4 @@
-/**
-* @author       Zarko Simonovski <zarko.simonovski@neocortex.co>
-* @copyright    2015 Neocortex Ltd.
-* @license      {@link http://opensource.org/licenses/MIT License}
-*/
+
 /*
 	Plugin that enable you to create web page sections, 
 	it will auto create dots for navigation, it support scroll animations and so one...

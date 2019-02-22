@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Testimonial Carousel with Flickity</title>
+  <meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.0/dist/aos.css" /> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+  
+</style>
+  
+</head>
+
+<body>
+
+<!-- testimonials -->
+<div class="section testimonial-sec page" data-hint-text="Customer Testimonials">
+    <div class="container">
+        <div class="section-in">  
+            <div class="inline-table">  
+                <div class="svg-wrap">
+                    <svg width="64" height="64" viewBox="0 0 64 64">
+                        <path id="arrow-left" d="M46.077 55.738c0.858 0.867 0.858 2.266 0 3.133s-2.243 0.867-3.101 0l-25.056-25.302c-0.858-0.867-0.858-2.269 0-3.133l25.056-25.306c0.858-0.867 2.243-0.867 3.101 0s0.858 2.266 0 3.133l-22.848 23.738 22.848 23.738z" />
+                    </svg>
+                    <svg width="64" height="64" viewBox="0 0 64 64">
+                        <path id="arrow-right" d="M17.919 55.738c-0.858 0.867-0.858 2.266 0 3.133s2.243 0.867 3.101 0l25.056-25.302c0.858-0.867 0.858-2.269 0-3.133l-25.056-25.306c-0.858-0.867-2.243-0.867-3.101 0s-0.858 2.266 0 3.133l22.848 23.738-22.848 23.738z" />
+                    </svg>
+                </div>                        
+                <div class="title">
+                    <h2 class="home-text-bg">Customer Testimonials</h2>
+                    <!-- <a href="#" class="view-all">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a> -->
+                </div>
+                <div class="testimonials">
+                    <div class="testimonial-cell">
+                        <div class="testimonial">
+                            <img class="testimonial-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg">
+                        <q class="testimonial-quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mauris ex, gravida ut leo eu, rhoncus porta orci. Fusce vitae rutrum nulla."</q>
+                        <span class="testimonial-author">Joe Smith, CEO of Cubix</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-cell">
+                        <div class="testimonial">
+                            <img class="testimonial-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/chexee/128.jpg">
+                        <q class="testimonial-quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mauris ex, gravida ut leo eu, rhoncus porta orci. Fusce vitae rutrum nulla."</q>
+                        <span class="testimonial-author">Lisa Jones, Freelance Web Developer</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-cell">
+                            <div class="testimonial">
+                            <img class="testimonial-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/andretacuyan/128.jpg">
+                        <q class="testimonial-quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mauris ex, gravida ut leo eu, rhoncus porta orci. Fusce vitae rutrum nulla."</q>
+                        <span class="testimonial-author">Ryan Waltz, Front-End Developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.min.js'></script>
+<script>
+  /*Downloaded from https://www.codeseek.co/jamy/testimonial-carousel-with-flickity-gbdWGJ */
+  var flkty = new Flickity( '.testimonials', {
+    cellAlign: 'left',
+    contain: true,
+    wrapAround: true,
+    prevNextButtons: true,
+    autoPlay: 5000
+  });
+        jQuery('.slider').lbSlider({
+            leftBtn: '.sa-left',
+            rightBtn: '.sa-right',
+            visible: 3,
+            autoPlay: true,
+            autoPlayDelay: 5
+        });
+        
+        $(document).ready(function () {
+			// log for all callbacks
+			$("#pager-holder").neo_pager({
+				autoScrollPages: true,
+				useDefaultCss: true,
+				onDotHide: function () {
+					console.log("onDotHide");
+				},
+				onDotShow: function () {
+					console.log("onDotShow");
+				},
+				onPageIn: function (dot, indNew, indOld) {
+					console.log("onPageIn, ind new: ", indNew, " , ind old: ", indOld, " , dot: ", dot);
+				},
+				onPageOut: function (dot, ind) {
+					console.log("onPageOut, ind: ", ind, " , dot: ", dot);
+				},
+				onAutoScrollStart: function (dot, ind) {
+					console.log("onAutoScrollStart, ind: ", ind, " , dot: ", dot);
+				},
+				onAutoScrollEnd: function (dot, ind) {
+					console.log("onAutoScrollEnd, ind: ", ind, " , dot: ", dot);
+				}
+			});
+        });
+        
+        $(document).ready(function () {
+            AOS.init({
+                duration: 1200,
+            });
+        });
+</script>
+
+    <!-- JavaScripts -->
+    
+    <!-- video popup -->
+    <script type="text/javascript" src="../assets/js/video-popup.js"></script>
+    <!-- common js -->
+    <script type="text/javascript" src="../assets/js/common2.js"></script>
+    <!-- testimonial slider -->
+    <script type="text/javascript" src="../assets/js/slider1.js"></script>  
+    <script type="text/javascript" src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>   
+    <script src="../assets/pagescroll/neo.pager.js"></script>
+
+</body>
+
+</html>
