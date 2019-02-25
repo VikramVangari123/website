@@ -6,9 +6,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    transition: -webkit-transform 1.5s;
-    transition: transform 1.5s;
-    transition: transform 1.5s, -webkit-transform 1.5s;
     .section:first-child .right50 img {
         max-width: 500px;
         @include mobile{
@@ -63,7 +60,7 @@
         position: relative;
         width: 100%;
         height: 100%;
-        transition: 1s ease-in-out;
+        background: #fff;
         @include smartphone {
             padding: 85px 0 25px 0 !important;
         }
@@ -592,20 +589,6 @@
         //         }
         //     }
         // }
-        .testimonial{
-            .pagination{
-                span{               
-                    &.current { 
-                        box-shadow: none;
-                        @include home-bg;
-                        }
-                    &:hover { 
-                        box-shadow: none;
-                        @include home-bg;
-                        }
-                }
-            }
-        }
         .sec-sm-cta{
             .sec-sm-cta-in{
                 @include home-bg;
@@ -731,20 +714,6 @@
                 }
             }
         }
-        .testimonial{
-            .pagination{
-                span{               
-                    &.current { 
-                        box-shadow: none;
-                        @include industry-bg;
-                        }
-                    &:hover { 
-                        box-shadow: none;
-                        @include industry-bg;
-                        }
-                }
-            }
-        }
         ul.list-style1{ 
             li{
                 &:before{
@@ -801,20 +770,6 @@
                             }
                         }
                     }
-                }
-            }
-        }
-        .testimonial{
-            .pagination{
-                span{               
-                    &.current { 
-                        box-shadow: none;
-                        @include business-area-bg;
-                        }
-                    &:hover { 
-                        box-shadow: none;
-                        @include business-area-bg;
-                        }
                 }
             }
         }
@@ -1665,8 +1620,11 @@
         .testimonial {
             text-align: center;
             max-width: 850px;
-            margin: 30px auto 0;
+            margin: 50px auto 0;
             padding: 0 20px;
+            @include smartphone{
+                margin: 20px auto 0;
+            }
         }
         .testimonial-avatar {
             width: 100px;
@@ -1682,6 +1640,12 @@
             font-style: italic;
             font-family: "georgia", sans-serif;
             padding: 10px 0;
+            @include mobile{
+                font-size: 22px;
+            }
+            @include smartphone{
+                font-size: 20px;
+            }
         }
         .testimonial-author {
             display: block;
@@ -1691,6 +1655,9 @@
                     font-size: 20px;
                     display: block;
                     margin: 5px 0;
+                    @include smartphone{
+                        font-size: 18px;
+                    }
                 }
                 &:nth-child(2){
                     display: block;
@@ -1759,7 +1726,7 @@
         }
         .flickity-prev-next-button {
             position: absolute;
-            top: 80px;
+            top: 100px;
             width: 44px;
             height: 44px;
             border: none;
@@ -1770,7 +1737,10 @@
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-            opacity: 0.6;
+            opacity: 0.4;
+            @include smartphone{
+                top: 70px;
+            }
             &:hover {
                 background: #fff;
             }
@@ -1783,9 +1753,15 @@
             }
             &.previous {
                 left: calc(50% - 200px);
+                @include smartphone{
+                    left: calc(50% - 150px);
+                }
             }
             &.next {
                 right: calc(50% - 200px);
+                @include smartphone{
+                    right: calc(50% - 150px);
+                }
             }
             &:disabled {
                 filter: alpha(opacity=30);
@@ -1798,6 +1774,10 @@
                 top: 20%;
                 width: 60%;
                 height: 60%;
+                @include mobile-max{
+                    width: 50%;
+                    height: 50%;
+                }
             }
             .arrow {
                 fill: #333;

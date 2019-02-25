@@ -62,7 +62,7 @@
   box-sizing: inherit;
 }
 .timeline:not(.timeline--horizontal)::before {
-  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%) !important;
   background-position: center;
   bottom: 0;
   content: "";
@@ -196,7 +196,7 @@
   white-space: nowrap;
 }
 .timeline--horizontal .timeline-divider {
-  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%) !important;
   background-position: center;
   display: block;
   height: 4px;
@@ -281,7 +281,7 @@
 }
 
 .timeline-nav-button {
-  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%) !important;
   background-position: center;
   border: 1px solid #FF9966;
   border-radius: 50px;
@@ -624,8 +624,8 @@ h1, h2 {
 }
 
 .home-bg {
-  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
-  background-position: center;
+  background-image: linear-gradient(to left, #283048 20%, #859398 100%) !important;
+  background-position: center !important;
 }
 
 .home-text-bg {
@@ -635,7 +635,7 @@ h1, h2 {
 }
 
 .hw-bg {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%) !important;
   background-position: center;
 }
 
@@ -646,7 +646,7 @@ h1, h2 {
 }
 
 .industry-bg {
-  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%) !important;
   background-position: center;
 }
 
@@ -657,7 +657,7 @@ h1, h2 {
 }
 
 .business-area-bg {
-  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
+  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
   background-position: center;
 }
 
@@ -668,7 +668,7 @@ h1, h2 {
 }
 
 .products-bg {
-  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%) !important;
   background-position: center;
 }
 
@@ -679,7 +679,7 @@ h1, h2 {
 }
 
 .ourwork-bg {
-  background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%);
+  background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%) !important;
   background-position: center;
 }
 
@@ -690,7 +690,7 @@ h1, h2 {
 }
 
 .ipgallery-bg {
-  background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%);
+  background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%) !important;
   background-position: center;
 }
 
@@ -701,7 +701,7 @@ h1, h2 {
 }
 
 .brand-mng-bg {
-  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
+  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%) !important;
   background-position: center;
 }
 
@@ -712,7 +712,7 @@ h1, h2 {
 }
 
 .blog-bg {
-  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%) !important;
   background-position: center;
 }
 
@@ -723,7 +723,7 @@ h1, h2 {
 }
 
 .about-bg {
-  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%) !important;
   background-position: center;
 }
 
@@ -734,7 +734,7 @@ h1, h2 {
 }
 
 .contact-bg {
-  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%) !important;
   background-position: center;
 }
 
@@ -745,7 +745,7 @@ h1, h2 {
 }
 
 .pillarPage-bg {
-  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%) !important;
   background-position: center;
 }
 
@@ -756,7 +756,7 @@ h1, h2 {
 }
 
 .notfound-bg {
-  background-image: linear-gradient(to right, #443164 0%, #24173a 100%);
+  background-image: linear-gradient(to right, #443164 0%, #24173a 100%) !important;
   background-position: center;
 }
 
@@ -1136,9 +1136,6 @@ header .overlay .overlay-content {
   left: 0;
   width: 100%;
   height: 100%;
-  transition: -webkit-transform 1.5s;
-  transition: transform 1.5s;
-  transition: transform 1.5s, -webkit-transform 1.5s;
 }
 .main .section:first-child .right50 img {
   max-width: 500px;
@@ -1203,7 +1200,7 @@ header .overlay .overlay-content {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: 1s ease-in-out;
+  background: #fff;
 }
 @media (max-width: 479px) {
   .section {
@@ -1783,8 +1780,8 @@ nav.nav-split:hover svg.icon {
 /*************************** section scrolling ***********************/
 /*************************** home header *****************************/
 .home header .overlay {
-  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
-  background-position: center;
+  background-image: linear-gradient(to left, #283048 20%, #859398 100%) !important;
+  background-position: center !important;
 }
 .home header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
   color: #78cfe2;
@@ -1793,19 +1790,9 @@ nav.nav-split:hover svg.icon {
 .home header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .home header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
   color: #78cfe2;
 }
-.home .testimonial .pagination span.current {
-  box-shadow: none;
-  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
-  background-position: center;
-}
-.home .testimonial .pagination span:hover {
-  box-shadow: none;
-  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
-  background-position: center;
-}
 .home .sec-sm-cta .sec-sm-cta-in {
-  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
-  background-position: center;
+  background-image: linear-gradient(to left, #283048 20%, #859398 100%) !important;
+  background-position: center !important;
 }
 .home .sec-full-cta .sec-full-cta-in {
   width: 80%;
@@ -1838,17 +1825,17 @@ nav.nav-split:hover svg.icon {
   text-align: center;
 }
 .home footer .footer-top {
-  background-image: linear-gradient(to left, #283048 20%, #859398 100%);
-  background-position: center;
+  background-image: linear-gradient(to left, #283048 20%, #859398 100%) !important;
+  background-position: center !important;
 }
 .home footer .copy-right {
-  background-image: linear-gradient(to left, #2c344c 20%, #6c7d84 100%);
-  background-position: center;
+  background-image: linear-gradient(to left, #2c344c 20%, #6c7d84 100%) !important;
+  background-position: center !important;
 }
 
 /****************************** how we work page header *******************************/
 .how-we-work header .overlay {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%) !important;
   background-position: center;
 }
 .how-we-work header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -1865,17 +1852,17 @@ nav.nav-split:hover svg.icon {
   color: #448cef;
 }
 .how-we-work footer .footer-top {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%) !important;
   background-position: center;
 }
 .how-we-work footer .copy-right {
-  background-image: linear-gradient(to right, #87e5eb 0%, #5093ef 100%);
+  background-image: linear-gradient(to right, #87e5eb 0%, #5093ef 100%) !important;
   background-position: center;
 }
 
 /*************************** industry header *****************************/
 .industry header .overlay {
-  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%) !important;
   background-position: center;
 }
 .industry header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -1891,36 +1878,26 @@ nav.nav-split:hover svg.icon {
 .industry header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .industry header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
   color: #f53437;
 }
-.industry .testimonial .pagination span.current {
-  box-shadow: none;
-  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
-  background-position: center;
-}
-.industry .testimonial .pagination span:hover {
-  box-shadow: none;
-  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
-  background-position: center;
-}
 .industry ul.list-style1 li:before {
-  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%) !important;
   background-position: center;
 }
 .industry .sec-sm-cta .sec-sm-cta-in {
-  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%) !important;
   background-position: center;
 }
 .industry footer .footer-top {
-  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
+  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%) !important;
   background-position: center;
 }
 .industry footer .copy-right {
-  background-image: linear-gradient(to right, #e27be6 0%, #ef2628 100%);
+  background-image: linear-gradient(to right, #e27be6 0%, #ef2628 100%) !important;
   background-position: center;
 }
 
 /*************************** business area header *****************************/
 .business-area header .overlay {
-  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
+  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
   background-position: center;
 }
 .business-area header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -1936,36 +1913,26 @@ nav.nav-split:hover svg.icon {
 .business-area header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active a, .business-area header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover a {
   color: #4b96fb;
 }
-.business-area .testimonial .pagination span.current {
-  box-shadow: none;
-  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
-  background-position: center;
-}
-.business-area .testimonial .pagination span:hover {
-  box-shadow: none;
-  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
-  background-position: center;
-}
 .business-area ul.list-style1 li:before {
-  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
+  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
   background-position: center;
 }
 .business-area .sec-sm-cta .sec-sm-cta-in {
-  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
+  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
   background-position: center;
 }
 .business-area footer .footer-top {
-  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
+  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
   background-position: center;
 }
 .business-area footer .copy-right {
-  background-image: linear-gradient(to right, #5fc3cc 0%, #3ff1c4 100%);
+  background-image: linear-gradient(to right, #5fc3cc 0%, #3ff1c4 100%) !important;
   background-position: center;
 }
 
 /*************************** products header *****************************/
 .products header .overlay {
-  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%) !important;
   background-position: center;
 }
 .products header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -1990,24 +1957,24 @@ nav.nav-split:hover svg.icon {
 }
 .products .pagination span.current {
   box-shadow: none;
-  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%) !important;
   background-position: center;
 }
 .products .pagination span:hover {
   box-shadow: none;
-  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%) !important;
   background-position: center;
 }
 .products .sec-sm-cta .sec-sm-cta-in {
-  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%) !important;
   background-position: center;
 }
 .products footer .footer-top {
-  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%) !important;
   background-position: center;
 }
 .products footer .copy-right {
-  background-image: linear-gradient(to right, #c489ed 0%, #4b2a91 100%);
+  background-image: linear-gradient(to right, #c489ed 0%, #4b2a91 100%) !important;
   background-position: center;
 }
 
@@ -2016,7 +1983,7 @@ nav.nav-split:hover svg.icon {
   padding: 17px 0;
 }
 .ourwork-gallery header .overlay {
-  background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%);
+  background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%) !important;
   background-position: center;
 }
 .ourwork-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -2033,11 +2000,11 @@ nav.nav-split:hover svg.icon {
   color: #9FACE6;
 }
 .ourwork-gallery footer .footer-top {
-  background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%);
+  background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%) !important;
   background-position: center;
 }
 .ourwork-gallery footer .copy-right {
-  background-image: linear-gradient(to right, #66dfc8 0%, #92a3ed 100%);
+  background-image: linear-gradient(to right, #66dfc8 0%, #92a3ed 100%) !important;
   background-position: center;
 }
 
@@ -2046,7 +2013,7 @@ nav.nav-split:hover svg.icon {
   padding: 17px 0;
 }
 .intprint-gallery header .overlay {
-  background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%);
+  background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%) !important;
   background-position: center;
 }
 .intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -2063,17 +2030,17 @@ nav.nav-split:hover svg.icon {
   color: #F8CDDA;
 }
 .intprint-gallery footer .footer-top {
-  background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%);
+  background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%) !important;
   background-position: center;
 }
 .intprint-gallery footer .copy-right {
-  background-image: linear-gradient(to right, #203072 0%, #ebbecc 100%);
+  background-image: linear-gradient(to right, #203072 0%, #ebbecc 100%) !important;
   background-position: center;
 }
 
 /*************************** brand-managers *****************************/
 .brand-managers header .overlay {
-  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
+  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%) !important;
   background-position: center;
 }
 .brand-managers header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -2091,24 +2058,24 @@ nav.nav-split:hover svg.icon {
 }
 .brand-managers .pagination span.current {
   box-shadow: none;
-  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
+  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%) !important;
   background-position: center;
 }
 .brand-managers .pagination span:hover {
   box-shadow: none;
-  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
+  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%) !important;
   background-position: center;
 }
 .brand-managers .sec-sm-cta .sec-sm-cta-in {
-  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
+  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%) !important;
   background-position: center;
 }
 .brand-managers footer .footer-top {
-  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
+  background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%) !important;
   background-position: center;
 }
 .brand-managers footer .copy-right {
-  background-image: linear-gradient(to right, #283670 0%, #ddaaba 100%);
+  background-image: linear-gradient(to right, #283670 0%, #ddaaba 100%) !important;
   background-position: center;
 }
 
@@ -2117,7 +2084,7 @@ nav.nav-split:hover svg.icon {
   padding: 17px 0;
 }
 .blog header .overlay {
-  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%) !important;
   background-position: center;
 }
 .blog header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -2134,17 +2101,17 @@ nav.nav-split:hover svg.icon {
   color: #653235;
 }
 .blog footer .footer-top {
-  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+  background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%) !important;
   background-position: center;
 }
 .blog footer .copy-right {
-  background-image: linear-gradient(to right, #ef404b 0%, #ca2f39 100%);
+  background-image: linear-gradient(to right, #ef404b 0%, #ca2f39 100%) !important;
   background-position: center;
 }
 
 /*************************** about header *****************************/
 .about header .overlay {
-  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%) !important;
   background-position: center;
 }
 .about header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -2218,7 +2185,7 @@ nav.nav-split:hover svg.icon {
 .about .member-profile .member-info .profile-nav a {
   width: 30px;
   height: 30px;
-  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%) !important;
   background-position: center;
   display: block;
   border-radius: 50%;
@@ -2290,17 +2257,17 @@ nav.nav-split:hover svg.icon {
   }
 }
 .about footer .footer-top {
-  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
+  background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%) !important;
   background-position: center;
 }
 .about footer .copy-right {
-  background-image: linear-gradient(to right, #fb8f5a 0%, #f55054 100%);
+  background-image: linear-gradient(to right, #fb8f5a 0%, #f55054 100%) !important;
   background-position: center;
 }
 
 /*************************** contact header *****************************/
 .contact header .overlay {
-  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%) !important;
   background-position: center;
 }
 .contact header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -2367,17 +2334,17 @@ nav.nav-split:hover svg.icon {
   font-size: 18px;
 }
 .contact footer .footer-top {
-  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%) !important;
   background-position: center;
 }
 .contact footer .copy-right {
-  background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%);
+  background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%) !important;
   background-position: center;
 }
 
 /*************************** pillarPage header ***************************************/
 .pillarPage header .overlay {
-  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%) !important;
   background-position: center;
 }
 .pillarPage header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -2394,11 +2361,11 @@ nav.nav-split:hover svg.icon {
   color: #f54548;
 }
 .pillarPage footer .footer-top {
-  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%) !important;
   background-position: center;
 }
 .pillarPage footer .copy-right {
-  background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%);
+  background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%) !important;
   background-position: center;
 }
 .pillarPage .pillarPage-main .left {
@@ -2487,7 +2454,7 @@ nav.nav-split:hover svg.icon {
   margin-bottom: 0;
 }
 .pillarPage .pillarPage-main .left ul.list-style1 li:before {
-  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%) !important;
   background-position: center;
 }
 .pillarPage .pillarPage-main .left ul.list-style1 li:last-child {
@@ -2579,7 +2546,7 @@ nav.nav-split:hover svg.icon {
 
 /*************************** notfound header ******************************************/
 .notfound header .overlay {
-  background-image: linear-gradient(to right, #443164 0%, #24173a 100%);
+  background-image: linear-gradient(to right, #443164 0%, #24173a 100%) !important;
   background-position: center;
 }
 .notfound header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
@@ -2596,11 +2563,11 @@ nav.nav-split:hover svg.icon {
   color: #805eb9;
 }
 .notfound footer .footer-top {
-  background-image: linear-gradient(to right, #584082 0%, #24173a 100%);
+  background-image: linear-gradient(to right, #584082 0%, #24173a 100%) !important;
   background-position: center;
 }
 .notfound footer .copy-right {
-  background-image: linear-gradient(to right, #443164 0%, #24173a 100%);
+  background-image: linear-gradient(to right, #443164 0%, #24173a 100%) !important;
   background-position: center;
 }
 
@@ -2611,8 +2578,13 @@ nav.nav-split:hover svg.icon {
 .testimonials .testimonial {
   text-align: center;
   max-width: 850px;
-  margin: 30px auto 0;
+  margin: 50px auto 0;
   padding: 0 20px;
+}
+@media (max-width: 479px) {
+  .testimonials .testimonial {
+    margin: 20px auto 0;
+  }
 }
 .testimonials .testimonial-avatar {
   width: 100px;
@@ -2630,6 +2602,16 @@ nav.nav-split:hover svg.icon {
   font-family: "georgia", sans-serif;
   padding: 10px 0;
 }
+@media (min-width: 480px) and (max-width: 767px) {
+  .testimonials .testimonial-quote {
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .testimonials .testimonial-quote {
+    font-size: 20px;
+  }
+}
 .testimonials .testimonial-author {
   display: block;
 }
@@ -2638,6 +2620,11 @@ nav.nav-split:hover svg.icon {
   font-size: 20px;
   display: block;
   margin: 5px 0;
+}
+@media (max-width: 479px) {
+  .testimonials .testimonial-author span:nth-child(1) {
+    font-size: 18px;
+  }
 }
 .testimonials .testimonial-author span:nth-child(2) {
   display: block;
@@ -2702,7 +2689,7 @@ nav.nav-split:hover svg.icon {
 }
 .testimonials .flickity-prev-next-button {
   position: absolute;
-  top: 80px;
+  top: 100px;
   width: 44px;
   height: 44px;
   border: none;
@@ -2713,7 +2700,12 @@ nav.nav-split:hover svg.icon {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  opacity: 0.6;
+  opacity: 0.4;
+}
+@media (max-width: 479px) {
+  .testimonials .flickity-prev-next-button {
+    top: 70px;
+  }
 }
 .testimonials .flickity-prev-next-button:hover {
   background: #fff;
@@ -2728,8 +2720,18 @@ nav.nav-split:hover svg.icon {
 .testimonials .flickity-prev-next-button.previous {
   left: calc(50% - 200px);
 }
+@media (max-width: 479px) {
+  .testimonials .flickity-prev-next-button.previous {
+    left: calc(50% - 150px);
+  }
+}
 .testimonials .flickity-prev-next-button.next {
   right: calc(50% - 200px);
+}
+@media (max-width: 479px) {
+  .testimonials .flickity-prev-next-button.next {
+    right: calc(50% - 150px);
+  }
 }
 .testimonials .flickity-prev-next-button:disabled {
   filter: alpha(opacity=30);
@@ -2742,6 +2744,12 @@ nav.nav-split:hover svg.icon {
   top: 20%;
   width: 60%;
   height: 60%;
+}
+@media (max-width: 767px) {
+  .testimonials .flickity-prev-next-button svg {
+    width: 50%;
+    height: 50%;
+  }
 }
 .testimonials .flickity-prev-next-button .arrow {
   fill: #333;
@@ -2836,7 +2844,7 @@ ul.tabs li.active {
   content: "";
   height: 100%;
   width: 5px;
-  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+  background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%) !important;
   background-position: center;
   position: absolute;
   left: 0;
@@ -4490,7 +4498,7 @@ ul.tabs li.active {
   color: #fff;
   padding: 6px 10px;
   align-items: center;
-  background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%);
+  background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%) !important;
   background-position: center;
   visibility: hidden;
 }
@@ -4540,7 +4548,7 @@ ul.tabs li.active {
   margin-bottom: 0;
 }
 .intprint-gallery ul.list-style1 li:before {
-  background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%);
+  background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%) !important;
   background-position: center;
 }
 
@@ -5675,7 +5683,7 @@ ul.tabs li.active {
   }
 }
 .notfound-block .btn {
-  background-image: linear-gradient(to right, #443164 0%, #24173a 100%);
+  background-image: linear-gradient(to right, #443164 0%, #24173a 100%) !important;
   background-position: center;
 }
 .notfound-block .central-body {

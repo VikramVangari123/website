@@ -29,12 +29,12 @@ $pillarPage-menu-active: #f54548;
 $notfound-menu-active: #805eb9;
   
 @mixin home-bg{    
-    background-image: linear-gradient(to left, #283048 20%, #859398 100%);
-    background-position: center;
+    background-image: linear-gradient(to left, #283048 20%, #859398 100%) !important;
+    background-position: center !important;
 }
 @mixin home-bg2{    
-    background-image: linear-gradient(to left, #2c344c 20%, #6c7d84 100%);
-    background-position: center;
+    background-image: linear-gradient(to left, #2c344c 20%, #6c7d84 100%) !important;
+    background-position: center !important;
 }
 @mixin home-text-bg{
 	background-image: linear-gradient(to left, #283048 20%, #859398 100%);
@@ -43,11 +43,11 @@ $notfound-menu-active: #805eb9;
 }
 
 @mixin hw-bg{    
-    background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+    background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%) !important;
     background-position: center;
 }
 @mixin hw-bg2{    
-    background-image: linear-gradient(to right, #87e5eb 0%, #5093ef 100%);
+    background-image: linear-gradient(to right, #87e5eb 0%, #5093ef 100%) !important;
     background-position: center;
 }
 @mixin hw-text-bg{
@@ -57,11 +57,11 @@ $notfound-menu-active: #805eb9;
 }
 
 @mixin industry-bg{    
-    background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
+    background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%) !important;
     background-position: center;
 }
 @mixin industry-bg2{    
-    background-image: linear-gradient(to right, #e27be6 0%, #ef2628 100%);
+    background-image: linear-gradient(to right, #e27be6 0%, #ef2628 100%) !important;
     background-position: center;
 }
 @mixin industry-text-bg{
@@ -71,11 +71,11 @@ $notfound-menu-active: #805eb9;
 }
 
 @mixin business-area-bg{    
-    background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
+    background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
     background-position: center;
 }
 @mixin business-area-bg2{    
-    background-image: linear-gradient(to right, #5fc3cc 0%, #3ff1c4 100%);
+    background-image: linear-gradient(to right, #5fc3cc 0%, #3ff1c4 100%) !important;
     background-position: center;
 }
 @mixin business-area-text-bg{
@@ -85,11 +85,11 @@ $notfound-menu-active: #805eb9;
 }
 
 @mixin products-bg{    
-    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%) !important;
     background-position: center;
 }
 @mixin products-bg2{    
-    background-image: linear-gradient(to right, #c489ed 0%, #4b2a91 100%);
+    background-image: linear-gradient(to right, #c489ed 0%, #4b2a91 100%) !important;
     background-position: center;
 }
 @mixin products-text-bg{
@@ -99,11 +99,11 @@ $notfound-menu-active: #805eb9;
 }
 
 @mixin ourwork-bg{    
-    background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%);
+    background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%) !important;
     background-position: center;
 }
 @mixin ourwork-bg2{    
-    background-image: linear-gradient(to right, #66dfc8 0%, #92a3ed 100%);
+    background-image: linear-gradient(to right, #66dfc8 0%, #92a3ed 100%) !important;
     background-position: center;
 }
 @mixin ourwork-text-bg{
@@ -113,11 +113,11 @@ $notfound-menu-active: #805eb9;
 }
 
 @mixin ipgallery-bg{    
-    background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%);
+    background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%) !important;
     background-position: center;
 }
 @mixin ipgallery-bg2{    
-    background-image: linear-gradient(to right, #203072 0%, #ebbecc 100%);
+    background-image: linear-gradient(to right, #203072 0%, #ebbecc 100%) !important;
     background-position: center;
 }
 @mixin ipgallery-text-bg{
@@ -126,11 +126,11 @@ $notfound-menu-active: #805eb9;
 	-webkit-text-fill-color: transparent;
 }
 @mixin brand-mng-bg{    
-    background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
+    background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%) !important;
     background-position: center;
 }
 @mixin brand-mng-bg2{    
-    background-image: linear-gradient(to right, #283670 0%, #ddaaba 100%);
+    background-image: linear-gradient(to right, #283670 0%, #ddaaba 100%) !important;
     background-position: center;
 }
 @mixin brand-mng-text-bg{
@@ -140,11 +140,11 @@ $notfound-menu-active: #805eb9;
 }
 
 @mixin blog-bg{    
-    background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+    background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%) !important;
     background-position: center;
 }
 @mixin blog-bg2{    
-    background-image: linear-gradient(to right, #ef404b 0%, #ca2f39 100%);
+    background-image: linear-gradient(to right, #ef404b 0%, #ca2f39 100%) !important;
     background-position: center;
 }
 @mixin blog-text-bg{
@@ -154,11 +154,11 @@ $notfound-menu-active: #805eb9;
 }
 
 @mixin about-bg{    
-    background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
+    background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%) !important;
     background-position: center;
 }
 @mixin about-bg2{    
-    background-image: linear-gradient(to right, #fb8f5a 0%, #f55054 100%);
+    background-image: linear-gradient(to right, #fb8f5a 0%, #f55054 100%) !important;
     background-position: center;
 }
 @mixin about-text-bg{
@@ -168,11 +168,11 @@ $notfound-menu-active: #805eb9;
 }
 
 @mixin contact-bg{    
-    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%) !important;
     background-position: center;
 }
 @mixin contact-bg2{    
-    background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%);
+    background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%) !important;
     background-position: center;
 }
 @mixin contact-text-bg{
@@ -182,11 +182,11 @@ $notfound-menu-active: #805eb9;
 }
 
 @mixin pillarPage-bg{    
-    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%) !important;
     background-position: center;
 }
 @mixin pillarPage-bg2{    
-    background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%);
+    background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%) !important;
     background-position: center;
 }
 @mixin pillarPage-text-bg{
@@ -196,11 +196,11 @@ $notfound-menu-active: #805eb9;
 }
 
 @mixin notfound-bg{    
-    background-image: linear-gradient(to right, #443164 0%, #24173a 100%);
+    background-image: linear-gradient(to right, #443164 0%, #24173a 100%) !important;
     background-position: center;
 }
 @mixin notfound-bg2{    
-    background-image: linear-gradient(to right, #584082 0%, #24173a 100%);
+    background-image: linear-gradient(to right, #584082 0%, #24173a 100%) !important;
     background-position: center;
 }
 
