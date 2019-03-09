@@ -9,7 +9,6 @@ $(function() {
     if ($(window).innerWidth() >= 768) {
         $('.mega-menu').on('mouseover', '.megamenu-item', function() {
             $(this).addClass('active').siblings().removeClass('active');
-            $(this).siblings().children().children().children().first().addClass('active').siblings().removeClass('active');
         });
         $('.megamenu-sub-menu').on('mouseover', 'li', function() {
             $(this).addClass('active').siblings().removeClass('active');

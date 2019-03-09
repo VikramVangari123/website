@@ -8,8 +8,99 @@
     <title>WOWSOME</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.0/dist/aos.css" /> 
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script> 
+    <script src="../assets/banner image animations/file size/home.js"></script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+       
+    <script>
+        var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+        function init() {
+            canvas = document.getElementById("canvas");
+            anim_container = document.getElementById("animation_container");
+            dom_overlay_container = document.getElementById("dom_overlay_container");
+            var comp=AdobeAn.getComposition("AD811C5866F34123B9CC5B51EAE37341");
+            var lib=comp.getLibrary();
+            handleComplete({},comp);
+        }
+        function handleComplete(evt,comp) {
+            //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+            var lib=comp.getLibrary();
+            var ss=comp.getSpriteSheet();
+            exportRoot = new lib.RECOVER_V2();
+            stage = new lib.Stage(canvas);	
+            //Registers the "tick" event listener.
+            fnStartAnimation = function() {
+                stage.addChild(exportRoot);
+                createjs.Ticker.setFPS(lib.properties.fps);
+                createjs.Ticker.addEventListener("tick", stage)
+                stage.addEventListener("tick", handleTick)
+                function handleTick(event) {
+                    var cameraInstance = exportRoot.___camera___instance;
+                    if(cameraInstance)
+                    {
+                        var stageCenter = { 'x' : lib.properties.width/2, 'y' : lib.properties.height/2 };
+                        if(cameraInstance._off != null && cameraInstance._off == true)
+                            exportRoot.transformMatrix = new createjs.Matrix2D();
+                        else
+                        {
+                            if(cameraInstance.pinToObject !== undefined)
+                            {
+                                cameraInstance.x = cameraInstance.pinToObject.x + cameraInstance.pinToObject.pinOffsetX;
+                                cameraInstance.y = cameraInstance.pinToObject.y + cameraInstance.pinToObject.pinOffsetY;
+                            }
+                            var mat = cameraInstance.getMatrix();
+                            mat.tx -= stageCenter.x;
+                            mat.ty -= stageCenter.y;
+                            var inverseMat = mat.invert();
+                            inverseMat.prependTransform(stageCenter.x, stageCenter.y, 1, 1, 0, 0, 0, 0, 0);
+                            inverseMat.appendTransform(-stageCenter.x, -stageCenter.y, 1, 1, 0, 0, 0, 0, 0);
+                            exportRoot.transformMatrix = inverseMat;
+                        }
+                    }
+                }
+            }	    
+            //Code to support hidpi screens and responsive scaling.
+            function makeResponsive(isResp, respDim, isScale, scaleType) {		
+                var lastW, lastH, lastS=1;		
+                window.addEventListener('resize', resizeCanvas);		
+                resizeCanvas();		
+                function resizeCanvas() {			
+                    var w = lib.properties.width, h = lib.properties.height;			
+                    var iw = window.innerWidth, ih=window.innerHeight;			
+                    var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+                    if(isResp) {                
+                        if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+                            sRatio = lastS;                
+                        }				
+                        else if(!isScale) {					
+                            if(iw<w || ih<h)						
+                                sRatio = Math.min(xRatio, yRatio);				
+                        }				
+                        else if(scaleType==1) {					
+                            sRatio = Math.min(xRatio, yRatio);				
+                        }				
+                        else if(scaleType==2) {					
+                            sRatio = Math.max(xRatio, yRatio);				
+                        }			
+                    }			
+                    canvas.width = w*pRatio*sRatio;			
+                    canvas.height = h*pRatio*sRatio;
+                    canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
+                    canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+                    stage.scaleX = pRatio*sRatio;			
+                    stage.scaleY = pRatio*sRatio;			
+                    lastW = iw; lastH = ih; lastS = sRatio;            
+                    stage.tickOnUpdate = false;            
+                    stage.update();            
+                    stage.tickOnUpdate = true;		
+                }
+            }
+            makeResponsive(false,'both',false,1);	
+            AdobeAn.compositionLoaded(lib.properties.id);
+            fnStartAnimation();
+        }
+    </script>
 </head>
 
 <body class="home">
@@ -22,7 +113,7 @@
                     </div>
                     <div class="overlay-content">
                         <div class="mega-menu">
-                            <div class="megamenu-item active">
+                            <div class="megamenu-item">
                                 <h5>
                                     <a href="javascript:void(0);">
                                         Solutions
@@ -31,7 +122,7 @@
                                 </h5>
                                 <div class="megamenu-sub">
                                     <ul class="megamenu-sub-menu">
-                                        <li class="active">
+                                        <li>
                                             <a href="../industry/index.html">Industry</a>                                            
                                             <span class="sub-menu-arrow"></span>
                                             <div class="megamenu-sub-content">
@@ -119,7 +210,6 @@
             </div>
             <script>
                 function openNav() {
-                    $('.mega-menu').children().first().addClass('active').siblings().removeClass('active');
                     document.getElementById("Nav").style.height = "100%";
                 }
         
@@ -129,21 +219,33 @@
             </script>
         </header>
         <div class="main" id="pager-holder">
-            <div class="section home-bg page" data-hint-text="Pioneers in Mixed Reality Solutions">
+            <div class="section home-bg page" style="margin:0px;" data-hint-text="Pioneers in Mixed Reality Solutions">
                 <div class="container">
                     <div class="section-in flex-col-rev">
                         <div class="left50">
                             <h1 data-aos="fade-up">Pioneers in Mixed Reality Solutions</h1>
                         </div>
-                        <div class="right50 text-center" data-aos="fade-up">
+                        <div class="right50 text-center" id="animation_container" data-aos="fade-up">
                             <div class="banner-img">
-                                <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/home/home.png" class="resp-img" alt="" />
+                                <canvas id="canvas" width="400" height="400"></canvas>
+                                <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:400px; height:400px;display: block;">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <div class="section home-bg page" style="margin:0px;" data-hint-text="Pioneers in Mixed Reality Solutions">
+                <div class="container">                    
+                    <div onload="init();" style="margin:0px;">
+                        <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:900px; height:900px">
+                            <canvas id="canvas" width="900" height="900" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+                            <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:900px; height:900px; position: absolute; left: 0px; top: 0px; display: block;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- our works -->
             <div class="section our-work page" data-hint-text="Our Work">
                 <div class="container">
@@ -153,7 +255,7 @@
                     </div> -->
                     <div class="section-in">
                         <div class="left50">
-                            <h2 class="home-text-bg" data-aos="fade-up">Our Work</h2>
+                            <h2 class="home-text-bg" data-aos="fade-down">Our Work</h2>
                             <p data-aos="fade-up">We craft immersive and innovative experiences powered by Mixed Reality across industries and business areas. With over 1600 campaigns and counting, we have delivered the largest number of mixed reality solutions so far in different
                                 segments.
                             </p>
@@ -191,64 +293,64 @@
                 </div>
             </div>
 
-
+            
             <!-- Brands Powered by WOWSOME -->
-            <div class="section brands page" data-hint-text="Brands Powered by WOWSOME">
+            <div class="section brands page" data-aos="fade-up">
                 <div class="container">
                     <div class="section-in">
-                        <div class="left40">
-                            <h2 class="home-text-bg" data-aos="fade-up">Brands Powered by WOWSOME</h2>
-                            <p data-aos="fade-up">Trusted by 50+ brands, WOWSOME is proud to partner with these organizations and offer new and exciting solutions to engage with their target audience.</p>
+                        <div class="left40" data-aos="zoom-in">
+                            <h2 class="home-text-bg">Brands Powered by WOWSOME</h2>
+                            <p>Trusted by 50+ brands, WOWSOME is proud to partner with these organizations and offer new and exciting solutions to engage with their target audience.</p>
                         </div>
 
-                        <div class="right60 text-center" data-aos="fade-left">
+                        <div class="right60 text-center" data-aos="zoom-in">
                             <div class="slider-wrap">
                                 <div class="slider">
                                     <ul>
                                         <li>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/The-Hindu.png" alt="The Hindu" title="The Hindu" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/tvs.png" alt="TVS" title="TVS" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Mahindra.png" alt="Mahindra" title="Mahindra" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/The-Hindu.png" alt="The Hindu" title="The Hindu" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/tvs.png" alt="TVS" title="TVS" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Mahindra.png" alt="Mahindra" title="Mahindra" /></span>
                                         </li>
                                         <li>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/starmaa.png" alt="starmaa" title="starmaa" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Apollo.png" alt="Apollo" title="Apollo" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/CognitveScale.png" alt="CognitveScale" title="CognitveScale" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/starmaa.png" alt="starmaa" title="starmaa" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Apollo.png" alt="Apollo" title="Apollo" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/CognitveScale.png" alt="CognitveScale" title="CognitveScale" /></span>
                                         </li>
                                         <li>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/DuPont.png" alt="DuPont" title="DuPont" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/rcb.png" alt="RCB" title="RCB" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/zee.png" alt="ZEE THEATRE" title="ZEE THEATRE" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/DuPont.png" alt="DuPont" title="DuPont" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/rcb.png" alt="RCB" title="RCB" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/zee.png" alt="SUPERSONIC" title="SUPERSONIC" /></span>
                                         </li>
                                         <li>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/tedx.png" alt="TEDx Hyderabad" title="TEDx Hyderabad" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/tplink.png" alt="tp-link" title="tp-link" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/supersonic.png" alt="SUPERSONIC" title="SUPERSONIC" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/tedx.png" alt="TEDx Hyderabad" title="TEDx Hyderabad" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/tplink.png" alt="tp-link" title="tp-link" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/supersonic.png" alt="viacomm 18" title="viacomm 18" /></span>
                                         </li>
                                         <li>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/ballentine.png" alt="Ballentine's" title="Ballentine's" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/blackdog.png" alt="BLACK DOG" title="BLACK DOG" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Budwesier.png" alt="Budwesier" title="Budwesier" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/ballentine.png" alt="Ballentine's" title="Ballentine's" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/blackdog.png" alt="BLACK DOG" title="BLACK DOG" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Budwesier.png" alt="Budwesier" title="Budwesier" /></span>
                                         </li>
                                         <li>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/cbs.png" alt="CBS TELEVISION STUDIOS" title="CBS TELEVISION STUDIOS" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/citi.png" alt="citibank" title="citibank" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/dna.png" alt="dna" title="dna" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/cbs.png" alt="CBS TELEVISION STUDIOS" title="CBS TELEVISION STUDIOS" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/citi.png" alt="citibank" title="citibank" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/dna.png" alt="dna" title="dna" /></span>
                                         </li>
                                         <li>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/fastrack.png" alt="fastrack" title="fastrack" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/forum.png" alt="FORUM" title="FORUM" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Jaguar.png" alt="JAGUAR" title="JAGUAR" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/fastrack.png" alt="fastrack" title="fastrack" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/forum.png" alt="FORUM" title="FORUM" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Jaguar.png" alt="JAGUAR" title="JAGUAR" /></span>
                                         </li>
                                         <li>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/P&G.png" alt="P&G" title="P&G" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/posterscope.png" alt="Posterscope" title="Posterscope" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/pwc.png" alt="pwc" title="pwc" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/P&G.png" alt="P&G" title="P&G" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/posterscope.png" alt="Posterscope" title="Posterscope" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/pwc.png" alt="pwc" title="pwc" /></span>
                                         </li>
-                                        <li> 
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/viacomm.png" alt="viacomm 18" title="viacomm 18" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/arka.png" alt="ARKA" title="ARKA" /></span>
-                                            <span><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/jeep.png" alt="Jeep" title="Jeep" /></span>
+                                        <li>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/viacomm.png" alt="P&G" title="P&G" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/arka.png" alt="ARKA" title="ARKA" /></span>
+                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/jeep.png" alt="Jeep" title="" /></span>
                                         </li>
                                     </ul>
                                 </div>
@@ -267,14 +369,6 @@
                                             </svg>
                                         </span>
                                     </a>
-                                    <div class="svg-wrap">
-                                        <svg width="64" height="64" viewBox="0 0 64 64">
-                                            <path id="arrow-left" d="M46.077 55.738c0.858 0.867 0.858 2.266 0 3.133s-2.243 0.867-3.101 0l-25.056-25.302c-0.858-0.867-0.858-2.269 0-3.133l25.056-25.306c0.858-0.867 2.243-0.867 3.101 0s0.858 2.266 0 3.133l-22.848 23.738 22.848 23.738z" />
-                                        </svg>
-                                        <svg width="64" height="64" viewBox="0 0 64 64">
-                                            <path id="arrow-right" d="M17.919 55.738c-0.858 0.867-0.858 2.266 0 3.133s2.243 0.867 3.101 0l25.056-25.302c0.858-0.867 0.858-2.269 0-3.133l-25.056-25.306c-0.858-0.867-2.243-0.867-3.101 0s-0.858 2.266 0 3.133l22.848 23.738-22.848 23.738z" />
-                                        </svg>
-                                    </div>
                                 </nav>
                             </div>
                             <script src="../assets/js/jquery.lbslider.js"></script>
@@ -282,7 +376,6 @@
                     </div>
                 </div>
             </div>
-
             
             <!-- testimonials -->
             <div class="section testimonial-sec page" data-hint-text="Customer Testimonials">
@@ -290,7 +383,7 @@
                     <div class="section-in">  
                         <div class="inline-table">                      
                             <div class="title">
-                                <h2 class="home-text-bg" data-aos="fade-up">Customer Testimonials</h2>
+                                <h2 data-aos="fade-down">Customer Testimonials</h2>
                                 <!-- <a href="#" class="view-all">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a> -->
                             </div>
                             <div class="testimonials" data-aos="fade-up">
@@ -331,11 +424,11 @@
             </div>
 
             <!-- recent blog post -->
-            <div class="section page" data-hint-text="Recent Blog Posts">
+            <div class="section recent-blog-posts page" data-hint-text="Recent Blog Posts">
                 <div class="container">
                     <div class="section-in post-grid">
                         <div class="title">
-                            <h2 class="home-text-bg" data-aos="fade-up">Recent Blog Post</h2>
+                            <h2 class="home-text-bg" data-aos="fade-down">Recent Blog Post</h2>
                             <a href="#" class="view-all home-text-bg">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a>
                         </div>
                         <div class="post-left" data-aos="slide-up">
@@ -399,8 +492,19 @@
             </div>
             
             <!-- footer -->
-            <footer>
-                <div class="footer-top section">
+            
+            
+            <footer> 
+                <div class="container">
+                    <div href="#" id="toBtm" class="nav-footer" title="Navigate to footer">
+                        <span>
+                            <svg height="30" viewBox="0 0 1792 1792" width="30">
+                                <path d="M1277 1299q8 19-5 35l-350 384q-10 10-23 10-14 0-24-10l-355-384q-13-16-5-35 9-19 29-19h224v-1248q0-14 9-23t23-9h192q14 0 23 9t9 23v1248h224q21 0 29 19z"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="footer-top section" id="footer-top">
                     <div class="container">
                         <div class="subscribe">
                             <h3>Subscribe to stay updated on latest trends of AR in branding</h3>
@@ -452,50 +556,41 @@
 
         </div>
     </div>
-    
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.min.js'></script>
-    <script>
-        var flkty = new Flickity( '.testimonials', {
-            cellAlign: 'left',
-            contain: true,
-            wrapAround: true,
-            prevNextButtons: true,
-            autoPlay: 5000
-        });
 
-        jQuery('.slider').lbSlider({
-            leftBtn: '.sa-left',
-            rightBtn: '.sa-right',
-            visible: 3,
-            autoPlay: true,
-            autoPlayDelay: 5
-        });
-        
-        $(document).ready(function () {
-			// log for all callbacks
-			$("#pager-holder").neo_pager({
-				autoScrollPages: true,
-				useDefaultCss: true
-			});
-        });
-        
-        $(document).ready(function () {
-            AOS.init({
-                duration: 1200,
+    <!-- JavaScripts -->
+    <!-- video popup -->
+    <script type="text/javascript" src="../assets/js/video-popup.js"></script>
+    <script type="text/javascript" src="../assets/js/slider1.js"></script>  
+       
+    <!--content transitions-->
+    <script>      
+      $(document).ready(function () {
+          AOS.init({
+              duration: 1200,
+          });
+      });
+        $(document).ready(function() {
+            $("#toBtm").click(function(event){
+                $('html, body').animate({scrollTop: '+=300px'}, 600);
             });
         });
     </script>
-    <!-- JavaScripts -->
-    
-    <!-- video popup -->
-    <script type="text/javascript" src="../assets/js/video-popup.js"></script>
-    <!-- common js -->
-    <script type="text/javascript" src="../assets/js/common2.js"></script>
-    <!-- testimonial slider -->
-    <script type="text/javascript" src="../assets/js/slider1.js"></script>  
     <script type="text/javascript" src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>   
-    <script src="../assets/pagescroll/neo.pager.js"></script>
+    <!-- common js -->
+    <script type="text/javascript" src="../assets/js/common.js"></script>  
+    <!--testimonials-->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.min.js'></script>
 
+    <script>
+      
+      function openNav() {
+        document.getElementById("Nav").style.height = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("Nav").style.height = "0%";
+      }
+    </script>
 </body>
 
 </html>

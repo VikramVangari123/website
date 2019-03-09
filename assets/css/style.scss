@@ -15,6 +15,13 @@ body {
   color: $font-color;
   line-height: $lineheight-normal;
 }
+// html, body{
+//   &::-webkit-scrollbar{
+//     width: 0 !important;
+//   }
+//     overflow: -moz-scrollbars-none;
+//     -ms-overflow-style: none;
+// }
 img {
   max-width: 100%;
   height: auto;
@@ -547,6 +554,9 @@ header {
                   font-size: 24px;
                   color: #eaeaea;
                 }
+                &.active a{
+                  color: #fff;
+                }
               }      
               .megamenu-sub-content{
                 position: absolute;
@@ -603,28 +613,27 @@ header {
               }
             }   
           }
-          &:hover, &.active{
-            .megamenu-sub{
-              display:block; 
-              top: 0px; 
-              left: 0px; 
-              margin-left: 249px; 
-              height: 100%; 
-              border-left: none;
-              .megamenu-sub-menu{
-                li{
-                  &.active, &:hover{
-                    a{
-                      color: $white;
-                    }
-                    .megamenu-tabH{
-                      display: block;
-                    }
+          .megamenu-sub{
+            display:block; 
+            top: 0px; 
+            left: 0px; 
+            margin-left: 249px; 
+            height: 100%; 
+            border-left: none;
+            .megamenu-sub-menu{
+              li{
+                > a{
+                  padding-bottom: 40px;
+                }  
+                &.active, &:hover{
+                  .megamenu-tabH{
+                    display: block;
+                    z-index: 99999;
                   }
-                }
+                }              
               }
             }
-          }     
+          }    
         }        
       }
     }
