@@ -1823,6 +1823,30 @@ nav.nav-split:hover svg.icon {
   }
 }
 
+.banner-animation #animation_container {
+  width: 450px !important;
+  height: 450px !important;
+  margin: 0 auto;
+  background: transparent !important;
+}
+.banner-animation canvas#canvas {
+  width: 450px !important;
+  height: 450px !important;
+  position: absolute;
+  display: block;
+  background: transparent !important;
+}
+.banner-animation #dom_overlay_container {
+  width: 450px !important;
+  height: 450px !important;
+  pointer-events: none;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+}
+
 /*************************** section scrolling ***********************/
 /*************************** home header *****************************/
 .home header .overlay {
@@ -1917,6 +1941,9 @@ nav.nav-split:hover svg.icon {
   color: #f53437;
   font-weight: bold;
 }
+.industry header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) .megamenu-sub .megamenu-sub-menu li:nth-child(1) > a {
+  color: #f53437;
+}
 .industry ul.list-style1 li:before {
   background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%) !important;
   background-position: center;
@@ -1966,7 +1993,6 @@ nav.nav-split:hover svg.icon {
 }
 .business-area header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) ul li:nth-child(2) > a {
   color: #207fff;
-  font-weight: bold;
 }
 .business-area header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) ul li:nth-child(2) .megamenu-tabH {
   display: block;
@@ -1976,7 +2002,7 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 .business-area .testimonial-sec h2, .business-area .recent-blog-posts h2 {
-  background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
+  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

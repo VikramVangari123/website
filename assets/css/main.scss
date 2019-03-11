@@ -588,6 +588,32 @@
         }
     } 
 
+    .banner-animation {
+        #animation_container {
+            width: 450px !important;
+            height: 450px !important;
+            margin: 0 auto;
+            background:transparent !important;
+        }
+        canvas#canvas {
+            width: 450px !important;
+            height: 450px !important;
+            position: absolute; 
+            display: block; 
+            background:transparent !important;
+        }
+        #dom_overlay_container {
+            width: 450px !important;
+            height: 450px !important;
+            pointer-events:none; 
+            overflow:hidden; 
+            position: absolute; 
+            left: 0px; 
+            top: 0px; 
+            display: block;
+        }
+    }
+
     /*************************** section scrolling ***********************/
     
     /*************************** home header *****************************/
@@ -766,6 +792,14 @@
                                     font-weight: bold;
                                 }
                             }
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &:nth-child(1){
+                                    > a {
+                                        color: $industry-menu-active;
+                                    }
+                                }
+                            }
+
                         }
                     }
                 }
@@ -848,7 +882,6 @@
                                     &:nth-child(2){
                                         > a{
                                             color: $business-area-menu-active;
-                                            font-weight: bold;
                                         }
                                         .megamenu-tabH{
                                             display: block;
@@ -872,7 +905,7 @@
               
         .testimonial-sec, .recent-blog-posts{
             h2{
-                @include industry-text-bg;
+                @include business-area-text-bg;
             }
         } 
         .sec-sm-cta{
