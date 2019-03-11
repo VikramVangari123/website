@@ -1262,6 +1262,11 @@ header .overlay .overlay-content {
     padding: 85px 0 25px 0 !important;
   }
 }
+@media (min-width: 480px) and (max-width: 767px) {
+  .section {
+    padding: 90px 0 30px 0 !important;
+  }
+}
 
 .padding-btm {
   padding-bottom: 40px;
@@ -6071,6 +6076,7 @@ footer .nav-footer span {
   transform: translatey(0px);
   animation: float 4s linear infinite;
   display: block;
+  cursor: pointer;
 }
 footer .nav-footer span:hover {
   -webkit-animation-play-state: paused;
@@ -6090,6 +6096,11 @@ footer .footer-top {
   height: auto;
   padding: 40px 0;
   color: #fff;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  footer .footer-top {
+    padding: 30px 0;
+  }
 }
 @media (max-width: 479px) {
   footer .footer-top {

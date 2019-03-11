@@ -72,6 +72,9 @@
         @include smartphone {
             padding: 85px 0 25px 0 !important;
         }
+        @include mobile {
+            padding: 90px 0 30px 0 !important;
+        }
     }
     .padding-btm{
         padding-bottom: 40px;
@@ -4804,6 +4807,7 @@
                 transform: translatey(0px);
                 animation: float 4s linear infinite;
                 display: block;
+                cursor: pointer;
                 &:hover{              
                     -webkit-animation-play-state: paused;
                     -moz-animation-play-state: paused;
@@ -4823,6 +4827,9 @@
             width: 100%;
             height: auto;
             padding: 40px 0;
+            @include mobile{
+                padding: 30px 0;
+            }
             @include smartphone{
                 padding: 25px 0;
             }
