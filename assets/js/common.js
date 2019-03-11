@@ -67,7 +67,7 @@ $(function() {
 
         // section inner full height
         var sectionHeight = $('.section').height();
-        $('.section-in').css('height', (sectionHeight) + 'px');
+		$('.section-in').css('height', (sectionHeight) + 'px');
 
         // testimonial 
         var sliderblockHeight = $('.sliderblock-cont').height();
@@ -557,6 +557,8 @@ $(document).ready(function(){
     });
     
 });
+
+// testimonials
 $(document).ready(function(){
 var flkty = new Flickity( '.testimonials', {
     cellAlign: 'left',
@@ -1073,14 +1075,43 @@ var flkty = new Flickity( '.testimonials', {
 
 })( jQuery, window, document );  
   
-  // log for all callbacks
-  $("#pager-holder").neo_pager({
-    autoScrollPages: true,
-    useDefaultCss: true
-  });
-$(document).ready(function () {
-    AOS.init({
-        duration: 1200,
-    });
-});
+	// log for all callbacks
+	$("#pager-holder").neo_pager({
+		autoScrollPages: true,
+		useDefaultCss: true
+	});
+
+	// content transitions
+	$(document).ready(function () {
+		AOS.init({
+			duration: 1200,
+		});
+	});
+
+	// footer navigation		
+	var footerHeight = $('footer').height();
+	$('footer').css('height', (footerHeight) + 'px');
+
+	             
+	// $(document).ready(function() {
+	// 	$("#toBtm").click(function(event){
+	// 		$('html, body').animate({scrollTop: '-=300px'}, 600);
+	// 	});
+	// });
+	var count = 0;
+	$("#toBtm").click(function() {
+		count++;
+		//even odd click detect 
+		var isEven = function(someNumber) {
+			return (someNumber % 2 === 0) ? true : false;
+		};
+		// on odd clicks do this
+		if (isEven(count) === false) {
+			$('html, body').animate({scrollTop: '+=240px'}, 400);
+		}
+		// on even clicks do this
+		else if (isEven(count) === true) {			
+			$('html, body').animate({scrollTop: '-=240px'}, 400);
+		}
+	});
 });

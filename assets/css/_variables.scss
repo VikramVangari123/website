@@ -314,21 +314,57 @@ $notfound-menu-active: #805eb9;
       -webkit-transform: scale3d(0.5, 0.5, 0.5);
       transform: scale3d(0.5, 0.5, 0.5);
     }
-  }
+}
   
-  @keyframes zoomIn {
-    0% {
-      opacity: 0;
-      -webkit-transform: scale3d(0.3, 0.3, 0.3);
-      transform: scale3d(0.3, 0.3, 0.3);
-    }
-  
-    100% {
-      opacity: 1;
-      -webkit-transform: scale3d(0.5, 0.5, 0.5);
-      transform: scale3d(0.5, 0.5, 0.5);
-    }
-  }
+@keyframes zoomIn {
+0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+}
+
+100% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
+}
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+		-webkit-transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+		-webkit-transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+		-webkit-transform: translatey(0px);
+	}
+}
+
+@-webkit-keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+		-webkit-transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+		-webkit-transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+		-webkit-transform: translatey(0px);
+	}
+}
+
 /*** media queries **/
 
 /* 

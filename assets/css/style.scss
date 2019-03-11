@@ -15,13 +15,13 @@ body {
   color: $font-color;
   line-height: $lineheight-normal;
 }
-// html, body{
-//   &::-webkit-scrollbar{
-//     width: 0 !important;
-//   }
-//     overflow: -moz-scrollbars-none;
-//     -ms-overflow-style: none;
-// }
+html, body{
+  &::-webkit-scrollbar{
+    width: 0 !important;
+  }
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
 img {
   max-width: 100%;
   height: auto;

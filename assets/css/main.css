@@ -25,6 +25,40 @@
     transform: scale3d(0.5, 0.5, 0.5);
   }
 }
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+    -webkit-transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+    -webkit-transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+    -webkit-transform: translatey(0px);
+  }
+}
+@-webkit-keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+    -webkit-transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+    -webkit-transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+    -webkit-transform: translatey(0px);
+  }
+}
 /*** media queries **/
 /* 
   ##Device = Desktops
@@ -394,6 +428,14 @@ body {
   font-family: "Roboto", sans-serif;
   color: #808285;
   line-height: 26px;
+}
+
+html, body {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  width: 0 !important;
 }
 
 img {
@@ -6012,6 +6054,7 @@ ul.tabs li.active {
 /******************************* footer **********************************************/
 footer {
   position: relative;
+  transition: 2s linear;
 }
 footer .nav-footer {
   position: absolute;
@@ -6023,7 +6066,17 @@ footer .nav-footer span {
   width: 30px;
   height: 30px;
   border: 2px solid #000;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transform: translatey(0px);
+  animation: float 4s linear infinite;
   display: block;
+}
+footer .nav-footer span:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
 }
 footer .nav-footer svg {
   fill: #000;
@@ -6034,7 +6087,14 @@ footer .footer-top {
   position: relative;
   overflow: hidden;
   width: 100%;
+  height: auto;
+  padding: 40px 0;
   color: #fff;
+}
+@media (max-width: 479px) {
+  footer .footer-top {
+    padding: 25px 0;
+  }
 }
 footer .footer-top .subscribe {
   width: 49%;
