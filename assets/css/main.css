@@ -1876,12 +1876,36 @@ nav.nav-split:hover svg.icon {
   margin: 0 auto;
   background: transparent !important;
 }
+@media (min-width: 480px) and (max-width: 767px) {
+  .banner-animation #animation_container {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
+@media (max-width: 479px) {
+  .banner-animation #animation_container {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
 .banner-animation canvas#canvas {
   width: 450px !important;
   height: 450px !important;
   position: absolute;
   display: block;
   background: transparent !important;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .banner-animation canvas#canvas {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
+@media (max-width: 479px) {
+  .banner-animation canvas#canvas {
+    width: 250px !important;
+    height: 250px !important;
+  }
 }
 .banner-animation #dom_overlay_container {
   width: 450px !important;
@@ -1892,6 +1916,18 @@ nav.nav-split:hover svg.icon {
   left: 0px;
   top: 0px;
   display: block;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .banner-animation #dom_overlay_container {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
+@media (max-width: 479px) {
+  .banner-animation #dom_overlay_container {
+    width: 250px !important;
+    height: 250px !important;
+  }
 }
 
 /*************************** section scrolling ***********************/

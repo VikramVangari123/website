@@ -597,6 +597,14 @@
             height: 450px !important;
             margin: 0 auto;
             background:transparent !important;
+            @include mobile{                
+                width: 300px !important;
+                height: 300px !important;
+            }
+            @include smartphone{                
+                width: 250px !important;
+                height: 250px !important;
+            }
         }
         canvas#canvas {
             width: 450px !important;
@@ -604,6 +612,14 @@
             position: absolute; 
             display: block; 
             background:transparent !important;
+            @include mobile{                
+                width: 300px !important;
+                height: 300px !important;
+            }
+            @include smartphone{                
+                width: 250px !important;
+                height: 250px !important;
+            }
         }
         #dom_overlay_container {
             width: 450px !important;
@@ -614,6 +630,14 @@
             left: 0px; 
             top: 0px; 
             display: block;
+            @include mobile{                
+                width: 300px !important;
+                height: 300px !important;
+            }
+            @include smartphone{                
+                width: 250px !important;
+                height: 250px !important;
+            }
         }
     }
 
