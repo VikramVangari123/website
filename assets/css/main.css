@@ -1906,6 +1906,16 @@ nav.nav-split:hover svg.icon {
 .home header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-tabH-in a:hover p, .home header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-tabH-in a.active p {
   color: #78cfe2;
 }
+.home #dot-holder .page-nav-dot span.page-nav-dot-current {
+  background: #5A6FA0;
+}
+.home #dot-holder .page-nav-dot .hint:after, .home #dot-holder .page-nav-dot [data-hint]:after {
+  background: #5A6FA0;
+}
+.home #dot-holder .page-nav-dot:hover span {
+  background: #5A6FA0;
+  opacity: 1;
+}
 .home .testimonial-sec h2, .home .recent-blog-posts h2 {
   background-image: linear-gradient(to left, #283048 20%, #859398 100%);
   -webkit-background-clip: text;
@@ -1949,6 +1959,16 @@ nav.nav-split:hover svg.icon {
   color: #448cef;
   font-weight: bold;
 }
+.how-we-work #dot-holder .page-nav-dot span.page-nav-dot-current {
+  background: #7BD6FE;
+}
+.how-we-work #dot-holder .page-nav-dot .hint:after, .how-we-work #dot-holder .page-nav-dot [data-hint]:after {
+  background: #7BD6FE;
+}
+.how-we-work #dot-holder .page-nav-dot:hover span {
+  background: #7BD6FE;
+  opacity: 1;
+}
 .how-we-work .recent-blog-posts h2 {
   background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
   -webkit-background-clip: text;
@@ -1990,6 +2010,16 @@ nav.nav-split:hover svg.icon {
 }
 .industry header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) .megamenu-sub .megamenu-sub-menu li:nth-child(1) > a {
   color: #f53437;
+}
+.industry #dot-holder .page-nav-dot span.page-nav-dot-current {
+  background: #FAA536;
+}
+.industry #dot-holder .page-nav-dot .hint:after, .industry #dot-holder .page-nav-dot [data-hint]:after {
+  background: #FAA536;
+}
+.industry #dot-holder .page-nav-dot:hover span {
+  background: #FAA536;
+  opacity: 1;
 }
 .industry ul.list-style1 li:before {
   background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%) !important;
@@ -2044,6 +2074,16 @@ nav.nav-split:hover svg.icon {
 .business-area header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) ul li:nth-child(2) .megamenu-tabH {
   display: block;
 }
+.business-area #dot-holder .page-nav-dot span.page-nav-dot-current {
+  background: #0063B0;
+}
+.business-area #dot-holder .page-nav-dot .hint:after, .business-area #dot-holder .page-nav-dot [data-hint]:after {
+  background: #0063B0;
+}
+.business-area #dot-holder .page-nav-dot:hover span {
+  background: #0063B0;
+  opacity: 1;
+}
 .business-area ul.list-style1 li:before {
   background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
   background-position: center;
@@ -2086,6 +2126,16 @@ nav.nav-split:hover svg.icon {
 }
 .products header .overlay .overlay-content .mega-menu .megamenu-item:hover a:hover {
   color: #412a6d;
+}
+.products #dot-holder .page-nav-dot span.page-nav-dot-current {
+  background: #DB0E55;
+}
+.products #dot-holder .page-nav-dot .hint:after, .products #dot-holder .page-nav-dot [data-hint]:after {
+  background: #DB0E55;
+}
+.products #dot-holder .page-nav-dot:hover span {
+  background: #DB0E55;
+  opacity: 1;
 }
 .products .products-bg:nth-child(1) p {
   color: #fff;
@@ -2204,6 +2254,16 @@ nav.nav-split:hover svg.icon {
 .brand-managers header .overlay .overlay-content .mega-menu .megamenu-item:hover a:hover {
   color: #ec8eab;
 }
+.brand-managers #dot-holder .page-nav-dot span.page-nav-dot-current {
+  background: #DB0E55;
+}
+.brand-managers #dot-holder .page-nav-dot .hint:after, .brand-managers #dot-holder .page-nav-dot [data-hint]:after {
+  background: #DB0E55;
+}
+.brand-managers #dot-holder .page-nav-dot:hover span {
+  background: #DB0E55;
+  opacity: 1;
+}
 .brand-managers .pagination span.current {
   box-shadow: none;
   background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%) !important;
@@ -2305,6 +2365,16 @@ nav.nav-split:hover svg.icon {
 .about header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(3) h5 a {
   color: #ef141a;
   font-weight: bold;
+}
+.about #dot-holder .page-nav-dot span.page-nav-dot-current {
+  background: #FD9F77;
+}
+.about #dot-holder .page-nav-dot .hint:after, .about #dot-holder .page-nav-dot [data-hint]:after {
+  background: #FD9F77;
+}
+.about #dot-holder .page-nav-dot:hover span {
+  background: #FD9F77;
+  opacity: 1;
 }
 .about .member-profile {
   width: 33.333%;
@@ -2466,6 +2536,16 @@ nav.nav-split:hover svg.icon {
 .contact header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(5) h5 a {
   color: #f54548;
   font-weight: bold;
+}
+.contact #dot-holder .page-nav-dot span.page-nav-dot-current {
+  background: #FD9F77;
+}
+.contact #dot-holder .page-nav-dot .hint:after, .contact #dot-holder .page-nav-dot [data-hint]:after {
+  background: #FD9F77;
+}
+.contact #dot-holder .page-nav-dot:hover span {
+  background: #FD9F77;
+  opacity: 1;
 }
 .contact .contact-block h2 {
   background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
@@ -2819,8 +2899,8 @@ nav.nav-split:hover svg.icon {
   }
 }
 .testimonials .testimonial-avatar {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
@@ -2834,8 +2914,8 @@ nav.nav-split:hover svg.icon {
 }
 .testimonials .testimonial-quote {
   display: block;
-  font-size: 24px;
-  line-height: 35px;
+  font-size: 18px;
+  line-height: 28px;
   font-style: italic;
   font-family: "georgia", sans-serif;
   padding: 10px 0;
@@ -4348,7 +4428,7 @@ ul.tabs li.active {
   }
 }
 .our-work .ow-videos-in .ow-videos-in-top a:nth-child(1):after {
-  right: 3px;
+  right: 10px;
 }
 .our-work .ow-videos-in .ow-videos-in-top a:nth-child(2) {
   margin: 0 0 5px 8px;

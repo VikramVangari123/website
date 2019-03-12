@@ -665,6 +665,22 @@
         //         }
         //     }
         // }
+        #dot-holder .page-nav-dot{
+            span{
+                &.page-nav-dot-current{
+                    @include home-dot-bg;
+                }
+            }
+            .hint:after, [data-hint]:after{
+                @include home-dot-bg;
+            }
+            &:hover{
+                span{
+                    @include home-dot-bg;
+                    opacity: 1;
+                }
+            }
+        } 
         .testimonial-sec, .recent-blog-posts{
             h2{
                 @include home-text-bg;
@@ -734,7 +750,23 @@
                     }
                 }
             }
-        }        
+        }   
+        #dot-holder .page-nav-dot{
+            span{
+                &.page-nav-dot-current{
+                    @include hw-dot-bg;
+                }
+            }
+            .hint:after, [data-hint]:after{
+                @include hw-dot-bg;
+            }
+            &:hover{
+                span{
+                    @include hw-dot-bg;
+                    opacity: 1;
+                }
+            }
+        }      
         .recent-blog-posts{
             h2{
                 @include hw-text-bg;
@@ -808,6 +840,22 @@
                 }
             }
         }
+        #dot-holder .page-nav-dot{
+            span{
+                &.page-nav-dot-current{
+                    @include industry-dot-bg;
+                }
+            }
+            .hint:after, [data-hint]:after{
+                @include industry-dot-bg;
+            }
+            &:hover{
+                span{
+                    @include industry-dot-bg;
+                    opacity: 1;
+                }
+            }
+        }    
         ul.list-style1{ 
             li{
                 &:before{
@@ -896,7 +944,23 @@
                     }
                 }
             }
-        }
+        }        
+        #dot-holder .page-nav-dot{
+            span{
+                &.page-nav-dot-current{
+                    @include business-area-dot-bg;
+                }
+            }
+            .hint:after, [data-hint]:after{
+                @include business-area-dot-bg;
+            }
+            &:hover{
+                span{
+                    @include business-area-dot-bg;
+                    opacity: 1;
+                }
+            }
+        }   
         ul.list-style1{ 
             li{
                 &:before{
@@ -975,7 +1039,23 @@
                     }
                 }
             }
-        }
+        }                
+        #dot-holder .page-nav-dot{
+            span{
+                &.page-nav-dot-current{
+                    @include products-dot-bg;
+                }
+            }
+            .hint:after, [data-hint]:after{
+                @include products-dot-bg;
+            }
+            &:hover{
+                span{
+                    @include products-dot-bg;
+                    opacity: 1;
+                }
+            }
+        }  
         .products-bg:nth-child(1) p{
             color: #fff;
             font-size: 18px;
@@ -1183,7 +1263,23 @@
                     }
                 }
             }
-        }
+        }                
+        #dot-holder .page-nav-dot{
+            span{
+                &.page-nav-dot-current{
+                    @include brand-mng-dot-bg;
+                }
+            }
+            .hint:after, [data-hint]:after{
+                @include brand-mng-dot-bg;
+            }
+            &:hover{
+                span{
+                    @include brand-mng-dot-bg;
+                    opacity: 1;
+                }
+            }
+        }  
         .pagination{
             span{               
                 &.current { 
@@ -1344,7 +1440,23 @@
         //             display: flex !important;
         //         }                 
         //     }
-        // }
+        // }            
+        #dot-holder .page-nav-dot{
+            span{
+                &.page-nav-dot-current{
+                    @include about-dot-bg;
+                }
+            }
+            .hint:after, [data-hint]:after{
+                @include about-dot-bg;
+            }
+            &:hover{
+                span{
+                    @include about-dot-bg;
+                    opacity: 1;
+                }
+            }
+        }  
         .member-profile{
             width: 33.333%;
             text-align: center;
@@ -1520,7 +1632,23 @@
                     }
                 }   
             }
-        }
+        }          
+        #dot-holder .page-nav-dot{
+            span{
+                &.page-nav-dot-current{
+                    @include contact-dot-bg;
+                }
+            }
+            .hint:after, [data-hint]:after{
+                @include contact-dot-bg;
+            }
+            &:hover{
+                span{
+                    @include contact-dot-bg;
+                    opacity: 1;
+                }
+            }
+        }  
         .contact-block{
             h2{
                 @include contact-text-bg;
@@ -1646,229 +1774,229 @@
 
     /*************************** pillarPage header ***************************************/
     
-        .pillarPage{
-            header {
-                .overlay{
-                    @include pillarPage-bg;
-                    .overlay-content .mega-menu {
-                        .megamenu-item{
-                            &.active{
-                                h5 a{
-                                    color: $pillarPage-menu-active;
-                                    font-weight: bold;
-                                } 
-                                .megamenu-tabH-in a{                                
-                                    &:hover, &.active{
-                                        p{
-                                            color: $pillarPage-menu-active;
-                                        }
-                                    }
-                                } 
-                                .megamenu-sub .megamenu-sub-menu li.active a{
-                                    color: $pillarPage-menu-active;
-                                }
-                            }
-                            &:hover{
-                                .megamenu-sub .megamenu-sub-menu li{
-                                    &.active, &:hover{
-                                        > a{
-                                            color: $pillarPage-menu-active; 
-                                        }
-                                    }
-                                }
-                                a{
-                                    &:hover{
+    .pillarPage{
+        header {
+            .overlay{
+                @include pillarPage-bg;
+                .overlay-content .mega-menu {
+                    .megamenu-item{
+                        &.active{
+                            h5 a{
+                                color: $pillarPage-menu-active;
+                                font-weight: bold;
+                            } 
+                            .megamenu-tabH-in a{                                
+                                &:hover, &.active{
+                                    p{
                                         color: $pillarPage-menu-active;
                                     }
                                 }
-                            }
-                            // &:nth-child(2){
-                            //     h5{
-                            //         a{
-                            //             color: $pillarPage-menu-active;
-                            //             font-weight: bold;
-                            //         }
-                            //     }
-                            // }
-                        }
-                    }   
-                }
-            }
-            footer{
-                .footer-top{
-                    @include pillarPage-bg;
-                }
-                .copy-right{
-                    @include pillarPage-bg2;
-                }
-            }
-            .pillarPage-main{
-                .left {
-                    width: calc(100% - 420px);
-                    height: 100%;
-                    margin-right: 20px;
-                    float: left;
-                    position: relative;
-                    @include mobile-max{
-                        width: 100%;
-                        float: none;
-                    }
-                    div{
-                        &:nth-child(1){
-                            h2{
-                                margin-top: 0;
+                            } 
+                            .megamenu-sub .megamenu-sub-menu li.active a{
+                                color: $pillarPage-menu-active;
                             }
                         }
-                    }                
-                    h2{
-                        font-size: 30px;
-                        line-height: 36px;
-                        margin-bottom: 10px;
-                        color: $black0;
-                        margin-top: 30px;
-                    }
-                    hr{
-                        margin: 30px 0;
-                    }
-                    p{
-                        margin-bottom: 15px;
-                        &:last-child{
-                            margin-bottom: 0;
-                        }
-                    }
-                    .box{
-                        padding: 10px;
-                        @include flex;
-                        color: #fff;
-                        margin: 40px 0;
-                        .img{
-                            height: 150px;
-                            width: 150px;
-                            background: #fff;
-                            padding: 10px;
-                            text-align: center;
-                            margin-right: 20px;
-                            @include flex;
-                            overflow: hidden;
-                            @include mobile{
-                                width: 120px;
-                                height: 120px;
-                            }                            
-                            @include smartphone{
-                                width: 100px;
-                                height: 100px;
-                            }
-                        }
-                        .content{
-                            h4{
-                                margin-bottom: 8px;
-                            }
-                            width: calc(100% - 170px);
-                            @include mobile{
-                                width: calc(100% - 140px);
-                            }
-                            @include smartphone{
-                                width: calc(100% - 120px);
-                            }
-                        }
-                        .btn{
-                            margin-bottom: 0;
-                        }
-                    }                    
-                    ul.list-style1{ 
-                        li{
-                            &:before{
-                                @include pillarPage-bg; 
-                            }
-                            &:last-child{
-                                margin-bottom: 15px;
-                            }
-                        }
-                    }
-                    .social-share {
-                        margin-top: 40px;
-                        font-size: 20px;
-                        .social-icons {
-                            @include inline-block;
-                            margin-left: 20px;
-                            span{
-                                @include inline-block;
-                                a{
-                                    width: 70%;
-                                    margin-right: 20px;
-                                    @include inline-block;
-                                    img{
-                                        width: 75%;
-                                        @include smartphone{
-                                            widh: 70%;
-                                        }
-                                    }                               
-                                }
-                            }
-                        }
-                    }
-                }
-                .right{
-                    float: right;
-                    width: 360px;
-                    margin-left: 40px;
-                    h3{
-                        margin-bottom: 20px;
-                        color: $black0;
-                    }
-                    .content-table, .download-guide{
-                        padding: 20px;
-                        @include box-shadow;
-                    }
-                    .content-table{
-                        ol{
-                            list-style-position: outside;
-                            padding-left: 20px;
-                            li{
-                                padding-bottom: 10px;
-                                a{
-                                    &:hover{
-                                        color: $link-color-hover;
+                        &:hover{
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &.active, &:hover{
+                                    > a{
+                                        color: $pillarPage-menu-active; 
                                     }
                                 }
                             }
-                        }
-                    }
-                    .download-guide{
-                        margin-top: 30px;
-                        .download-guide-in {
-                            max-width: 320px;
-                            label{
-                                position: relative;
-                                input, textarea{
-                                    width: 100%;
-                                    border: 0;
-                                    border-bottom: 1px solid #7d7d7d;
-                                    padding: 3px 0;
-                                    background: 0 0;
-                                    margin-bottom: 30px;
+                            a{
+                                &:hover{
+                                    color: $pillarPage-menu-active;
                                 }
                             }
-                            .btn{
-                                width: 100%;
-                                border: 1px solid transparent;
-                                color: #fff;
-                                font-size: 18px;
-                                margin-bottom: 0;
+                        }
+                        // &:nth-child(2){
+                        //     h5{
+                        //         a{
+                        //             color: $pillarPage-menu-active;
+                        //             font-weight: bold;
+                        //         }
+                        //     }
+                        // }
+                    }
+                }   
+            }
+        }
+        footer{
+            .footer-top{
+                @include pillarPage-bg;
+            }
+            .copy-right{
+                @include pillarPage-bg2;
+            }
+        }
+        .pillarPage-main{
+            .left {
+                width: calc(100% - 420px);
+                height: 100%;
+                margin-right: 20px;
+                float: left;
+                position: relative;
+                @include mobile-max{
+                    width: 100%;
+                    float: none;
+                }
+                div{
+                    &:nth-child(1){
+                        h2{
+                            margin-top: 0;
+                        }
+                    }
+                }                
+                h2{
+                    font-size: 30px;
+                    line-height: 36px;
+                    margin-bottom: 10px;
+                    color: $black0;
+                    margin-top: 30px;
+                }
+                hr{
+                    margin: 30px 0;
+                }
+                p{
+                    margin-bottom: 15px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+                .box{
+                    padding: 10px;
+                    @include flex;
+                    color: #fff;
+                    margin: 40px 0;
+                    .img{
+                        height: 150px;
+                        width: 150px;
+                        background: #fff;
+                        padding: 10px;
+                        text-align: center;
+                        margin-right: 20px;
+                        @include flex;
+                        overflow: hidden;
+                        @include mobile{
+                            width: 120px;
+                            height: 120px;
+                        }                            
+                        @include smartphone{
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                    .content{
+                        h4{
+                            margin-bottom: 8px;
+                        }
+                        width: calc(100% - 170px);
+                        @include mobile{
+                            width: calc(100% - 140px);
+                        }
+                        @include smartphone{
+                            width: calc(100% - 120px);
+                        }
+                    }
+                    .btn{
+                        margin-bottom: 0;
+                    }
+                }                    
+                ul.list-style1{ 
+                    li{
+                        &:before{
+                            @include pillarPage-bg; 
+                        }
+                        &:last-child{
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+                .social-share {
+                    margin-top: 40px;
+                    font-size: 20px;
+                    .social-icons {
+                        @include inline-block;
+                        margin-left: 20px;
+                        span{
+                            @include inline-block;
+                            a{
+                                width: 70%;
+                                margin-right: 20px;
+                                @include inline-block;
+                                img{
+                                    width: 75%;
+                                    @include smartphone{
+                                        widh: 70%;
+                                    }
+                                }                               
                             }
                         }
-                        
-                        
-                    }
-                    @include mobile-max{
-                        width: 100%;
-                        float: none;
-                        margin-left: 0;
-                        margin-top: 40px;
                     }
                 }
             }
+            .right{
+                float: right;
+                width: 360px;
+                margin-left: 40px;
+                h3{
+                    margin-bottom: 20px;
+                    color: $black0;
+                }
+                .content-table, .download-guide{
+                    padding: 20px;
+                    @include box-shadow;
+                }
+                .content-table{
+                    ol{
+                        list-style-position: outside;
+                        padding-left: 20px;
+                        li{
+                            padding-bottom: 10px;
+                            a{
+                                &:hover{
+                                    color: $link-color-hover;
+                                }
+                            }
+                        }
+                    }
+                }
+                .download-guide{
+                    margin-top: 30px;
+                    .download-guide-in {
+                        max-width: 320px;
+                        label{
+                            position: relative;
+                            input, textarea{
+                                width: 100%;
+                                border: 0;
+                                border-bottom: 1px solid #7d7d7d;
+                                padding: 3px 0;
+                                background: 0 0;
+                                margin-bottom: 30px;
+                            }
+                        }
+                        .btn{
+                            width: 100%;
+                            border: 1px solid transparent;
+                            color: #fff;
+                            font-size: 18px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    
+                    
+                }
+                @include mobile-max{
+                    width: 100%;
+                    float: none;
+                    margin-left: 0;
+                    margin-top: 40px;
+                }
+            }
         }
+    }
     
     /*************************** notfound header ******************************************/
     
@@ -1945,8 +2073,8 @@
             }
         }
         .testimonial-avatar {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             object-fit: cover;
             border-radius: 50%;
             @include box-shadow;
@@ -1957,8 +2085,8 @@
         }
         .testimonial-quote {
             display: block;
-            font-size: 24px;
-            line-height: 35px;
+            font-size: 18px;
+            line-height: 28px;
             font-style: italic;
             font-family: "georgia", sans-serif;
             padding: 10px 0;
@@ -3284,7 +3412,7 @@
                             margin: 0 0 5px 0;
                         }
                         &:after{
-                            right: 3px;
+                            right: 10px;
                         }
                     }
                     &:nth-child(2){

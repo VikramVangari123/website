@@ -41,6 +41,9 @@ $notfound-menu-active: #805eb9;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+@mixin home-dot-bg{
+    background: #5A6FA0;
+}
 
 @mixin hw-bg{    
     background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%) !important;
@@ -54,6 +57,9 @@ $notfound-menu-active: #805eb9;
 	background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+@mixin hw-dot-bg{
+    background: #7BD6FE;
 }
 
 @mixin industry-bg{    
@@ -69,6 +75,9 @@ $notfound-menu-active: #805eb9;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+@mixin industry-dot-bg{
+    background: #FAA536;
+}
 
 @mixin business-area-bg{    
     background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
@@ -83,6 +92,9 @@ $notfound-menu-active: #805eb9;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+@mixin business-area-dot-bg{
+    background: #0063B0;
+}
 
 @mixin products-bg{    
     background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%) !important;
@@ -96,6 +108,9 @@ $notfound-menu-active: #805eb9;
 	background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+@mixin products-dot-bg{
+    background: #DB0E55;
 }
 
 @mixin ourwork-bg{    
@@ -125,6 +140,7 @@ $notfound-menu-active: #805eb9;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
 @mixin brand-mng-bg{    
     background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%) !important;
     background-position: center;
@@ -137,6 +153,9 @@ $notfound-menu-active: #805eb9;
 	background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+@mixin brand-mng-dot-bg{
+    background: #DB0E55;
 }
 
 @mixin blog-bg{    
@@ -166,6 +185,9 @@ $notfound-menu-active: #805eb9;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+@mixin about-dot-bg{
+    background: #FD9F77;
+}
 
 @mixin contact-bg{    
     background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%) !important;
@@ -179,6 +201,9 @@ $notfound-menu-active: #805eb9;
 	background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+@mixin contact-dot-bg{
+    background: #FD9F77;
 }
 
 @mixin pillarPage-bg{    
