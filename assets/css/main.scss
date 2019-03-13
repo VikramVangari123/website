@@ -64,11 +64,8 @@
         width: 100%;
         height: 100%;
         background: #fff;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        -webkit-transition: -webkit-transform 1s ease-in-out;
-        transition: transform 1s ease-in-out;
-        will-change: transform;
+        -webkit-transition: 0.8s ease;
+        transition: 0.8s ease;
         @include smartphone {
             padding: 85px 0 25px 0 !important;
         }
@@ -689,11 +686,15 @@
         //         }
         //     }
         // }
-        #dot-holder .page-nav-dot{
+        #dot-holder .page-nav-dot{            
+            -webkit-transition: background 0.3s ease;
+            transition: background 0.3s ease;
             span{
                 &.page-nav-dot-current{
                     @include home-dot-bg;
                 }
+                -webkit-transition: background 0.3s ease;
+                transition: background 0.3s ease;
             }
             .hint:after, [data-hint]:after{
                 @include home-dot-bg;
@@ -1166,6 +1167,9 @@
                     }
                 }
             }
+        }
+        .section{
+            height: auto;
         }
         footer{
             .footer-top{
@@ -2102,10 +2106,6 @@
             object-fit: cover;
             border-radius: 50%;
             @include box-shadow;
-            @include smartphone{
-                width: 90px;
-                height: 90px;
-            }
         }
         .testimonial-quote {
             display: block;
@@ -2115,10 +2115,10 @@
             font-family: "georgia", sans-serif;
             padding: 10px 0;
             @include mobile{
-                font-size: 22px;
+                font-size: 17px;
             }
             @include smartphone{
-                font-size: 18px;
+                font-size: 16px;
             }
         }
         .testimonial-author {
@@ -2200,7 +2200,7 @@
         }
         .flickity-prev-next-button {
             position: absolute;
-            top: 100px;
+            top: 90px;
             width: 44px;
             height: 44px;
             border: none;
@@ -2212,9 +2212,6 @@
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             opacity: 0.4;
-            @include smartphone{
-                top: 70px;
-            }
             &:hover {
                 background: #fff;
             }
@@ -2246,8 +2243,8 @@
                 position: absolute;
                 left: 20%;
                 top: 20%;
-                width: 60%;
-                height: 60%;
+                width: 50%;
+                height: 50%;
                 @include mobile-max{
                     width: 50%;
                     height: 50%;
@@ -3105,6 +3102,9 @@
             vertical-align: middle;
             width: 50%;
             text-align: right;
+            img{
+                max-width: 100% !important;
+            }
         }
         .download-links {
             display: inline-block;
@@ -3121,7 +3121,8 @@
                     @include transition;
                     &:hover{
                         @include image-scale;
-                    }                    
+                    } 
+                    max-width: 100% !important;               
                 }
                 @include smartphone{
                     min-width: 100px;
@@ -3788,11 +3789,10 @@
                     bottom: 8px;
                     z-index: 59;
                     position: absolute;
-                    text-shadow: 0 0 2px rgba(0,0,0,.5);
                     color: #fff;
                     padding: 6px 10px;
                     align-items: center;
-                    @include ourwork-bg;
+                    background: rgba(0, 0, 0, 0.5);
                     visibility: hidden;
                     @include mobile-max{
                         left: 0;
@@ -3841,6 +3841,32 @@
         }
         ul.list-style1 li:before {
             @include ipgallery-bg;
+        }
+        .main{
+            top:60px;
+        }
+        .section {
+            padding: 40px 0;
+            height: auto;
+            @include mobile{
+                padding: 30px 0 !important;
+            }
+            @include smartphone {
+                padding: 25px 0 !important;
+            }
+            &.pb0{
+                padding-bottom: 0 !important;
+            }
+        }
+        .load-more {
+            display: inline-block;
+            width: 100%;
+            @include tablet-max{
+                margin-top: 20px;
+            }
+            .btn{
+                margin:0;
+            }
         }
     }
         .campaigns-main-list, .slider-ipgallery ul{
@@ -3916,8 +3942,8 @@
                         border-radius: 25px;                        
                         @include box-shadow-profileimg;
                         @include mobile-max{
-                            width: 35px;
-                            height: 35px;
+                            width: 30px;
+                            height: 30px;
                         }
                         img{
                             width: 100%;
@@ -3954,7 +3980,7 @@
                                 font-size: 13px;
                             }
                             @include mobile-max{
-                                font-size: 12px;
+                                font-size: 11px;
                             }
                         }
                         .desc{
@@ -4971,6 +4997,11 @@
                 fill: #283048;
                 width: 25px;
                 height: 25px;
+            }
+            &.footer-visible{
+                svg{
+                    transform: rotateX(180deg);
+                }
             }
         }
         .footer-top{

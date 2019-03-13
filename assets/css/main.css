@@ -1251,11 +1251,8 @@ header .overlay .overlay-content {
   width: 100%;
   height: 100%;
   background: #fff;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  will-change: transform;
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
 }
 @media (max-width: 479px) {
   .section {
@@ -1942,6 +1939,14 @@ nav.nav-split:hover svg.icon {
 .home header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-tabH-in a:hover p, .home header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-tabH-in a.active p {
   color: #78cfe2;
 }
+.home #dot-holder .page-nav-dot {
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.home #dot-holder .page-nav-dot span {
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
 .home #dot-holder .page-nav-dot span.page-nav-dot-current {
   background: #5A6FA0;
 }
@@ -2226,6 +2231,9 @@ nav.nav-split:hover svg.icon {
 }
 .ourwork-gallery header .overlay .overlay-content .mega-menu .megamenu-item:hover a:hover {
   color: #9FACE6;
+}
+.ourwork-gallery .section {
+  height: auto;
 }
 .ourwork-gallery footer .footer-top {
   background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%) !important;
@@ -2942,12 +2950,6 @@ nav.nav-split:hover svg.icon {
   -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 479px) {
-  .testimonials .testimonial-avatar {
-    width: 90px;
-    height: 90px;
-  }
-}
 .testimonials .testimonial-quote {
   display: block;
   font-size: 18px;
@@ -2958,12 +2960,12 @@ nav.nav-split:hover svg.icon {
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .testimonials .testimonial-quote {
-    font-size: 22px;
+    font-size: 17px;
   }
 }
 @media (max-width: 479px) {
   .testimonials .testimonial-quote {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 .testimonials .testimonial-author {
@@ -3043,7 +3045,7 @@ nav.nav-split:hover svg.icon {
 }
 .testimonials .flickity-prev-next-button {
   position: absolute;
-  top: 100px;
+  top: 90px;
   width: 44px;
   height: 44px;
   border: none;
@@ -3055,11 +3057,6 @@ nav.nav-split:hover svg.icon {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   opacity: 0.4;
-}
-@media (max-width: 479px) {
-  .testimonials .flickity-prev-next-button {
-    top: 70px;
-  }
 }
 .testimonials .flickity-prev-next-button:hover {
   background: #fff;
@@ -3096,8 +3093,8 @@ nav.nav-split:hover svg.icon {
   position: absolute;
   left: 20%;
   top: 20%;
-  width: 60%;
-  height: 60%;
+  width: 50%;
+  height: 50%;
 }
 @media (max-width: 767px) {
   .testimonials .flickity-prev-next-button svg {
@@ -3381,7 +3378,7 @@ ul.tabs li.active {
   padding: 15px;
   height: 180px;
 }
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   #tab-slider .tab-slider-in #slider-content .item .item-in .item-cont {
     padding: 10px;
   }
@@ -3411,7 +3408,7 @@ ul.tabs li.active {
 #tab-slider .tab-slider-in #slider-content .item p {
   font-size: 16px;
 }
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   #tab-slider .tab-slider-in #slider-content .item p {
     font-size: 14px;
     line-height: 27px;
@@ -4083,6 +4080,9 @@ ul.tabs li.active {
   width: 50%;
   text-align: right;
 }
+.download-app .mobile img {
+  max-width: 100% !important;
+}
 .download-app .download-links {
   display: inline-block;
   vertical-align: middle;
@@ -4101,6 +4101,7 @@ ul.tabs li.active {
 .download-app .download-links a img {
   -webkit-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
+  max-width: 100% !important;
 }
 .download-app .download-links a img:hover {
   -webkit-transform: scale(1.05);
@@ -4844,12 +4845,10 @@ ul.tabs li.active {
   bottom: 8px;
   z-index: 59;
   position: absolute;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 6px 10px;
   align-items: center;
-  background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%) !important;
-  background-position: center;
+  background: rgba(0, 0, 0, 0.5);
   visibility: hidden;
 }
 @media (max-width: 767px) {
@@ -4900,6 +4899,38 @@ ul.tabs li.active {
 .intprint-gallery ul.list-style1 li:before {
   background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%) !important;
   background-position: center;
+}
+.intprint-gallery .main {
+  top: 60px;
+}
+.intprint-gallery .section {
+  padding: 40px 0;
+  height: auto;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .intprint-gallery .section {
+    padding: 30px 0 !important;
+  }
+}
+@media (max-width: 479px) {
+  .intprint-gallery .section {
+    padding: 25px 0 !important;
+  }
+}
+.intprint-gallery .section.pb0 {
+  padding-bottom: 0 !important;
+}
+.intprint-gallery .load-more {
+  display: inline-block;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .intprint-gallery .load-more {
+    margin-top: 20px;
+  }
+}
+.intprint-gallery .load-more .btn {
+  margin: 0;
 }
 
 .campaigns-main-list, .slider-ipgallery ul {
@@ -5000,8 +5031,8 @@ ul.tabs li.active {
 }
 @media (max-width: 767px) {
   .campaigns-main-list .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-brand-icon, .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-brand-icon {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
 }
 .campaigns-main-list .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-brand-icon img, .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-brand-icon img {
@@ -5045,7 +5076,7 @@ ul.tabs li.active {
 }
 @media (max-width: 767px) {
   .campaigns-main-list .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-name .brand-name, .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-name .brand-name {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 .campaigns-main-list .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-name .desc, .slider-ipgallery ul .camp-list-block .camp-list-block-in .campaigns-brand .campaigns-name .desc {
@@ -5309,7 +5340,7 @@ ul.tabs li.active {
   float: left;
   position: relative;
 }
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   .blog-main .latest-posts .left {
     width: 100%;
     float: none;
@@ -5404,19 +5435,19 @@ ul.tabs li.active {
   float: right;
   width: 400px;
 }
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   .blog-main .latest-posts .right {
     width: 100%;
     float: none;
     margin-top: 40px;
   }
 }
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   .blog-main .latest-posts {
     height: auto !important;
   }
 }
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   .blog-main .latest-posts .section-in {
     height: auto !important;
     display: block;
@@ -6204,6 +6235,9 @@ footer .nav-footer svg {
   fill: #283048;
   width: 25px;
   height: 25px;
+}
+footer .nav-footer.footer-visible svg {
+  transform: rotateX(180deg);
 }
 footer .footer-top {
   position: relative;
