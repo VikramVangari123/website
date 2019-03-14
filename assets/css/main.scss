@@ -3544,6 +3544,13 @@
                 margin: 0 -8px;
                 @include mobile-max{
                     margin: 0;
+                    &:last-child{
+                        span{
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
                 }
                 .custom{
                     height: 190px; 
@@ -3562,9 +3569,12 @@
                     position: relative;
                     video {
                         width: 100%;
-                        height: 100%;
+                        height: inherit;
                         object-fit: fill;
                         float: left;
+                        &.selVideo{
+                            height: auto;
+                        }
                     }
                     &:after {
                         content: " ";
@@ -3798,10 +3808,15 @@
                         left: 0;
                         right: 0;
                         bottom: 0;
+                        padding: 4px;
                     }
                     a{
                         color: #fff;
                         font-size: 13px;
+                        @include mobile-max{
+                            font-size: 12px;
+                            line-height: 15px;
+                        }
                     }
                     .title{
                         overflow: hidden;
@@ -3828,7 +3843,26 @@
                     }
                 }
             }            
-		}
+        }      
+        .main{
+            top:60px;
+        }
+        .section {
+            padding: 40px 0;
+            height: auto;
+            @include mobile{
+                padding: 30px 0 !important;
+            }
+            @include smartphone {
+                padding: 25px 0 !important;
+            }
+            &.pb0{
+                padding-bottom: 0 !important;
+            }
+            &.pt0{
+                padding-top: 0 !important;
+            }
+        }
     }
 
     /******************************* interactive print gallery ************************/

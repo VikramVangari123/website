@@ -93,47 +93,6 @@ $(function() {
                 $(this).prependTo(this.parentNode);
             });
         };
-
-        //our work gallery 
-        //video controls
-        $(function() {
-            $('.video-block span').click(function(e) {
-                $('.flex').removeClass('flex');
-                $('.selected').removeClass('selected');
-                $('.sibling').removeClass('sibling');
-                $('video').removeAttr('controls');
-                $('video').removeClass('selVideo');
-                $('video').each(function () { 
-                    this.currentTime = 0;
-                    this.pause();
-                });
-                $(this).addClass('selected').siblings().addClass('sibling');
-                $(this).children().children('video').addClass('selVideo');
-                $(this).parent('.video-block').addClass('flex');
-                $('.selected video').fadeIn();  
-                $('.selected video').get(0).play();  
-                $('.selected video').attr('controls', '');
-            });
-            $('.close').click(function(event){
-                event.stopPropagation();
-                $('video').each(function () { 
-                    this.currentTime = 0;
-                    this.pause();
-                });
-                $('.selected').removeClass('selected');
-                $('.sibling').removeClass('sibling');
-                $('.flex').removeClass('flex');
-                $('video').removeClass('selVideo');
-                $('video').removeAttr('controls', '');
-                $('.selected video').fadeOut(); 
-                $('video').get(0).pause();
-            });
-
-            $('video').click(function() {
-                event.stopPropagation();
-                this.paused ? this.play() : this.pause();
-            });
-        });
         
 
         // recent blog post
