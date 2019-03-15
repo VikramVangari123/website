@@ -410,7 +410,7 @@
         @include tablet-max{
             width: 8px !important;
             height: 8px !important;
-            margin: 10px 0 !important;
+            margin: 10px 3px !important;
         }
     }
     #dot-holder .page-nav-dot span.page-nav-dot-current:after{        
@@ -692,6 +692,11 @@
             span{
                 &.page-nav-dot-current{
                     @include home-dot-bg;
+                    @include tablet-max{
+                        margin: 10px 0px !important;
+                        width: 12px !important;
+                        height: 12px !important;
+                    }
                 }
                 -webkit-transition: background 0.3s ease;
                 transition: background 0.3s ease;
@@ -4052,6 +4057,7 @@
                     top: 0;
                     left: 0;
                     visibility: hidden;
+                    cursor: pointer;
                     span {
                         position: absolute;
                         left: 50%;
@@ -5010,6 +5016,9 @@
             right: 0;
             top: -40px;
             left: calc(100% - 100px);
+            @include mobile-max{
+                left: calc(100% - 60px);
+            }
             span{
                 width: 30px;
                 height: 30px;
@@ -5032,11 +5041,11 @@
                 width: 25px;
                 height: 25px;
             }
-            &.footer-visible{
-                svg{
-                    transform: rotateX(180deg);
-                }
-            }
+            // &.footer-visible{
+            //     svg{
+            //         transform: rotateX(180deg);
+            //     }
+            // }
         }
         .footer-top{
             position: relative;
@@ -5045,10 +5054,10 @@
             height: auto;
             padding: 40px 0;
             @include mobile{
-                padding: 30px 0;
+                padding: 30px 0 !important;
             }
             @include smartphone{
-                padding: 25px 0;
+                padding: 25px 0 !important;
             }
             color: #fff;
             .subscribe {

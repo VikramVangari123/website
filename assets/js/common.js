@@ -11,7 +11,7 @@ $(function() {
         //     $(this).addClass('active').siblings().removeClass('active');
         // });
         $('.megamenu-sub-menu').on('mouseover', 'li', function() {
-            $(this).toggleClass('hover-active').siblings().removeClass('hover-active');
+            $(this).addClass('hover-active').removeClass('hover-not-active').siblings().addClass('hover-not-active').removeClass('hover-active');
 		});
 		$('.megamenu-sub-menu').children().first().addClass('active').siblings().removeClass('active');
 		$('.industry .megamenu-sub-menu').children().first().addClass('active').siblings().removeClass('active');
@@ -37,7 +37,7 @@ $(function() {
         $(window).scroll(function() {    
             var scroll = $(window).scrollTop();
         
-            if (scroll >= 200) {
+            if (scroll >= 150) {
                 $("header").addClass("fixedheader");
             } else {
                 $("header").removeClass("fixedheader");
@@ -47,7 +47,7 @@ $(function() {
         $(window).on('load', function() {    
             var scroll = $(window).scrollTop();
         
-            if (scroll >= 200) {
+            if (scroll >= 150) {
                 $("header").addClass("fixedheader");
             } else {
                 $("header").removeClass("fixedheader");
@@ -547,7 +547,7 @@ var flkty = new Flickity( '.testimonials', {
 			pageFactorUp: 0.01, // how we recognize the current page (0.5 = half page, values from 0..1)
 			pageFactorDown: 0.95, // how we recognize the current page (0.5 = half page, values from 0..1)
 			autoScrollPages: false, // if true it will auto scroll to next current page
-			pageScrollSpeed: 300, // animation of page scroll
+			pageScrollSpeed: 800, // animation of page scroll
 			onDotHide: null, // event after dot animation hide finish
 			onDotShow: null, // event after dot animation show finish
 			onPageIn: null, // event when page become active

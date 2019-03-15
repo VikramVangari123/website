@@ -625,12 +625,24 @@ header {
                 > a{
                   padding-bottom: 40px;
                 }  
-                &.active, &:hover{
+                &.active{
                   .megamenu-tabH{
                     display: block;
-                    z-index: 99999;
+                    z-index: 99;
                   }
-                }              
+                }                
+                &.hover-not-active{
+                  .megamenu-tabH{
+                    display: none;
+                    z-index: 0;
+                  }
+                }                 
+                &.hover-active{
+                  .megamenu-tabH{
+                    display: block;
+                    z-index: 99;
+                  }
+                }             
               }
             }
           }    
