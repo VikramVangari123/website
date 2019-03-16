@@ -48,9 +48,9 @@ fetch('https://api.wowsomeapp.com/v3.0/findQuickView', {
 .then (data => {
   // console.log(data);
    if (data.data.url) {
-      window.open(data.data.url, '_blank');
+      window.open('https://quickview.wowso.me/'+ data.data.code, '_blank');
    } else if (data.data){
-    window.open('http://quickview.wowso.me/'+ data.data.code, '_blank');
+    window.open('https://quickview.wowso.me/'+ data.data.code, '_blank');
    }
 })  
 .catch((err) => {
