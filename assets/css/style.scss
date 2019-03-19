@@ -15,6 +15,7 @@ body {
   color: $font-color;
   line-height: $lineheight-normal;
 }
+// body.home, body.industry, body.business-area, body.about, body.contact, body.how-we-work
 html, body{
   &::-webkit-scrollbar{
     width: 0 !important;
@@ -506,7 +507,7 @@ header {
         margin: 0 auto;
         .megamenu-item {
           display: block !important;
-          width: 250px;
+          width: 300px;
           background-color: transparent;
           padding-left: 16px;
           padding-right: 16px;
@@ -614,10 +615,10 @@ header {
             }   
           }
           .megamenu-sub{
-            display:block; 
+            display:none; 
             top: 0px; 
             left: 0px; 
-            margin-left: 249px; 
+            margin-left: 299px; 
             height: 100%; 
             border-left: none;
             .megamenu-sub-menu{
@@ -645,7 +646,14 @@ header {
                 }             
               }
             }
-          }    
+          }  
+          &:nth-child(1){
+            &:hover{
+              .megamenu-sub {
+                display: block;
+              }
+            }
+          }  
         }        
       }
     }

@@ -1059,20 +1059,22 @@ var flkty = new Flickity( '.testimonials', {
 	// });
 	var count = 0;
 	$("#toBtm").click(function() {
+		$('html, body').animate({scrollTop: '+=240px'}, 400);
+			$(this).addClass('footer-visible');
 		count++;
 		//even odd click detect 
-		var isEven = function(someNumber) {
-			return (someNumber % 2 === 0) ? true : false;
-		};
+		// var isEven = function(someNumber) {
+		// 	return (someNumber % 2 === 0) ? true : false;
+		// };
 		// on odd clicks do this
-		if (isEven(count) === false) {
-			$('html, body').animate({scrollTop: '+=240px'}, 400);
-			$(this).addClass('footer-visible');
-		}
+		// if (isEven(count) === false) {
+		// 	$('html, body').animate({scrollTop: '+=240px'}, 400);
+		// 	$(this).addClass('footer-visible');
+		// }
 		// on even clicks do this
-		else if (isEven(count) === true) {			
-			$('html, body').animate({scrollTop: '-=240px'}, 400);
-			$(this).removeClass('footer-visible');
-		}
+		// else if (isEven(count) === true) {			
+		// 	$('html, body').animate({scrollTop: '-=240px'}, 400);
+		// 	$(this).removeClass('footer-visible');
+		// }
 	});
 });

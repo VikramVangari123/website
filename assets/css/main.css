@@ -1030,7 +1030,7 @@ header .overlay .overlay-content {
   }
   header .overlay .overlay-content .mega-menu .megamenu-item {
     display: block !important;
-    width: 250px;
+    width: 300px;
     background-color: transparent;
     padding-left: 16px;
     padding-right: 16px;
@@ -1160,10 +1160,10 @@ header .overlay .overlay-content {
 }
 @media (min-width: 768px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub {
-    display: block;
+    display: none;
     top: 0px;
     left: 0px;
-    margin-left: 249px;
+    margin-left: 299px;
     height: 100%;
     border-left: none;
   }
@@ -1181,6 +1181,11 @@ header .overlay .overlay-content {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub .megamenu-sub-menu li.hover-active .megamenu-tabH {
     display: block;
     z-index: 99;
+  }
+}
+@media (min-width: 768px) {
+  header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1):hover .megamenu-sub {
+    display: block;
   }
 }
 
@@ -2067,6 +2072,9 @@ nav.nav-split:hover svg.icon {
 .industry header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) .megamenu-sub .megamenu-sub-menu li:nth-child(1) > a {
   color: #f53437;
 }
+.industry header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub {
+  display: block;
+}
 .industry #dot-holder .page-nav-dot span.page-nav-dot-current {
   background: #FAA536;
 }
@@ -2124,10 +2132,10 @@ nav.nav-split:hover svg.icon {
   color: #207fff;
   font-weight: bold;
 }
-.business-area header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) ul li:nth-child(2) > a {
+.business-area header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) .megamenu-sub .megamenu-sub-menu li:nth-child(2) > a {
   color: #207fff;
 }
-.business-area header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) ul li:nth-child(2) .megamenu-tabH {
+.business-area header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub {
   display: block;
 }
 .business-area #dot-holder .page-nav-dot span.page-nav-dot-current {
@@ -2232,20 +2240,24 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 .ourwork-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
-  color: #9FACE6;
+  color: #6e77a0;
   font-weight: bold;
 }
 .ourwork-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .ourwork-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
-  color: #9FACE6;
+  color: #6e77a0;
 }
 .ourwork-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
-  color: #9FACE6;
+  color: #6e77a0;
 }
 .ourwork-gallery header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active > a, .ourwork-gallery header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover > a {
-  color: #9FACE6;
+  color: #6e77a0;
 }
 .ourwork-gallery header .overlay .overlay-content .mega-menu .megamenu-item:hover a:hover {
-  color: #9FACE6;
+  color: #6e77a0;
+}
+.ourwork-gallery header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(3) h5 a {
+  color: #6e77a0;
+  font-weight: bold;
 }
 .ourwork-gallery .section {
   height: auto;
@@ -2268,20 +2280,20 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 .intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
-  color: #F8CDDA;
+  color: #f0a8be;
   font-weight: bold;
 }
 .intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
-  color: #F8CDDA;
+  color: #f0a8be;
 }
 .intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
-  color: #F8CDDA;
+  color: #f0a8be;
 }
 .intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active > a, .intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover > a {
-  color: #F8CDDA;
+  color: #f0a8be;
 }
 .intprint-gallery header .overlay .overlay-content .mega-menu .megamenu-item:hover a:hover {
-  color: #F8CDDA;
+  color: #f0a8be;
 }
 .intprint-gallery footer .footer-top {
   background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%) !important;
@@ -2370,7 +2382,7 @@ nav.nav-split:hover svg.icon {
 .blog header .overlay .overlay-content .mega-menu .megamenu-item:hover a:hover {
   color: #653235;
 }
-.blog header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(4) h5 a {
+.blog header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(5) h5 a {
   color: #653235;
   font-weight: bold;
 }
@@ -2421,7 +2433,7 @@ nav.nav-split:hover svg.icon {
 .about header .overlay .overlay-content .mega-menu .megamenu-item:hover a:hover {
   color: #ef141a;
 }
-.about header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(3) h5 a {
+.about header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(4) h5 a {
   color: #ef141a;
   font-weight: bold;
 }
@@ -2592,7 +2604,7 @@ nav.nav-split:hover svg.icon {
 .contact header .overlay .overlay-content .mega-menu .megamenu-item:hover a:hover {
   color: #f54548;
 }
-.contact header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(5) h5 a {
+.contact header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(6) h5 a {
   color: #f54548;
   font-weight: bold;
 }

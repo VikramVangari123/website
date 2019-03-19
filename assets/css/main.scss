@@ -864,7 +864,9 @@
                                     }
                                 }
                             }
-
+                        }
+                        .megamenu-sub {
+                            display: block;
                         }
                     }
                 }
@@ -958,18 +960,16 @@
                                     font-weight: bold;
                                 }
                             }
-                            ul{
-                                li{
-                                    &:nth-child(2){
-                                        > a{
-                                            color: $business-area-menu-active;
-                                        }
-                                        .megamenu-tabH{
-                                            display: block;
-                                        }
+                            .megamenu-sub .megamenu-sub-menu li{
+                                &:nth-child(2){
+                                    > a {
+                                        color: $business-area-menu-active;
                                     }
                                 }
                             }
+                        }                        
+                        .megamenu-sub {
+                            display: block;
                         }
                     }
                 }
@@ -1161,14 +1161,14 @@
                                 }
                             }
                         }
-                        // &:nth-child(2){
-                        //     h5{
-                        //         a{
-                        //             color: $ourwork-menu-active;
-                        //             font-weight: bold;
-                        //         }
-                        //     }
-                        // }
+                        &:nth-child(3){
+                            h5{
+                                a{
+                                    color: $ourwork-menu-active;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1379,7 +1379,7 @@
                                 }
                             }
                         }
-                        &:nth-child(4){
+                        &:nth-child(5){
                             h5{
                                 a{
                                     color: $blog-menu-active;
@@ -1455,7 +1455,7 @@
                                 }
                             }
                         }
-                        &:nth-child(3){
+                        &:nth-child(4){
                             h5{
                                 a{
                                     color: $about-menu-active;
@@ -1654,7 +1654,7 @@
                                 }
                             }
                         }
-                        &:nth-child(5){
+                        &:nth-child(6){
                             h5{
                                 a{
                                     color: $contact-menu-active;
