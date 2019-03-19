@@ -41,7 +41,7 @@ var reqData = { feedID: cId}
 fetch('https://api.wowsomeapp.com/v3.0/findQuickView', {
     method:"POST",
     // mode: 'no-cors',
-    headers: new Headers({ 'Content-Type': 'text/plain', 'x-license-key': 'iOd8XwQgXx8dXKiXbLhNOopdzUZTpNxX' }),
+    headers: new Headers({ 'Content-Type': 'application/json', 'x-license-key': 'iOd8XwQgXx8dXKiXbLhNOopdzUZTpNxX' }),
     body : JSON.stringify(reqData)
  
 }).then( (res) => res.json())
