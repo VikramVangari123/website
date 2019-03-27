@@ -21,13 +21,20 @@ header{
     .fp-tooltip{
         @include smartphone{
             font-size: 12px !IMPORTANT;
-            top: -4px !important;
         }
-        visibility: hidden;
+        // visibility: hidden;
     }
     &:hover{
         .fp-tooltip{
             visibility: visible;
+        }
+    }
+    a{
+        &.active {
+            + .fp-tooltip{
+                transition: 1s linear;
+                visibility: hidden;
+            }
         }
     }
 }

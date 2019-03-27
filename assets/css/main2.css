@@ -1254,17 +1254,17 @@ header {
   }
 }
 
-#fp-nav ul li .fp-tooltip {
-  visibility: hidden;
-}
 @media (max-width: 479px) {
   #fp-nav ul li .fp-tooltip {
     font-size: 12px !important;
-    top: -4px !important;
   }
 }
 #fp-nav ul li:hover .fp-tooltip {
   visibility: visible;
+}
+#fp-nav ul li a.active + .fp-tooltip {
+  transition: 1s linear;
+  visibility: hidden;
 }
 
 @media (max-width: 479px) {

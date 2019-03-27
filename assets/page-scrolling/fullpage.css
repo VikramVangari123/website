@@ -190,7 +190,7 @@ html.fp-enabled,
 #fp-nav ul li .fp-tooltip {
     position: absolute;
     top: -7px;
-    color: #5A6FA0;
+    color: #fff;
     font-size: 13px;
     font-family: arial, helvetica, sans-serif;
     white-space: nowrap;
@@ -200,6 +200,10 @@ html.fp-enabled,
     opacity: 0;
     width: 0;
     cursor: pointer;
+    background: #5A6FA0;
+    padding: 2px 7px;
+    border-radius: 13px;
+    outline: none;
 }
 #fp-nav ul li:hover .fp-tooltip,
 #fp-nav.fp-show-active a.active + .fp-tooltip {
