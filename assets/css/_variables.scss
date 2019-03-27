@@ -27,6 +27,7 @@ $about-menu-active: #ef141a;
 $contact-menu-active: #f54548;
 $pillarPage-menu-active: #f54548;
 $notfound-menu-active: #805eb9;
+$subscription-menu-active: #653235;
   
 @mixin home-bg{    
     background-image: linear-gradient(to left, #283048 20%, #859398 100%) !important;
@@ -227,6 +228,20 @@ $notfound-menu-active: #805eb9;
 @mixin notfound-bg2{    
     background-image: linear-gradient(to right, #584082 0%, #24173a 100%) !important;
     background-position: center;
+}
+
+@mixin subscription-bg{    
+    background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%) !important;
+    background-position: center;
+}
+@mixin subscription-bg2{    
+    background-image: linear-gradient(to right, #ef404b 0%, #ca2f39 100%) !important;
+    background-position: center;
+}
+@mixin subscription-text-bg{
+	background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 @mixin inline-block{

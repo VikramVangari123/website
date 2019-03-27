@@ -88,7 +88,7 @@ $(function() {
 
 		// column reverse
 		
-        if ($(window).innerWidth() <= 768) {
+        if ($(window).innerWidth() <= 1024) {
             $('.flex-col-rev > div').each(function() {
                 $(this).prependTo(this.parentNode);
             });
@@ -1051,30 +1051,9 @@ var flkty = new Flickity( '.testimonials', {
 	var footerHeight = $('footer').height();
 	$('footer').css('height', (footerHeight) + 'px');
 
-	             
-	// $(document).ready(function() {
-	// 	$("#toBtm").click(function(event){
-	// 		$('html, body').animate({scrollTop: '-=300px'}, 600);
-	// 	});
+	// footer navigation arrow
+	// $("#toBtm").click(function() {
+	// 	$('html, body').animate({scrollTop: '+=240px'}, 400);
+	// 		$(this).addClass('footer-visible');
 	// });
-	var count = 0;
-	$("#toBtm").click(function() {
-		$('html, body').animate({scrollTop: '+=240px'}, 400);
-			$(this).addClass('footer-visible');
-		count++;
-		//even odd click detect 
-		// var isEven = function(someNumber) {
-		// 	return (someNumber % 2 === 0) ? true : false;
-		// };
-		// on odd clicks do this
-		// if (isEven(count) === false) {
-		// 	$('html, body').animate({scrollTop: '+=240px'}, 400);
-		// 	$(this).addClass('footer-visible');
-		// }
-		// on even clicks do this
-		// else if (isEven(count) === true) {			
-		// 	$('html, body').animate({scrollTop: '-=240px'}, 400);
-		// 	$(this).removeClass('footer-visible');
-		// }
-	});
 });

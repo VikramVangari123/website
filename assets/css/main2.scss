@@ -1,5 +1,44 @@
 
 @import 'style';
+.fp-viewing-firstPage header{
+    padding: 30px 0 17px 0;
+    @include smartphone{
+        padding: 12px 0;
+    }
+}
+header{
+    padding: 17px 0;
+    @include smartphone{
+        padding: 12px 0;
+    }
+}
+#fp-nav.fp-right{
+    @include smartphone{
+        right: -5px !important;
+    }
+}
+#fp-nav ul li{
+    .fp-tooltip{
+        @include smartphone{
+            font-size: 12px !IMPORTANT;
+            top: -4px !important;
+        }
+        visibility: hidden;
+    }
+    &:hover{
+        .fp-tooltip{
+            visibility: visible;
+        }
+    }
+}
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{
+    @include smartphone{
+        height: 11px !important;
+        width: 11px !important;
+        margin: -6px 0 0 -4.5px !important;
+    }
+}
 .main{  
     position: absolute;
     top: 0px;
@@ -65,7 +104,7 @@
         }
     }
     .section {      
-        padding: 99px 0 40px 0;
+        padding: 0;
         border: 1px #b0b0b0;
         overflow: hidden;
         display: table;
@@ -76,11 +115,19 @@
         background: #fff;
         -webkit-transition: 0.8s ease;
         transition: 0.8s ease;
+    }
+    .fp-tableCell{
+        padding: 99px 0 40px 0;
         @include smartphone {
             padding: 60px 0 15px 0 !important;
         }
         @include mobile {
             padding: 90px 0 30px 0 !important;
+        }
+    }
+    footer.section{
+        .fp-tableCell{
+            padding: 0 !important;
         }
     }
     .padding-btm{
@@ -165,6 +212,7 @@
         }
         @include smartphone{
             font-size: 20px;
+            line-height: 26px;
         }
     }
     h4{

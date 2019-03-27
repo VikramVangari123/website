@@ -1254,9 +1254,25 @@ header {
   }
 }
 
+#fp-nav ul li .fp-tooltip {
+  visibility: hidden;
+}
 @media (max-width: 479px) {
   #fp-nav ul li .fp-tooltip {
-    font-size: 12px;
+    font-size: 12px !important;
+    top: -4px !important;
+  }
+}
+#fp-nav ul li:hover .fp-tooltip {
+  visibility: visible;
+}
+
+@media (max-width: 479px) {
+  #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
+    height: 11px !important;
+    width: 11px !important;
+    margin: -6px 0 0 -4.5px !important;
   }
 }
 
@@ -1469,6 +1485,7 @@ h3 {
 @media (max-width: 479px) {
   h3 {
     font-size: 20px;
+    line-height: 26px;
   }
 }
 
@@ -6746,4 +6763,4 @@ footer .footer-main .col.col-2, footer .footer-main .col.col-3, footer .footer-m
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main2.css.map */

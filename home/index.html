@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta charset="utf-8" />
@@ -8,14 +7,12 @@
     <title>WOWSOME</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>   
-</head>
+    <link rel="stylesheet" type="text/css" href="../assets/css/aos.css" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 
-<body class="home">
+<!-- write your code here -->
+</head>
+<body class="home" onload="init();" style="margin:0px;">
     <div class="content">
         <header class="home-bg">
             <div class="container">
@@ -25,7 +22,7 @@
                     </div>
                     <div class="overlay-content">
                         <div class="mega-menu">
-                            <div class="megamenu-item active">
+                            <div class="megamenu-item">
                                 <h5>
                                     <a href="javascript:void(0);">
                                         Solutions
@@ -34,7 +31,7 @@
                                 </h5>
                                 <div class="megamenu-sub">
                                     <ul class="megamenu-sub-menu">
-                                        <li class="active">
+                                        <li>
                                             <a href="../industry/index.html">Industry</a>                                            
                                             <span class="sub-menu-arrow"></span>
                                             <div class="megamenu-sub-content">
@@ -122,7 +119,6 @@
             </div>
             <script>
                 function openNav() {
-                    $('.mega-menu').children().first().addClass('active').siblings().removeClass('active');
                     document.getElementById("Nav").style.height = "100%";
                 }
         
@@ -130,212 +126,225 @@
                     document.getElementById("Nav").style.height = "0%";
                 }
             </script>
-        </header>
-        <div class="main">
-            <div class="section home-bg full-height">
+        </header>        
+        <div class="main" id="pager-holder">
+            <div class="section home-bg page" style="margin:0px;" data-hint-text="Pioneers in Mixed Reality Solutions">
                 <div class="container">
                     <div class="section-in flex-col-rev">
                         <div class="left50">
-                            <h1>Pioneers in Mixed Reality Solutions</h1>
+                            <h1 data-aos="fade-up">Pioneers in Mixed Reality Solutions</h1>
                         </div>
                         <div class="right50 text-center" data-aos="fade-up">
-                            <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/home/home.png" class="resp-img" alt="" />
+                            <div class="banner-img">
+                                <div class="banner-animation">
+                                    <div id="animation_container">
+                                        <canvas id="canvas"></canvas>
+                                        <div id="dom_overlay_container">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- our works -->
-            <div class="section full-height our-work" data-aos="fade-down">
+            <div class="section our-work page" data-hint-text="Our Work">
                 <div class="container">
 
                     <!-- <div class="title float-right hidden">
                         <a href="#" class="view-all">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a>
                     </div> -->
                     <div class="section-in">
-                        <div class="left50" data-aos="slide-up">
-                            <h2 class="home-text-bg">Our Work</h2>
-                            <p>We craft immersive and innovative experiences powered by Mixed Reality across industries and business areas. With over 1600 campaigns and counting, we have delivered the largest number of mixed reality solutions so far in different
+                        <div class="left50">
+                            <h2 class="home-text-bg" data-aos="fade-down">Our Work</h2>
+                            <p data-aos="fade-up">We craft immersive and innovative experiences powered by Mixed Reality across industries and business areas. With over 1600 campaigns and counting, we have delivered the largest number of mixed reality solutions so far in different
                                 segments.
                             </p>
                         </div>
 
-                        <div class="right50 text-center" data-aos="fade-left">
-                            <div class="ow-videos-in">                                
-                                <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" data-lity>
-                                    <video>
-                                        <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" type="video/mp4">
-                                    </video>
-                                </a>
-                                <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4" data-lity>
-                                    <video>
-                                        <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4" type="video/mp4">
-                                    </video>
-                                </a>
-                                <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/RCB+-+IPL+2018.mp4" data-lity>
-                                    <video>
-                                        <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/RCB+-+IPL+2018.mp4" type="video/mp4">
-                                    </video>
-                                </a>
-                                <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/Marketing+video+final+version.mp4" data-lity>
-                                    <video>
-                                        <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/Marketing+video+final+version.mp4" type="video/mp4">
-                                    </video>
-                                </a>
+                        <div class="right50 text-center">
+                            <div class="ow-videos-in">
+                                <div class="ow-videos-in-top">                                
+                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" data-lity data-aos="fade-right">
+                                        <video>
+                                            <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4#t=5" type="video/mp4">
+                                        </video>
+                                    </a>
+                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4" data-lity data-aos="slide-down">
+                                        <video>
+                                            <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4#t=4" type="video/mp4">
+                                        </video>
+                                    </a>
+                                </div>
+                                <div class="ow-videos-in-btm">  
+                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/RCB+-+IPL+2018.mp4" data-lity data-aos="fade-up">
+                                        <video>
+                                            <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/RCB+-+IPL+2018.mp4#t=51" type="video/mp4">
+                                        </video>
+                                    </a>
+                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/Marketing+video+final+version.mp4" data-lity data-aos="fade-left">
+                                        <video>
+                                            <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/Marketing+video+final+version.mp4#t=8" type="video/mp4">
+                                        </video>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-
+            </div>    
+            
             <!-- Brands Powered by WOWSOME -->
-            <div class="section full-height brands" data-aos="fade-up">
-                <div class="container">
-                    <div class="section-in">
-                        <div class="left40" data-aos="zoom-in">
-                            <h2 class="home-text-bg">Brands Powered by WOWSOME</h2>
-                            <p>Trusted by 50+ brands, WOWSOME is proud to partner with these organizations and offer new and exciting solutions to engage with their target audience.</p>
-                        </div>
+            <div class="section brands page" data-hint-text="Brands Powered by WOWSOME">
+                    <div class="container">
+                            <div class="section-in">
+                                    <div class="left40" data-aos="slide-up">
+                                        <h2 class="home-text-bg">Brands Powered by WOWSOME</h2>
+                                        <p>Trusted by 50+ brands, WOWSOME is proud to partner with these organizations and offer new and exciting solutions to engage with their target audience.</p>
+                                    </div>
 
-                        <div class="right60 text-center" data-aos="zoom-in">
-                            <div class="slider-wrap">
-                                <div class="slider">
-                                    <ul>
-                                        <li>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/The-Hindu.png" alt="The Hindu" title="The Hindu" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/tvs.png" alt="TVS" title="TVS" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Mahindra.png" alt="Mahindra" title="Mahindra" /></span>
-                                        </li>
-                                        <li>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/starmaa.png" alt="starmaa" title="starmaa" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Apollo.png" alt="Apollo" title="Apollo" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/CognitveScale.png" alt="CognitveScale" title="CognitveScale" /></span>
-                                        </li>
-                                        <li>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/DuPont.png" alt="DuPont" title="DuPont" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/rcb.png" alt="RCB" title="RCB" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/zee.png" alt="SUPERSONIC" title="SUPERSONIC" /></span>
-                                        </li>
-                                        <li>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/tedx.png" alt="TEDx Hyderabad" title="TEDx Hyderabad" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/tplink.png" alt="tp-link" title="tp-link" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/supersonic.png" alt="viacomm 18" title="viacomm 18" /></span>
-                                        </li>
-                                        <li>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/ballentine.png" alt="Ballentine's" title="Ballentine's" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/blackdog.png" alt="BLACK DOG" title="BLACK DOG" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Budwesier.png" alt="Budwesier" title="Budwesier" /></span>
-                                        </li>
-                                        <li>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/cbs.png" alt="CBS TELEVISION STUDIOS" title="CBS TELEVISION STUDIOS" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/citi.png" alt="citibank" title="citibank" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/dna.png" alt="dna" title="dna" /></span>
-                                        </li>
-                                        <li>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/fastrack.png" alt="fastrack" title="fastrack" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/forum.png" alt="FORUM" title="FORUM" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Jaguar.png" alt="JAGUAR" title="JAGUAR" /></span>
-                                        </li>
-                                        <li>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/P&G.png" alt="P&G" title="P&G" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/posterscope.png" alt="Posterscope" title="Posterscope" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/pwc.png" alt="pwc" title="pwc" /></span>
-                                        </li>
-                                        <li>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/viacomm.png" alt="P&G" title="P&G" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/arka.png" alt="ARKA" title="ARKA" /></span>
-                                            <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/jeep.png" alt="Jeep" title="" /></span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <nav class="nav-split">
-                                    <a class="prev slider-arrow sa-left" href="">
-                                        <span class="icon-wrap">
-                                            <svg class="icon" width="22" height="22" viewBox="0 0 64 64">
-                                                <use xlink:href="#arrow-left" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <a class="next slider-arrow sa-right" href="">
-                                        <span class="icon-wrap">
-                                            <svg class="icon" width="22" height="22" viewBox="0 0 64 64">
-                                                <use xlink:href="#arrow-right" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </nav>
+                                    <div class="right60 text-center" data-aos="fade-left">
+                                            <div class="slider-wrap">
+                                                <div class="slider">
+                                                    <ul>
+                                                            <li>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/The-Hindu.png" alt="The Hindu" title="The Hindu" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/tvs.png" alt="TVS" title="TVS" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Mahindra.png" alt="Mahindra" title="Mahindra" /></span>
+                                                            </li>
+                                                            <li>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/starmaa.png" alt="starmaa" title="starmaa" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Apollo.png" alt="Apollo" title="Apollo" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/CognitveScale.png" alt="CognitveScale" title="CognitveScale" /></span>
+                                                            </li>
+                                                            <li>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/DuPont.png" alt="DuPont" title="DuPont" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/rcb.png" alt="RCB" title="RCB" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/zee.png" alt="SUPERSONIC" title="SUPERSONIC" /></span>
+                                                            </li>
+                                                            <li>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/tedx.png" alt="TEDx Hyderabad" title="TEDx Hyderabad" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/tplink.png" alt="tp-link" title="tp-link" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/supersonic.png" alt="viacomm 18" title="viacomm 18" /></span>
+                                                            </li>
+                                                            <li>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/ballentine.png" alt="Ballentine's" title="Ballentine's" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/blackdog.png" alt="BLACK DOG" title="BLACK DOG" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Budwesier.png" alt="Budwesier" title="Budwesier" /></span>
+                                                            </li>
+                                                            <li>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/cbs.png" alt="CBS TELEVISION STUDIOS" title="CBS TELEVISION STUDIOS" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/citi.png" alt="citibank" title="citibank" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/dna.png" alt="dna" title="dna" /></span>
+                                                            </li>
+                                                            <li>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/fastrack.png" alt="fastrack" title="fastrack" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/forum.png" alt="FORUM" title="FORUM" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/Jaguar.png" alt="JAGUAR" title="JAGUAR" /></span>
+                                                            </li>
+                                                            <li>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/P&G.png" alt="P&G" title="P&G" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/posterscope.png" alt="Posterscope" title="Posterscope" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/pwc.png" alt="pwc" title="pwc" /></span>
+                                                            </li>
+                                                            <li>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/viacomm.png" alt="P&G" title="P&G" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/arka.png" alt="ARKA" title="ARKA" /></span>
+                                                                <span class=""><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/brands/jeep.png" alt="Jeep" title="" /></span>
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <nav class="nav-split">
+                                                    <a class="prev slider-arrow sa-left" href="">
+                                                        <span class="icon-wrap">
+                                                            <svg class="icon" width="22" height="22" viewBox="0 0 64 64">
+                                                                <use xlink:href="#arrow-left" />
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                    <a class="next slider-arrow sa-right" href="">
+                                                        <span class="icon-wrap">
+                                                            <svg class="icon" width="22" height="22" viewBox="0 0 64 64">
+                                                                <use xlink:href="#arrow-right" />
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                    <div class="svg-wrap">
+                                                        <svg width="64" height="64" viewBox="0 0 64 64">
+                                                            <path id="arrow-left" d="M46.077 55.738c0.858 0.867 0.858 2.266 0 3.133s-2.243 0.867-3.101 0l-25.056-25.302c-0.858-0.867-0.858-2.269 0-3.133l25.056-25.306c0.858-0.867 2.243-0.867 3.101 0s0.858 2.266 0 3.133l-22.848 23.738 22.848 23.738z" />
+                                                        </svg>
+                                                        <svg width="64" height="64" viewBox="0 0 64 64">
+                                                            <path id="arrow-right" d="M17.919 55.738c-0.858 0.867-0.858 2.266 0 3.133s2.243 0.867 3.101 0l25.056-25.302c0.858-0.867 0.858-2.269 0-3.133l-25.056-25.306c-0.858-0.867-2.243-0.867-3.101 0s-0.858 2.266 0 3.133l22.848 23.738-22.848 23.738z" />
+                                                        </svg>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                            <script src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/js/jquery.lbslider.js"></script>
+                                    </div>
                             </div>
-                            <script src="../assets/js/jquery.lbslider.js"></script>
-                        </div>
                     </div>
-                </div>
             </div>
-
+            
             <!-- testimonials -->
-            <div class="section full-height testimonial" data-aos="fade-up">
+            <div class="section testimonial-sec page" data-hint-text="Customer Testimonials">
                 <div class="container">
-                    <div class="title">
-                        <h2 class="home-text-bg">Customer Testimonials</h2>
-                        <!-- <a href="#" class="view-all">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a> -->
-                    </div>
-                    <div class="section-in" data-aos="fade-up">
-                        <div class="svg-wrap">
-                            <svg width="64" height="64" viewBox="0 0 64 64">
-                                <path id="arrow-left" d="M46.077 55.738c0.858 0.867 0.858 2.266 0 3.133s-2.243 0.867-3.101 0l-25.056-25.302c-0.858-0.867-0.858-2.269 0-3.133l25.056-25.306c0.858-0.867 2.243-0.867 3.101 0s0.858 2.266 0 3.133l-22.848 23.738 22.848 23.738z" />
-                            </svg>
-                            <svg width="64" height="64" viewBox="0 0 64 64">
-                                <path id="arrow-right" d="M17.919 55.738c-0.858 0.867-0.858 2.266 0 3.133s2.243 0.867 3.101 0l25.056-25.302c0.858-0.867 0.858-2.269 0-3.133l-25.056-25.306c-0.858-0.867-2.243-0.867-3.101 0s-0.858 2.266 0 3.133l22.848 23.738-22.848 23.738z" />
-                            </svg>
-                        </div>
-
-                        <div class="slider1">
-                            <div class="slide active">
-                                <div class="testi-in">
-                                    <div class="testi-img home-bg">
-                                        <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/user.png" alt="" />
+                    <div class="section-in">  
+                        <div class="inline-table">                      
+                            <div class="title">
+                                <h2 data-aos="fade-down">Customer Testimonials</h2>
+                                <!-- <a href="#" class="view-all">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a> -->
+                            </div>
+                            <div class="testimonials" data-aos="fade-up">
+                                <div class="testimonial-cell">
+                                    <div class="testimonial">
+                                        <img class="testimonial-avatar" data-aos="fade-up" src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/user_b.png">
+                                        <span class="testimonial-author">
+                                            <span data-aos="fade-left">Customer Name</span> 
+                                            <span data-aos="fade-right">Designation</span> 
+                                        </span>
+                                        <q class="testimonial-quote" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mauris ex, gravida ut leo eu, rhoncus porta orci. Fusce vitae rutrum nulla.</q>
                                     </div>
-                                    <div class="sliderblock-cont">
-                                        <div class="quotes">
-                                            <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/quotes.png" alt="" />
-                                        </div>
-                                        <p>WOWSOME is an incredibly interactive and engaging app, and the WOW-SOME team has been great to work with. WOWSOME features allow us to create a magical advertising experience for our customers that truly reflects our Kajal Magique line.
-                                        </p>
-                                        <h4 class="testi-name"><span>Kanika Dewani</span>, L'Oreal</h4>
+                                </div>
+                                <div class="testimonial-cell">
+                                    <div class="testimonial">
+                                        <img class="testimonial-avatar" data-aos="fade-up" src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/user_b.png">
+                                        <span class="testimonial-author">
+                                            <span data-aos="fade-left">Customer Name</span> 
+                                            <span data-aos="fade-right">Designation</span> 
+                                        </span>
+                                        <q class="testimonial-quote" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mauris ex, gravida ut leo eu, rhoncus porta orci. Fusce vitae rutrum nulla.</q>
+                                    </div>
+                                </div>
+                                <div class="testimonial-cell">
+                                    <div class="testimonial">
+                                        <img class="testimonial-avatar" data-aos="fade-up" src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/user_b.png">
+                                        <span class="testimonial-author">
+                                            <span data-aos="fade-left">Customer Name</span> 
+                                            <span data-aos="fade-right">Designation</span> 
+                                        </span>
+                                        <q class="testimonial-quote" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mauris ex, gravida ut leo eu, rhoncus porta orci. Fusce vitae rutrum nulla.</q>
                                     </div>
                                 </div>
                             </div>
-
-                            <nav class="nav-split">
-                                <a class="prev home-bg" href="">
-                                    <span class="icon-wrap"><svg class="icon" width="22" height="22" viewBox="0 0 64 64"><use xlink:href="#arrow-left" /></svg></span>
-                                </a>
-                                <a class="next home-bg" href="">
-                                    <span class="icon-wrap"><svg class="icon" width="22" height="22" viewBox="0 0 64 64"><use xlink:href="#arrow-right" /></svg></span>
-                                </a>
-                            </nav>
-
-                            <!-- <nav class="pagination">
-                                <span class="current"></span>
-                                <span></span>
-                                <span></span>
-                            </nav> -->
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </div>
 
             <!-- recent blog post -->
-            <div class="section full-height post-grid" data-aos="fade-up">
+            <div class="section recent-blog-posts page" data-hint-text="Recent Blog Posts">
                 <div class="container">
-                    <div class="title">
-                        <h2 class="home-text-bg">Recent Blog Post</h2>
-                        <a href="#" class="view-all home-text-bg">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a>
-                    </div>
-                    <div class="section-in" data-aos="flip-down">
-                        <div class="post-left">
+                    <div class="section-in post-grid">
+                        <div class="title">
+                            <h2 class="home-text-bg" data-aos="fade-down">Recent Blog Post</h2>
+                            <a href="#" class="view-all home-text-bg">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a>
+                        </div>
+                        <div class="post-left" data-aos="slide-up">
                             <div class="post-img">
-                                <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg.jpg" alt="" />
+                                <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg1.jpg" alt="" />
                             </div>
                             <div class="post-cont">
                                 <div class="post-cont-in">
@@ -347,10 +356,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="post-right">
+                        <div class="post-right" data-aos="slide-up">
                             <div class="post-right-top">                                
                                 <div class="post-img">
-                                    <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg.jpg" alt="" />
+                                    <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg1.jpg" alt="" />
                                 </div>
                                 <div class="post-cont">
                                     <div class="post-cont-in">
@@ -364,7 +373,7 @@
                             </div>
                             <div class="post-right-btm">                               
                                 <div class="post-img">
-                                    <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg.jpg" alt="" />
+                                    <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg1.jpg" alt="" />
                                 </div>
                                 <div class="post-cont">
                                     <div class="post-cont-in">
@@ -382,25 +391,36 @@
             </div>
             
             <!-- contact cta -->
-            <div class="section sec-sm-cta">
+            <div class="section page sec-full-cta" data-hint-text="Contact">
                 <div class="container">
-                    <div class="sec-sm-cta-in">
-                        <p class="text">Take your Events to the future with our Turnkey solutions. Create amazing interactive experiences, generate leads and engage your audience with breathtaking visuals and brand content. Learn more about our products.</p>
-                        <div><a class="btn btn-white">Contact</a></div>
+                    <div class="section-in">
+                        <div class="sec-full-cta-in">
+                            <p class="text" data-aos="fade-down">Take your Events to the future with our Turnkey solutions. Create amazing interactive experiences, generate leads and engage your audience with breathtaking visuals and brand content. Learn more about our products.</p>
+                            <div class="cta-btn"><a class="btn btn-black home-bg btn-lg" data-aos="fade-up">Contact</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <!-- footer -->
-            <footer>
-                <div class="footer-top section">
+            <!-- footer -->            
+            <footer> 
+                <div class="container">
+                    <div href="#" id="toBtm" class="nav-footer" title="Navigate to footer">
+                        <span>
+                            <svg height="30" viewBox="0 0 1792 1792" width="30">
+                                <path d="M1277 1299q8 19-5 35l-350 384q-10 10-23 10-14 0-24-10l-355-384q-13-16-5-35 9-19 29-19h224v-1248q0-14 9-23t23-9h192q14 0 23 9t9 23v1248h224q21 0 29 19z"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="footer-top section" id="footer-top">
                     <div class="container">
                         <div class="subscribe">
                             <h3>Subscribe to stay updated on latest trends of AR in branding</h3>
                             <input id="subscribe-email" type="email" placeholder="Email" name="email" />
                             <span class="submit-btn">
-                            <input type="submit" class="btn btn-submit" value="Subscribe">
-                        </span>
+                                <input type="submit" class="btn btn-submit" value="Subscribe">
+                            </span>
                         </div>
                         <div class="followus">
                             <h3>Follow Us</h3>
@@ -436,62 +456,59 @@
                 </div>
                 
                 <!-- copyright -->
-                <div class="section copy-right">
+                <div class="copy-right">
                     <div class="container">
                         <div>&#9400; 2018 WOWSOME</div>
                     </div>
                 </div>
             </footer>
-
+    
         </div>
     </div>
-
-    <script>
-        jQuery('.slider').lbSlider({
-            leftBtn: '.sa-left',
-            rightBtn: '.sa-right',
-            visible: 3,
-            autoPlay: true,
-            autoPlayDelay: 5
-        });
-        AOS.init({
-            duration: 1200,
-        });
-        $(function(){
-	
-            var $window = $(window);		//Window object
-            
-            var scrollTime = 1.2;			//Scroll time
-            var scrollDistance = $('.section').height();		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
-                
-            $window.on("mousewheel DOMMouseScroll", function(event){
-                
-                event.preventDefault();	
-                                                
-                var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
-                var scrollTop = $window.scrollTop();
-                var finalScroll = scrollTop - parseInt(delta*scrollDistance);
-                    
-                TweenMax.to($window, scrollTime, {
-                    scrollTo : { y: finalScroll, autoKill:true },
-                        ease: Power1.easeOut,	//For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
-                        autoKill: true,
-                        overwrite: 5							
-                    });
-                            
+       
+    <!--content transitions-->
+        <script>                             
+            jQuery('.slider').lbSlider({
+                leftBtn: '.sa-left',
+                rightBtn: '.sa-right',
+                visible: 3,
+                autoPlay: true,
+                autoPlayDelay: 5
             });
-            
-        });
-    </script>
-    <!-- JavaScripts -->
+        </script>
+        <!-- JavaScripts -->
+        
+        <!-- video popup -->
+        <script type="text/javascript" src="../assets/js/video-popup.js"></script>
+        <script type="text/javascript" src="../assets/js/slider1.js"></script> 
+        
+        <!--content transitions-->
+        <script>      
+          $(document).ready(function () {
+              AOS.init({
+                  duration: 1200,
+              });
+          });
+        </script>
+        <script type="text/javascript" src="../assets/js/aos.js"></script>  
+        <!-- common js -->
+        <script type="text/javascript" src="../assets/js/common.js"></script>  
+        <!--testimonials-->
+        <script type="text/javascript" src="../assets/js/flickity.min.js"></script> 
+        <!--banner image animations-->
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        <script src="../assets/js/banner-animations/home/home.min.js"></script>
+        <script src="../assets/js/banner-animations/home/animation.js"></script>
+       
+        <script>
+          
+          function openNav() {
+            document.getElementById("Nav").style.height = "100%";
+          }
     
-    <!-- video popup -->
-    <script type="text/javascript" src="../assets/js/video-popup.js"></script>
-    <!-- common js -->
-    <script type="text/javascript" src="../assets/js/common.js"></script>
-    <!-- testimonial slider -->
-    <script type="text/javascript" src="../assets/js/slider1.js"></script>   
-
+          function closeNav() {
+            document.getElementById("Nav").style.height = "0%";
+          }
+        </script>
 </body>
-
 </html>

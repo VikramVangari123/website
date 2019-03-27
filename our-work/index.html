@@ -173,7 +173,7 @@
                                             <img src="https://www.wowso.me/hubfs/assets/website/images/our-work/play.png" alt="" />
                                         </div>
                                         <div class="cta">
-                                            <a href="#">Case Study <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/our-work/go.png" alt="" /></a> 
+                                            <a href="https://www.wowso.me/our-work">Case Study <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/our-work/go.png" alt="" /></a> 
                                         </div>
                                     </div>
                                 </span>
@@ -450,8 +450,6 @@
          //our work gallery 
         //video controls
         $(function() {
-
-
             
             $('.video-block span').click(function(event) {            
                 console.log('span click')
@@ -491,6 +489,9 @@
                 $('video').removeAttr('controls', '');
                 $('.selected video').fadeOut(); 
                 $('video').get(0).pause();
+            });
+            $('.cta').click(function(event){
+                event.stopPropagation();
             });
 
            

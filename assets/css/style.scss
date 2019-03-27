@@ -14,6 +14,10 @@ body {
   font-family: $font-stack;
   color: $font-color;
   line-height: $lineheight-normal;
+  @include smartphone{
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 // body.home, body.industry, body.business-area, body.about, body.contact, body.how-we-work
 html, body{
@@ -178,8 +182,10 @@ h1, h2{
   }
   @include smartphone{
     height: auto;
-    line-height: 35px;
-    min-height: 35px;
+    line-height: 30px;
+    min-height: 30px;
+    min-width: 110px;
+    margin: 0 0 5px;
   }
 }
 .btn-lg{
@@ -189,10 +195,10 @@ h1, h2{
   min-width: 220px;
   font-size: 20px;
   @include mobile-max{
-    padding: 0 35px;
-    height: 45px;
-    line-height: 45px;
-    min-width: 180px;
+    padding: 0 30px;
+    height: 40px;
+    line-height: 40px;
+    min-width: 160px;
     font-size: 16px;
   }
 }
@@ -286,6 +292,12 @@ h1, h2{
   @include notfound-bg;
 }
 
+.subscription-bg{
+  @include subscription-bg;
+}
+.subscription-text-bg{
+    @include subscription-text-bg;
+}
 /*** header *************************/
 
 header {
@@ -298,16 +310,29 @@ header {
   &.fixedheader{    
     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);    
     padding: 17px 0;
+    @include smartphone{
+      padding: 12px 0;
+    }
+  }
+  @include smartphone{
+    padding: 12px 0;
+    height: 45px;
   }
   .logo {
     text-transform: uppercase;
     img{
       width: 160px;
+      @include smartphone{
+        width: 150px;
+      }
     }
   }
   .openNav {
     float: right;
-    padding-top: 4px;
+    padding-top: 3px;
+    @include smartphone{
+      padding-top: 0;
+    }
     img{
       width: 24px;
     }
