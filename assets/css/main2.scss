@@ -116,18 +116,38 @@ header{
         -webkit-transition: 0.8s ease;
         transition: 0.8s ease;
     }
+    .fp-section {
+        @include smartphone{
+            height: auto !important;
+        }
+    }
     .fp-tableCell{
         padding: 99px 0 40px 0;
         @include smartphone {
-            padding: 60px 0 15px 0 !important;
+            padding: 30px 0 !important;
+            height: auto !important;
         }
         @include mobile {
             padding: 90px 0 30px 0 !important;
         }
     }
+    .fp-enabled .main .fp-section:nth-child(1){
+        .fp-tableCell{
+            @include smartphone {
+                padding: 105px 0 60px 0 !important;
+            }
+            h1{
+                margin-bottom: 0;
+            }
+        }
+        margin-bottom: 30px !important;
+    }
     footer.section{
         .fp-tableCell{
             padding: 0 !important;
+        }
+        @include smartphone {
+            margin-top: 30px;
         }
     }
     .padding-btm{
@@ -174,7 +194,7 @@ header{
         }
         @include smartphone{
             font-size: 24px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             line-height: 30px;
         }
     }
