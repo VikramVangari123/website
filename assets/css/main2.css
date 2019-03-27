@@ -2900,7 +2900,7 @@ nav.nav-split:hover svg.icon {
 }
 .contact .contact-block form .hs-error-msgs {
   position: absolute;
-  top: 25px;
+  bottom: 23px;
   font-size: 11px;
   color: red;
 }

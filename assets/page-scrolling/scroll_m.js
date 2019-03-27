@@ -12,10 +12,10 @@ slidesNavPosition: 'bottom',
 
 //Scrolling
 css3: true,
-scrollingSpeed: 500,
+scrollingSpeed: 400,
 autoScrolling: false,
 fitToSection: false,
-fitToSectionDelay: 1000,
+fitToSectionDelay: 600,
 scrollBar: true,
 easing: 'easeInOutCubic',
 easingcss3: 'ease',
