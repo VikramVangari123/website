@@ -15,6 +15,7 @@ header{
 #fp-nav.fp-right{
     @include smartphone{
         right: -5px !important;
+        display: none;
     }
 }
 #fp-nav ul li{

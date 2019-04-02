@@ -954,12 +954,12 @@ header .overlay .overlay-content {
   }
   header .overlay .overlay-content .mega-menu .megamenu-item {
     display: block !important;
-    border-top: 1px solid #f4f4f4;
+    border-top: 1px solid rgba(244, 244, 244, 0.15);
     z-index: 11;
     transition: 0.3s linear;
   }
   header .overlay .overlay-content .mega-menu .megamenu-item h5 {
-    font-size: 20px;
+    font-size: 16px;
     text-align: left;
     cursor: pointer;
     color: #fff;
@@ -979,22 +979,22 @@ header .overlay .overlay-content {
   header .overlay .overlay-content .mega-menu .megamenu-item .sub-menu-arrow:before {
     content: "+";
     width: 50px;
-    height: 45px;
+    height: 40px;
     position: absolute;
     right: 0;
     display: inline-block;
     font-size: 22px;
-    line-height: 48px;
+    line-height: 40px;
   }
   header .overlay .overlay-content .mega-menu .megamenu-item.active-submenu h5 .sub-menu-arrow:before {
     content: "−";
   }
   header .overlay .overlay-content .mega-menu .megamenu-item.active-submenu .megamenu-sub {
-    display: block;
+    display: block !important;
   }
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub {
     z-index: 12;
-    display: none;
+    display: none !important;
     padding: 0;
     overflow: hidden;
     color: #fff;
@@ -1251,6 +1251,7 @@ header {
 @media (max-width: 479px) {
   #fp-nav.fp-right {
     right: -5px !important;
+    display: none;
   }
 }
 
@@ -2458,13 +2459,13 @@ nav.nav-split:hover svg.icon {
   color: #412a6d;
 }
 .products #dot-holder .page-nav-dot span.page-nav-dot-current {
-  background: #DB0E55;
+  background: #6927f1;
 }
 .products #dot-holder .page-nav-dot .hint:after, .products #dot-holder .page-nav-dot [data-hint]:after {
-  background: #DB0E55;
+  background: #6927f1;
 }
 .products #dot-holder .page-nav-dot:hover span {
-  background: #DB0E55;
+  background: #6927f1;
   opacity: 1;
 }
 .products .products-bg:nth-child(1) p {
