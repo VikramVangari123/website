@@ -25,11 +25,13 @@ $(function() {
         });
         $("li .sub-menu-arrow").click(function(){
             $(this).parent('.megamenu-sub-menu li').toggleClass("active-submenu").siblings().removeClass("active-submenu");  
-        });
+		});
+		$(".industry .mega-menu .megamenu-item").first().toggleClass("active-submenu").siblings().removeClass("active-submenu");
+		$(".business-area .mega-menu .megamenu-item").first().toggleClass("active-submenu").siblings().removeClass("active-submenu");
 
         $(".openNav").click(function(){
             $('.mega-menu .active').removeClass("active");                    
-            $('.active-submenu').removeClass("active-submenu");      
+            //$('.active-submenu').removeClass("active-submenu");      
         });
     }   
 	
@@ -71,11 +73,11 @@ $(function() {
 
         // testimonial 
         var sliderblockHeight = $('.sliderblock-cont').height();
-        $('.slider1').css('height', (sliderblockHeight + 140) + 'px');
+        //$('.slider1').css('height', (sliderblockHeight + 140) + 'px');
             // testimonial (window width leass than 767px)
         if ($(window).innerWidth() <= 767) {
            var sliderblockHeight = $('.sliderblock-cont').height();
-           $('.slider1').css('height', (sliderblockHeight + 180) + 'px');
+           //$('.slider1').css('height', (sliderblockHeight + 180) + 'px');
         }
             // testimonial (window width leass than 479px)
         //if ($(window).innerWidth() <= 479) {

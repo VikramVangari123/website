@@ -26,7 +26,9 @@ $(function() {
         $("li .sub-menu-arrow").click(function(){
             $(this).parent('.megamenu-sub-menu li').toggleClass("active-submenu").siblings().removeClass("active-submenu");  
         });
-
+		$(".industry .mega-menu .megamenu-item").first().toggleClass("active-submenu").siblings().removeClass("active-submenu");
+        $(".business-area .mega-menu .megamenu-item").first().toggleClass("active-submenu").siblings().removeClass("active-submenu");
+        
         $(".openNav").click(function(){
             $('.mega-menu .active').removeClass("active");                    
             $('.active-submenu').removeClass("active-submenu");      
