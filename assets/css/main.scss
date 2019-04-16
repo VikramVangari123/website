@@ -1840,10 +1840,16 @@
                 .hs-button{
                     margin: 0;
                 }
+                .hs-form-required{
+                    display: none;
+                }
             }
             form {
                 width: 320px;
                 margin: 0 auto;
+                @include smartphone{
+                    width: 280px;
+                }
                 .hs_full_name, .hs_mobilephone, .hs_email, .hs-company, .hs_query{
                     position: relative;
                 }
