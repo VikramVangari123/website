@@ -1374,6 +1374,19 @@ header {
     height: auto !important;
   }
 }
+.fp-section .fp-scroller {
+  overflow: unset;
+  transform: unset !important;
+}
+.fp-section .fp-scrollable {
+  overflow: hidden;
+  position: relative;
+  height: auto !important;
+}
+.fp-section .iScrollVerticalScrollbar.iScrollLoneScrollbar {
+  display: none;
+  overflow: unset;
+}
 
 .fp-tableCell {
   padding: 99px 0 40px 0;

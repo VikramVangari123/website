@@ -128,6 +128,19 @@ header{
         @include smartphone{
             height: auto !important;
         }
+        .fp-scroller {
+            overflow: unset;
+            transform: unset !important;
+        }
+        .fp-scrollable {
+            overflow: hidden;
+            position: relative;
+            height: auto !IMPORTANT;
+        }
+        .iScrollVerticalScrollbar.iScrollLoneScrollbar {
+            display: none;
+            overflow: unset;
+        }
     }
     .fp-tableCell{
         padding: 99px 0 40px 0;
