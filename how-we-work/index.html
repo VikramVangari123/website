@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/favicon.png">
     <title>WOWSOME</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/aos.css" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />     
+    <link rel="stylesheet" type="text/css" href="../assets/page-scrolling/fullpage.css" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 </head>
 
@@ -127,7 +127,7 @@
                 }
             </script>
         </header> 
-        <div class="main" id="pager-holder">
+        <div class="main" id="fullpage">
             <div class="section hw-bg page">
                 <div class="container">
                     <div class="section-in flex-col-rev">
@@ -289,7 +289,7 @@
             
             
             <!-- recent blog post -->
-            <div class="section recent-blog-posts page" data-hint-text="Recent Blog Posts">
+            <div class="section recent-blog-posts page">
                 <div class="container">
                     <div class="section-in post-grid">
                         <div class="title">
@@ -345,8 +345,8 @@
             </div>
 
             <!-- footer -->
-            <footer>
-                <div class="footer-top section">
+            <footer class="section fp-auto-height">
+                <div class="footer-top" id="footer-top">
                     <div class="container">
                         <div class="subscribe">
                             <h3>Subscribe to stay updated on latest trends of AR in branding</h3>
@@ -389,9 +389,9 @@
                 </div>
                 
                 <!-- copyright -->
-                <div class="section copy-right">
+                <div class="copy-right">
                     <div class="container">
-                        <div>&#9400; 2018 WOWSOME</div>
+                        <div>&#9400; 2019 WOWSOME</div>
                     </div>
                 </div>
             </footer>
@@ -409,28 +409,20 @@
         });
     </script>
     <!-- JavaScripts -->
-    
     <!-- video popup -->
     <script type="text/javascript" src="../assets/js/video-popup.js"></script>
-    <script type="text/javascript" src="../assets/js/slider1.js"></script> 
-    
-    <!--content transitions-->
-    <script>      
-      $(document).ready(function () {
-          AOS.init({
-              duration: 1200,
-          });
-      });
-    </script>
-    <script type="text/javascript" src="../assets/js/aos.js"></script>  
+    <script type="text/javascript" src="../assets/js/slider1.js"></script>
     <!-- common js -->
-    <script type="text/javascript" src="../assets/js/common.js"></script>  
+    <script type="text/javascript" src="../assets/js/common2.js"></script>  
     <!--testimonials-->
     <script type="text/javascript" src="../assets/js/flickity.min.js"></script> 
     <!--banner image animations-->
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script src="../assets/js/banner-animations/home/home.min.js"></script>
     <script src="../assets/js/banner-animations/home/animation.js"></script>
+    <script type="text/javascript" src="../assets/page-scrolling/fullpage.js"></script>
+    <script type="text/javascript" src="../assets/page-scrolling/scrolloverflow.js"></script>
+    <script type="text/javascript" src="../assets/page-scrolling/fullpage.extensions.min.js"></script>
    
     <script>
       
@@ -441,7 +433,25 @@
       function closeNav() {
         document.getElementById("Nav").style.height = "0%";
       }
+
     </script>
+      <script>
+        var head = document.getElementsByTagName('head')[0];
+        var js = document.createElement("script");
+
+        js.type = "text/javascript";
+
+        if (screen.width < 767)
+        {
+            js.src = "../assets/page-scrolling/scroll_m.js";
+        }
+        else
+        {
+            js.src = "../assets/page-scrolling/scroll.js";
+        }
+
+        head.appendChild(js);       
+      </script>
 </body>
 
 </html>
