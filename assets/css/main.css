@@ -5873,6 +5873,11 @@ ul.tabs li.active {
   border-radius: 0;
   box-shadow: none;
 }
+@media (max-width: 767px) {
+  .how-we-work .hw-3blocks .circle3-blocks .circle3-block:last-child {
+    margin-bottom: 0;
+  }
+}
 
 /******************************* Blog Main *******************************************/
 .blog-main {
@@ -6879,7 +6884,7 @@ footer .footer-top {
 }
 @media (max-width: 479px) {
   footer .footer-top {
-    padding: 25px 0 !important;
+    padding: 20px 0 !important;
   }
 }
 footer .footer-top .subscribe {
