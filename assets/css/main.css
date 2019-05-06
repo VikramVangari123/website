@@ -1415,11 +1415,6 @@ header {
 footer.section .fp-tableCell {
   padding: 0 !important;
 }
-@media (max-width: 479px) {
-  footer.section {
-    margin-top: 30px;
-  }
-}
 
 .padding-btm {
   padding-bottom: 40px;
