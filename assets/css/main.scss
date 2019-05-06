@@ -3515,7 +3515,7 @@ header{
             }
             @include smartphone{
                 width: 285px !important;
-                margin: 0 auto 0 0px;
+                margin: 0 auto;
             }
         }
         ul{
@@ -3537,15 +3537,20 @@ header{
                     -o-transition:-o-transform .15s linear;
                     -webkit-transition:-webkit-transform .15s linear;
                     &:hover, &:focus {
-                        -webkit-transform: scale(1.15);
-                        -moz-transform: scale(1.15);
-                        -o-transform: scale(1.15);
+                        -webkit-transform: scale(1.06);
+                        -moz-transform: scale(1.06);
+                        -o-transform: scale(1.06);
                         position:relative;
                         z-index:5;
                     }
                     img{
                         width: 100%;
                         height: auto;
+                        @include smartphone{
+                            // box-shadow: 0 0 9px -4px rgba(0, 0, 0, 0.3);
+                            // -webkit-box-shadow: 0 0 9px -4px rgba(0, 0, 0, 0.3);
+                            margin: 1px 5px 0 5px;
+                        }
                     }
                     @include laptop{
                         width: 130px;
@@ -3558,10 +3563,11 @@ header{
                         margin: 10px auto;
                     }
                     @include smartphone{
-                        width: 90px;
-                        height: 60px;
-                        margin: 5px auto;
+                        width: 85px;
+                        height: 58px;
+                        margin: 0;
                         line-height: 80px;
+                        overflow: unset;
                     }
                 }
             }
@@ -3572,7 +3578,10 @@ header{
             transform: translateY(-50%);
             background: none;
             box-shadow: none;
-            height: 50px;;
+            height: 50px;
+            @include smartphone{
+                height: 38px;
+            }
             svg.icon{
                 fill: #b2b2b2;
                 width: 30px;
@@ -3594,7 +3603,7 @@ header{
         .sa-right {
             right: 10px;
             @include smartphone{
-                right: 5px;
+                right: -12px;
             }
         }
     }
