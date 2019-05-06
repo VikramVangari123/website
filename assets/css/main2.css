@@ -1332,7 +1332,7 @@ header {
 .title .view-all {
   font-size: 18px;
   height: 22px;
-  margin-top: 6px;
+  margin-top: 20px;
 }
 .title .view-all img {
   margin-left: 10px;
@@ -1464,7 +1464,7 @@ h2 {
 @media (max-width: 479px) {
   h2 {
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     line-height: 30px;
   }
 }
@@ -1724,13 +1724,13 @@ hr {
   margin: 0;
 }
 
-.copy-right {
+body .main .copy-right {
   text-align: center;
   color: #fff;
   background-color: #c8c8c8;
   padding: 10px 0 !important;
 }
-.copy-right div div {
+body .main .copy-right div div {
   padding-top: 3px;
 }
 
@@ -1998,31 +1998,6 @@ nav.nav-split:hover svg.icon {
   }
 }
 
-.subscribe-sec {
-  padding-top: 0 !important;
-  color: #fff;
-}
-.subscribe-sec .subscribe-sec-in {
-  padding: 30px;
-  -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
-  color: #fff;
-  display: flex;
-  -webkit-display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@media (max-width: 1024px) {
-  .subscribe-sec .subscribe-sec-in {
-    display: block;
-  }
-}
-@media (max-width: 767px) {
-  .subscribe-sec .subscribe-sec-in {
-    padding: 20px 10px;
-  }
-}
 .subscribe-sec .subscribe-sec-in p.text {
   font-size: 20px;
   padding-right: 20px;
@@ -2036,8 +2011,8 @@ nav.nav-split:hover svg.icon {
   }
 }
 .subscribe-sec .subscribe-sec-in div {
-  margin: 0;
-  display: flex;
+  margin: 0 auto;
+  width: 420px;
 }
 @media (max-width: 1024px) {
   .subscribe-sec .subscribe-sec-in div {
@@ -2056,6 +2031,9 @@ nav.nav-split:hover svg.icon {
     width: 80px;
     padding: 0 10px;
   }
+}
+.subscribe-sec .subscribe-sec-in input#subscribe-email {
+  border-bottom: 1px solid #7d7d7d;
 }
 @media (max-width: 1024px) {
   .subscribe-sec .subscribe-sec-in input#subscribe-email {
@@ -2922,6 +2900,11 @@ nav.nav-split:hover svg.icon {
 .contact .contact-block form {
   width: 320px;
   margin: 0 auto;
+}
+@media (max-width: 479px) {
+  .contact .contact-block form {
+    width: 280px;
+  }
 }
 .contact .contact-block form .hs_full_name, .contact .contact-block form .hs_mobilephone, .contact .contact-block form .hs_email, .contact .contact-block form .hs-company, .contact .contact-block form .hs_query {
   position: relative;

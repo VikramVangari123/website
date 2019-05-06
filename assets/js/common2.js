@@ -31,7 +31,7 @@ $(function() {
         
         $(".openNav").click(function(){
             $('.mega-menu .active').removeClass("active");                    
-            $('.active-submenu').removeClass("active-submenu");      
+            //$('.active-submenu').removeClass("active-submenu");      
         });
     }   
 	

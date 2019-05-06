@@ -6,9 +6,9 @@
     <link rel="shortcut icon" href="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/favicon.png">
     <title>WOWSOME</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/aos.css" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />     
+    <link rel="stylesheet" type="text/css" href="../assets/page-scrolling/fullpage.css" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!-- write your code here -->
 </head>
@@ -127,8 +127,8 @@
                 }
             </script>
         </header>        
-        <div class="main" id="pager-holder">
-            <div class="section home-bg page" style="margin:0px;" data-hint-text="Pioneers in Mixed Reality Solutions">
+        <div class="main" id="fullpage">
+            <div class="section home-bg page" style="margin:0px;">
                 <div class="container">
                     <div class="section-in flex-col-rev">
                         <div class="left50">
@@ -150,7 +150,7 @@
             </div>
 
             <!-- our works -->
-            <div class="section our-work page" data-hint-text="Our Work">
+            <div class="section our-work page">
                 <div class="container">
 
                     <!-- <div class="title float-right hidden">
@@ -197,7 +197,7 @@
             </div>    
             
             <!-- Brands Powered by WOWSOME -->
-            <div class="section brands page" data-hint-text="Brands Powered by WOWSOME">
+            <div class="section brands page">
                     <div class="container">
                             <div class="section-in">
                                     <div class="left40" data-aos="slide-up">
@@ -289,7 +289,7 @@
             </div>
             
             <!-- testimonials -->
-            <div class="section testimonial-sec page" data-hint-text="Customer Testimonials">
+            <div class="section testimonial-sec page">
                 <div class="container">
                     <div class="section-in">  
                         <div class="inline-table">                      
@@ -335,7 +335,7 @@
             </div>
 
             <!-- recent blog post -->
-            <div class="section recent-blog-posts page" data-hint-text="Recent Blog Posts">
+            <div class="section recent-blog-posts page">
                 <div class="container">
                     <div class="section-in post-grid">
                         <div class="title">
@@ -391,7 +391,7 @@
             </div>
             
             <!-- contact cta -->
-            <div class="section page sec-full-cta" data-hint-text="Contact">
+            <div class="section page sec-full-cta">
                 <div class="container">
                     <div class="section-in">
                         <div class="sec-full-cta-in">
@@ -403,17 +403,8 @@
             </div>
             
             <!-- footer -->            
-            <footer> 
-                <div class="container">
-                    <div href="#" id="toBtm" class="nav-footer" title="Navigate to footer">
-                        <span>
-                            <svg height="30" viewBox="0 0 1792 1792" width="30">
-                                <path d="M1277 1299q8 19-5 35l-350 384q-10 10-23 10-14 0-24-10l-355-384q-13-16-5-35 9-19 29-19h224v-1248q0-14 9-23t23-9h192q14 0 23 9t9 23v1248h224q21 0 29 19z"/>
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                <div class="footer-top section" id="footer-top">
+            <footer class="section fp-auto-height"> 
+                <div class="footer-top" id="footer-top">
                     <div class="container">
                         <div class="subscribe">
                             <h3>Subscribe to stay updated on latest trends of AR in branding</h3>
@@ -458,7 +449,7 @@
                 <!-- copyright -->
                 <div class="copy-right">
                     <div class="container">
-                        <div>&#9400; 2018 WOWSOME</div>
+                        <div>&#9400; 2019 WOWSOME</div>
                     </div>
                 </div>
             </footer>
@@ -467,6 +458,7 @@
     </div>
        
     
+        
         <script>                             
             jQuery('.slider').lbSlider({
                 leftBtn: '.sa-left',
@@ -477,28 +469,20 @@
             });
         </script>
         <!-- JavaScripts -->
-        
         <!-- video popup -->
         <script type="text/javascript" src="../assets/js/video-popup.js"></script>
-        <script type="text/javascript" src="../assets/js/slider1.js"></script> 
-        
-        <!--content transitions-->
-        <script>      
-          $(document).ready(function () {
-              AOS.init({
-                  duration: 1200,
-              });
-          });
-        </script>
-        <script type="text/javascript" src="../assets/js/aos.js"></script>  
+        <script type="text/javascript" src="../assets/js/slider1.js"></script>
         <!-- common js -->
-        <script type="text/javascript" src="../assets/js/common.js"></script>  
+        <script type="text/javascript" src="../assets/js/common2.js"></script>  
         <!--testimonials-->
         <script type="text/javascript" src="../assets/js/flickity.min.js"></script> 
         <!--banner image animations-->
         <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
         <script src="../assets/js/banner-animations/home/home.min.js"></script>
         <script src="../assets/js/banner-animations/home/animation.js"></script>
+        <script type="text/javascript" src="../assets/page-scrolling/fullpage.js"></script>
+        <script type="text/javascript" src="../assets/page-scrolling/scrolloverflow.js"></script>
+        <script type="text/javascript" src="../assets/page-scrolling/fullpage.extensions.min.js"></script>
        
         <script>
           
@@ -509,6 +493,24 @@
           function closeNav() {
             document.getElementById("Nav").style.height = "0%";
           }
+
         </script>
+          <script>
+            var head = document.getElementsByTagName('head')[0];
+            var js = document.createElement("script");
+
+            js.type = "text/javascript";
+
+            if (screen.width < 767)
+            {
+                js.src = "../assets/page-scrolling/scroll_m.js";
+            }
+            else
+            {
+                js.src = "../assets/page-scrolling/scroll.js";
+            }
+
+            head.appendChild(js);       
+          </script>
 </body>
 </html>
