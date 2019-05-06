@@ -4588,11 +4588,11 @@ ul.tabs li.active {
 @media (max-width: 479px) {
   .brands .slider {
     width: 285px !important;
-    margin: 0 0 0 7px;
+    margin: 0 auto 0 0px;
   }
 }
 .brands ul {
-  margin: 0 !important;
+  margin: 0;
 }
 .brands ul li {
   text-align: center;
@@ -4613,20 +4613,15 @@ ul.tabs li.active {
   -webkit-transition: -webkit-transform 0.15s linear;
 }
 .brands ul li span:hover, .brands ul li span:focus {
-  -webkit-transform: scale(1.06);
-  -moz-transform: scale(1.06);
-  -o-transform: scale(1.06);
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -o-transform: scale(1.15);
   position: relative;
   z-index: 5;
 }
 .brands ul li span img {
   width: 100%;
   height: auto;
-}
-@media (max-width: 479px) {
-  .brands ul li span img {
-    margin: 1px 5px 0 5px;
-  }
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
   .brands ul li span {
@@ -4644,11 +4639,10 @@ ul.tabs li.active {
 }
 @media (max-width: 479px) {
   .brands ul li span {
-    width: 85px;
-    height: 58px;
-    margin: 0;
+    width: 90px;
+    height: 60px;
+    margin: 5px auto;
     line-height: 80px;
-    overflow: unset;
   }
 }
 .brands .slider-arrow {
@@ -4658,11 +4652,6 @@ ul.tabs li.active {
   background: none;
   box-shadow: none;
   height: 50px;
-}
-@media (max-width: 479px) {
-  .brands .slider-arrow {
-    height: 38px;
-  }
 }
 .brands .slider-arrow svg.icon {
   fill: #b2b2b2;
@@ -4690,7 +4679,7 @@ ul.tabs li.active {
 }
 @media (max-width: 479px) {
   .brands .sa-right {
-    right: -12px;
+    right: 5px;
   }
 }
 
