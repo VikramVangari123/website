@@ -4588,6 +4588,7 @@ ul.tabs li.active {
 @media (max-width: 479px) {
   .brands .slider {
     width: 285px !important;
+    margin: 0 0 0 7px;
   }
 }
 .brands ul {
@@ -4624,8 +4625,6 @@ ul.tabs li.active {
 }
 @media (max-width: 479px) {
   .brands ul li span img {
-    box-shadow: 0 0 9px -4px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 0 9px -4px rgba(0, 0, 0, 0.3);
     margin: 1px 5px 0 5px;
   }
 }
