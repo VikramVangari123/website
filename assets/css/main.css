@@ -605,10 +605,16 @@ h1, h2 {
     padding: 0 20px;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    padding: 0 25px;
+  }
+}
 @media (max-width: 1024px) {
   .container {
     max-width: 100%;
-    padding: 0 10px;
+    padding: 0 18px;
   }
 }
 
@@ -1459,6 +1465,11 @@ h2 {
   margin-bottom: 25px;
   font-weight: normal;
 }
+@media (min-width: 1025px) and (max-width: 1280px) {
+  h2 {
+    font-size: 42px;
+  }
+}
 @media (max-width: 1024px) {
   h2 {
     font-size: 34px;
@@ -1481,8 +1492,12 @@ h1 {
   font-weight: normal;
   position: relative;
   color: #fff;
-  max-width: 410px;
   font-weight: normal;
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  h1 {
+    font-size: 42px;
+  }
 }
 @media (max-width: 1024px) {
   h1 {
@@ -4555,7 +4570,7 @@ ul.tabs li.active {
 /******************************* brands powered by wowsome ***********************/
 .brands .slider-wrap {
   position: relative;
-  margin: 0px auto;
+  margin: 0px;
   width: 600px;
 }
 @media (min-width: 1025px) {
@@ -4575,7 +4590,7 @@ ul.tabs li.active {
 }
 @media (max-width: 479px) {
   .brands .slider-wrap {
-    width: 300px;
+    width: 284px;
   }
 }
 .brands .slider {
@@ -4633,7 +4648,9 @@ ul.tabs li.active {
 }
 @media (max-width: 479px) {
   .brands ul li span img {
-    margin: 1px 5px 0 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -4652,11 +4669,10 @@ ul.tabs li.active {
 }
 @media (max-width: 479px) {
   .brands ul li span {
-    width: 85px;
-    height: 58px;
-    margin: 0;
-    line-height: 80px;
-    overflow: unset;
+    width: 70px;
+    height: 55px;
+    margin: 0 auto;
+    overflow: hidden;
   }
 }
 .brands .slider-arrow {
