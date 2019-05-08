@@ -151,7 +151,7 @@ html.fp-enabled,
     width: 12px;
     margin: -6px 0 0 -5px;
     border-radius: 100%;
-    background: #5A6FA0 !important;
+    background: rgba(0,0,0,0.7) !important;
     opacity: 1 !important;
  }
 #fp-nav ul li a span,
@@ -187,11 +187,12 @@ html.fp-enabled,
     white-space: nowrap;
     max-width: 220px;
     overflow: hidden;
+    text-overflow: ellipsis;
     display: block;
     opacity: 0;
     width: 0;
     cursor: pointer;
-    background: #5A6FA0;
+    background: rgba(0,0,0,0.7);
     padding: 2px 7px;
     border-radius: 13px;
     outline: none;

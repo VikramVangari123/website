@@ -1042,13 +1042,6 @@ var flkty = new Flickity( '.testimonials', {
 		useDefaultCss: true
 	});
 
-	// content transitions
-	$(document).ready(function () {
-		AOS.init({
-			duration: 1200,
-		});
-	});
-
 	// footer navigation		
 	var footerHeight = $('footer').height();
 	$('footer').css('height', (footerHeight) + 'px');
@@ -1058,4 +1051,5 @@ var flkty = new Flickity( '.testimonials', {
 	// 	$('html, body').animate({scrollTop: '+=240px'}, 400);
 	// 		$(this).addClass('footer-visible');
 	// });
+
 });

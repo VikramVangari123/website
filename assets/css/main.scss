@@ -156,9 +156,12 @@ header{
         .fp-tableCell{
             @include smartphone {
                 padding: 95px 0 50px 0 !important;
-            }
-            h1{
-                margin-bottom: 0;
+                h1{
+                    margin-bottom: 0;
+                }
+                h1 + .btn{
+                    margin-top: 20px;
+                }
             }
         }
     }
@@ -579,6 +582,9 @@ header{
         }
         input#subscribe-email, .submit-btn, .hs_email, .hs_submit{
             display: table-cell;
+            @include smartphone{
+                display: inline-block;
+            }
             > label{
                 display: none;
             }
@@ -681,7 +687,9 @@ header{
                 background: #fff;
                 @include smartphone{
                     min-width: 90px;
-                    width: 90px;
+                    width: 260px;
+                    display: block;
+                    margin-top: 20px;
                 }
             }
         }
@@ -3258,10 +3266,11 @@ header{
             }
             .circle3-block-title {
                 margin-top: 20px;
-                color: #000;
+                color: #6b6b6b;
                 h3{
+                    font-size: 18px;
                     @include mobile-max{
-                        font-size: 20px;
+                        font-size: 16px;
                     }
                 }
             }
@@ -4605,6 +4614,9 @@ header{
             .hw-panel-in{
                 overflow: hidden;
                 display: flex;
+                @include tablet-min{
+                    width: 95%;
+                }
                 .icon{
                     width: 100px;
                     @include mobile-max{

@@ -17,7 +17,7 @@ $lineheightMedium: 1.5;
 $home-menu-active: #78cfe2;
 $industry-menu-active: #f53437;
 $business-area-menu-active: #207fff;
-$hw-menu-active: #448cef;
+$hw-menu-active: #336473;
 $ourwork-menu-active: #6e77a0;
 $ipgallery-menu-active: #f0a8be;
 $products-menu-active: #412a6d;
@@ -47,15 +47,15 @@ $subscription-menu-active: #653235;
 }
 
 @mixin hw-bg{    
-    background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%) !important;
+    background-image: linear-gradient(to right, #36c9c4 0%, #336473 100%) !important;
     background-position: center;
 }
 @mixin hw-bg2{    
-    background-image: linear-gradient(to right, #87e5eb 0%, #5093ef 100%) !important;
+    background-image: linear-gradient(to right, #33c3be 0%, #2d5a68 100%) !important;
     background-position: center;
 }
 @mixin hw-text-bg{
-	background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+	background-image: linear-gradient(to right, #36c9c4 0%, #336473 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

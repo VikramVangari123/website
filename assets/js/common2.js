@@ -528,5 +528,21 @@ var flkty = new Flickity( '.testimonials', {
     prevNextButtons: true,
     autoPlay: 5000
 });
+
+var head = document.getElementsByTagName('head')[0];
+var js = document.createElement("script");
+
+js.type = "text/javascript";
+
+if (screen.width < 767)
+{
+    js.src = "../assets/page-scrolling/scroll_m.js";
+}
+else
+{
+    js.src = "../assets/page-scrolling/scroll.js";
+}
+
+head.appendChild(js);  
 });
 

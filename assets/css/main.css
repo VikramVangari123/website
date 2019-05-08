@@ -692,12 +692,12 @@ h1, h2 {
 }
 
 .hw-bg {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%) !important;
+  background-image: linear-gradient(to right, #36c9c4 0%, #336473 100%) !important;
   background-position: center;
 }
 
 .hw-text-bg {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(to right, #36c9c4 0%, #336473 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1413,9 +1413,12 @@ header {
   .fp-enabled .main .fp-section:nth-child(1) .fp-tableCell {
     padding: 95px 0 50px 0 !important;
   }
-}
-.fp-enabled .main .fp-section:nth-child(1) .fp-tableCell h1 {
-  margin-bottom: 0;
+  .fp-enabled .main .fp-section:nth-child(1) .fp-tableCell h1 {
+    margin-bottom: 0;
+  }
+  .fp-enabled .main .fp-section:nth-child(1) .fp-tableCell h1 + .btn {
+    margin-top: 20px;
+  }
 }
 
 footer.section .fp-tableCell {
@@ -1902,6 +1905,11 @@ nav.nav-split:hover svg.icon {
 .subscribe input#subscribe-email, .subscribe .submit-btn, .subscribe .hs_email, .subscribe .hs_submit {
   display: table-cell;
 }
+@media (max-width: 479px) {
+  .subscribe input#subscribe-email, .subscribe .submit-btn, .subscribe .hs_email, .subscribe .hs_submit {
+    display: inline-block;
+  }
+}
 .subscribe input#subscribe-email > label, .subscribe .submit-btn > label, .subscribe .hs_email > label, .subscribe .hs_submit > label {
   display: none;
 }
@@ -2018,7 +2026,9 @@ nav.nav-split:hover svg.icon {
 @media (max-width: 479px) {
   .subscribe .hs_submit input {
     min-width: 90px;
-    width: 90px;
+    width: 260px;
+    display: block;
+    margin-top: 20px;
   }
 }
 
@@ -2266,27 +2276,27 @@ nav.nav-split:hover svg.icon {
 
 /****************************** how we work page header *******************************/
 .how-we-work header .overlay {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%) !important;
+  background-image: linear-gradient(to right, #36c9c4 0%, #336473 100%) !important;
   background-position: center;
 }
 .how-we-work header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
-  color: #448cef;
+  color: #336473;
   font-weight: bold;
 }
 .how-we-work header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .how-we-work header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
-  color: #448cef;
+  color: #336473;
 }
 .how-we-work header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
-  color: #448cef;
+  color: #336473;
 }
 .how-we-work header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active > a, .how-we-work header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover > a {
-  color: #448cef;
+  color: #336473;
 }
 .how-we-work header .overlay .overlay-content .mega-menu .megamenu-item:hover a:hover {
-  color: #448cef;
+  color: #336473;
 }
 .how-we-work header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(2) h5 a {
-  color: #448cef;
+  color: #336473;
   font-weight: bold;
 }
 .how-we-work #dot-holder .page-nav-dot span.page-nav-dot-current {
@@ -2300,16 +2310,16 @@ nav.nav-split:hover svg.icon {
   opacity: 1;
 }
 .how-we-work .recent-blog-posts h2 {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+  background-image: linear-gradient(to right, #36c9c4 0%, #336473 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .how-we-work footer .footer-top {
-  background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%) !important;
+  background-image: linear-gradient(to right, #36c9c4 0%, #336473 100%) !important;
   background-position: center;
 }
 .how-we-work footer .copy-right {
-  background-image: linear-gradient(to right, #87e5eb 0%, #5093ef 100%) !important;
+  background-image: linear-gradient(to right, #33c3be 0%, #2d5a68 100%) !important;
   background-position: center;
 }
 
@@ -4299,11 +4309,14 @@ ul.tabs li.active {
 }
 .circle3-blocks .circle3-block .circle3-block-title {
   margin-top: 20px;
-  color: #000;
+  color: #6b6b6b;
+}
+.circle3-blocks .circle3-block .circle3-block-title h3 {
+  font-size: 18px;
 }
 @media (max-width: 767px) {
   .circle3-blocks .circle3-block .circle3-block-title h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -5826,6 +5839,11 @@ ul.tabs li.active {
 .how-we-work .hw-panel .hw-panel-in {
   overflow: hidden;
   display: flex;
+}
+@media (min-width: 768px) {
+  .how-we-work .hw-panel .hw-panel-in {
+    width: 95%;
+  }
 }
 .how-we-work .hw-panel .hw-panel-in .icon {
   width: 100px;
