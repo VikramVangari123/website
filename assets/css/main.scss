@@ -1803,6 +1803,64 @@ header{
                 }
             }
         }
+        .our-team-form {
+            form input{
+                position: relative;
+                z-index: 2;
+                color: #fff;
+                float: left;
+                margin-bottom: 0;
+                display: block;
+                width: 300px;
+                height: 40px;
+                padding: 6px 0px;
+                background-color: transparent;
+                background-image: none;
+                border: 0;
+                border-bottom: 1px solid #fff;
+                border-radius: 0px;
+                -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+                -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+                transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            }
+            .hs-submit, .hs_email{
+                display: table-cell;
+            }
+            .hs-submit{
+                width: auto;
+                margin: 0;
+                vertical-align: middle;
+                input{
+                    border: 1px solid #ccc;
+                    min-width: 120px;
+                    width: 120px;
+                    padding: 0px 15px;
+                    height: 40px;
+                    line-height: 40px;
+                    cursor: pointer;
+                    text-decoration: none;
+                    text-align: center;
+                    display: inline-block;
+                    vertical-align: middle;
+                    transition: 0.15s linear;
+                    -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+                    box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+                    border-radius: 25px;
+                    margin: 0;
+                    background: #fff;
+                }
+            }
+            .hs_email{
+                position: relative;
+                .hs-error-msgs {
+                    position: absolute;
+                    bottom: -25px;
+                    font-size: 13px;
+                    color: #f5333f;
+                    font-size: 12px;
+                }
+            } 
+        }
         .core-values{
             .core-values-in{
                 margin: 0 -15px;
