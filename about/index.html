@@ -186,7 +186,7 @@
             </div>
 
             <!-- our team -->
-            <!-- <div class="section page our-team">
+            <div class="section page our-team">
                 <div class="container">
                     <div class="section-in">
                         <div class="inline-table">
@@ -236,36 +236,23 @@
                                         </p>
                                     </div>
                                 </div>
+                                <div class="our-team-form">
+                                    <!--[if lte IE 8]>
+                                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+                                    <![endif]-->
+                                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                                    <script>
+                                    hbspt.forms.create({
+                                        portalId: "1635524",
+                                        formId: "86a56953-647a-4c14-aebc-0beed5e56b6c"
+                                    });
+                                    </script>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> -->
-
-            <!-- contact form -->
-            <div class="section page our-team">
-                <div class="container">
-                    <div class="section-in">
-                        <div class="inline-table">
-                            <div class="title">
-                                <h2 class="about-text-bg">Our Team</h2>
-                            </div>
-                            <div class="our-team-form">
-                                <!--[if lte IE 8]>
-                                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-                                <![endif]-->
-                                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                                <script>
-                                hbspt.forms.create({
-                                    portalId: "1635524",
-                                    formId: "86a56953-647a-4c14-aebc-0beed5e56b6c"
-                                });
-                                </script>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div>  
 
             <!-- Our Core Value -->
             <div class="section page core-values">
@@ -514,73 +501,34 @@
         </div>
     </div>
 
-    <!-- JavaScripts -->
-
-    
-    
     <script>                             
-        jQuery('.slider').lbSlider({
-            leftBtn: '.sa-left',
-            rightBtn: '.sa-right',
-            visible: 3,
-            autoPlay: true,
-            autoPlayDelay: 5
-        });
-    </script>
-    <!--about/timeline-->
-    <script type="text/javascript" src="../assets/js/timeline.min.js"></script>	
-    <script>
-        // about/timeline
-        timeline(document.querySelectorAll('.timeline'), {
-            forceVerticalMode: 767,
-            mode: 'horizontal',
-            verticalStartPosition: 'left',
-            visibleItems: 4
-        });
-    </script>  
-    <!-- video popup -->
-    <script type="text/javascript" src="../assets/js/video-popup.js"></script>
-    <script type="text/javascript" src="../assets/js/slider1.js"></script>
-    <!-- common js -->
-    <script type="text/javascript" src="../assets/js/common2.js"></script>  
-    <!--testimonials-->
-    <script type="text/javascript" src="../assets/js/flickity.min.js"></script> 
-    <!--banner image animations-->
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script src="../assets/js/banner-animations/home/home.min.js"></script>
-    <script src="../assets/js/banner-animations/home/animation.js"></script>
-    <script type="text/javascript" src="../assets/page-scrolling/fullpage.js"></script>
-    <script type="text/javascript" src="../assets/page-scrolling/scrolloverflow.js"></script>
-    <script type="text/javascript" src="../assets/page-scrolling/fullpage.extensions.min.js"></script>
-   
-    <script>
-      
-      function openNav() {
-        document.getElementById("Nav").style.height = "100%";
-      }
-
-      function closeNav() {
-        document.getElementById("Nav").style.height = "0%";
-      }
-
-    </script>
-      <script>
-        var head = document.getElementsByTagName('head')[0];
-        var js = document.createElement("script");
-
-        js.type = "text/javascript";
-
-        if (screen.width < 767)
-        {
-            js.src = "../assets/page-scrolling/scroll_m.js";
-        }
-        else
-        {
-            js.src = "../assets/page-scrolling/scroll.js";
-        }
-
-        head.appendChild(js);       
-      </script>
+            jQuery('.slider').lbSlider({
+                leftBtn: '.sa-left',
+                rightBtn: '.sa-right',
+                visible: 3,
+                autoPlay: true,
+                autoPlayDelay: 5
+            });
+        </script>
+        <!-- JavaScripts -->
+        <!-- video popup -->
+        <script type="text/javascript" src="../assets/js/video-popup.js"></script>
+        <script type="text/javascript" src="../assets/js/slider1.js"></script>
+        <!-- common js -->
+        <script type="text/javascript" src="../assets/js/common2.js"></script>  
+        <!--testimonials-->
+        <script type="text/javascript" src="../assets/js/flickity.min.js"></script> 
+        <!--banner image animations-->
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        <script src="../assets/js/banner-animations/home/home.min.js"></script>
+        <script src="../assets/js/banner-animations/home/animation.js"></script>
+        <!--scrolling-->
+        <script type="text/javascript" src="../assets/page-scrolling/fullpage.js"></script>
+        <script type="text/javascript" src="../assets/page-scrolling/scrolloverflow.js"></script>
+        <script type="text/javascript" src="../assets/page-scrolling/fullpage.extensions.min.js"></script>
+        <script type="text/javascript">
+            var customToolTips = ['WOWSOME Mixed Reality Products', 'Interactive Print', 'Interactive Kiosk', 'Mixed Reality Stories', 'Use Cases', 'Case Study', 'Footer']
+        </script>
 
 </body>
 

@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/favicon.png">
     <title>WOWSOME</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/aos.css" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />     
+    <link rel="stylesheet" type="text/css" href="../assets/page-scrolling/fullpage.css" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
@@ -111,7 +111,7 @@
                     </div>
                 </div>
                 <span class="logo">
-                    <a href="../home/index2.html"><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/logo.png" alt="WOWSOME" /></a>
+                    <a href="../home/index.html"><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/logo.png" alt="WOWSOME" /></a>
                 </span>
                 <span style="cursor:pointer" class="openNav" onclick="openNav()">
                     <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/hamburger_w.png" alt="hamburger" />
@@ -126,8 +126,8 @@
                     document.getElementById("Nav").style.height = "0%";
                 }
             </script>
-        </header>
-        <div class="main" id="pager-holder">
+        </header> 
+        <div class="main" id="fullpage">
             <div class="section products-bg page" data-hint-text="WOWSOME Mixed Reality Products">
                 <div class="container">
                     <div class="section-in flex-col-rev">
@@ -474,83 +474,81 @@
                             <h2 class="products-text-bg">Case Study</h2>
                             <a href="#" class="view-all">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a>
                         </div>
-                        <div>
-                            <div class="svg-wrap">
+                        <div class="slider_fpage">
+                            
+                            <!-- <div class="svg-wrap">
                                 <svg width="64" height="64" viewBox="64 0 0 64">
                                     <path id="arrow-top" d="M46.077 55.738c0.858 0.867 0.858 2.266 0 3.133s-2.243 0.867-3.101 0l-25.056-25.302c-0.858-0.867-0.858-2.269 0-3.133l25.056-25.306c0.858-0.867 2.243-0.867 3.101 0s0.858 2.266 0 3.133l-22.848 23.738 22.848 23.738z" />
                                 </svg>
                                     <svg width="64" height="64" viewBox="0 0 64 64">
                                     <path id="arrow-right" d="M17.919 55.738c-0.858 0.867-0.858 2.266 0 3.133s2.243 0.867 3.101 0l25.056-25.302c0.858-0.867 0.858-2.269 0-3.133l-25.056-25.306c-0.858-0.867-2.243-0.867-3.101 0s-0.858 2.266 0 3.133l22.848 23.738-22.848 23.738z" />
                                 </svg>
-                            </div>
-
-                            <div class="slider1">
-                                <div class="slide active">
-                                    <div class="case-study-in">
-                                        <div class="img">
-                                            <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg1.jpg" alt="" />
-                                        </div>
-                                        <div class="sliderblock-cont">
-                                            <h3>The Hindu</h3>
-                                            <p>Lorem Ipsum
-                                            </p>
-                                            <a class="btn btn-white">Know More</a>
-                                        </div>
+                            </div> -->
+                            <div class="slide active" id="slide1">
+                                <div class="case-study-in">
+                                    <div class="img">
+                                        <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg1.jpg" alt="" />
                                     </div>
-                                </div>
-                                <div class="slide" style="display:block">
-                                    <div class="case-study-in">
-                                        <div class="img">
-                                            <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg1.jpg" alt="" />
-                                        </div>
-                                        <div class="sliderblock-cont">
-                                        <h3>Mahindra</h3>
+                                    <div class="sliderblock-cont">
+                                        <h3>The Hindu</h3>
                                         <p>Lorem Ipsum
                                         </p>
                                         <a class="btn btn-white">Know More</a>
-                                        </div>
                                     </div>
                                 </div>
-                                <div class="slide" style="display:block">
-                                    <div class="case-study-in">
-                                        <div class="img">
-                                            <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg1.jpg" alt="" />
-                                        </div>
-                                        <div class="sliderblock-cont">
-                                        <h3>DuPont Pexalon</h3>
-                                        <p>Lorem Ipsum
-                                        </p>
-                                        <a class="btn btn-white">Know More</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <nav class="nav-split">
-                                    <a class="prev products-bg" href="">
-                                        <span class="icon-wrap">
-                                            <svg class="icon" width="22" height="22" viewBox="0 0 64 64">
-                                                <use xlink:href="#arrow-top" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <a class="next products-bg" href="">
-                                        <span class="icon-wrap"><svg class="icon" width="22" height="22" viewBox="0 0 64 64"><use xlink:href="#arrow-right" /></svg></span>
-                                    </a>
-                                </nav>
-                                <nav class="pagination">
-                                    <span class="current"></span>
-                                    <span></span>
-                                    <span></span>
-                                </nav>
                             </div>
+                            <div class="slide" id="slide2">
+                                <div class="case-study-in">
+                                    <div class="img">
+                                        <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg1.jpg" alt="" />
+                                    </div>
+                                    <div class="sliderblock-cont">
+                                    <h3>Mahindra</h3>
+                                    <p>Lorem Ipsum
+                                    </p>
+                                    <a class="btn btn-white">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide" id="slide3">
+                                <div class="case-study-in">
+                                    <div class="img">
+                                        <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg1.jpg" alt="" />
+                                    </div>
+                                    <div class="sliderblock-cont">
+                                    <h3>DuPont Pexalon</h3>
+                                    <p>Lorem Ipsum
+                                    </p>
+                                    <a class="btn btn-white">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <nav class="nav-split">
+                                <a class="prev products-bg" href="">
+                                    <span class="icon-wrap">
+                                        <svg class="icon" width="22" height="22" viewBox="0 0 64 64">
+                                            <use xlink:href="#arrow-top" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a class="next products-bg" href="">
+                                    <span class="icon-wrap"><svg class="icon" width="22" height="22" viewBox="0 0 64 64"><use xlink:href="#arrow-right" /></svg></span>
+                                </a>
+                            </nav>
+                            <nav class="pagination">
+                                <span class="current"></span>
+                                <span></span>
+                                <span></span>
+                            </nav> -->
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- footer -->            
-            <footer> 
-                <div class="footer-top section" id="footer-top">
+            <footer class="section fp-auto-height"> 
+                <div class="footer-top" id="footer-top">
                     <div class="container">
                         <div class="subscribe">
                             <h3>Subscribe to stay updated on latest trends of AR in branding</h3>
@@ -595,57 +593,41 @@
                 <!-- copyright -->
                 <div class="copy-right">
                     <div class="container">
-                        <div>&#9400; 2018 WOWSOME</div>
+                        <div>&#9400; 2019 WOWSOME</div>
                     </div>
                 </div>
             </footer>
 
         </div>
     </div>
-<!-- JavaScripts -->
-<script>                             
-    jQuery('.slider').lbSlider({
-        leftBtn: '.sa-left',
-        rightBtn: '.sa-right',
-        visible: 3,
-        autoPlay: true,
-        autoPlayDelay: 5
-    });
-</script>
-<!-- JavaScripts -->
-
-<!-- video popup -->
-<script type="text/javascript" src="../assets/js/video-popup.js"></script>
-<script type="text/javascript" src="../assets/js/slider1.js"></script> 
-
-<!--content transitions-->
-<script>      
-  $(document).ready(function () {
-      AOS.init({
-          duration: 1200,
-      });
-  });
-</script>
-<script type="text/javascript" src="../assets/js/aos.js"></script>  
-<!-- common js -->
-<script type="text/javascript" src="../assets/js/common.js"></script>  
-<!--testimonials-->
-<script type="text/javascript" src="../assets/js/flickity.min.js"></script> 
-<!--banner image animations-->
-<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="../assets/js/banner-animations/home/home.min.js"></script>
-<script src="../assets/js/banner-animations/home/animation.js"></script>
-
-<script>
-  
-  function openNav() {
-    document.getElementById("Nav").style.height = "100%";
-  }
-
-  function closeNav() {
-    document.getElementById("Nav").style.height = "0%";
-  }
-</script>  
+    <script>                             
+        jQuery('.slider').lbSlider({
+            leftBtn: '.sa-left',
+            rightBtn: '.sa-right',
+            visible: 3,
+            autoPlay: true,
+            autoPlayDelay: 5
+        });
+    </script>
+    <!-- JavaScripts -->
+    <!-- video popup -->
+    <script type="text/javascript" src="../assets/js/video-popup.js"></script>
+    <script type="text/javascript" src="../assets/js/slider1.js"></script>
+    <!-- common js -->
+    <script type="text/javascript" src="../assets/js/common2.js"></script>  
+    <!--testimonials-->
+    <script type="text/javascript" src="../assets/js/flickity.min.js"></script> 
+    <!--banner image animations-->
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="../assets/js/banner-animations/home/home.min.js"></script>
+    <script src="../assets/js/banner-animations/home/animation.js"></script>
+    <!--scrolling-->
+    <script type="text/javascript" src="../assets/page-scrolling/fullpage.js"></script>
+    <script type="text/javascript" src="../assets/page-scrolling/scrolloverflow.js"></script>
+    <script type="text/javascript" src="../assets/page-scrolling/fullpage.extensions.min.js"></script>
+    <script type="text/javascript">
+        var customToolTips = ['WOWSOME Mixed Reality Products', 'Interactive Print', 'Interactive Kiosk', 'Mixed Reality Stories', 'Use Cases', 'Case Study', 'Footer']
+    </script>
 </body>
 
 </html>
