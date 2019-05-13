@@ -1807,6 +1807,9 @@ header{
             margin-top: 40px;
             display: inline-block;
             width: 100%;
+            @include mobile-tablet{
+                margin-top: 20px;
+            }
             form input{
                 position: relative;
                 z-index: 2;
@@ -1824,17 +1827,43 @@ header{
                 -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
                 -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
                 transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+                @include mobile-tablet{
+                   float: none;
+                   width: 240px;
+                }
+            }
+            .our-team-form-text{
+                @include mobile-tablet{
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+            .our-team-form-in {
+                @include mobile-tablet{
+                    text-align: center;
+                }
+                form{
+                    @include mobile-tablet{
+                        display: inline-block;
+                    }
+                }
             }
             .hs_error_rollup {
                 display: none;
             }
             .hs-submit, .hs_email{
-                display: table-cell;
+                display: table-cell;                
+                @include smartphone{
+                    display: block;
+                }
             }
             .hs-submit{
                 width: auto;
                 margin: 0;
-                vertical-align: middle;
+                vertical-align: middle;               
+                @include smartphone{
+                    margin-top: 20px;
+                }
                 input{
                     border: 1px solid #ccc;
                     color: #fff;
@@ -1854,6 +1883,10 @@ header{
                     border-radius: 25px;
                     margin: 0;
                     background: linear-gradient(to right, #FF9966 0%, #FF5E62 100%) !important;
+                    @include smartphone{
+                        width: 240px;
+                        display: block;
+                    }
                 }
             }
             .hs_email{
@@ -1863,7 +1896,10 @@ header{
                     bottom: -25px;
                     font-size: 13px;
                     color: #f5333f;
-                    font-size: 12px;
+                    font-size: 12px;              
+                    @include smartphone{
+                        bottom: -19px;
+                    }
                 }
                 .hs-form-required{
                     display: none;

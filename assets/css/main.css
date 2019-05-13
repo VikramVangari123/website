@@ -2820,6 +2820,11 @@ nav.nav-split:hover svg.icon {
   display: inline-block;
   width: 100%;
 }
+@media (min-width: 480px) and (max-width: 1024px) {
+  .about .our-team-form {
+    margin-top: 20px;
+  }
+}
 .about .our-team-form form input {
   position: relative;
   z-index: 2;
@@ -2838,16 +2843,48 @@ nav.nav-split:hover svg.icon {
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
+@media (min-width: 480px) and (max-width: 1024px) {
+  .about .our-team-form form input {
+    float: none;
+    width: 240px;
+  }
+}
+@media (min-width: 480px) and (max-width: 1024px) {
+  .about .our-team-form .our-team-form-text {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 480px) and (max-width: 1024px) {
+  .about .our-team-form .our-team-form-in {
+    text-align: center;
+  }
+}
+@media (min-width: 480px) and (max-width: 1024px) {
+  .about .our-team-form .our-team-form-in form {
+    display: inline-block;
+  }
+}
 .about .our-team-form .hs_error_rollup {
   display: none;
 }
 .about .our-team-form .hs-submit, .about .our-team-form .hs_email {
   display: table-cell;
 }
+@media (max-width: 479px) {
+  .about .our-team-form .hs-submit, .about .our-team-form .hs_email {
+    display: block;
+  }
+}
 .about .our-team-form .hs-submit {
   width: auto;
   margin: 0;
   vertical-align: middle;
+}
+@media (max-width: 479px) {
+  .about .our-team-form .hs-submit {
+    margin-top: 20px;
+  }
 }
 .about .our-team-form .hs-submit input {
   border: 1px solid #ccc;
@@ -2869,6 +2906,12 @@ nav.nav-split:hover svg.icon {
   margin: 0;
   background: linear-gradient(to right, #FF9966 0%, #FF5E62 100%) !important;
 }
+@media (max-width: 479px) {
+  .about .our-team-form .hs-submit input {
+    width: 240px;
+    display: block;
+  }
+}
 .about .our-team-form .hs_email {
   position: relative;
 }
@@ -2878,6 +2921,11 @@ nav.nav-split:hover svg.icon {
   font-size: 13px;
   color: #f5333f;
   font-size: 12px;
+}
+@media (max-width: 479px) {
+  .about .our-team-form .hs_email .hs-error-msgs {
+    bottom: -19px;
+  }
 }
 .about .our-team-form .hs_email .hs-form-required {
   display: none;
