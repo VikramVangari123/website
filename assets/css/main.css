@@ -2848,6 +2848,7 @@ nav.nav-split:hover svg.icon {
 }
 .about .our-team-form .hs-submit input {
   border: 1px solid #ccc;
+  color: #fff;
   min-width: 120px;
   width: 120px;
   padding: 0px 15px;
@@ -2863,7 +2864,7 @@ nav.nav-split:hover svg.icon {
   box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
   margin: 0;
-  background: #fff;
+  background: linear-gradient(to right, #FF9966 0%, #FF5E62 100%) !important;
 }
 .about .our-team-form .hs_email {
   position: relative;
