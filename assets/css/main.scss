@@ -1825,6 +1825,9 @@ header{
                 -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
                 transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
             }
+            .hs_error_rollup {
+                display: none;
+            }
             .hs-submit, .hs_email{
                 display: table-cell;
             }

@@ -2838,6 +2838,9 @@ nav.nav-split:hover svg.icon {
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
+.about .our-team-form .hs_error_rollup {
+  display: none;
+}
 .about .our-team-form .hs-submit, .about .our-team-form .hs_email {
   display: table-cell;
 }
