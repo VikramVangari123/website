@@ -2871,6 +2871,9 @@ nav.nav-split:hover svg.icon {
   color: #f5333f;
   font-size: 12px;
 }
+.about .our-team-form .hs_email .hs-form-required {
+  display: none;
+}
 .about .core-values .core-values-in {
   margin: 0 -15px;
 }
@@ -4591,6 +4594,17 @@ ul.tabs li.active {
   .case-study .case-study-in .sliderblock-cont a.btn {
     right: 20px;
   }
+}
+
+.case-study .section-in .fp-sliderSec {
+  padding: 99px 0 40px 0;
+}
+.case-study .section-in .fp-sliderSec .fp-tableCell {
+  height: auto !important;
+  padding: 0;
+}
+.case-study .fp-slidesNav.fp-bottom {
+  display: none;
 }
 
 /******************************* download app ************************************/

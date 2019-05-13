@@ -1859,6 +1859,9 @@ header{
                     color: #f5333f;
                     font-size: 12px;
                 }
+                .hs-form-required{
+                    display: none;
+                }
             } 
         }
         .core-values{
@@ -3526,6 +3529,21 @@ header{
             }
             }   
         } 
+    }
+
+    .case-study{
+        .section-in {
+            .fp-sliderSec{
+                padding: 99px 0 40px 0;
+                .fp-tableCell{
+                    height: auto !important;
+                    padding: 0;
+                }
+            }
+        }        
+        .fp-slidesNav.fp-bottom{
+            display: none;
+        }
     }
     
     /******************************* download app ************************************/
