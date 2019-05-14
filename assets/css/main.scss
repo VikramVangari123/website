@@ -3156,12 +3156,13 @@ header{
                 width: 25%;
                 float: left;
                 padding: 0 10px;
-                margin-bottom: 20px;
+                margin-top: 20px;
                 @include mobile{
                     width: 33.3333%;
                 }
                 @include smartphone{
                     width: 50%;
+                    margin-top: 10px;
                 }
                 &:last-child{
                     @include mobile-max{
@@ -3189,6 +3190,9 @@ header{
                         padding: 10px;
                         overflow: hidden;
                         text-align: center;
+                        @include smartphone{
+                            height: 65px;
+                        }
                         .contTitle {
                             color: #000;
                             margin-bottom: 5px;
@@ -3300,6 +3304,11 @@ header{
 
     /******************************* interactive print page **************************/
     .interactive-print{
+        .circle3-blocks .circle3-block{
+            &:before{
+                content: none;
+            }
+        }
         .sec-sm-cta{
             .sec-sm-cta-in{
                 p.text{

@@ -4197,7 +4197,7 @@ ul.tabs li.active {
   width: 25%;
   float: left;
   padding: 0 10px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .applications-type2 .app-blocks .app-block {
@@ -4207,6 +4207,7 @@ ul.tabs li.active {
 @media (max-width: 479px) {
   .applications-type2 .app-blocks .app-block {
     width: 50%;
+    margin-top: 10px;
   }
 }
 @media (max-width: 767px) {
@@ -4239,6 +4240,11 @@ ul.tabs li.active {
   padding: 10px;
   overflow: hidden;
   text-align: center;
+}
+@media (max-width: 479px) {
+  .applications-type2 .app-blocks .app-block .app-block-in .contentBlock {
+    height: 65px;
+  }
 }
 .applications-type2 .app-blocks .app-block .app-block-in .contentBlock .contTitle {
   color: #000;
@@ -4377,6 +4383,9 @@ ul.tabs li.active {
 }
 
 /******************************* interactive print page **************************/
+.interactive-print .circle3-blocks .circle3-block:before {
+  content: none;
+}
 .interactive-print .sec-sm-cta .sec-sm-cta-in p.text {
   width: calc(100% - 290px);
 }
