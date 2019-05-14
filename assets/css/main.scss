@@ -149,7 +149,7 @@ header{
             height: auto !important;
         }
         @include mobile {
-            padding: 90px 0 30px 0 !important;
+            padding: 50px 0 !important;
         }
     }
     .fp-enabled .main .fp-section:nth-child(1){
@@ -3596,9 +3596,12 @@ header{
         .section-in {
             .fp-sliderSec{
                 padding: 99px 0 40px 0;
+                display: table-cell;
+                vertical-align: middle;
+                width: 100%;
                 .fp-tableCell{
                     height: auto !important;
-                    padding: 0;
+                    padding: 0 !important;
                 }
             }
         }        

@@ -1439,7 +1439,7 @@ header {
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .fp-tableCell {
-    padding: 90px 0 30px 0 !important;
+    padding: 50px 0 !important;
   }
 }
 
@@ -4704,10 +4704,13 @@ ul.tabs li.active {
 
 .case-study .section-in .fp-sliderSec {
   padding: 99px 0 40px 0;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
 }
 .case-study .section-in .fp-sliderSec .fp-tableCell {
   height: auto !important;
-  padding: 0;
+  padding: 0 !important;
 }
 .case-study .fp-slidesNav.fp-bottom {
   display: none;
