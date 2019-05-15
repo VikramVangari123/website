@@ -4221,25 +4221,8 @@ ul.tabs li.active {
   }
 }
 .applications-type2 .app-blocks .app-block .app-block-in .imgBlock {
-  background: #f1f1f1;
-  height: 180px;
-  -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
-}
-@media (max-width: 1024px) {
-  .applications-type2 .app-blocks .app-block .app-block-in .imgBlock {
-    height: 150px;
-  }
-}
-@media (max-width: 479px) {
-  .applications-type2 .app-blocks .app-block .app-block-in .imgBlock {
-    height: 130px;
-  }
-}
-.applications-type2 .app-blocks .app-block .app-block-in .imgBlock img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 115px;
+  text-align: center;
 }
 .applications-type2 .app-blocks .app-block .app-block-in .contentBlock {
   padding: 10px;
