@@ -3706,7 +3706,7 @@ ul.tabs {
   list-style: none;
   height: 45px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -3807,7 +3807,7 @@ ul.tabs li.active {
 }
 @media (max-width: 767px) {
   .tab_container .tab_drawer_heading.d_active {
-    background-color: #666;
+    background-color: #894ab4;
     color: #fff;
   }
 }
@@ -4083,13 +4083,18 @@ ul.tabs li.active {
 /******************************* Applications ************************************/
 .applications .app-blocks {
   margin: 0 -10px;
-  margin-top: 35px;
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .applications .app-blocks {
+    margin-top: 0;
+  }
 }
 .applications .app-blocks .app-block {
   width: 50%;
   float: left;
   padding: 0 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .applications .app-blocks .app-block {
@@ -4249,16 +4254,17 @@ ul.tabs li.active {
 .applications-type2 .app-blocks .app-block .app-block-in .contentBlock .contTitle {
   color: #000;
   margin-bottom: 5px;
-  font-size: 22px;
+  font-size: 18px;
+  height: 35px;
 }
 @media (max-width: 1024px) {
   .applications-type2 .app-blocks .app-block .app-block-in .contentBlock .contTitle {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (max-width: 479px) {
   .applications-type2 .app-blocks .app-block .app-block-in .contentBlock .contTitle {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .applications-type2 .app-blocks .app-block .app-block-in .contentBlock p {
@@ -4413,6 +4419,7 @@ ul.tabs li.active {
   display: inline-table;
   table-layout: fixed;
   width: 100%;
+  margin-top: 20px;
 }
 .circle3-blocks .circle3-block {
   width: 33.333%;

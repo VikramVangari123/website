@@ -2734,7 +2734,7 @@ header{
         list-style: none;
         height: 45px;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         @include box-shadow;
         @include flex-space-bw;
         @include mobile-max{
@@ -2820,7 +2820,7 @@ header{
             }
             @include mobile-max{
                 &.d_active {
-                    background-color: #666;
+                    background-color: #894ab4;
                     color: #fff;
                 }
             }
@@ -3069,12 +3069,15 @@ header{
     .applications{
         .app-blocks {
             margin: 0 -10px;
-            margin-top: 35px;
+            margin-top:20px;
+            @include mobile-max{
+                margin-top: 0;
+            }
             .app-block {
                 width: 50%;
                 float: left;
                 padding: 0 10px;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
                 @include mobile-max{
                     width: 100%;
                 }
@@ -3196,12 +3199,13 @@ header{
                         .contTitle {
                             color: #000;
                             margin-bottom: 5px;
-                            font-size: 22px;
+                            font-size: 18px;
+                            height: 35px;
                             @include tablet-max{
-                                font-size: 20px;
+                                font-size: 14px;
                             }
                             @include smartphone{
-                                font-size: 18px;
+                                font-size: 14px;
                             }
                         }
                         p{
@@ -3337,6 +3341,7 @@ header{
         display: inline-table;
         table-layout: fixed;
         width: 100%;
+        margin-top: 20px;
         .circle3-block{
             width: 33.333%;
             text-align: center;
