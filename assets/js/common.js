@@ -66,11 +66,11 @@ $(function() {
               'height': (($(window).height())) + 'px'
           });
         });
-        // if ($(window).innerWidth() <= 767) {
-        //     $('.case-study .fp-sliderSec').css({
-        //         'height': (($(window).height())) + 'px'
-        //     });
-        // };
+        if ($(window).innerWidth() >= 767) {
+            $('.case-study .fp-sliderSec').css({
+                'height': (($(window).height())) + 'px'
+            });
+        };
 
         // section inner full height
         var sectionHeight = $('.section').height();

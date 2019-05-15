@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/favicon.png">
     <title>WOWSOME</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/aos.css" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />     
+    <link rel="stylesheet" type="text/css" href="../assets/page-scrolling/fullpage.css" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
@@ -127,7 +127,7 @@
                 }
             </script>
         </header>
-        <div class="main" id="pager-holder">
+        <div class="main" id="fullpage">
             <div class="section products-bg page">
                 <div class="container">
                     <div class="section-in flex-col-rev">
@@ -186,11 +186,7 @@
                                     </div>
                                     <div class="contentBlock">
                                         <h3 class="contTitle">Virtual Avatars</h3>
-                                        <p>
-                                            Push notifications are outdated. Personalized message delivery is key to marketing success.
-                                        </p>
-                                        <p>Reach out to your audience through a customized virtual avatar for your Brand,, with Mixed Reality Stories.</p>
-                                        <p>Your brand is unique. Why should your notifications be any different.</p>
+                                        <p>Reach out to your audience through a customized virtual avatar for your Brand, with Mixed Reality Stories.</p>
                                     </div>
                                 </div>
                             </div>
@@ -201,10 +197,7 @@
                                     </div>
                                     <div class="contentBlock">
                                         <h3 class="contTitle">Location based services</h3>
-                                        <p>
-                                            The future of marketing is local. Drive conversions and engagement through location based content and reminders.
-                                        </p>
-                                        <p>Your customer is right outside the door. Don't let him pass.</p>
+                                        <p>The future of marketing is local. Drive conversions and engagement through location based content and reminders. </p>
                                     </div>
                                 </div>
                             </div>
@@ -215,11 +208,7 @@
                                     </div>
                                     <div class="contentBlock">
                                         <h3 class="contTitle">Time based reminders</h3>
-                                        <p>
-                                            You care for your customers; show it to them. 
-                                        </p>
                                         <p>Delight your customers with messages and content for special days ( holidays, birthday), regular events ( lunch, dinner) and specific intents ( calorie counter)</p>
-                                        <p>Don't just be a product. Be a part of your customer's life.</p>
                                     </div>
                                 </div>
                             </div>
@@ -230,11 +219,7 @@
                                     </div>
                                     <div class="contentBlock">
                                         <h3 class="contTitle">Brand Content Creation</h3>
-                                        <p>
-                                            What if you can literally bring your customer and your brand in a single frame?
-                                        </p>
-                                        <p>Simplify brand content creation through user generated photos and videos with your brand mascots. Delight customers, reward them for content creation and convert them into evangelists.</p>
-                                        <p>Marketing has traditionally been a one way dialog. It’s time to make a customer a part of that dialog.</p>
+                                        <p>Simplify brand content creation through user generated photos and videos with your brand mascots. Delight customers, reward them for content creation and convert them into evangelists. </p>
                                     </div>
                                 </div>
                             </div>
@@ -520,7 +505,6 @@
         </div>
     </div>
 
-    <!-- JavaScripts -->
     <script>                             
         jQuery('.slider').lbSlider({
             leftBtn: '.sa-left',
@@ -531,20 +515,9 @@
         });
     </script>
     <!-- JavaScripts -->
-    
     <!-- video popup -->
     <script type="text/javascript" src="../assets/js/video-popup.js"></script>
-    <script type="text/javascript" src="../assets/js/slider1.js"></script> 
-    
-    <!--content transitions-->
-    <script>      
-      $(document).ready(function () {
-          AOS.init({
-              duration: 1200,
-          });
-      });
-    </script>
-    <script type="text/javascript" src="../assets/js/aos.js"></script>  
+    <script type="text/javascript" src="../assets/js/slider1.js"></script>
     <!-- common js -->
     <script type="text/javascript" src="../assets/js/common.js"></script>  
     <!--testimonials-->
@@ -553,17 +526,13 @@
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script src="../assets/js/banner-animations/home/home.min.js"></script>
     <script src="../assets/js/banner-animations/home/animation.js"></script>
-   
-    <script>
-      
-      function openNav() {
-        document.getElementById("Nav").style.height = "100%";
-      }
-
-      function closeNav() {
-        document.getElementById("Nav").style.height = "0%";
-      }
-    </script>  
+    <!--scrolling-->
+    <script type="text/javascript" src="../assets/page-scrolling/fullpage.js"></script>
+    <script type="text/javascript" src="../assets/page-scrolling/scrolloverflow.js"></script>
+    <script type="text/javascript" src="../assets/page-scrolling/fullpage.extensions.min.js"></script>
+    <script type="text/javascript">
+        var customToolTips = ['WOWSOME Mixed Reality Products', 'Interactive Print', 'Interactive Kiosk', 'Mixed Reality Stories', 'Use Cases', 'Case Study', 'Subscribe']
+    </script>
 </body>
 
 </html>
