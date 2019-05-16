@@ -1,0 +1,517 @@
+$font-stack: 'Roboto', sans-serif;;
+$font-color: #666768;
+$font-size: 16px;
+$fontSize-h1: 30px;
+$fontSizeResp-h1: 24px;
+$link-color: #666768;
+$primary-color: #f5333f; 
+$link-color-hover: #f5333f;
+$placeholder: #666768;
+$white: #fff;
+$black: #989898;
+$black0: #383838;
+$primary-background: #f6f6f6;
+$lineheight-normal: 26px;
+$lineheightMedium: 1.5;
+
+$home-menu-active: #78cfe2;
+$industry-menu-active: #f53437;
+$business-area-menu-active: #207fff;
+$hw-menu-active: #336473;
+$ourwork-menu-active: #6e77a0;
+$ipgallery-menu-active: #f0a8be;
+$products-menu-active: #412a6d;
+$brand-mng-menu-active: #ec8eab;
+$blog-menu-active: #653235;
+$about-menu-active: #ef141a;
+$contact-menu-active: #f54548;
+$pillarPage-menu-active: #f54548;
+$notfound-menu-active: #805eb9;
+$subscription-menu-active: #653235;
+  
+@mixin home-bg{    
+    background-image: linear-gradient(to left, #283048 20%, #859398 100%) !important;
+    background-position: center !important;
+}
+@mixin home-bg2{    
+    background-image: linear-gradient(to left, #2c344c 20%, #6c7d84 100%) !important;
+    background-position: center !important;
+}
+@mixin home-text-bg{
+	background-image: linear-gradient(to left, #283048 20%, #859398 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin home-dot-bg{
+    background: #5A6FA0;
+}
+
+@mixin hw-bg{    
+    background-image: linear-gradient(to right, #36c9c4 0%, #336473 100%) !important;
+    background-position: center;
+}
+@mixin hw-bg2{    
+    background-image: linear-gradient(to right, #33c3be 0%, #2d5a68 100%) !important;
+    background-position: center;
+}
+@mixin hw-text-bg{
+	background-image: linear-gradient(to right, #36c9c4 0%, #336473 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin hw-dot-bg{
+    background: #7BD6FE;
+}
+
+@mixin industry-bg{    
+    background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%) !important;
+    background-position: center;
+}
+@mixin industry-bg2{    
+    background-image: linear-gradient(to right, #e27be6 0%, #ef2628 100%) !important;
+    background-position: center;
+}
+@mixin industry-text-bg{
+	background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin industry-dot-bg{
+    background: #FAA536;
+}
+
+@mixin business-area-bg{    
+    background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
+    background-position: center;
+}
+@mixin business-area-bg2{    
+    background-image: linear-gradient(to right, #5fc3cc 0%, #3ff1c4 100%) !important;
+    background-position: center;
+}
+@mixin business-area-text-bg{
+	background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin business-area-dot-bg{
+    background: #0063B0;
+}
+
+@mixin products-bg{    
+    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%) !important;
+    background-position: center;
+}
+@mixin products-bg2{    
+    background-image: linear-gradient(to right, #c489ed 0%, #4b2a91 100%) !important;
+    background-position: center;
+}
+@mixin products-text-bg{
+	background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin products-dot-bg{
+    background: #6927f1;
+}
+
+@mixin ourwork-bg{    
+    background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%) !important;
+    background-position: center;
+}
+@mixin ourwork-bg2{    
+    background-image: linear-gradient(to right, #66dfc8 0%, #92a3ed 100%) !important;
+    background-position: center;
+}
+@mixin ourwork-text-bg{
+	background-image: linear-gradient(to right, #74EBD5 0%, #9FACE6 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin ipgallery-bg{    
+    background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%) !important;
+    background-position: center;
+}
+@mixin ipgallery-bg2{    
+    background-image: linear-gradient(to right, #203072 0%, #ebbecc 100%) !important;
+    background-position: center;
+}
+@mixin ipgallery-text-bg{
+	background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin brand-mng-bg{    
+    background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%) !important;
+    background-position: center;
+}
+@mixin brand-mng-bg2{    
+    background-image: linear-gradient(to right, #283670 0%, #ddaaba 100%) !important;
+    background-position: center;
+}
+@mixin brand-mng-text-bg{
+	background-image: linear-gradient(to right, #1d2b64 0%, #f8cdda 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin brand-mng-dot-bg{
+    background: #DB0E55;
+}
+
+@mixin blog-bg{    
+    background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%) !important;
+    background-position: center;
+}
+@mixin blog-bg2{    
+    background-image: linear-gradient(to right, #ef404b 0%, #ca2f39 100%) !important;
+    background-position: center;
+}
+@mixin blog-text-bg{
+	background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin about-bg{    
+    background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%) !important;
+    background-position: center;
+}
+@mixin about-bg2{    
+    background-image: linear-gradient(to right, #fb8f5a 0%, #f55054 100%) !important;
+    background-position: center;
+}
+@mixin about-text-bg{
+	background-image: linear-gradient(to right, #FF9966 0%, #FF5E62 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin about-dot-bg{
+    background: #FD9F77;
+}
+
+@mixin contact-bg{    
+    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%) !important;
+    background-position: center;
+}
+@mixin contact-bg2{    
+    background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%) !important;
+    background-position: center;
+}
+@mixin contact-text-bg{
+	background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin contact-dot-bg{
+    background: #FD9F77;
+}
+
+@mixin pillarPage-bg{    
+    background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%) !important;
+    background-position: center;
+}
+@mixin pillarPage-bg2{    
+    background-image: linear-gradient(to right, #f9905c 0%, #f56266 100%) !important;
+    background-position: center;
+}
+@mixin pillarPage-text-bg{
+	background-image: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin notfound-bg{    
+    background-image: linear-gradient(to right, #443164 0%, #24173a 100%) !important;
+    background-position: center;
+}
+@mixin notfound-bg2{    
+    background-image: linear-gradient(to right, #584082 0%, #24173a 100%) !important;
+    background-position: center;
+}
+
+@mixin subscription-bg{    
+    background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%) !important;
+    background-position: center;
+}
+@mixin subscription-bg2{    
+    background-image: linear-gradient(to right, #ef404b 0%, #ca2f39 100%) !important;
+    background-position: center;
+}
+@mixin subscription-text-bg{
+	background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin inline-block{
+    display: inline-block;
+    vertical-align: middle;
+} 
+@mixin flex{
+    display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-center-left{
+    display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    justify-content: left;
+}
+@mixin flex-space-bw{
+    display: flex;
+    -webkit-display: flex;
+    justify-content: space-between;
+}
+@mixin center-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+@mixin objectfitCover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@mixin bg-position{    
+    background-repeat: no-repeat;
+    background-position: center center;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+@mixin box-shadow{    
+    -webkit-box-shadow: 0 0 12px -4px rgba(0,0,0,.3);
+    box-shadow: 0 0 12px -4px rgba(0,0,0,.3);
+}
+@mixin box-shadow-07 {
+    -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.7);
+}
+@mixin box-shadow-hw {
+    -webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.12), 0px 6px 12px rgba(0,0,0,0.08);
+    box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.12), 0px 6px 12px rgba(0,0,0,0.08);
+}
+@mixin box-shadow-profileimg{    
+    -webkit-box-shadow: 0 10px 12px -4px rgba(0,0,0,.3);
+    box-shadow: 0 10px 12px -4px rgba(0,0,0,.3);
+}
+@mixin box-shadow-pricing{    
+    -webkit-box-shadow: 0 0 8px -4px rgba(0,0,0,.3);
+    box-shadow: 0 0 8px -4px rgba(0,0,0,.3);
+}
+@mixin image-scale{
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+}
+@mixin transition {
+    -webkit-transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+@mixin transition05 {
+    -webkit-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+@mixin rotate360{    
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+@mixin ellipsis{    
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    -o-text-overflow: ellipsis;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 2!important;
+    -webkit-box-orient: vertical;
+}
+@mixin ellipsis1{    
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 1!important;
+    -webkit-box-orient: vertical;
+}
+@mixin zoomin{
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+@-webkit-keyframes zoomIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    100% {
+      opacity: 1;
+      -webkit-transform: scale3d(0.5, 0.5, 0.5);
+      transform: scale3d(0.5, 0.5, 0.5);
+    }
+}
+  
+@keyframes zoomIn {
+0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+}
+
+100% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
+}
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+		-webkit-transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+		-webkit-transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+		-webkit-transform: translatey(0px);
+	}
+}
+
+@-webkit-keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+		-webkit-transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+		-webkit-transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+		-webkit-transform: translatey(0px);
+	}
+}
+
+/*** media queries **/
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@mixin desktop {
+    @media (min-width: 1281px){
+        @content;
+    }
+}
+  
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+@mixin laptop-min {
+    @media (min-width: 1025px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+@media (min-width: 1025px) and (max-width: 1280px) {
+    @content;
+}
+}
+@mixin laptop-random{    
+@media (min-width: 1025px) and (max-width: 1380px) {
+    @content;
+}
+}
+@mixin laptop-max {
+    @media (max-width: 1280px) {
+        @content;
+    }
+}
+
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+@mixin tablet {
+@media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+}
+}
+@mixin tablet-min {
+@media (min-width: 768px) {
+    @content;
+}
+}
+@mixin tablet-max {
+@media (max-width: 1024px) {
+    @content;
+}
+}
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+@mixin tablet-landscape {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    @content;
+}
+}
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+@mixin mobile-tablet {
+    @media (min-width: 480px) and (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (min-width: 480px) and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin mobile-max {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+@mixin mobile-min {
+    @media (min-width: 480px) {
+        @content;
+    }
+}
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+@mixin smartphone {
+@media (max-width: 479px) {
+    @content;
+}
+}
+
+/**max-height 450px **/
+@mixin max-height450px {
+    @media (max-height: 450px) {
+        @content;
+    }
+}
+
+
+/*********** testimonials *************************/

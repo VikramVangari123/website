@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="description" content="{{ content.meta_description }}">
+    {{ standard_header_includes }}
+    <link rel="shortcut icon" href="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/favicon.png">
+    <title>{{ content.html_title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ get_public_template_url('Custom/Website/css/main.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ get_public_template_url('Custom/Website/css/video-popup.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ get_public_template_url('Custom/Website/css/scrolling/fullpage.css') }}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="about">
+    <div class="content">
+        <header class="about-bg">
+            {% module "module_154643021682348" module_id="4619122" label="Standard Header Module" %}
+        </header>
+        <div class="main" id="fullpage">
+            <div class="section about-bg page" data-hint-text="All about WOWSOME">
+                <div class="container">
+                    <div class="section-in flex-col-rev">
+                        <div class="left50">
+                            <h1 data-aos="fade-up">{% text "title_heading" label="Enter text here", value="Lorem ipsum dolor sit amet", no_wrapper=True %}</h1>
+                        </div>
+                        <div class="right50 text-center" data-aos="fade-up">
+                            <div class="banner-img">
+                                <img src="{% image_src 'image_top_banner' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/about/about.png' , no_wrapper=True %} " alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section page" data-hint-text="About Us">
+                <div class="container">
+                    <div class="section-in">
+                        <div class="left50 text-center" data-aos="fade-right">
+                            <img src="{% image_src 'image_about_us_section' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/about/about-us.png' , no_wrapper=True %} " alt="" />
+                        </div>
+                        <div class="right50">
+                            <h2 class="about-text-bg" data-aos="fade-down"> {% text "about_heading" label="Enter text here", value="About Us", no_wrapper=True %} </h2>
+                            <p data-aos="fade-up"> {% textarea "About_Us_Body" label='Enter plain text block', value='We are a Mixed Reality company based in India. We exist to push the frontiers of innovation, bring life transforming products into this world and change the fundamental relationship of humans and information. Mixed Reality and Emerging Technologies are our tools of choice.', no_wrapper=True %} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section page" data-hint-text="Founder Speaks">
+                <div class="container">
+                    <div class="section-in flex-col-rev">
+                        <div class="left50">
+                            <h2 class="about-text-bg" data-aos="fade-down"> {% text "founder_speaks_heading" label="Enter text here", value="Founder Speaks", no_wrapper=True %} </h2>
+                            <p data-aos="fade-up"> {% textarea "Foudner_1_Body" label='Enter plain text block', value='We at WOWSOME use Mixed Reality to delight us, as well as advance us towards an evolved lifestyle.', no_wrapper=True %} </p>
+                            <p data-aos="fade-up"> {% textarea "Founder_2_Body" label='Enter plain text block', value='The immersive technology industry has every variable one can think of to realise all of life"s dreams ! Infinite by themselves, WOWSOME together. ', no_wrapper=True %} </p>
+                        </div>
+                        <div class="right50 text-center" data-aos="fade-left">
+                            <img src="{% image_src 'image_founder_speaks' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/about/founder-speaks.png' , no_wrapper=True %} " alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section page" data-hint-text="Grand Vision of WOWSOME">
+                <div class="container">
+                    <div class="section-in">
+                        <div class="left50 text-center" data-aos="fade-right">
+                            <img src="{% image_src 'image_grand_vision' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/about/vision.png' , no_wrapper=True %} " alt="" />
+                        </div>
+                        <div class="right50">
+                            <h2 class="about-text-bg" data-aos="fade-down"> {% text "grand_vision_heading" label="Enter text here", value="Grand Vision of WOWSOME", no_wrapper=True %} </h2>
+                            <p data-aos="fade-up"> {% textarea "Vision_1_Body" label='Enter plain text block', value='We are on a mission to create a new world - A world where communication knows no boundaries; A world where imagination and vision translates into abundance; A world that exists beyond the limitations of space and distance; A world where collaboration and sharing comes naturally; A world of joy and happiness.', no_wrapper=True %} </p>
+                            <p data-aos="fade-up"> {% textarea "Vision_2_Body" label='Enter plain text block', value='A world, where every man, woman and child can realize their potential, and experience what it means to be truly human.', no_wrapper=True %} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- our team -->
+            <div class="section our-team page" data-hint-text="Our Team">
+                <div class="container">
+                    <div class="section-in">
+                      <div class="inline-table">                        
+                        <div class="title">
+                            <h2 class="about-text-bg" data-aos="fade-down"> {% text "our_team_heading" label="Enter text here", value="Our Team", no_wrapper=True %} </h2>
+                        </div>
+                        <div class="member-profiles">                        
+                          <div class="member-profile" data-aos="fade-right">
+                              <div class="member-thumb" data-aos="fade-down">
+                                  <img src="{% image_src 'image_CEO' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/team/vishal.jpg' , no_wrapper=True %} " alt="Vishal Reddy" />
+                              </div>
+                              <div class="member-info" data-aos="fade-up">
+                                  <h3> {% text "CEO_name" label="Enter text here", value="Vishal Reddy", no_wrapper=True %} </h3>
+                                  <p class="designation"> {% textarea "CEO_Body" label='Enter plain text block', value='CEO', no_wrapper=True %} </p>
+                                  <p class="profile-nav">
+                                      <a href="https://www.linkedin.com/in/vishalreddyp" target="_blank">
+                                          <img src="{% image_src 'image_CEO_Linkedin' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/linkedin.png' , no_wrapper=True %} " alt="linkedin" />
+                                      </a>
+                                  </p>
+                              </div>
+</div>
+                          <div class="member-profile" data-aos="fade-up">
+                              <div class="member-thumb" data-aos="fade-down">
+                                  <img src="{% image_src 'image_COO' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/team/anuraj.jpg' , no_wrapper=True %} " alt="Anuraj EP" />
+                              </div>
+                              <div class="member-info" data-aos="fade-up">
+                                  <h3> {% text "COO_Name" label="Enter text here", value="Anuraj EP", no_wrapper=True %} </h3>
+                                  <p class="designation"> {% textarea "COO_body" label='Enter plain text block', value='COO', no_wrapper=True %} </p>
+                                  <p class="profile-nav">
+                                      <a href="https://in.linkedin.com/in/anurajparadise" target="_blank">
+                                          <img src="{% image_src 'image_linkedin_COO' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/linkedin.png' , no_wrapper=True %} " alt="link" />
+                                      </a>
+                                  </p>
+                              </div>
+</div>
+                          <div class="member-profile" data-aos="fade-left">
+                              <div class="member-thumb" data-aos="fade-down">
+                                  <img src="{% image_src 'image_CTO' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/team/aditya.jpg' , no_wrapper=True %} " alt="Aditya Musunuru" />
+                              </div>
+                              <div class="member-info" data-aos="fade-up">
+                                  <h3> {% text "CTO_Name" label="Enter text here", value="Aditya Musunuru", no_wrapper=True %} </h3>
+                                  <p class="designation"> {% textarea "CTO_Body" label='Enter plain text block', value='CTO', no_wrapper=True %} </p>
+                                  <p class="profile-nav">
+                                      <a href="https://in.linkedin.com/in/venkata-aditya-musunuru-6940b249" target="_blank">
+                                          <img src="{% image_src 'image_CTO_LinkedIn' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/linkedin.png' , no_wrapper=True %} " alt="linkedin" />
+                                      </a>
+                                  </p>
+                              </div>
+</div>                       
+                        </div>                        
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Core Value -->
+            <div class="section core-values page" data-hint-text="Our Core Values">
+                <div class="container">
+                    <div class="section-in">
+                      <div class="inline-table">                        
+                        <div class="title">
+                            <h2 class="about-text-bg" data-aos="fade-down"> {% text "core_values_heading" label="Enter text here", value="Our Core Values", no_wrapper=True %} </h2>
+                        </div>
+                        <div class="core-values-in">
+                            <div class="cv-panel" data-aos="fade-up">
+                                <div class="cv-panel-in">
+                                    <span class="icon">
+                                        <img src="{% image_src 'image_integrity' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/about/integrity.png' , no_wrapper=True %} " alt="" />
+                                    </span>
+                                    <span class="cv-title">Integrity</span>
+                                    <p class="desc"> {% textarea "Integrity_Body" label='Enter plain text block', value='
+                                        Professional integrity is the virtue we treasure and imbibe above all things.
+                                    ', no_wrapper=True %} </p>
+                                </div>
+                            </div>
+                            <div class="cv-panel" data-aos="fade-up">
+                                <div class="cv-panel-in">
+                                    <span class="icon">
+                                        <img src="{% image_src 'image_excellence' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/about/excellence.png' , no_wrapper=True %} " alt="" />
+                                    </span>
+                                    <span class="cv-title">Excellence</span>
+                                    <p class="desc"> {% textarea "Excellence_Body" label='Enter plain text block', value='
+                                        Nothing but the best - A world changing mission requires nothing less than absolute commitment and unmatched standards of excellence.
+                                    ', no_wrapper=True %} </p>
+                                </div>
+                            </div>
+                            <div class="cv-panel" data-aos="fade-up">
+                                <div class="cv-panel-in">
+                                    <span class="icon">
+                                        <img src="{% image_src 'image_autonomy' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/about/autonomy.png' , no_wrapper=True %} " alt="" />
+                                    </span>
+                                    <span class="cv-title">Autonomy</span>
+                                    <p class="desc"> {% textarea "Autonomy_Body" label='Enter plain text block', value='
+                                        Autonomy and Independence is the secret that enables us to move fast, innovate and create impact.
+                                    ', no_wrapper=True %} </p>
+                                </div>
+                            </div>
+                            <div class="cv-panel" data-aos="fade-up">
+                                <div class="cv-panel-in">
+                                    <span class="icon">
+                                        <img src="{% image_src 'image_interdependence' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/about/interdependence.png' , no_wrapper=True %} " alt="" />
+                                    </span>
+                                    <span class="cv-title">Interdependence</span>
+                                    <p class="desc"> {% textarea "Interdependence_Body" label='Enter plain text block', value='                                        
+                                        "Alone we can do so little; Together we can do so much." - is a motto we swear by. 
+                                    ', no_wrapper=True %} </p>
+                                </div>
+                            </div>
+                            <div class="cv-panel" data-aos="fade-up">
+                                <div class="cv-panel-in">
+                                    <span class="icon">
+                                        <img src="{% image_src 'image_play' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/about/play.png' , no_wrapper=True %} " alt="" />
+                                    </span>
+                                    <span class="cv-title">Play</span>
+                                    <p class="desc"> {% textarea "Play_Body" label='Enter plain text block', value='                                        
+                                        Our mission is to create a world where work and play exist together; where creation is fun; where gamification permeates everything. 
+                                    ', no_wrapper=True %} </p>
+                                </div>
+                            </div>
+                            <div class="cv-panel" data-aos="fade-up">
+                                <div class="cv-panel-in">
+                                    <span class="icon">
+                                        <img src="{% image_src 'image_giving' src='https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/about/giving-back.png' , no_wrapper=True %} " alt="" />
+                                    </span>
+                                    <span class="cv-title">Giving Back</span>
+                                    <p class="desc"> {% textarea "Giving_Back_Body" label='Enter plain text block', value='
+                                        We drive real social impact and create value for each strata of the society, through our immersive experiences, products and our education and upskilling initiatives.
+                                    ', no_wrapper=True %} </p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Core Value -->
+            <div class="section core-values page" data-hint-text="Timelines">
+                <div class="container">
+                    <div class="title">
+                        <h2 class="about-text-bg" data-aos="fade-down"> {% text "timeline_heading" label="Enter text here", value="Timelines", no_wrapper=True %} </h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline__wrap">
+                            <div class="timeline__items">
+                                <div class="timeline__item">
+                                    <div class="timeline__content" data-aos="fade-up">
+                                        <p class="date"> {% textarea "Date_1_Body" label='Enter plain text block', value='January 2015', no_wrapper=True %} </p>
+                                        <h2> {% text "incorporation_heading" label="Enter text here", value="Incorporation", no_wrapper=True %} </h2>
+                                        <p> {% textarea "Incorporation_Body" label='Enter plain text block', value='After a 2 year journey in stealth mode, we decided to make it official. We were WOWSOME now !', no_wrapper=True %} </p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content" data-aos="fade-down">
+                                        <p class="date"> {% textarea "Date_2_Body" label='Enter plain text block', value='March 2015', no_wrapper=True %} </p>
+                                        <h2> {% text "product_launch_heading" label="Enter text here", value="Product Launch", no_wrapper=True %} </h2>
+                                        <p> {% textarea "Launch_Body" label='Enter plain text block', value='From an idea, to a vision, to a mission, to a product, the first leg of the journey concluded with the launch of our Interactive Print product. ', no_wrapper=True %} </p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content" data-aos="fade-up">
+                                        <p class="date"> {% textarea "Date_3_Body" label='Enter plain text block', value='December 2016', no_wrapper=True %} </p>
+                                        <h2> {% text "incubation_heading" label="Enter text here", value="Incubation", no_wrapper=True %} </h2>
+                                        <p> {% textarea "Incubation_Body" label='Enter plain text block', value='Great ideas do not remain unnoticed long, for now we were a part of the T Hub technology startups incubator program, powered by the Telangana Government and IIIT Hyderabad.', no_wrapper=True %} </p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content" data-aos="fade-down">
+                                        <p class="date"> {% textarea "Date_4_Body" label='Enter plain text block', value='2018', no_wrapper=True %} </p>
+                                        <h2> {% text "expansion_heading" label="Enter text here", value="Tech, Business Area, Production Expansion", no_wrapper=True %} </h2>
+                                        <p> {% textarea "Expansion_Body" label='Enter plain text block', value='The year saw us expanding our horizons, with new product lines, new partnerships and new members on our team. ', no_wrapper=True %} </p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content" data-aos="fade-up">
+                                        <p class="date"> {% textarea "Date__Body" label='Enter plain text block', value='August 2018', no_wrapper=True %} </p>
+                                        <h2> {% text "post_incubation_heading" label="Enter text here", value="Post Incubation", no_wrapper=True %} </h2>
+                                        <p> {% textarea "Post_Incubation_Body" label='Enter plain text block', value='After a 20 month incubation phase, we set out to conquer new horizons on our own; Armed with invaluable experience, a formidable team, solid partnerships and an expanded vision. ', no_wrapper=True %} </p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__content" data-aos="fade-down">
+                                        <p class="date"> {% textarea "Date_6" label='Enter plain text block', value='October 2018', no_wrapper=True %} </p>
+                                        <h2> {% text "international_heading" label="Enter text here", value="International Partnerships", no_wrapper=True %} </h2>
+                                        <p> {% textarea "International_Body" label='Enter plain text block', value='Our efforts have borne fruit, with global recognition and business partnerships, including leading Media networks and Leading Edge Technology Companies in Silicon Valley.', no_wrapper=True %} </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- recent blog post -->   
+            <div class="section recent-blog-posts page">
+              {% module "module_155143773828026" path="/Custom/Website/Modules/Blog Post Listing Module by Tag" %}
+            </div>
+            
+            <!-- footer -->
+            <footer class="section fp-auto-height">
+                {% module "module_154643020251845" module_id="4613822" label="Standard Website Footer" %}
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- JavaScripts -->
+   
+    <!-- common js -->
+    <script type="text/javascript" src="{{ get_public_template_url('Custom/Website/js/common.js') }}"></script> 
+    <!--about/timeline-->
+    <script type="text/javascript" src="{{ get_public_template_url('Custom/Website/js/timeline.js') }}"></script> 
+  
+    <script type="text/javascript" src="{{ get_public_template_url('Custom/Website/js/flickity.js') }}"></script> 
+  <script>
+      // about/timeline
+      timeline(document.querySelectorAll('.timeline'), {
+        forceVerticalMode: 767,
+        mode: 'horizontal',
+        verticalStartPosition: 'left',
+        visibleItems: 4
+      });
+    </script>
+  <!--scrolling-->    
+    <script type="text/javascript" src="{{ get_public_template_url('Custom/Website/js/scrolling/fullpage.js') }}"></script>
+    <script type="text/javascript" src="{{ get_public_template_url('Custom/Website/js/scrolling/scrolloverflow.js') }}"></script>
+    <script type="text/javascript" src="{{ get_public_template_url('Custom/Website/js/scrolling/fullpageExtensions.js') }}"></script>
+   
+    <script type="text/javascript">
+        var customToolTips = ['All about WOWSOME', 'About Us', 'Founder Speaks', 'Grand Vision of WOWSOME', 'Our Team', 'Our Core Values', 'Timelines', 'Recent Blog Posts' 'Footer']  
+    </script>
+  
+    <script>
+      var head = document.getElementsByTagName("head")[0];
+      var js = document.createElement("script");
+
+      js.type = "text/javascript";
+
+      if (screen.width < 767)
+      {
+        js.src = "{{ get_public_template_url('Custom/Website/js/scrolling/scroll_m.js') }}";
+      }
+      else
+      {
+        js.src = "{{ get_public_template_url('Custom/Website/js/scrolling/scroll.js') }}";
+      }
+
+      head.appendChild(js); 
+    </script>
+    
+    <!-- common scripts module -->
+    {% module "module_155411320169842" path="/Custom/Website/Modules/common-scripts" %}
+{{standard_footer_includes}}
+</body>
+
+</html>

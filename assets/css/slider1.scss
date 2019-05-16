@@ -1,0 +1,168 @@
+
+/***************/
+/***** SVG *****/
+/***************/
+
+.svg-wrap {
+  height: 0;
+  width: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+/************************/
+/***** testi Slider *****/
+/************************/
+
+.slider1 {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    z-index: 0;
+    content: "";
+    &+.active { 
+        z-index: 3;
+     }
+     .testi-in{ z-index: 3;display: block; }
+  }
+  .testi-in {
+    width: 100%;
+    z-index: 50;
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    padding: 0 40px;
+  }
+}
+/*****************************/
+/***** Navigation Arrows *****/
+/*****************************/
+
+nav.nav-split {
+    .icon-wrap {
+    position: relative;
+    display: block;
+    padding: 45px 5px;
+    }
+    svg.icon {
+        -webkit-transition: -webkit-transform 0.3s 0.3s;
+        transition: transform 0.3s 0.3s;
+        fill: #b0b0b0;
+    }
+    a {
+        position: absolute;
+        top: 50%;
+        display: block;
+        outline: none;
+        text-align: left;
+        z-index: 1000;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        svg {
+          display: block;
+          margin: 0 auto;
+          padding: 0;
+        }
+        &+.prev { left: 0; }
+        &+.next { right: 0; }
+    }
+    &:hover{
+        svg.icon {
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+    }
+}
+
+/* nav.nav-split a.prev:hover svg.icon {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+} */
+/* nav.nav-split a.next:hover svg.icon {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+} */
+
+/**********************/
+/***** Pagination *****/
+/**********************/
+
+nav.pagination {
+  position: absolute;
+  bottom: 20%;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+  span {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 8px #e5e5e5;
+    -webkit-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    &+.current { box-shadow: inset 0 0 0 8px #c1c1c1; }
+    &:hover { box-shadow: inset 0 0 0 8px #e5e5e5; }
+  }
+}
+
+/*************************/
+/***** Slide Content *****/
+/*************************/
+
+.testi-in {
+  z-index:0;
+  display: none;
+  .testi-img {
+    width: 180px;
+    background: #fff;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 80px;
+    }
+  }
+  .testi-cont {
+    width: calc(100% - 210px);
+    background: #fff;
+    padding: 20px;
+    position: absolute;
+    left: 170px;
+    top: 60px;
+    display: inline-block;
+    .quotes{
+        width: 80px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+    p{
+        padding: 65px 75px 20px;
+        font-size: 20px;
+        font-style: italic;
+    }
+    h4{
+        text-align: right;
+        font-size: 20px;
+        font-weight: normal;
+        span{
+            font-weight: bold;
+        }
+    }
+  }   
+}
