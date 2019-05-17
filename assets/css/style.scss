@@ -485,6 +485,14 @@ header {
               display: block !important;
             }
           }
+          
+          &:nth-child(3){
+            &.active-submenu{
+              .megamenu-tabH{
+                display: block !important;
+              }
+            }
+          }
           .megamenu-sub {
             z-index: 12;
             display: none !important;
@@ -643,6 +651,7 @@ header {
                     img {
                       margin: 0px;
                       @include transition;
+                      max-width: 115px;
                       @include tablet{
                         width: 80px;
                       }
@@ -713,6 +722,19 @@ header {
               .megamenu-sub {
                 display: block;
               }
+            }
+          }
+          &:nth-child(3){
+            &:hover{
+              .megamenu-sub {
+                display: block;
+              }
+            }
+            .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div{
+              display: block;
+            }
+            .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content{
+              top:0;
             }
           }  
         }        

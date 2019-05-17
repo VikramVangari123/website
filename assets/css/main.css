@@ -1032,6 +1032,9 @@ header .overlay .overlay-content {
   header .overlay .overlay-content .mega-menu .megamenu-item.active-submenu .megamenu-sub {
     display: block !important;
   }
+  header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(3).active-submenu .megamenu-tabH {
+    display: block !important;
+  }
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub {
     z-index: 12;
     display: none !important;
@@ -1200,6 +1203,7 @@ header .overlay .overlay-content {
     margin: 0px;
     -webkit-transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
+    max-width: 115px;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
@@ -1266,6 +1270,17 @@ header .overlay .overlay-content {
 @media (min-width: 768px) {
   header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1):hover .megamenu-sub {
     display: block;
+  }
+}
+@media (min-width: 768px) {
+  header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(3):hover .megamenu-sub {
+    display: block;
+  }
+  header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(3) .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div {
+    display: block;
+  }
+  header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(3) .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content {
+    top: 0;
   }
 }
 
