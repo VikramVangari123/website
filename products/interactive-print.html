@@ -20,25 +20,6 @@
           //  console.log(data)
             var campaigns = data.data;
             campaigns.forEach(function (campaign, index) {
-                // console.log(index, campaign);
-                // <li>  
-                //     <div class="item">
-                //         <div class="item-in">
-                //             <div class="imgTitle">
-                //                 <!-- <h2 class="blogTitle">Animals</h2> -->
-                //                 <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/bg1.jpg" alt="" />
-                //             </div>
-                //             <div class="item-cont">
-                //                 <h3>Brand Name</h3>
-                //                 <p>Digital, Interactive Content Delivery</p>
-                //                 <p>Content Engagement and Readership Data</p>
-                //                 <p>One Click Lead Generation</p>
-                //                 <p>App & Cloud Integration</p>
-                //                 <!-- <a href="#">Read More</a> -->
-                //             </div>
-                //         </div>
-                //     </div>
-                // </li>
                 $(".ipAdsList").append($('<li onclick="quickView(\'' +campaign._id + '\')"><div class="camp-list-block"><div class="camp-list-block-in" id=campList'+index+'><div class="campaigns-brand"><div class="campaigns-brand-icon"><img alt="Profile image" src="' + campaign.createdBy.profileImage + '"></div><div class="campaigns-name"><span class="brand-name">' + campaign.createdBy.name.first + ' ' + campaign.createdBy.name.last + '</span><span class="desc">' + campaign.title + '</span></div></div><div class="campaign-img"><img alt="" src="' + campaign.trackableContent.url + '" alt="" /></div><div target="_blank" class="camp-hover"><span>Quick View</span></div></div></div></li>'));
             });
         })  
@@ -49,7 +30,7 @@
 </head>
 
 <body class="products interactive-print">
-    <div class="content">
+    <div class="content">        
         <header class="products-bg">
             <div class="container">
                 <div id="Nav" class="overlay">
@@ -129,8 +110,39 @@
                             </div>
                             <div class="megamenu-item">
                                 <h5>
-                                    <a href="javascript:void(0);">Product</a>   
-                                </h5>  
+                                    <a href="index.html">
+                                        Products
+                                    </a>
+                                    <span class="sub-menu-arrow"></span>
+                                </h5>
+                                <div class="megamenu-sub">
+                                    <ul class="megamenu-sub-menu">
+                                        <li>
+                                            <div class="megamenu-sub-content">
+                                                <div class="megamenu-tabH">
+                                                    <div class="megamenu-tabH-in">
+                                                        <a href="../products/interactive-print.html">
+                                                            <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/header/products/interactive-print.png" alt="" />
+                                                            <p>Interactive Print</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="megamenu-tabH-in">
+                                                        <a href="../products/interactive-kiosk.html">
+                                                            <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/header/products/interactive-kiosk.png" alt="" />
+                                                            <p>Interactive Kiosk</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="megamenu-tabH-in">
+                                                        <a href="../products/mixed-reality.html">
+                                                            <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/header/products/mixed-reality.png" alt="" />
+                                                            <p>Mixed Reality</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="megamenu-item">
                                 <h5><a href="javascript:void(0);">Our Work</a></h5>
@@ -143,11 +155,14 @@
                             <div class="megamenu-item">
                                 <h5><a href="../blog/index.html">Blog</a></h5>
                             </div>
+                            <div class="megamenu-item">
+                                <h5><a href="../contact/index.html">Contact Us</a></h5>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <span class="logo">
-                    <a href="../home/index2.html"><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/logo.png" alt="WOWSOME" /></a>
+                    <a href="../home/index.html"><img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/logo.png" alt="WOWSOME" /></a>
                 </span>
                 <span style="cursor:pointer" class="openNav" onclick="openNav()">
                     <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/hamburger_w.png" alt="hamburger" />
@@ -162,14 +177,14 @@
                     document.getElementById("Nav").style.height = "0%";
                 }
             </script>
-        </header>
+        </header> 
         <div class="main" id="fullpage">
             <div class="section products-bg page">
                 <div class="container">
                     <div class="section-in flex-col-rev">
                         <div class="left50">
                             <h1>Unlock Digital Media on Print</h1>
-                            <p>Interactive Content in Mixed Reality, on Mobile Phones</p>                            
+                            <p>Interactive Content in Mixed Reality on Mobile Phones</p>                            
                             <a href="#" class="btn btn-white">Book your free trial</a>
                         </div>
                         <div class="right50 text-center">
@@ -375,7 +390,8 @@
                 <div class="container">
                     <div class="section-in">
                         <div class="title">
-                            <h2 class="products-text-bg">Interactive Print Ads</h2>                        
+                            <h2 class="products-text-bg">Interactive Print Ads</h2>     
+                            <a href="https://www.wowso.me/interactive-print-gallery" class="view-all">View All <img src="https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/go.png" alt="" /></a>                   
                         </div>
                         <div id="tab-slider">
                             <div class="tab-slider-in">                            
