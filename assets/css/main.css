@@ -4034,6 +4034,21 @@ ul.tabs li.active {
     width: 100%;
   }
 }
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow {
+    height: 425px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow {
+    height: 435px;
+  }
+}
+@media (max-width: 479px) {
+  #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow {
+    height: 395px;
+  }
+}
 #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow li {
   width: 33.3333%;
   padding: 0;
@@ -4042,7 +4057,7 @@ ul.tabs li.active {
   display: block;
   float: left;
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media (max-width: 1024px) {
   #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow li {
     width: 50%;
   }
@@ -4056,9 +4071,19 @@ ul.tabs li.active {
   position: absolute;
   text-align: center;
   z-index: 1;
-  top: 50%;
+  top: 48%;
   transform: translateY(-50%);
   cursor: pointer;
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #tab-slider .tab-slider-in #slider-content li[id^=tab] #nex, #tab-slider .tab-slider-in #slider-content li[id^=tab] #prev {
+    top: 40%;
+  }
+}
+@media (max-width: 767px) {
+  #tab-slider .tab-slider-in #slider-content li[id^=tab] #nex, #tab-slider .tab-slider-in #slider-content li[id^=tab] #prev {
+    top: 40%;
+  }
 }
 #tab-slider .tab-slider-in #slider-content .item {
   opacity: 1;
@@ -4094,6 +4119,21 @@ ul.tabs li.active {
 @media (max-width: 1280px) {
   #tab-slider .tab-slider-in #slider-content .item .item-in .item-cont {
     padding: 10px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #tab-slider .tab-slider-in #slider-content .item .item-in .item-cont {
+    height: 230px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  #tab-slider .tab-slider-in #slider-content .item .item-in .item-cont {
+    height: 250px;
+  }
+}
+@media (max-width: 479px) {
+  #tab-slider .tab-slider-in #slider-content .item .item-in .item-cont {
+    height: 210px;
   }
 }
 #tab-slider .tab-slider-in #slider-content .item .item-in .item-cont ul li {
@@ -4966,6 +5006,11 @@ ul.tabs li.active {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
+}
+@media (max-width: 767px) {
+  .case-study .section-in .fp-sliderSec {
+    padding: 40px 0 !important;
+  }
 }
 .case-study .section-in .fp-sliderSec .fp-tableCell {
   height: auto !important;

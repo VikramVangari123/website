@@ -3009,6 +3009,15 @@ header{
                                 margin: 0;
                                 width: 100%;
                             }
+                            @include laptop{
+                                height: 425px;
+                            }
+                            @include mobile{
+                                height: 435px;
+                            }
+                            @include smartphone{
+                                height: 395px;
+                            }
                             li{
                                 width:33.3333%;
                                 padding:0;
@@ -3016,7 +3025,7 @@ header{
                                 position:relative;
                                 display:block;
                                 float:left;
-                                @include mobile {
+                                @include tablet-max {
                                     width: 50%;
                                 }
                                 @include smartphone {
@@ -3028,9 +3037,15 @@ header{
                             position:absolute;
                             text-align:center;
                             z-index:1;
-                            top:50%;
+                            top:48%;
                             transform:translateY(-50%);
                             cursor:pointer;
+                            @include laptop{
+                                top: 40%;
+                            }
+                            @include mobile-max{
+                                top: 40%;
+                            }
                         }
                     }
                     .item {
@@ -3061,6 +3076,15 @@ header{
                             height: 180px;
                             @include laptop-max{
                                 padding: 10px;
+                            }
+                            @include laptop{
+                                height: 230px;
+                            }
+                            @include mobile{
+                                height: 250px;
+                            }
+                            @include smartphone{
+                                height: 210px;
                             }
                             ul{
                                 li{
@@ -3824,6 +3848,9 @@ header{
                 display: table-cell;
                 vertical-align: middle;
                 width: 100%;
+                @include mobile-max{
+                    padding: 40px 0 !important;
+                }
                 .fp-tableCell{
                     height: auto !important;
                     padding: 0 !important;
