@@ -1339,6 +1339,69 @@ header{
                 }
             }
         }
+        .add-ons{
+            ul.tabs li.active{
+                @include products-bg;
+                color: #fff;
+            }
+            .tab_container .tab_content img {
+                max-height: 380px;
+            }
+        }
+        .features-benefits {
+            .feature-blocks{
+                margin: 0 -10px;
+                margin-top: 20px;
+                .feature{
+                    width: 33.3333%;
+                    float: left;
+                    padding: 0 10px;
+                    margin-bottom: 20px;
+                    @include tablet{
+                        width: 50%;
+                    }
+                    @include mobile-max{
+                        width: 100%;
+                    }
+                    .feature-in{
+                        @include box-shadow;
+                        height: 140px;
+                        padding: 15px;
+                        @include laptop{
+                            height: 160px;
+                        }
+                        @include tablet{
+                            height: 125px;
+                        }
+                        @include mobile-max{
+                            height: auto;
+                        }
+                        h3{
+                            color: #000;
+                            margin-bottom: 5px;
+                            font-size: 20px;
+                            @include tablet-max{
+                                font-size: 20px;
+                            }
+                            @include smartphone{
+                                font-size: 18px;
+                            }
+                        }
+                        p{
+                            @include ellipsis;
+                            -webkit-line-clamp: 4!important;
+                            @include tablet-max{
+                                font-size: 15px;
+                            }
+                            @include tablet-max{
+                                font-size: 14px;
+                                line-height: 21px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .list-style1{
             li{
                 &::before{
