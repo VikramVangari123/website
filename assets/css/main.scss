@@ -184,7 +184,10 @@ header{
     .section-in{            
         display: table-cell;
         vertical-align: middle;
-        width: 100%;            
+        width: 100%;   
+        @include tablet-max{
+            display: table;
+        }         
         &.flex-col-rev{                
             @include tablet-max {
                 .right60, .right50 {
@@ -220,6 +223,9 @@ header{
             // }
             video{            
                 max-width: 500px;
+                @include mobile-max{
+                    max-width: 100%;
+                }
             }
         }
     }
@@ -277,7 +283,10 @@ header{
     }
     p{
         &+.btn{
-            margin-top:20px;
+            margin-top:30px;
+            @include smartphone{
+                margin-top: 20px;
+            }
         }
     }
     h3{
@@ -305,6 +314,9 @@ header{
             text-align: center;
             display: inline-table;
             table-layout: fixed;
+            .cta-img {
+                margin-bottom: 30px;
+            }
         }
         p{
             font-size: 25px;
@@ -334,6 +346,12 @@ header{
         width: 100%;
         border: 0;
         border-bottom: 1.5px solid #c8c8c8;
+    }
+    .hr-dashed80{
+        width: 80%;
+        border: 0;
+        border-bottom: 1.5px dashed #c8c8c8;
+        margin: 20px 0;
     }
     .left60, .right60{
         width: 59%;
@@ -3009,14 +3027,17 @@ header{
                                 margin: 0;
                                 width: 100%;
                             }
+                            @include tablet{
+                                height: 324px;
+                            }
                             @include laptop{
-                                height: 425px;
+                                height: 345px;
                             }
                             @include mobile{
-                                height: 435px;
+                                height: 394px;
                             }
                             @include smartphone{
-                                height: 395px;
+                                height: 354px;
                             }
                             li{
                                 width:33.3333%;
@@ -3037,14 +3058,11 @@ header{
                             position:absolute;
                             text-align:center;
                             z-index:1;
-                            top:48%;
-                            transform:translateY(-50%);
+                            top:130px;
+                            // transform:translateY(-50%);
                             cursor:pointer;
-                            @include laptop{
-                                top: 40%;
-                            }
-                            @include mobile-max{
-                                top: 40%;
+                            @include tablet-max{
+                                top: 120px;
                             }
                         }
                     }
@@ -3078,7 +3096,7 @@ header{
                                 padding: 10px;
                             }
                             @include laptop{
-                                height: 230px;
+                                height: 200px;
                             }
                             @include mobile{
                                 height: 250px;
@@ -3111,11 +3129,14 @@ header{
                     .imgTitle {
                         position: relative;
                         @include flex;
-                        height: 180px;
+                        height: 140px;
                         overflow: hidden;
                         border-top-left-radius: 5px;
                         border-top-right-radius: 5px;
                         background: #fff;
+                        img{
+                            max-width: 120px;
+                        }
                     }
                     h3{
                         font-size: 20px;
@@ -3126,13 +3147,16 @@ header{
                         }
                     }
                     p {
-                        font-size: 14px;
+                        font-size: 12px;
+                        line-height: 24px;
+                        float: left;
+                        width: 100%;
                         @include laptop-max{
-                            font-size: 14px;
+                            font-size: 12px;
                             line-height: 24px;
                         }
                         @include mobile-max{
-                            font-size: 13px;
+                            font-size: 12px;
                             line-height: 22px;
                         }
                     }
@@ -3311,7 +3335,7 @@ header{
                 }
                 .app-block-in{
                     .imgBlock {
-                        height: 115px;
+                        height: 85px;
                         text-align: center;
                     }
                     .contentBlock {
@@ -3324,12 +3348,9 @@ header{
                         .contTitle {
                             color: #000;
                             margin-bottom: 5px;
-                            font-size: 18px;
+                            font-size: 16px;
                             height: 35px;
                             @include tablet-max{
-                                font-size: 14px;
-                            }
-                            @include smartphone{
                                 font-size: 14px;
                             }
                         }
@@ -3433,9 +3454,76 @@ header{
 
     /******************************* interactive print page **************************/
     .interactive-print{
-        .circle3-blocks .circle3-block{
-            &:before{
-                content: none;
+        .ip-hiw{
+            .ip-hiw-blocks{
+                display: inline-table;
+                table-layout: fixed;
+                width: 100%;
+                margin-top: 40px;
+                .ip-hiw-block{
+                    width: 33.333%;
+                    text-align: center;
+                    float: left;
+                    position: relative;
+                    @include smartphone{
+                        width: 100%;
+                        margin-bottom: 40px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+        
+                    .ip-hiw-block-img{
+                        width: 150px;
+                        height: 150px;
+                        margin: 0 auto;
+                        overflow: hidden;
+                        @include mobile-max{
+                            width: 140px;
+                            height: 140px;
+                        }
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .ip-hiw-block-title {
+                        margin-top: 20px;
+                        color: #6b6b6b;
+                        h3{
+                            font-size: 18px;
+                            @include mobile-max{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+                &+.sec-sm-cta{
+                    margin-top: 30px;
+                }
+            }
+            .ip-hiw-title{
+                font-size: 18px; 
+                span:nth-child(1) {
+                    @include products-bg;
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    border-radius: 50%;
+                    color: #fff;
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 30px;
+                    vertical-align: middle;
+                    margin-right: 15px;
+                    @include box-shadow;
+                }
+                span:nth-child(2){
+                    display: inline-block;
+                    width: calc(100% - 45px);
+                    vertical-align: middle;
+                }
             }
         }
         .ipAdsList{
@@ -3550,14 +3638,20 @@ header{
         }
         .sec-sm-cta{
             .sec-sm-cta-in{
+                padding: 20px;
+                border-radius: 75px;
+                @include mobile-max{
+                    border-radius: 0;
+                }
                 p.text{
-                    width: calc(100% - 290px);
+                    width: calc(100% - 334px);
                     @include mobile-max{
                         width: 100%;
                     }
                 }
                 div{
-                    width: 286px;
+                    width: 330px;
+                    margin-bottom: -8px;
                     @include mobile-max{
                         width: 100%;
                     }

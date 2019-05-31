@@ -140,6 +140,15 @@ a:focus {
 h1, h2{
   line-height: 36px;
 }
+.f22{
+  font-size: 22px;
+  @include laptop-max{
+    font-size: 20px;
+    @include smartphone{
+      font-size: 18px;
+    }
+  }
+}
 .content {
   margin: 0;
 }
