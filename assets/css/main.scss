@@ -3538,13 +3538,21 @@ header{
                 background-repeat: no-repeat;
             }
         }
+        #slider-content li[id^=tab] #nex, #slider-content li[id^=tab] #prev{
+            top: 50%;
+            transform: translateY(-50%)
+        }
         .ipAdsList{
             &#slideshow{
+                height: 375px !important;
+                @include laptop{
+                    height: 375px !important;  
+                }
                 @include mobile-max{
-                    height: 230px !important;
+                    height: 240px !important;
                 }
                 @include tablet{
-                    height: 250px !important;
+                    height: 375px !important;
                 }
             }
             .camp-list-block{
@@ -3564,7 +3572,7 @@ header{
                     transition: transform 0.2s, -webkit-transform 0.2s;
                     border-radius: 6px;   
                     @include tablet{
-                        height: 250px;
+                        height: 365px !important;
                     }       
                     @include mobile-max{
                         height: 230px;
