@@ -3516,14 +3516,26 @@ header{
                     text-align: center;
                     line-height: 30px;
                     vertical-align: middle;
-                    margin-right: 15px;
+                    margin-right: 5px;
                     @include box-shadow;
                 }
                 span:nth-child(2){
                     display: inline-block;
-                    width: calc(100% - 45px);
+                    width: calc(100% - 40px);
                     vertical-align: middle;
                 }
+            }
+        }        
+        ul.list-style1 li{
+            padding-left: 28px;
+            &:before {
+                background-image: url(https://www.wowso.me/hubfs/assets/website/images/products/list-style-arrow@2x.png) !important;
+                background: none;
+                width: 16px !important;
+                height: 13px !important;
+                top:6px;
+                background-size: 100%;
+                background-repeat: no-repeat;
             }
         }
         .ipAdsList{

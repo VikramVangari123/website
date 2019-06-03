@@ -4663,14 +4663,26 @@ ul.tabs li.active {
   text-align: center;
   line-height: 30px;
   vertical-align: middle;
-  margin-right: 15px;
+  margin-right: 5px;
   -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
 }
 .interactive-print .ip-hiw .ip-hiw-title span:nth-child(2) {
   display: inline-block;
-  width: calc(100% - 45px);
+  width: calc(100% - 40px);
   vertical-align: middle;
+}
+.interactive-print ul.list-style1 li {
+  padding-left: 28px;
+}
+.interactive-print ul.list-style1 li:before {
+  background-image: url(https://www.wowso.me/hubfs/assets/website/images/products/list-style-arrow@2x.png) !important;
+  background: none;
+  width: 16px !important;
+  height: 13px !important;
+  top: 6px;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 @media (max-width: 767px) {
   .interactive-print .ipAdsList#slideshow {
