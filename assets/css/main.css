@@ -1439,7 +1439,7 @@ header {
   transition: 0.8s ease;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   .fp-section {
     height: auto !important;
   }
@@ -1461,15 +1461,10 @@ header {
 .fp-tableCell {
   padding: 99px 0 40px 0;
 }
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   .fp-tableCell {
     padding: 40px 0 !important;
     height: auto !important;
-  }
-}
-@media (min-width: 480px) and (max-width: 767px) {
-  .fp-tableCell {
-    padding: 40px 0 !important;
   }
 }
 

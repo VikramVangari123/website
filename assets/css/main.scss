@@ -126,7 +126,7 @@ header{
         transition: 0.8s ease;
     }
     .fp-section {
-        @include smartphone{
+        @include mobile-max{
             height: auto !important;
         }
         .fp-scroller {
@@ -145,12 +145,9 @@ header{
     }
     .fp-tableCell{
         padding: 99px 0 40px 0;
-        @include smartphone {
+        @include mobile-max {
             padding: 40px 0 !important;
             height: auto !important;
-        }
-        @include mobile {
-            padding: 40px 0 !important;
         }
     }
     .fp-enabled .main .fp-section:nth-child(1){
