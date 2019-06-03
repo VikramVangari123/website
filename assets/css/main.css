@@ -4808,6 +4808,10 @@ ul.tabs li.active {
   color: #fff;
   text-transform: uppercase;
 }
+.interactive-print .videoSingle-half a video {
+  -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+}
 .interactive-print .sec-sm-cta .sec-sm-cta-in {
   padding: 20px;
   border-radius: 75px;

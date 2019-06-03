@@ -3654,6 +3654,9 @@ header{
                 }  
             }
         }
+        .videoSingle-half a video {
+            @include box-shadow;
+        }
         .sec-sm-cta{
             .sec-sm-cta-in{
                 padding: 20px;
