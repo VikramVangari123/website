@@ -289,12 +289,14 @@ header{
     }
     h3{
         font-size: 24px;
+        line-height: 30px;
         @include mobile{
             font-size: 22px;
+            line-height: 28px;
         }
         @include smartphone{
             font-size: 20px;
-            line-height: 26px
+            line-height: 26px;
         }
     }
     h4{
@@ -484,6 +486,121 @@ header{
             }
         }
         .btn{margin:0;}
+    }
+    
+    .ipAdsList{
+        &#slideshow{
+            height: 375px !important;
+            @include laptop{
+                height: 375px !important;  
+            }
+            @include mobile-max{
+                height: 240px !important;
+            }
+            @include tablet{
+                height: 375px !important;
+            }
+        }
+        .camp-list-block{
+            position: relative;
+            width: 100%;
+            margin: 0 0 20px;
+            padding: 0 20px; 
+            @include mobile-max{
+                padding: 0 10px;
+            } 
+            .camp-list-block-in{      
+                background: #fff;
+                width: 100%;
+                height: 365px;
+                box-shadow: 0 0 10px -3px;
+                position: relative;
+                transition: transform 0.2s, -webkit-transform 0.2s;
+                border-radius: 6px;   
+                @include tablet{
+                    height: 365px !important;
+                }       
+                @include mobile-max{
+                    height: 230px;
+                }
+                .campaigns-brand{
+                    position: absolute;     
+                    left: 0;
+                    top: 0;
+                    background: linear-gradient(rgba(0, 0, 0, 0.8), transparent);
+                    width: 100%;
+                    padding: 6px 0 36px 6px;
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                    .campaigns-brand-icon{
+                        float: left;
+                        background: 0;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 25px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            -o-object-fit: cover;
+                            object-fit: cover;
+                        }
+                    }
+                    .campaigns-name{
+                        display: inline-block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        height: 40px;
+                        width: calc(100% - 45px);
+                        margin-left: 5px;
+                        line-height: 1.4;
+                        padding-top: 3px;
+                        text-align: left;
+                        .brand-name, .desc{
+                            font-size: 14px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        span{
+                            color: #fff;
+                            display: block;
+                        }
+                    }
+                }
+                .campaign-img {
+                    height: 100%;
+                    overflow: hidden;
+                    border-radius: 6px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                        border-radius: 6px;
+                    }
+                }
+                .camp-hover {
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.8);
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 6px;
+                    top: 0;
+                    left: 0;
+                    visibility: hidden;
+                    cursor: pointer;
+                    span{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #fff;
+                        text-transform: uppercase;
+                    }
+                }
+            }  
+        }
     }
     body .main .copy-right {
         text-align: center;
@@ -1190,6 +1307,128 @@ header{
                 @include industry-bg;
             }
         } 
+        ul.list-style-Vline{
+            li{
+                position: relative;
+                margin-bottom: 15px;
+                padding-left: 20px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &:before{
+                    content: '';
+                    height: 80%;
+                    width: 3px;
+                    background: #f4455a !important;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        &.publishing {
+            h2{
+                font-size: 35px;
+                margin-bottom: 20px;
+                line-height: 45px;
+                @include mobile-max{
+                    font-size: 30px;
+                    margin-bottom: 15px;
+                    line-height: 26px;
+                }
+            }
+            .ip-solution{
+                .title-tagline {
+                    max-width: 70%;
+                    margin-bottom: 30px;
+                }
+            }            
+            .blocktitle-sm{
+                font-size: 18px;
+                font-weight: bold;
+                color: #f35579;
+                margin-bottom: 15px;
+                &+.title-tagline{
+                    margin-bottom: 20px;                        
+                     max-width: 100%;
+                }
+                @include tabletMin-laptopMax{
+                    margin-bottom: 0px;
+                    min-height: 56px;
+                }
+            }
+        }
+        .three-blocks{
+            margin: 0 -10px;
+            margin-top: 20px;
+            .single-block {
+                width: 33.3333%;
+                float: left;
+                padding: 0 10px;
+                @include mobile-max{
+                    width: 100%;
+                    padding:0;
+                    margin-bottom: 20px;
+                }
+                .single-block-in {
+                    padding: 0 15px;
+                    .img{
+                        margin-bottom: 20px;
+                    }
+                    h3{
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+        .two-blocks{
+            margin: 0 -10px;
+            margin-top: 20px;
+            .single-block{
+                width: 50%;
+                float: left;
+                padding: 0 10px;
+                &:nth-child(2), &:nth-child(3){
+                    background: #f1f1f1;
+                }
+                
+                &:nth-child(2), &:nth-child(4){
+                    @include mobile-max{
+                        background: #f1f1f1;
+                    }
+                }                
+                &:nth-child(3){
+                    @include mobile-max{
+                        background: #fff;
+                    }
+                }
+                @include mobile-max{
+                    width: 100%;
+                    margin-bottom: 20px;
+                    padding: 0;
+                }
+                &:last-child(3){
+                    @include mobile-max{
+                        margin-bottom: 0;
+                    }
+                }
+                .single-block-in{
+                    @include flex;
+                    .imgBlock{
+                        width: 150px;
+                        height: 150px;
+                        @include flex;
+                    }
+                    .contentBlock{
+                        padding: 10px;
+                        width: calc(100% - 150px);
+                        max-height: 180px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
         footer{
             .footer-top{
                 @include industry-bg;
@@ -2911,11 +3150,13 @@ header{
                     }
                     &:before{
                         content: '';
-                        height: 100%;
-                        width: 5px;
-                        @include products-bg;
+                        height: 80%;
+                        width: 3px;
+                        background: #3b2667 !important;
                         position: absolute;
-                        left:0;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
                     }
                 }
             }
@@ -3257,7 +3498,6 @@ header{
                 }
                 .app-block-in{
                     @include flex;
-                    @include box-shadow;
                     .imgBlock {
                         width: 180px;
                         height: 180px;
@@ -3539,120 +3779,6 @@ header{
         #slider-content li[id^=tab] #nex, #slider-content li[id^=tab] #prev{
             top: 50% !important;
             transform: translateY(-50%)
-        }
-        .ipAdsList{
-            &#slideshow{
-                height: 375px !important;
-                @include laptop{
-                    height: 375px !important;  
-                }
-                @include mobile-max{
-                    height: 240px !important;
-                }
-                @include tablet{
-                    height: 375px !important;
-                }
-            }
-            .camp-list-block{
-                position: relative;
-                width: 100%;
-                margin: 0 0 20px;
-                padding: 0 20px; 
-                @include mobile-max{
-                    padding: 0 10px;
-                } 
-                .camp-list-block-in{      
-                    background: #fff;
-                    width: 100%;
-                    height: 365px;
-                    box-shadow: 0 0 10px -3px;
-                    position: relative;
-                    transition: transform 0.2s, -webkit-transform 0.2s;
-                    border-radius: 6px;   
-                    @include tablet{
-                        height: 365px !important;
-                    }       
-                    @include mobile-max{
-                        height: 230px;
-                    }
-                    .campaigns-brand{
-                        position: absolute;     
-                        left: 0;
-                        top: 0;
-                        background: linear-gradient(rgba(0, 0, 0, 0.8), transparent);
-                        width: 100%;
-                        padding: 6px 0 36px 6px;
-                        border-top-left-radius: 6px;
-                        border-top-right-radius: 6px;
-                        .campaigns-brand-icon{
-                            float: left;
-                            background: 0;
-                            width: 40px;
-                            height: 40px;
-                            border-radius: 25px;
-                            img{
-                                width: 100%;
-                                height: 100%;
-                                border-radius: 50%;
-                                -o-object-fit: cover;
-                                object-fit: cover;
-                            }
-                        }
-                        .campaigns-name{
-                            display: inline-block;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            height: 40px;
-                            width: calc(100% - 45px);
-                            margin-left: 5px;
-                            line-height: 1.4;
-                            padding-top: 3px;
-                            text-align: left;
-                            .brand-name, .desc{
-                                font-size: 14px;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                white-space: nowrap;
-                            }
-                            span{
-                                color: #fff;
-                                display: block;
-                            }
-                        }
-                    }
-                    .campaign-img {
-                        height: 100%;
-                        overflow: hidden;
-                        border-radius: 6px;
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            -o-object-fit: cover;
-                            object-fit: cover;
-                            border-radius: 6px;
-                        }
-                    }
-                    .camp-hover {
-                        position: absolute;
-                        background: rgba(0, 0, 0, 0.8);
-                        height: 100%;
-                        width: 100%;
-                        border-radius: 6px;
-                        top: 0;
-                        left: 0;
-                        visibility: hidden;
-                        cursor: pointer;
-                        span{
-                            position: absolute;
-                            left: 50%;
-                            top: 50%;
-                            transform: translate(-50%, -50%);
-                            color: #fff;
-                            text-transform: uppercase;
-                        }
-                    }
-                }  
-            }
         }
         .videoSingle-half a video {
             @include box-shadow;
@@ -4288,6 +4414,7 @@ header{
                 display: block;
                 width: 100%;
                 float: left;
+                border-radius: 5px;
             }
             .post-right-top {
                 margin-bottom: 10px;
