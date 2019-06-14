@@ -1545,14 +1545,76 @@ footer.section .fp-tableCell {
   }
 }
 
+.dashedCont-vertical {
+  width: 300px;
+  text-align: left;
+  margin: 0 auto;
+}
+.dashedCont-vertical .dashedCont-vertical-in {
+  position: relative;
+  margin-bottom: 50px;
+}
+.dashedCont-vertical .dashedCont-vertical-in:last-child {
+  margin-bottom: 0;
+}
+.dashedCont-vertical .dashedCont-vertical-in:last-child:after {
+  content: none;
+}
+.dashedCont-vertical .dashedCont-vertical-in:after {
+  content: "";
+  height: 38px;
+  width: 3px;
+  background: url(https://www.wowso.me/hubfs/assets/website/images/retail/dashedV.png) no-repeat 100% !important;
+  position: absolute;
+  left: 40px;
+  top: calc(100% + 7px);
+  background-size: 100%;
+}
+.dashedCont-vertical .dashedCont-vertical-in span {
+  font-size: 20px;
+}
+@media (max-width: 479px) {
+  .dashedCont-vertical .dashedCont-vertical-in span {
+    font-size: 16px;
+  }
+}
+.dashedCont-vertical .dashedCont-vertical-in img {
+  vertical-align: middle;
+}
+
 .banner-img {
   display: inline-table;
   table-layout: fixed;
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  .autoheightM {
+    height: auto !important;
+  }
+}
+
 .pb0 {
   padding-bottom: 0 !important;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb40 {
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .mb40 {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mbm20 {
+    margin-bottom: 20px;
+  }
 }
 
 h2 {
@@ -2706,41 +2768,64 @@ nav.nav-split:hover svg.icon {
   top: 50%;
   transform: translateY(-50%);
 }
-.industry.publishing h2 {
+.industry ul.list-style-arrow li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+.industry ul.list-style-arrow li:last-child {
+  margin-bottom: 0;
+}
+.industry ul.list-style-arrow li:before {
+  content: "";
+  height: 14px;
+  width: 14px;
+  background: url(https://www.wowso.me/hubfs/assets/website/images/retail/list-arrow.png) no-repeat 100% !important;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+.industry.publishing h2, .industry.retail h2 {
   font-size: 35px;
   margin-bottom: 20px;
   line-height: 45px;
 }
 @media (max-width: 767px) {
-  .industry.publishing h2 {
+  .industry.publishing h2, .industry.retail h2 {
     font-size: 30px;
     margin-bottom: 15px;
     line-height: 26px;
   }
 }
-.industry.publishing .ip-solution .title-tagline {
+.industry.publishing .title-tagline, .industry.retail .title-tagline {
   max-width: 70%;
   margin-bottom: 30px;
 }
-.industry.publishing #slider-content li[id^=tab] #nex, .industry.publishing #slider-content li[id^=tab] #prev {
+.industry.publishing #slider-content li[id^=tab] #nex, .industry.publishing #slider-content li[id^=tab] #prev, .industry.retail #slider-content li[id^=tab] #nex, .industry.retail #slider-content li[id^=tab] #prev {
   top: 50% !important;
   transform: translateY(-50%);
 }
-.industry.publishing .blocktitle-sm {
+.industry.publishing .blocktitle-sm2, .industry.retail .blocktitle-sm2 {
   font-size: 18px;
   font-weight: bold;
   color: #f35579;
   margin-bottom: 15px;
 }
-.industry.publishing .blocktitle-sm + .title-tagline {
-  margin-bottom: 20px;
-  max-width: 100%;
-}
 @media (min-width: 768px) and (max-width: 1280px) {
-  .industry.publishing .blocktitle-sm {
+  .industry.publishing .blocktitle-sm2, .industry.retail .blocktitle-sm2 {
     margin-bottom: 0px;
     min-height: 56px;
   }
+}
+.industry.publishing .blocktitle-sm, .industry.retail .blocktitle-sm {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f35579;
+  margin-bottom: 5px;
+}
+.industry.publishing .blocktitle-sm + .title-tagline, .industry.retail .blocktitle-sm + .title-tagline {
+  margin-bottom: 20px;
+  max-width: 100%;
 }
 .industry .three-blocks {
   margin: 0 -10px;
@@ -2758,6 +2843,11 @@ nav.nav-split:hover svg.icon {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 767px) {
+  .industry .three-blocks .single-block:last-child {
+    margin-bottom: 0;
+  }
+}
 .industry .three-blocks .single-block .single-block-in {
   padding: 0 15px;
 }
@@ -2766,6 +2856,30 @@ nav.nav-split:hover svg.icon {
 }
 .industry .three-blocks .single-block .single-block-in h3 {
   margin-bottom: 15px;
+}
+.industry .three-blocks.three-blocks-rightarw .single-block {
+  position: relative;
+}
+.industry .three-blocks.three-blocks-rightarw .single-block:last-child {
+  margin-bottom: 0;
+}
+.industry .three-blocks.three-blocks-rightarw .single-block:last-child:after {
+  content: none;
+}
+.industry .three-blocks.three-blocks-rightarw .single-block:after {
+  content: "";
+  height: 26px;
+  width: 12px;
+  background: url(https://www.wowso.me/hubfs/assets/website/images/retail/right-arrow.png) no-repeat 100% !important;
+  position: absolute;
+  right: 0px;
+  top: 30px;
+  background-size: 100%;
+}
+@media (max-width: 767px) {
+  .industry .three-blocks.three-blocks-rightarw .single-block::after {
+    content: none;
+  }
 }
 .industry .two-blocks {
   margin: 0 -10px;
@@ -2821,6 +2935,9 @@ nav.nav-split:hover svg.icon {
   max-height: 180px;
   overflow: hidden;
 }
+.industry.retail .two-blocks .single-block {
+  background: #fff;
+}
 .industry footer .footer-top {
   background-image: linear-gradient(to right, #f192f5 0%, #f53335 100%) !important;
   background-position: center;
@@ -2858,7 +2975,7 @@ nav.nav-split:hover svg.icon {
 .business-area header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) .megamenu-sub .megamenu-sub-menu li:nth-child(2) > a {
   color: #207fff;
 }
-.business-area header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub {
+.business-area header .overlay .overlay-content .mega-menu .megamenu-item:hover:nth-child(1) .megamenu-sub {
   display: block;
 }
 .business-area #dot-holder .page-nav-dot span.page-nav-dot-current {
