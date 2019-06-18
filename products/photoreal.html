@@ -10,26 +10,9 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />     
     <link rel="stylesheet" type="text/css" href="../assets/page-scrolling/fullpage.css" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-         
-        fetch("https://api.wowsomeapp.com/v3.0/feedMetaData?count=4", {
-            // mode: 'no-cors',
-            headers: new Headers({ 'Content-Type': 'text/plain', 'x-license-key': 'iOd8XwQgXx8dXKiXbLhNOopdzUZTpNxX' })
-        }).then( (res) => res.json())
-        .then (data => {
-          //  console.log(data)
-            var campaigns = data.data;
-            campaigns.forEach(function (campaign, index) {
-                $(".ipAdsList").append($('<li onclick="quickView(\'' +campaign._id + '\')"><div class="camp-list-block"><div class="camp-list-block-in" id=campList'+index+'><div class="campaigns-brand"><div class="campaigns-brand-icon"><img alt="Profile image" src="' + campaign.createdBy.profileImage + '"></div><div class="campaigns-name"><span class="brand-name">' + campaign.createdBy.name.first + ' ' + campaign.createdBy.name.last + '</span><span class="desc">' + campaign.title + '</span></div></div><div class="campaign-img"><img alt="" src="' + campaign.trackableContent.url + '" alt="" /></div><div target="_blank" class="camp-hover"><span>Quick View</span></div></div></div></li>'));
-            });
-        })  
-        .catch((err) => {
-            console.log('Fetch Error :', err);
-        });
-    </script>
 </head>
 
-<body class="products interactive-print">
+<body class="products photoreal">
     <div class="content">        
         <header class="products-bg">
             <div class="container">
@@ -179,32 +162,27 @@
             </script>
         </header> 
         <div class="main" id="fullpage">
+            <!--section 1-->
             <div class="section products-bg page">
                 <div class="container">
                     <div class="section-in flex-col-rev">
                         <div class="left50">
-                            <h1>Unlock Digital Media on Print</h1>
-                            <p>Interactive Content in Mixed Reality on Mobile Phones</p>                            
-                            <a href="#" class="btn btn-white">Book your free trial</a>
+                            <h1>Photoreal Product Catalogue</h1>
                         </div>
                         <div class="right50 text-center">
                             <div class="banner-img">
-                                <img src="https://www.wowso.me/hubfs/assets/website/images/products/interactive-print/interactive-print.png" alt="Interactive Print" />
+                                <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/photoreal-catalogue.png" alt="" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+            <!--section 2-->
             <div class="section page">
                 <div class="container">
                     <div class="section-in flex-col-rev">
                         <div class="left50">
-                            <h2 class="products-text-bg">Watch Interactive Print in Action</h2>
-                            <p class="f22">The Hindu Print Play Powered by WOWSOME</p>
-                            <div class="hr-dashed80"></div>
-                            <p class="f22">Read How the Hindu Adopted Interactive Print</p>                                                       
-                            <a href="#" class="btn btn-black products-bg">Book your free trial</a>
+                            <h2 class="products-text-bg">Bring life to your product demonstrations, accelerate your sales with augmented reality</h2>
                         </div>
                         <div class="right50 text-center">
                             <div class="videoSingle-half">
@@ -218,77 +196,188 @@
                     </div>
                 </div>
             </div> 
-
+            <!--section 3-->
+            <div class="section page">
+                <div class="container">
+                    <div class="section-in">
+                        <div class="title">
+                            <h2 class="products-text-bg mb40">Key Features of Photoreal Product Catalogue</h2>
+                        </div>
+                        <div class="inline-table">
+                            <div class="three-blocks">
+                                <div class="single-block">
+                                    <div class="single-block-in text-center">
+                                        <div class="img">
+                                            <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/product-visualization.png" alt="" />
+                                        </div>
+                                        <h3 class="blocktitle-sm2">Immersive 3D Product <br>Visualization</h3>
+                                        <p>Get your prospects to visualize your products in virtual 3D from all angles and learn about various parts and features through part-by-part detailing</p>
+                                    </div>
+                                </div>
+                                <div class="single-block">
+                                    <div class="single-block-in text-center">
+                                        <div class="img">
+                                            <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/liveAR.png" alt="" />
+                                        </div>
+                                        <h3 class="blocktitle-sm2">Live AR <br>(Augmented Reality) View</h3>
+                                        <p>Place 3D model of your product in the live environment of the prospect and give an accurate visual representation of size and positioning</p>
+                                    </div>
+                                </div>
+                                <div class="single-block">
+                                    <div class="single-block-in text-center">
+                                        <div class="img">
+                                            <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/virtual-product.png" alt="" />
+                                        </div>
+                                        <h3 class="blocktitle-sm2">Virtual Product <br>Customization</h3>
+                                        <p>Enable your prospects to customize and visualize different configurations, varieties, colors, etc. of your product model in real-time without an actual product</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--section 4-->
+            <div class="section sec-full-cta page">
+                <div class="container">                
+                    <div class="section-in">
+                        <div class="sec-full-cta-in">
+                            <div class="cta-img">
+                                <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/challenges.png" alt="" />
+                            </div>
+                            <p class="text">WOWSOME Photoreal Product Catalogue empowers your sales and marketing teams to solve typical challenges in sales demos and showcase your line of products in an interactive way that is exciting, entertaining, and memorable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <!--section 5-->
             <div class="section page">
                 <div class="container">
                     <div class="section-in flex-col-rev">
                         <div class="left50">
-                            <h2 class="products-text-bg">Benefits to Reader</h2>
-                            <ul class="list-style1">
-                                <li>Personalized, relevant content, rewards and offers</li>
-                                <li>One click, convenient way to contact the brand</li>
-                                <li>Simple, quick social media sharing</li>
-                                <li>Interactive, entertaining content consumption</li>
-                            </ul>
+                            <h2 class="products-text-bg">Shorten the sales cycle and enable quick-decision making</h2>
+                            <p>A traditional sales process that involves a typical product demo with print catalogues is often ineffective to communicate all product features. With the interactive 3D catalogue, your prospects can engage with the 3D view of the product, learn features effortlessly, and gain more effective and well-rounded product information. They can take the final decision quickly saving you extra time in explaining all features.</p>
                         </div>
                         <div class="right50 text-center">
-                            <img src="https://www.wowso.me/hubfs/assets/website/images/products/interactive-print/contact-seller.png" alt="" />
+                            <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/quick-decision.png" alt="" />
                         </div>
                     </div>
                 </div>
             </div>      
-
+            <!--section 6-->
             <div class="section page">
                 <div class="container">
                     <div class="section-in">
                         <div class="left50 text-center">
-                            <img src="https://www.wowso.me/hubfs/assets/website/images/products/interactive-print/benefits-to-enterprise.png" alt="" />
+                            <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/try-before-you-buy.png" alt="" />
                         </div>
                         <div class="right50">
-                            <h2 class="products-text-bg">Benefits to Enterprise</h2>
-                            <ul class="list-style1">
-                                <li>Enhanced engagement on print</li>
-                                <li>Quality Lead Capture and Nurturing</li>
-                                <li>Advanced Engagement Analytics</li>
-                                <li>Easy integration with existing mobile apps</li>
-                            </ul>
+                            <h2 class="products-text-bg">Try-before-you-buy experience & real-time customization</h2>
+                            <p>With the power of augmented reality, photoreal product catalogue allows your prospects and buyers to visualize the product in their live environment and see if it is the right fit for their need. They can customize variants of the product with an interactive toggle feature that can change colours, add or remove features, etc. without any need of the actual product.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </div>     
+            <!--section 7-->
+            <div class="section page">
+                <div class="container">
+                    <div class="section-in flex-col-rev">
+                        <div class="left50">
+                            <h2 class="products-text-bg">Eliminate costs in transportation of physical products or prototypes</h2>
+                            <p>Large size products especially heavy machinery and equipment take  a lot of time, effort, and resources to be transported physically from one location to another for demonstration purpose. Through interactive 3D visualization and live AR view, photoreal catalogue completely eliminates the need to carry physical prototypes or actual products to the client site.</p>
+                        </div>
+                        <div class="right50 text-center">
+                            <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/transportation.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>      
+            <!--section 8-->
+            <div class="section page">
+                <div class="container">
+                    <div class="section-in">
+                        <div class="left50 text-center">
+                            <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/right-expectations.png" alt="" />
+                        </div>
+                        <div class="right50">
+                            <h2 class="products-text-bg">Set the right expectations and win the trust of your buyers</h2>
+                            <p>Understanding a product through brochures or pamphlets can be challenging for many people leading to wrong expectations. Even if you manage to convince them to buy a product, you stand a risk of losing your credibility if their expectations are not met. With the photoreal catalogue, you provide a realistic visual representation of products, give them a chance to experience your product before buying, and set the right expectations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+            <!--section 9-->
+            <div class="section page">
+                <div class="container">
+                    <div class="section-in flex-col-rev">
+                        <div class="left50">
+                            <h2 class="products-text-bg">Reduce human dependency and travel scope in the sales process</h2>
+                            <p>Multiple salespersons are often engaged at various stages in the sales cycle. More often than not, they have to travel at the location of prospects to give demonstrations. By using the photoreal catalogue, you can empower your prospects to learn about your products and engage with them actively through their smartphones without you being present there. You can deliver an augmented 3D product demo through a simple web-link or exclusive mobile application.</p>
+                        </div>
+                        <div class="right50 text-center">
+                            <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/travel-scope.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>      
+            <!--section 10-->
+            <div class="section page">
+                <div class="container">
+                    <div class="section-in">
+                        <div class="left50 text-center">
+                            <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/smarter-forecast.png" alt="" />
+                        </div>
+                        <div class="right50">
+                            <h2 class="products-text-bg">Measure client engagement & make smarter forecast decisions</h2>
+                            <p>Engagement on traditional sales collaterals like brochures, pamphlets, or booklets can be difficult to measure quantitatively. The photoreal catalogue allows you to monitor and track engagement with virtual product demos and help you make better decisions about predicting the likelihood of buying. Based on this quantitative measurement of engagement, you can smartly classify and manage your sales pipeline.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+            <!--section 11-->
+            <div class="section page">
+                <div class="container">
+                    <div class="section-in flex-col-rev">
+                        <div class="left50">
+                            <h2 class="products-text-bg">Easy Delivery and Smooth Experience Across Multiple Mediums</h2>
+                            <p>The biggest advantage of WOWSOME Photoreal product catalogue is the smooth delivery of the experience through multiple mediums. You or your prospects do not need an additional headset or device to use this AR powered product demonstrations solution. With web-based AR technology, you can trigger the experience through a URL that opens in the mobile browser. You can also integrate AR capability within your existing enterprise sales app to aid your representatives.</p>
+                        </div>
+                        <div class="right50 text-center">
+                            <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/multiple-mediums.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>      
+            <!--section 12-->
             <div class="section sec-full-cta page">
                 <div class="container">                
                     <div class="section-in">
                         <div class="sec-full-cta-in">
                             <div class="cta-img">
-                                <img src="https://www.wowso.me/hubfs/assets/website/images/products/interactive-print/cta/enterprise-app.png" alt="" />
+                                <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/empower-salesteam.png" alt="" />
                             </div>
-                            <p class="text">Get WOWSOME integrated with your Enterprise App</p>
-                            <div class="cta-btn">
-                                <a href="#" class="btn btn-black products-bg btn-lg" data-aos="fade-up">Know More</a>
-                            </div>
+                            <p class="text">With WOWSOME Photoreal Product Catalogue, you empower your sales team with a cutting-edge AR-powered solution for interactive product demonstrations and remove various points of friction in the entire sales process. </p>
                         </div>
                     </div>
                 </div>
-            </div>           
-            
+            </div>   
+            <!--section 13-->
             <div class="section sec-full-cta page">
                 <div class="container">                
                     <div class="section-in">
                         <div class="sec-full-cta-in">
                             <div class="cta-img">
-                                <img src="https://www.wowso.me/hubfs/assets/website/images/products/interactive-print/cta/interactive-printAd.png" alt="" />
+                                <img src="https://www.wowso.me/hubfs/assets/website/images/products/photoreal/get-in-touch.png" alt="" />
                             </div>
-                            <p class="text">Make your Own Interactive Print Ad</p>
+                            <p class="text">Are you ready to power your sales process with Photoreal Product Catalogue?</p>
                             <div class="cta-btn">
-                                <a href="#" class="btn btn-black products-bg btn-lg" data-aos="fade-up">Let's Start</a>
+                                <a href="https://www.wowso.me/contact-us" class="btn btn-black products-bg btn-lg" data-aos="fade-up">Get in touch with us now</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+            <!--section 14-->
             <!-- recent blog post -->
             <div class="section recent-blog-posts page">
                 <div class="container">
