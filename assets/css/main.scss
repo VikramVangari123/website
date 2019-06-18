@@ -348,7 +348,7 @@ header{
         @include smartphone{
             font-size: 22px;
             margin-bottom: 15px;
-            line-height: 30px;
+            line-height: 35px;
         }
     }
 
@@ -371,8 +371,8 @@ header{
             margin-bottom: 0;
         }
         @include smartphone{
-            font-size: 24px;
-            line-height: 30px;
+            font-size: 22px;
+            line-height: 35px;
             margin-bottom: 20px;
         }
     }
@@ -1521,16 +1521,6 @@ header{
             }
         }
         &.publishing, &.retail {
-            h2{
-                font-size: 35px;
-                margin-bottom: 20px;
-                line-height: 45px;
-                @include mobile-max{
-                    font-size: 30px;
-                    margin-bottom: 15px;
-                    line-height: 26px;
-                }
-            }
             .title-tagline {
                 max-width: 70%;
                 margin-bottom: 30px;
@@ -1554,6 +1544,9 @@ header{
                 &+.title-tagline{
                     margin-bottom: 20px;                        
                      max-width: 100%;
+                }
+                @include smartphone{
+                    font-size: 16px;
                 }
             }
         }
@@ -2695,6 +2688,11 @@ header{
                     color: red;
                     li{
                         line-height: 18px !important;
+                    }
+                }
+                .hs-fieldtype-textarea{
+                    .hs-error-msgs{
+                        top:70px;
                     }
                 }
                 .hs_full_name {
@@ -4489,6 +4487,14 @@ header{
             }
             @include smartphone{
                 width: 284px;      
+            }
+        }
+        .right50{
+            >.hs_cos_wrapper{
+                @include smartphone{
+                    width: 284px;
+                    margin: 0 auto;
+                }
             }
         }
         .slider {

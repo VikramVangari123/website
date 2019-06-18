@@ -1685,7 +1685,7 @@ h2 {
   h2 {
     font-size: 22px;
     margin-bottom: 15px;
-    line-height: 30px;
+    line-height: 35px;
   }
 }
 
@@ -1713,8 +1713,8 @@ h1 {
 }
 @media (max-width: 479px) {
   h1 {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 22px;
+    line-height: 35px;
     margin-bottom: 20px;
   }
 }
@@ -2836,18 +2836,6 @@ nav.nav-split:hover svg.icon {
   left: 0;
   top: 6px;
 }
-.industry.publishing h2, .industry.retail h2 {
-  font-size: 35px;
-  margin-bottom: 20px;
-  line-height: 45px;
-}
-@media (max-width: 767px) {
-  .industry.publishing h2, .industry.retail h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
-    line-height: 26px;
-  }
-}
 .industry.publishing .title-tagline, .industry.retail .title-tagline {
   max-width: 70%;
   margin-bottom: 30px;
@@ -2874,6 +2862,11 @@ nav.nav-split:hover svg.icon {
 .industry.publishing .blocktitle-sm + .title-tagline, .industry.retail .blocktitle-sm + .title-tagline {
   margin-bottom: 20px;
   max-width: 100%;
+}
+@media (max-width: 479px) {
+  .industry.publishing .blocktitle-sm, .industry.retail .blocktitle-sm {
+    font-size: 16px;
+  }
 }
 .industry .three-blocks.three-blocks-rightarw .single-block::after {
   content: "";
@@ -3782,6 +3775,9 @@ nav.nav-split:hover svg.icon {
 }
 .contact .contact-block form .hs-error-msgs li {
   line-height: 18px !important;
+}
+.contact .contact-block form .hs-fieldtype-textarea .hs-error-msgs {
+  top: 70px;
 }
 .contact .contact-block form .hs_full_name .input:before {
   background: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/contact/user.png) center/contain no-repeat;
@@ -5682,6 +5678,12 @@ ul.tabs li.active {
 @media (max-width: 479px) {
   .brands .slider-wrap {
     width: 284px;
+  }
+}
+@media (max-width: 479px) {
+  .brands .right50 > .hs_cos_wrapper {
+    width: 284px;
+    margin: 0 auto;
   }
 }
 .brands .slider {
