@@ -860,7 +860,14 @@ header{
                 bottom: -25px;
                 font-size: 13px;
                 @include mobile-max{
-                    bottom: -38px;
+                    bottom: -36px;
+                }
+                li:nth-child(2){
+                    display: none;
+                }
+                @include smartphone{
+                    bottom: -44px;
+                    width: 100%;
                 }
             }
         }
@@ -1524,6 +1531,9 @@ header{
             .title-tagline {
                 max-width: 70%;
                 margin-bottom: 30px;
+                @include smartphone{
+                    width: 100%;
+                }
             }         
             #slider-content li[id^=tab] #nex, #slider-content li[id^=tab] #prev{
                 top: 50% !important;
@@ -1602,7 +1612,7 @@ header{
                     margin-bottom: 20px;
                     padding: 0;
                 }
-                &:last-child(3){
+                &:last-child{
                     @include mobile-max{
                         margin-bottom: 0;
                     }
@@ -5770,7 +5780,9 @@ header{
                     max-width: 400px;
                     color: #fff;
                     h1{
-                        margin-bottom: 0;      
+                        margin-bottom: 0; 
+                        font-size: 36px;
+                        line-height: 40px;     
                         max-height: 80px;
                         @include ellipsis;
                         a{
@@ -5780,14 +5792,21 @@ header{
                             }
                         }
                         @include mobile{
+                            font-size: 28px;
+                            line-height: 30px;
                             max-height: 60px;
                         } 
                         @include smartphone{
+                            font-size: 25px;
+                            line-height: 30px;
                             max-height: 60px;
                         } 
                         & + p{                            
                             @include ellipsis;
                             max-height: 26px;
+                            @include smartphone{
+                                line-height: 22px;
+                            }
                         }                                    
                     }
                     .post-info{
@@ -5846,10 +5865,16 @@ header{
                             }
                             & + p{
                                 font-size: 14px;
+                                @include smartphone{
+                                    line-height: 22px;
+                                }
                             }
                             a{
                                 max-height: 25px;
                                 @include ellipsis;
+                            }
+                            @include smartphone{
+                                line-height: 22px;
                             }
                         }
                         .post-info{
@@ -5895,6 +5920,7 @@ header{
                     h4{
                         @include smartphone{
                             margin-bottom: 5px;
+                            line-height: 22px;
                             a{
                                 max-height: 25px;
                             }
@@ -5927,7 +5953,21 @@ header{
                     margin-top: 40px;
                 }
             }
-
+            .blog-pagination{
+                margin-top: 30px;
+                width: 100%;
+                a{
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #f5333f;
+                    &:first-child{
+                        float: left;
+                    }
+                    &:nth-child(2){
+                        float:right;
+                    }
+                }
+            }
             .popular-posts{
                 @include box-shadow;
                 padding: 20px;
@@ -5971,6 +6011,9 @@ header{
                         }
                         a{
                             max-height: 25px;
+                        }
+                        @include smartphone{
+                            line-height: 24px;
                         }
                     }
                 }
