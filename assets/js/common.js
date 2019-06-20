@@ -539,11 +539,7 @@ var js = document.createElement("script");
 
 js.type = "text/javascript";
 
-if (screen.width < 767)
-{
-    js.src = "../assets/page-scrolling/scroll_m.js";
-}
-else
+if (screen.width > 767)
 {
     js.src = "../assets/page-scrolling/scroll.js";
 }

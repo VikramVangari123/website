@@ -1623,12 +1623,24 @@ header{
                         width: 150px;
                         height: 150px;
                         @include flex;
+                        @include smartphone{
+                            width: 80px;
+                            height: 80px;
+                        }
+                        img{
+                            @include smartphone{
+                                width: 60px;
+                            }
+                        }
                     }
                     .contentBlock{
                         padding: 10px;
                         width: calc(100% - 150px);
                         max-height: 180px;
-                        overflow: hidden;
+                        overflow: hidden;                        
+                        @include smartphone{
+                            width: calc(100% - 80px);
+                        }
                     }
                 }
             }

@@ -2948,11 +2948,27 @@ nav.nav-split:hover svg.icon {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 479px) {
+  .industry .two-blocks .single-block .single-block-in .imgBlock {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 479px) {
+  .industry .two-blocks .single-block .single-block-in .imgBlock img {
+    width: 60px;
+  }
+}
 .industry .two-blocks .single-block .single-block-in .contentBlock {
   padding: 10px;
   width: calc(100% - 150px);
   max-height: 180px;
   overflow: hidden;
+}
+@media (max-width: 479px) {
+  .industry .two-blocks .single-block .single-block-in .contentBlock {
+    width: calc(100% - 80px);
+  }
 }
 .industry.retail .two-blocks .single-block {
   background: #fff;
