@@ -47,6 +47,10 @@ header{
         margin: -6px 0 0 -4.5px !important;
     }
 }
+input[type="text"]:focus,
+textarea:focus {
+    -webkit-text-size-adjust: 100%;
+}
 .main{  
     position: absolute;
     top: 0px;
@@ -169,6 +173,9 @@ header{
                 padding: 40px 0 !important;
                 height: auto !important;
             }
+        }
+        @include smartphone{
+            height: auto !important;
         }
     }
     .fp-enabled .main .fp-section:nth-child(1){
@@ -1970,6 +1977,9 @@ header{
         .products-bg:nth-child(1) p{
             color: #fff;
             font-size: 18px;
+            @include smartphone{
+                font-size: 16px;
+            }
         }
         .products-bg{
             h2{
@@ -4468,6 +4478,9 @@ header{
                 width: 100%;
                 @include mobile-max{
                     padding: 40px 0 !important;
+                }
+                @include smartphone{
+                    padding: 0 !important;
                 }
                 .fp-tableCell{
                     height: auto !important;
