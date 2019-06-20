@@ -150,6 +150,27 @@ header{
             height: auto !important;
         }
     }
+    .section{
+        &:nth-child(1){
+            .section-in {
+                @include smartphone{
+                    padding: 95px 0 50px 0 !important;
+                    h1{
+                        margin-bottom: 0;
+                    }
+                    h1 + .btn{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        } 
+        .section-in{
+            @include smartphone{
+                padding: 40px 0 !important;
+                height: auto !important;
+            }
+        }
+    }
     .fp-enabled .main .fp-section:nth-child(1){
         .fp-tableCell{
             @include smartphone {
@@ -166,6 +187,12 @@ header{
     footer.section{
         .fp-tableCell{
             padding: 0 !important;
+        }
+        .section-in{
+            padding: 0 !important;
+        }
+        &.fp-auto-height{
+            height: auto !important;
         }
     }
     .padding-btm{

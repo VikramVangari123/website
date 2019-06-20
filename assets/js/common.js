@@ -543,6 +543,10 @@ if (screen.width > 767)
 {
     js.src = "../assets/page-scrolling/scroll.js";
 }
+else if(screen.width > 480)
+{
+    js.src = "../assets/page-scrolling/scroll_m.js";
+}
 
 head.appendChild(js);  
 });

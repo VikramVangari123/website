@@ -1468,6 +1468,24 @@ header {
 }
 
 @media (max-width: 479px) {
+  .section:nth-child(1) .section-in {
+    padding: 95px 0 50px 0 !important;
+  }
+  .section:nth-child(1) .section-in h1 {
+    margin-bottom: 0;
+  }
+  .section:nth-child(1) .section-in h1 + .btn {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 479px) {
+  .section .section-in {
+    padding: 40px 0 !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 479px) {
   .fp-enabled .main .fp-section:nth-child(1) .fp-tableCell {
     padding: 95px 0 50px 0 !important;
   }
@@ -1481,6 +1499,12 @@ header {
 
 footer.section .fp-tableCell {
   padding: 0 !important;
+}
+footer.section .section-in {
+  padding: 0 !important;
+}
+footer.section.fp-auto-height {
+  height: auto !important;
 }
 
 .padding-btm {
