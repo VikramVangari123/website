@@ -212,7 +212,10 @@ textarea:focus {
         display: inline-table;
         table-layout: fixed;
         width: 100%;
-    }    
+    }  
+    .normal-font{
+        font-size: 16px;
+    }  
     .section-in{            
         display: table-cell;
         vertical-align: middle;
