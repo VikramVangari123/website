@@ -266,6 +266,34 @@ textarea:focus {
             }
         }
     }
+    .four-blocks{
+        margin: 0 -10px;
+        margin-top: 20px;
+        .single-block {
+            width: 25%;
+            float: left;
+            padding: 0 10px;
+            @include mobile-max{
+                width: 100%;
+                padding:0;
+                margin-bottom: 20px;
+            }
+            &:last-child{
+                @include mobile-max{
+                    margin-bottom: 0;
+                }
+            }
+            .single-block-in {
+                padding: 0 15px;
+                .img{
+                    margin-bottom: 20px;
+                }
+                h3{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
     .blocktitle-sm2{
         font-size: 18px;
         font-weight: bold;
@@ -335,6 +363,25 @@ textarea:focus {
                 vertical-align: middle;
             }
         }
+        
+        &.dashedCont-vertical-type2{
+            width: 90%;
+            @include flex;
+            justify-content: initial;
+            flex-wrap: wrap;
+            .dashedCont-vertical-in{
+                img{
+                    max-width: 80px;
+                    margin-right: 5px;
+                }
+                span{
+                    width: calc(100% - 85px);
+                    display: inline-block;
+                    font-size: inherit;
+                    vertical-align: middle;
+                }
+            }
+        }
     }
     .banner-img{
         display: inline-table;
@@ -364,6 +411,11 @@ textarea:focus {
     .mbm20{
         @include mobile-max{
             margin-bottom: 20px;
+        }
+    }
+    .mbm40{
+        @include mobile-max{
+            margin-bottom: 40px;
         }
     }
     h2{
@@ -1683,6 +1735,97 @@ textarea:focus {
             .two-blocks{
                 .single-block{
                     background: #fff;
+                }
+            }
+        }
+        &.banking{
+            .tab-sec {
+                .tab_container{
+                    margin-top: 20px;
+                }
+                ul.tabs{
+                    box-shadow: none;
+                    li{
+                        width: 33.3333%;
+                        text-align: center;
+                        position: relative;
+                        font-size: 18px;
+                        &.active{
+                            &::after{
+                                content: "";
+                                height: 3px;
+                                width: 90%;
+                                background: #44488b !important;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                margin: 0 auto;
+                            }
+                            color: #44488b;
+                        }    
+                        &:hover{
+                            color: #44488b;
+                        }                
+                    }
+                }
+            }
+            .dashedCont-vertical .dashedCont-vertical-in{
+                &::after{
+                    content: none;
+                }
+            }
+            .device-AR {
+                &.cta-img div {
+                    display: inline-block;
+                    @include mobile-max{
+                        display: block;
+                    }
+                    p{
+                        font-size: inherit;
+                        line-height: 20px;
+                    }
+                    &:nth-child(2){
+                        position: relative;
+                        &:after{
+                            content: "";
+                            height: 140px;
+                            width: 0;
+                            border-left: 1.5px dashed #ccc;
+                            position: absolute;
+                            right: -30px;
+                            top: 0;
+                            background-size: 100%;
+                            @include mobile-max{
+                                height: 0;
+                                width: 180px;
+                                border-left: 0;
+                                border-bottom: 1.5px dashed #ccc;
+                                right: 0;
+                                left: 0;
+                                margin: 0 auto;
+                                bottom: -30px;
+                                top: unset;
+                            }
+                        }
+                    }
+                    &:first-child {
+                        background: #000;
+                        color: #fff;
+                        border-radius: 15px;
+                        transform: rotate(0deg);
+                        height: 140px;
+                        writing-mode: tb-rl;
+                        white-space: nowrap;
+                        vertical-align: top;
+                        margin-right: 30px;
+                        @include mobile-max{
+                            writing-mode: initial;
+                            height: auto;
+                            width: 180px;
+                            margin: 0 auto 30px;
+                        }
+                    }
                 }
             }
         }
@@ -3408,104 +3551,109 @@ textarea:focus {
           }
       }
     /******************************* Content Tabs ***********************************/
-    
-    ul.tabs {
-        margin: 0;
-        padding: 0;
-        float: left;
-        list-style: none;
-        height: 45px;
-        width: 100%;
-        margin-bottom: 10px;
-        @include box-shadow;
-        @include flex-space-bw;
-        @include mobile-max{
-            display: none;
-        }
-        li {
-            float: left;
+    .tab-sec{
+        ul.tabs {
+            display: block !important;
             margin: 0;
-            cursor: pointer;
-            padding: 0px 18px;
+            padding: 0;
+            float: left;
+            list-style: none;
             height: 45px;
-            line-height: 45px;
-            overflow: hidden;
-            position: relative;
-            @include tablet{
-                font-size: 14px;
-                padding: 0px 8px;
-            }
-            &:hover {
-                color: #000;
-            }
-            &.active {
-                background-color: #fff;
-                color: #000;
-                display: block;
-            }
-        }
-    }
-    .tab_container {
-        border-top: none;
-        clear: both;
-        float: left;
-        width: 100%;
-        background: #fff;
-        overflow: auto;
-        border-top: 0;
-        @include mobile-max{            
-            border: 1px solid #9a9a9a;
-        }
-        .tab_content {
-            padding: 20px 0;
-            display: none;
+            width: 100%;
+            margin-bottom: 10px;
+            @include box-shadow;
+            @include flex-space-bw;
             @include mobile-max{
-                padding: 10px;
+                display: none !important;
+                h3{
+                    font-size: 18px;
+                }
             }
-            p{
-                margin-bottom: 25px;
-            }
-            ul{
-                li{
-                    position: relative;
-                    margin-bottom: 15px;
-                    padding-left: 20px;
-                    &:last-child{
-                        margin-bottom: 0;
-                    }
-                    &:before{
-                        content: '';
-                        height: 80%;
-                        width: 3px;
-                        background: #3b2667 !important;
-                        position: absolute;
-                        left: 0;
-                        top: 50%;
-                        transform: translateY(-50%);
-                    }
+            li {
+                float: left;
+                margin: 0;
+                cursor: pointer;
+                padding: 0px 18px;
+                height: 45px;
+                line-height: 45px;
+                overflow: hidden;
+                position: relative;
+                @include tablet{
+                    font-size: 14px;
+                    padding: 0px 8px;
+                }
+                &:hover {
+                    color: #000;
+                }
+                &.active {
+                    background-color: #fff;
+                    color: #000;
+                    display: block;
                 }
             }
         }
-        .tab_drawer_heading { 
-            display: none;
-            @include mobile-max{                
-                background-color: #f7f7f7;
-                border-top: 1px solid #9a9a9a;
-                margin: 0;
-                padding: 12px 20px;
-                display: block;
-                cursor: pointer;
-                -webkit-touch-callout: none;
-                -webkit-user-select: none;
-                -khtml-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
+        .tab_container {
+            border-top: none;
+            clear: both;
+            float: left;
+            width: 100%;
+            background: #fff;
+            overflow: auto;
+            border-top: 0;
+            @include mobile-max{            
+                border: 1px solid #9a9a9a;
             }
-            @include mobile-max{
-                &.d_active {
-                    background-color: #894ab4;
-                    color: #fff;
+            .tab_content {
+                padding: 20px 0;
+                display: none;
+                @include mobile-max{
+                    padding: 10px;
+                }
+                p{
+                    margin-bottom: 25px;
+                }
+                ul{
+                    li{
+                        position: relative;
+                        margin-bottom: 15px;
+                        padding-left: 20px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        &:before{
+                            content: '';
+                            height: 80%;
+                            width: 3px;
+                            background: #3b2667 !important;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            .tab_drawer_heading { 
+                display: none;
+                @include mobile-max{                
+                    background-color: #f7f7f7;
+                    border-top: 1px solid #9a9a9a;
+                    margin: 0;
+                    padding: 12px 20px;
+                    display: block;
+                    cursor: pointer;
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+                @include mobile-max{
+                    &.d_active {
+                        background-color: #894ab4;
+                        color: #fff;
+                    }
                 }
             }
         }
@@ -3809,6 +3957,55 @@ textarea:focus {
         #tab-slider .tab-slider-in #slider-content li[id^=tab] #nex, #tab-slider .tab-slider-in #slider-content li[id^=tab] #prev{
             top: 50% !important;
             transform: translateY(-50%);
+        }
+    }
+
+    /******************************* two-blocks-type2 ********************************/
+    
+    .two-blocks-type2{
+        margin: 0 -10px;
+        margin-top: 20px;
+        .single-block{
+            width: 50%;
+            float: left;
+            padding: 0 10px; 
+            margin-bottom: 40px;
+            @include mobile-max{
+                width: 100%;
+                margin-bottom: 40px;
+                padding: 0;
+            }
+            &:last-child{
+                @include mobile-max{
+                    margin-bottom: 0;
+                }
+            }
+            .single-block-in{
+                span{
+                    &.img{
+                        max-width: 40px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        img{
+                            vertical-align: middle;
+                        }
+                    }
+                    &.cont-title{
+                        color: #000;
+                        font-size: 22px;
+                        margin-left: 15px;
+                        width: calc(100% - 70px);
+                        display: inline-block;
+                        line-height: 24px;
+                        vertical-align: middle;
+                    }
+                }                    
+                .contentBlock{
+                    max-height: 180px;
+                    overflow: hidden;  
+                    margin-top: 15px;
+                }
+            }
         }
     }
     

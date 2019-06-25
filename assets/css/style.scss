@@ -60,6 +60,27 @@ select:invalid{
  /** if value should be something **/
 .all { color: $placeholder;}
 
+/** hiding play button on iphone **/
+*::-webkit-media-controls-panel {
+  display: none!important;
+ -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::--webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
 /** global **/
 
 input::placeholder,
@@ -585,7 +606,7 @@ header {
         margin: 0 auto;
         .megamenu-item {
           display: block !important;
-          width: 300px;
+          width: 230px;
           background-color: transparent;
           padding-left: 16px;
           padding-right: 16px;
@@ -648,21 +669,28 @@ header {
                   margin-right: 20px;
                   position: relative;
                   vertical-align: top;
+                  @include tablet{
+                    margin-right: 5px;
+                  }
                   a{
                     font-size: 16px;
-                    height: 180px;
-                    width: 180px;
+                    height: 150px;
+                    width: 150px;
                     @include tablet{
-                      width: 130px;
-                      height: 150px;
+                      width: 90px;
+                      height: 130px;
+                      min-width: 110px;
                     }
                     @include flex;
                     img {
                       margin: 0px;
                       @include transition;
-                      max-width: 115px;
+                      max-width: 85px;
+                      margin-bottom: 15px;
+                      max-height: 85px;
                       @include tablet{
-                        width: 80px;
+                        width: auto;   
+                        max-height: 70px;
                       }
                     }
                     &:hover{
@@ -690,6 +718,9 @@ header {
                 position: absolute;
                 bottom: 5px;
                 text-align: center;
+                font-size: 14px;
+                white-space: initial;
+                line-height: 16px;
               }
             }   
           }
@@ -697,7 +728,7 @@ header {
             display:none; 
             top: 0px; 
             left: 0px; 
-            margin-left: 299px; 
+            margin-left: 229px; 
             height: 100%; 
             border-left: none;
             .megamenu-sub-menu{
