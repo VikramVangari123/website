@@ -638,6 +638,10 @@ h1, h2 {
   display: none !important;
 }
 
+.normal-font {
+  font-size: 16px;
+}
+
 .sec-in-space {
   margin-top: 40px !important;
 }
@@ -1879,6 +1883,10 @@ h4 {
 
 h3, h4, h5, h6 {
   font-weight: normal;
+}
+
+.normal-font {
+  font-size: 16px !important;
 }
 
 .sec-full-cta .sec-full-cta-in {

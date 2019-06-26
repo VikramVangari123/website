@@ -212,10 +212,7 @@ textarea:focus {
         display: inline-table;
         table-layout: fixed;
         width: 100%;
-    }  
-    .normal-font{
-        font-size: 16px;
-    }  
+    } 
     .section-in{            
         display: table-cell;
         vertical-align: middle;
@@ -494,6 +491,9 @@ textarea:focus {
     h3, h4, h5, h6{
         font-weight: normal;
     }
+    .normal-font{
+        font-size: 16px !important;
+    }  
     .sec-full-cta{
         .sec-full-cta-in{
             width: 100%;
