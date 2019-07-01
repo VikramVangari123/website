@@ -58,7 +58,7 @@ parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 
 //Custom selectors
 sectionSelector: '.section',
-slideSelector: '.slide',
+slideSelector: '.slideScroll',
 
 lazyLoading: true,
 
