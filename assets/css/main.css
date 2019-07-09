@@ -1693,6 +1693,10 @@ footer.section.fp-auto-height {
     max-width: 100%;
   }
 }
+.videoSingle-half a video.box-shadow {
+  -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+}
 
 .dashedCont-vertical {
   width: 300px;
@@ -1750,6 +1754,31 @@ footer.section.fp-auto-height {
   vertical-align: middle;
 }
 
+.smCont-slider #slider-content #slideshow {
+  height: 215px !important;
+}
+.smCont-slider #slider-content li[id^=tab] #nex, .smCont-slider #slider-content li[id^=tab] #prev {
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+.smCont-slider #slider-content .item .item-in {
+  box-shadow: none !important;
+}
+.smCont-slider #slider-content .item .item-in .item-cont {
+  height: auto !important;
+  justify-content: center;
+  text-align: center;
+}
+.smCont-slider #slider-content .item .item-in .item-cont p {
+  font-size: 14px !important;
+}
+.smCont-slider #slider-content .item .item-in .item-cont p:before {
+  content: none !important;
+}
+.smCont-slider #slider-content .item .item-in .imgTitle {
+  height: auto !important;
+}
+
 .banner-img {
   display: inline-table;
   table-layout: fixed;
@@ -1772,6 +1801,18 @@ footer.section.fp-auto-height {
 
 .mt30 {
   margin-top: 30px;
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.mt0 {
+  margin-top: 0px;
+}
+
+.mb0 {
+  margin-bottom: 0px;
 }
 
 .mb20 {
@@ -3133,6 +3174,11 @@ nav.nav-split:hover svg.icon {
 .industry.banking .tab-sec .tab_container {
   margin-top: 20px;
 }
+@media (min-width: 1025px) {
+  .industry.banking .tab-sec .tab_container .tab_content {
+    min-height: 260px;
+  }
+}
 .industry.banking .tab-sec ul.tabs {
   box-shadow: none;
 }
@@ -3272,6 +3318,33 @@ nav.nav-split:hover svg.icon {
 .business-area ul.list-style1 li:before {
   background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
   background-position: center;
+}
+.business-area .dashedCont-vertical .dashedCont-vertical-in::after {
+  content: none;
+}
+.business-area .smCont-slider #slider-content #slideshow {
+  height: 192px !important;
+}
+.business-area .smCont-slider #slider-content li[id^=tab] #nex, .business-area .smCont-slider #slider-content li[id^=tab] #prev {
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+.business-area .smCont-slider #slider-content .item .item-in {
+  box-shadow: none !important;
+}
+.business-area .smCont-slider #slider-content .item .item-in .item-cont {
+  height: auto !important;
+  justify-content: center;
+  text-align: center;
+}
+.business-area .smCont-slider #slider-content .item .item-in .item-cont p {
+  font-size: 14px !important;
+}
+.business-area .smCont-slider #slider-content .item .item-in .item-cont p:before {
+  content: none !important;
+}
+.business-area .smCont-slider #slider-content .item .item-in .imgTitle {
+  height: auto !important;
 }
 .business-area .testimonial-sec h2, .business-area .recent-blog-posts h2 {
   background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);

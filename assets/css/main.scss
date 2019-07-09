@@ -330,6 +330,10 @@ textarea:focus {
                 @include mobile-max{
                     max-width: 100%;
                 }
+                &.box-shadow{
+                    -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+                    box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
+                }
             }
         }
     }
@@ -386,6 +390,36 @@ textarea:focus {
             }
         }
     }
+    .smCont-slider {        
+        #slider-content {
+            #slideshow{
+                height: 215px !important;
+            }
+            li[id^=tab]{
+                #nex, #prev{
+                    top: 50% !important;
+                    transform: translateY(-50%);
+                }
+            }
+            .item .item-in{
+                box-shadow: none !important;
+                .item-cont{
+                    height: auto !important;
+                    justify-content: center;
+                    text-align: center;
+                    p{
+                        font-size: 14px !important;
+                        &:before{
+                            content: none !important;
+                        }
+                    }
+                }
+                .imgTitle{
+                    height: auto !important;
+                }
+            }
+        }  
+    }
     .banner-img{
         display: inline-table;
         table-layout: fixed;
@@ -404,6 +438,15 @@ textarea:focus {
     }
     .mt30{
         margin-top: 30px;
+    }
+    .mt40{
+        margin-top: 40px;
+    }
+    .mt0{
+        margin-top: 0px;
+    }
+    .mb0 {
+        margin-bottom: 0px;
     }
     .mb20 {
         margin-bottom: 20px;
@@ -1765,6 +1808,11 @@ textarea:focus {
             .tab-sec {
                 .tab_container{
                     margin-top: 20px;
+                    .tab_content {
+                        @include laptop-min{
+                            min-height: 260px;
+                        }
+                    }
                 }
                 ul.tabs{
                     box-shadow: none;
@@ -1946,9 +1994,43 @@ textarea:focus {
                     @include business-area-bg; 
                 }
             }
+        }        
+        .dashedCont-vertical .dashedCont-vertical-in{
+            &::after{
+                content: none;
+            }
+        }    
+        
+        .smCont-slider {        
+            #slider-content {
+                #slideshow{
+                    height: 192px !important;
+                }
+                li[id^=tab]{
+                    #nex, #prev{
+                        top: 50% !important;
+                        transform: translateY(-50%);
+                    }
+                }
+                .item .item-in{
+                    box-shadow: none !important;
+                    .item-cont{
+                        height: auto !important;
+                        justify-content: center;
+                        text-align: center;
+                        p{
+                            font-size: 14px !important;
+                            &:before{
+                                content: none !important;
+                            }
+                        }
+                    }
+                    .imgTitle{
+                        height: auto !important;
+                    }
+                }
+            }  
         }
-             
-              
         .testimonial-sec, .recent-blog-posts{
             h2{
                 @include business-area-text-bg;
