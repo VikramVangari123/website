@@ -3362,11 +3362,11 @@ nav.nav-split:hover svg.icon {
 }
 @media (max-width: 479px) {
   .business-area .smCont-slider #slider-content #slideshow {
-    height: 142px !important;
+    height: 182px !important;
   }
   .business-area .smCont-slider #slider-content #slideshow li {
     padding: 0 20px !important;
-    height: 142px !important;
+    height: 182px !important;
   }
 }
 .business-area .testimonial-sec h2, .business-area .recent-blog-posts h2 {
