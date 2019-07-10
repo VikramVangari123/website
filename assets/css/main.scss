@@ -327,6 +327,9 @@ textarea:focus {
             // }
             video{            
                 max-width: 500px;
+                @include laptop{
+                    max-width: 420px;
+                }
                 @include mobile-max{
                     max-width: 100%;
                 }
@@ -344,6 +347,9 @@ textarea:focus {
         .dashedCont-vertical-in{
             position: relative;
             margin-bottom: 50px;
+            @include tablet-max{
+                width: 100%;
+            }
             &:last-child{
                 margin-bottom: 0;
                 &:after{
@@ -376,6 +382,9 @@ textarea:focus {
             @include flex;
             justify-content: initial;
             flex-wrap: wrap;
+            @include tablet{
+                width: 100%;
+            }
             .dashedCont-vertical-in{
                 img{
                     max-width: 80px;
@@ -2004,29 +2013,29 @@ textarea:focus {
         .smCont-slider {        
             #slider-content {
                 #slideshow{
-                    height: 192px !important;
-                }
-                li[id^=tab]{
-                    #nex, #prev{
-                        top: 50% !important;
-                        transform: translateY(-50%);
-                    }
-                }
-                .item .item-in{
-                    box-shadow: none !important;
-                    .item-cont{
-                        height: auto !important;
-                        justify-content: center;
-                        text-align: center;
-                        p{
-                            font-size: 14px !important;
-                            &:before{
-                                content: none !important;
-                            }
+                    height: 162px !important;
+                    @include laptop {
+                        li{
+                            padding: 0 40px !important;
                         }
                     }
-                    .imgTitle{
-                        height: auto !important;
+                    @include tablet {
+                        li{
+                            padding: 0 10px !important;
+                            height: 188px !important;
+                            width: 33.3333% !important;
+                        }
+                        height: 188px !important;
+                    }
+                    @include mobile {
+                        height: 142px !important;
+                    }
+                    @include smartphone {
+                        height: 142px !important;
+                        li{
+                            padding: 0 20px !important;
+                            height: 142px !important;
+                        }
                     }
                 }
             }  
