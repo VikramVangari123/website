@@ -80,6 +80,23 @@ $subscription-menu-active: #653235;
     background: #645974;
 }
 
+@mixin enm-bg {    
+    background-image: linear-gradient(to right, #2B2B2B 0%, #2B2B2B 100%) !important;
+    background-position: center;
+}
+@mixin enm-bg2 {    
+    background-image: linear-gradient(to right, #2d2d2d 0%, #393939 100%) !important;
+    background-position: center;
+}
+@mixin enm-text-bg {
+	background-image: linear-gradient(to right, #2B2B2B 0%, #2B2B2B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin enm-dot-bg{
+    background: #2B2B2B;
+}
+
 @mixin business-area-bg{    
     background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
     background-position: center;

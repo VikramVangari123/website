@@ -784,6 +784,17 @@ h1, h2 {
   -webkit-text-fill-color: transparent;
 }
 
+.enm-bg {
+  background-image: linear-gradient(to right, #2B2B2B 0%, #2B2B2B 100%) !important;
+  background-position: center;
+}
+
+.enm-text-bg {
+  background-image: linear-gradient(to right, #2B2B2B 0%, #2B2B2B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .business-area-bg {
   background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
   background-position: center;
@@ -1335,7 +1346,208 @@ header .overlay .overlay-content {
   }
 }
 
-/************************* content animations on scroll ***************************************/
+/************************* content animations ***************************************/
+/*=== Trigger  ===*/
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/*=== Optional Delays, change values here  ===*/
+.one {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+/*=== Animations start here  ===*/
+/*=== FADE IN  ===*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/*=== FADE IN DOWN ===*/
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+/*==== FADE IN UP ===*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/*=== FADE IN LEFT ===*/
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+/*==== FADE IN RIGHT ===*/
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+/** Bounce **/
+@keyframes bounce1 {
+  0% {
+    bottom: 30px;
+    -webkit-animation-timing-function: linear;
+  }
+  50% {
+    bottom: 40px;
+    -webkit-animation-timing-function: linear;
+  }
+  100% {
+    bottom: 30px;
+    -webkit-animation-timing-function: linear;
+  }
+}
+@keyframes bounce2 {
+  0% {
+    top: -90px;
+    -webkit-animation-timing-function: linear;
+  }
+  50% {
+    top: -80px;
+    -webkit-animation-timing-function: linear;
+  }
+  100% {
+    top: -90px;
+    -webkit-animation-timing-function: linear;
+  }
+}
+@keyframes bounce3 {
+  0% {
+    top: -70px;
+    -webkit-animation-timing-function: linear;
+  }
+  50% {
+    top: -60px;
+    -webkit-animation-timing-function: linear;
+  }
+  100% {
+    top: -70px;
+    -webkit-animation-timing-function: linear;
+  }
+}
 .fp-viewing-firstPage header {
   padding: 30px 0 17px 0;
 }
@@ -1968,6 +2180,11 @@ h3, h4, h5, h6 {
 
 .normal-font {
   font-size: 16px !important;
+  line-height: 26px !important;
+}
+
+.font18px {
+  font-size: 18px !important;
   line-height: 26px !important;
 }
 
@@ -3000,6 +3217,10 @@ nav.nav-split:hover svg.icon {
 .industry header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) .megamenu-sub .megamenu-sub-menu li:nth-child(1) > a {
   color: #989dfa;
 }
+.industry header.enm-bg .overlay {
+  background-image: linear-gradient(to right, #2B2B2B 0%, #2B2B2B 100%) !important;
+  background-position: center;
+}
 .industry #dot-holder .page-nav-dot span.page-nav-dot-current {
   background: #645974;
 }
@@ -3279,6 +3500,499 @@ nav.nav-split:hover svg.icon {
     width: 180px;
     margin: 0 auto 30px;
   }
+}
+.industry.enm {
+  color: #2b2b2b;
+}
+.industry.enm .section.enm-bg {
+  position: relative;
+}
+.industry.enm .section.enm-bg p {
+  color: #fff;
+}
+@media (min-width: 1025px) {
+  .industry.enm .section.enm-bg .right50 img {
+    position: absolute;
+    right: 15%;
+    margin: 0 auto;
+    bottom: -40px;
+    height: 100%;
+    overflow: hidden;
+    max-height: 560px;
+    transform: rotate(-8deg);
+  }
+}
+@media (max-width: 1024px) {
+  .industry.enm .section.enm-bg .right50 img {
+    height: 300px;
+  }
+}
+@media (min-width: 1025px) {
+  .industry.enm .section.enm-bg .enm-sec1 {
+    background: #FFE167;
+    color: #2b2b2b !important;
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
+    padding: 50px;
+    text-align: center;
+    padding-top: 80px;
+  }
+  .industry.enm .section.enm-bg .enm-sec1 h1 {
+    font-weight: bold;
+  }
+  .industry.enm .section.enm-bg .enm-sec1 p {
+    color: #2b2b2b;
+  }
+}
+.industry.enm .bubble .align-left60, .industry.enm .bubble .align-right50 {
+  position: relative;
+  width: 60%;
+  margin: 0;
+  padding: 0px 0px 0px 50px;
+}
+.industry.enm .bubble .align-left60:before, .industry.enm .bubble .align-right50:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -70px;
+  width: 60px;
+  height: 70px;
+  background: url(https://www.wowso.me/hubfs/assets/website/images/enm/bubble.png) 0 49% no-repeat;
+  background-size: 60px;
+  animation: bounce3 1s;
+  animation-iteration-count: infinite;
+}
+@media (max-width: 767px) {
+  .industry.enm .bubble .align-left60:before, .industry.enm .bubble .align-right50:before {
+    left: -10px;
+    top: -50px;
+  }
+}
+@media (max-width: 1024px) {
+  .industry.enm .bubble .align-left60, .industry.enm .bubble .align-right50 {
+    width: 100%;
+    padding: 0px 0px 0px 60px;
+  }
+}
+.industry.enm .bubble .align-left60 {
+  margin-top: 70px;
+}
+.industry.enm .bubble .align-right50 {
+  margin: 80px 0 0 50% !important;
+  width: 50% !important;
+}
+@media (max-width: 1024px) {
+  .industry.enm .bubble .align-right50 {
+    width: 100% !important;
+    margin: 80px 0 0 0 !important;
+  }
+}
+.industry.enm .bubble .box50, .industry.enm .bubble .boxFull {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+@media (max-width: 1024px) {
+  .industry.enm .bubble .box50, .industry.enm .bubble .boxFull {
+    width: 100%;
+  }
+}
+.industry.enm .bubble .box50 ul, .industry.enm .bubble .box50 p, .industry.enm .bubble .boxFull ul, .industry.enm .bubble .boxFull p {
+  position: relative;
+}
+.industry.enm .bubble .box50 ul:before, .industry.enm .bubble .box50 p:before, .industry.enm .bubble .boxFull ul:before, .industry.enm .bubble .boxFull p:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -90px;
+  width: 60px;
+  height: 70px;
+  background: url(https://www.wowso.me/hubfs/assets/website/images/enm/bubble.png) 0 49% no-repeat;
+  background-size: 60px;
+  transform: rotate(65deg);
+  animation: bounce2 1s;
+  animation-iteration-count: infinite;
+}
+@media (max-width: 479px) {
+  .industry.enm .bubble .box50 ul:before, .industry.enm .bubble .box50 p:before, .industry.enm .bubble .boxFull ul:before, .industry.enm .bubble .boxFull p:before {
+    background-size: 50px;
+    top: -80px;
+    right: -20px;
+  }
+}
+.industry.enm .bubble .box50 p:before, .industry.enm .bubble .boxFull p:before {
+  left: -30px;
+}
+.industry.enm .bubble .box50:before, .industry.enm .bubble .box50:after, .industry.enm .bubble .boxFull:before, .industry.enm .bubble .boxFull:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: solid #666768;
+  border-width: 1px 0 0 1px;
+}
+.industry.enm .bubble .box50:before, .industry.enm .bubble .boxFull:before {
+  top: 5px;
+  left: 5px;
+}
+.industry.enm .bubble .box50:after, .industry.enm .bubble .boxFull:after {
+  border-width: 0 1px 1px 0;
+  bottom: 5px;
+  right: 5px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .industry.enm .bubble .box50 {
+    width: 60%;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .industry.enm .bubble .box50 {
+    width: 80%;
+  }
+}
+.industry.enm .bubble.flex-col-rev .box50 ul:before, .industry.enm .bubble.flex-col-rev .box50 p:before, .industry.enm .bubble .boxFull ul:before, .industry.enm .bubble .boxFull p:before {
+  left: 0;
+  background: url(https://www.wowso.me/hubfs/assets/website/images/enm/bubble.png) 0 49% no-repeat;
+  background-size: 60px;
+  transform: rotate(0deg);
+}
+@media (max-width: 479px) {
+  .industry.enm .bubble.flex-col-rev .box50 ul:before, .industry.enm .bubble.flex-col-rev .box50 p:before, .industry.enm .bubble .boxFull ul:before, .industry.enm .bubble .boxFull p:before {
+    background-size: 50px;
+    left: -20px;
+  }
+}
+.industry.enm .bubble.flex-col-rev .box50 p:before, .industry.enm .bubble .boxFull p:before {
+  left: -30px;
+}
+.industry.enm .bubble.flex-col-rev .box50:before, .industry.enm .bubble.flex-col-rev .box50:after, .industry.enm .bubble .boxFull:before, .industry.enm .bubble .boxFull:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: solid #666768;
+  border-width: 1px 1px 0 0;
+}
+.industry.enm .bubble.flex-col-rev .box50:before, .industry.enm .bubble .boxFull:before {
+  right: 5px;
+  top: 5px;
+  left: unset;
+}
+.industry.enm .bubble.flex-col-rev .box50:after, .industry.enm .bubble .boxFull:after {
+  border-width: 0 0 1px 1px;
+  bottom: 5px;
+  left: 5px;
+}
+.industry.enm .bubble .max-height300 img {
+  max-height: 300px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .industry.enm .bubble .max-height300 img {
+    max-height: 220px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .industry.enm .bubble .max-height300 img {
+    max-height: 200px;
+  }
+}
+.industry.enm .bubble .img {
+  margin-bottom: 10px;
+}
+.industry.enm .bubble .img img {
+  max-width: 120px;
+}
+.industry.enm h2 {
+  color: #2B2B2B;
+}
+.industry.enm h2 span {
+  color: #ffb233;
+}
+.industry.enm ul.list-style1 li {
+  padding-left: 28px;
+}
+.industry.enm ul.list-style1 li:before {
+  background-image: url(https://www.wowso.me/hubfs/assets/website/images/enm/right-arrow.png) !important;
+  background: none;
+  width: 16px !important;
+  height: 13px !important;
+  top: 6px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.industry.enm .expand_hover .three-blocks {
+  height: 500px;
+  position: relative;
+}
+.industry.enm .expand_hover .three-blocks .single-block:hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.industry.enm .expand_hover .three-blocks .single-block:hover .single-block-in {
+  -webkit-transition: width 0.1s;
+  -moz-transition: width 0.1s;
+  -o-transition: width 0.1s;
+  transition: width 0.1s;
+}
+.industry.enm .expand_hover .three-blocks .single-block:hover h3 {
+  font-size: 22px;
+}
+.industry.enm .expand_hover .three-blocks .single-block:hover p {
+  display: block;
+}
+@media (max-width: 767px) {
+  .industry.enm .expand_hover .three-blocks .single-block:hover {
+    position: unset;
+    width: 100%;
+    height: auto;
+  }
+  .industry.enm .expand_hover .three-blocks .single-block:hover h3 {
+    font-size: 20px;
+  }
+}
+.industry.enm .expand_hover .single-block {
+  height: 250px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.industry.enm .expand_hover .single-block h3 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 0;
+}
+.industry.enm .expand_hover .single-block p {
+  display: none;
+  color: #fff;
+  margin-top: 15px;
+}
+.industry.enm .expand_hover .single-block:nth-child(odd) {
+  background-color: #FFEB84;
+}
+.industry.enm .expand_hover .single-block:nth-child(odd) h3, .industry.enm .expand_hover .single-block:nth-child(odd) p {
+  color: #2B2B2B;
+}
+.industry.enm .expand_hover .single-block:nth-child(even) {
+  background-color: #4D4D4D;
+}
+.industry.enm .expand_hover .single-block .single-block-in .img {
+  margin-bottom: 15px;
+}
+.industry.enm .expand_hover .single-block .single-block-in .img img {
+  max-width: 100px;
+}
+@media (max-width: 767px) {
+  .industry.enm .expand_hover .single-block {
+    height: auto;
+    padding: 10px 0;
+  }
+  .industry.enm .expand_hover .single-block h3 {
+    font-size: 20px;
+  }
+  .industry.enm .expand_hover .single-block p {
+    display: block;
+  }
+}
+.industry.enm .tab-sec ul.tabs {
+  display: none !important;
+}
+.industry.enm .tab-sec .tab_container {
+  background: #fff;
+}
+@media (max-width: 767px) {
+  .industry.enm .tab-sec .tab_container {
+    border: 0;
+  }
+}
+.industry.enm .tab-sec .tab_container .tab-in {
+  margin-bottom: 5px;
+}
+.industry.enm .tab-sec .tab_container .tab_content {
+  padding: 20px 0;
+  display: none;
+}
+@media (max-width: 767px) {
+  .industry.enm .tab-sec .tab_container .tab_content {
+    padding: 10px;
+  }
+}
+.industry.enm .tab-sec .tab_container .tab_content ul li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+.industry.enm .tab-sec .tab_container .tab_content ul li:last-child {
+  margin-bottom: 0;
+}
+.industry.enm .tab-sec .tab_container .tab_drawer_heading {
+  background-color: #F2F2F2;
+  border-top: 0;
+  padding: 0 20px;
+  display: block;
+  color: #2B2B2B;
+  font-size: 16px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  height: 32px;
+  line-height: 32px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.industry.enm .tab-sec .tab_container .tab_drawer_heading.d_active {
+  background-color: #9A9A9A;
+  color: #fff;
+}
+.industry.enm .tab-sec .tab_container .tab_drawer_heading span {
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  background: #FFE167;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  color: #2b2b2b;
+  margin-left: -20px;
+  font-weight: bold;
+}
+.industry.enm .use-cases .circle3-blocks .circle3-block .circle3-block-img {
+  box-shadow: none;
+}
+.industry.enm .our-work .align-right50 {
+  width: 100% !important;
+  margin: 80px 0 0 !important;
+  padding: 0;
+}
+.industry.enm .our-work .align-right50:before {
+  left: -80px;
+}
+@media (max-width: 1024px) {
+  .industry.enm .our-work .align-right50:before {
+    right: -20px;
+    left: unset;
+    transform: rotate(65deg);
+    top: -50px;
+    background-size: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .industry.enm .our-work .align-right50 {
+    width: 90% !important;
+    margin: 50px auto 0 !important;
+  }
+}
+.industry.enm .marketing .marketing-cont {
+  width: 24%;
+  margin: 0 auto !important;
+  text-align: center;
+  position: relative;
+  transform: rotate(-5deg);
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .industry.enm .marketing .marketing-cont {
+    width: 30%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .industry.enm .marketing .marketing-cont {
+    width: 290px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .industry.enm .marketing .marketing-cont {
+    width: 280px;
+  }
+}
+@media (max-width: 479px) {
+  .industry.enm .marketing .marketing-cont {
+    width: 200px;
+  }
+}
+.industry.enm .marketing .marketing-cont::before {
+  content: "";
+  position: absolute;
+  left: -90px;
+  top: -30px;
+  width: 130px;
+  height: 140px;
+  background: url(https://www.wowso.me/hubfs/assets/website/images/enm/marketing.png) 0 54% no-repeat;
+  background-size: 120px;
+  z-index: 1;
+}
+@media (max-width: 479px) {
+  .industry.enm .marketing .marketing-cont::before {
+    left: -50px;
+    top: -10px;
+    width: 60px;
+    height: 80px;
+    background-size: 60px;
+  }
+}
+.industry.enm .marketing .marketing-cont:after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  bottom: 30px;
+  width: 130px;
+  height: 160px;
+  background: url(https://www.wowso.me/hubfs/assets/website/images/enm/bubble2.png) 0 54% no-repeat;
+  background-size: 90px;
+  z-index: 1;
+  animation: bounce1 1s;
+  animation-iteration-count: infinite;
+}
+@media (max-width: 479px) {
+  .industry.enm .marketing .marketing-cont:after {
+    right: -90px;
+    bottom: 30px;
+    width: 100px;
+    height: 90px;
+    background-size: 50px;
+  }
+}
+.industry.enm .marketing .marketing-cont .marketing-cont-in {
+  background: #FFE167;
+  color: #2b2b2b;
+  padding: 70px 30px;
+  border-radius: 40px;
+  position: relative;
+}
+.industry.enm .marketing .marketing-cont .marketing-cont-in::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: -100px;
+  width: 130px;
+  height: 160px;
+  background: url(https://www.wowso.me/hubfs/assets/website/images/enm/arrowMarketing.png) 0 54% no-repeat;
+  background-size: 90px;
+  z-index: 1;
+}
+.industry.enm .marketing .marketing-cont .marketing-cont-in p {
+  transform: rotate(3deg);
+}
+@media (max-width: 479px) {
+  .industry.enm .marketing .marketing-cont .marketing-cont-in {
+    padding: 50px 20px;
+  }
+}
+.industry.enm .recent-blog-posts h2 {
+  background-image: none;
+  -webkit-text-fill-color: unset;
+}
+.industry.enm .recent-blog-posts .view-all {
+  color: #2b2b2b;
+}
+.industry.enm footer .footer-top {
+  background-image: linear-gradient(to right, #2B2B2B 0%, #2B2B2B 100%) !important;
+  background-position: center;
+}
+.industry.enm footer .copy-right {
+  background-image: linear-gradient(to right, #2d2d2d 0%, #393939 100%) !important;
+  background-position: center;
 }
 .industry footer .footer-top {
   background-image: linear-gradient(to right, #645974 0%, #737AFF 100%) !important;
@@ -5712,6 +6426,9 @@ nav.nav-split:hover svg.icon {
   width: auto !important;
   height: auto;
   object-fit: none;
+}
+.interactive-kiosk .tab-sec ul.tabs {
+  display: flex !important;
 }
 
 /******************************* Circle Blocks section ****************************/
