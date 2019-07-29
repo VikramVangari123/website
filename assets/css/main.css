@@ -4319,6 +4319,11 @@ nav.nav-split:hover svg.icon {
   -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
 }
+@media (min-width: 768px) {
+  .products.ip-narrative .three-blocks .single-block .single-block-in h3 {
+    min-height: 60px;
+  }
+}
 .products footer .footer-top {
   background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%) !important;
   background-position: center;
@@ -4328,7 +4333,7 @@ nav.nav-split:hover svg.icon {
   background-position: center;
 }
 
-/*************************** our work gallery header *****************************/
+/*************************** Our work gallery header *****************************/
 .ourwork-gallery header {
   padding: 17px 0;
 }
