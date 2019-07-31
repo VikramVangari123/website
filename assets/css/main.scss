@@ -2425,6 +2425,65 @@ textarea:focus {
                 }
             }
         }
+        &.event{
+            #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow{
+                height: 235px !important;
+                > li{
+                    width: 50%;
+                    position: relative;
+                    &:after {
+                        content: "";
+                        display: inline-block;
+                        width: 1px;
+                        background: #ccc;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                    .item {
+                        .item-in{
+                            padding-left: 40px;
+                            .imgTitle{
+                                justify-content: left;
+                            }
+                            .item-cont{
+                                justify-content: left;
+                                text-align: left;
+                                h4{
+                                    color: #3d2460;
+                                }
+                                div{
+                                    margin-top: 10px;
+                                    p{
+                                        padding-left: 20px !important;
+                                        position: relative;
+                                        font-size: 16px;
+                                        line-height: 26px;
+                                        &:before{
+                                            content: '' !important;
+                                            display: inline-block;
+                                            width: 8px;
+                                            background: #666768;
+                                            height: 8px;
+                                            border-radius: 8px;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 9px;
+                                        }
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+            } 
+            .two-blocks{
+                .single-block{
+                    background: #fff;
+                }
+            }
+        }
         footer{
             .footer-top{
                 @include industry-bg;
