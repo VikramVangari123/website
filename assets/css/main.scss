@@ -116,6 +116,7 @@ textarea:focus {
                 font-size: 13px;
                 height: 16px;
                 margin-top: 9px;
+                text-align: right;
             }
         }
     }
@@ -464,6 +465,9 @@ textarea:focus {
     }
     .mb0 {
         margin-bottom: 0px;
+    }
+    .mb0_imp {
+        margin-bottom: 0px !important;
     }
     .mb20 {
         margin-bottom: 20px;
@@ -1823,6 +1827,29 @@ textarea:focus {
                 }
             }
         }
+        .four-sideCont-blocks{
+            margin: 0 -10px;
+            margin-top: 20px;
+            .single-block{
+                width: 25%;
+                float: left;
+                padding: 0 10px;
+                .single-block-in{
+                    @include flex;
+                    .imgBlock {
+                        width: 100px;
+                        height: 100px;
+                        @include flex;
+                    }
+                    .contentBlock {
+                        padding: 10px;
+                        width: calc(100% - 100px);
+                        max-height: 100px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
         &.retail{
             .two-blocks{
                 .single-block{
@@ -2426,61 +2453,215 @@ textarea:focus {
             }
         }
         &.event{
-            #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow{
-                height: 235px !important;
-                > li{
-                    width: 50%;
-                    position: relative;
-                    &:after {
-                        content: "";
-                        display: inline-block;
-                        width: 1px;
-                        background: #ccc;
-                        height: 100%;
-                        position: absolute;
-                        left: 0;
-                        top: 0;
+            #tab-slider .tab-slider-in #slider-content{
+                @include smartphone{
+                    overflow: inherit;
+                }
+                li[id^=tab]{
+                    @include smartphone{
+                        overflow: inherit;
                     }
-                    .item {
-                        .item-in{
-                            padding-left: 40px;
-                            .imgTitle{
-                                justify-content: left;
+                    #prev {
+                        @include smartphone{
+                            left: -15px;
+                        }
+                    }
+                    #nex {
+                        @include smartphone{
+                            right: -15px;
+                        }
+                    }
+                    #slideshow{
+                    height: 235px !important;
+                    @include tablet{
+                        height: 355px !important;
+                    }
+                    @include smartphone{
+                        height: 315px !important;
+                    }
+                    > li{
+                        width: 50%;
+                        position: relative;
+                        height: 100%;
+                        @include mobile-max{
+                            width: 100%;
+                        }
+                        &:after {
+                            content: "";
+                            display: inline-block;
+                            width: 1px;
+                            background: #ccc;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            @include tablet{
+                                height: 250px;
+                                top: 50%;
+                                transform: translateY(-50%);
                             }
-                            .item-cont{
-                                justify-content: left;
-                                text-align: left;
-                                h4{
-                                    color: #3d2460;
+                            @include mobile-max{
+                                content: none;
+                            }
+                        }
+                        .item {
+                            @include tablet{
+                                padding: 0 20px 0 30px !important;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                            .item-in{
+                                padding-left: 40px;
+                                @include tablet{
+                                    padding: 0 !important;
+                                }                            
+                                @include smartphone{
+                                    padding-left: 0 !important;
                                 }
-                                div{
-                                    margin-top: 10px;
-                                    p{
-                                        padding-left: 20px !important;
-                                        position: relative;
-                                        font-size: 16px;
-                                        line-height: 26px;
-                                        &:before{
-                                            content: '' !important;
-                                            display: inline-block;
-                                            width: 8px;
-                                            background: #666768;
-                                            height: 8px;
-                                            border-radius: 8px;
-                                            position: absolute;
-                                            left: 0;
-                                            top: 9px;
+                                .imgTitle{
+                                    justify-content: left;
+                                    padding-left: 15px;                   
+                                    @include smartphone{
+                                        padding-left: 5px;
+                                    }
+                                    img{
+                                        max-height: 75px;
+                                    }
+                                }
+                                .item-cont{
+                                    justify-content: left;
+                                    text-align: left;
+                                    h4{
+                                        color: #3d2460;
+                                        @include smartphone{
+                                            font-size: 17px;
+                                        }
+                                    }
+                                    div{
+                                        margin-top: 10px;
+                                        p{
+                                            padding-left: 20px !important;
+                                            position: relative;
+                                            font-size: 16px;
+                                            line-height: 26px;
+                                            @include smartphone{
+                                                padding-left: 16px !important; 
+                                                line-height: 22px;
+                                                font-size: 13px !important;
+                                            }
+                                            &:before{
+                                                content: '' !important;
+                                                display: inline-block;
+                                                width: 8px;
+                                                background: url(https://www.wowso.me/hubfs/assets/website/images/event/list-arrow2.png) no-repeat 100% !important;
+                                                height: 8px;
+                                                border-radius: 8px;
+                                                position: absolute;
+                                                left: 0;
+                                                top: 9px;
+                                                background-size: 6px !important;
+                                            }
                                         }
                                     }
                                 }
-                            }
-                        } 
+                            } 
+                        }
+                    }
                     }
                 }
             } 
             .two-blocks{
                 .single-block{
                     background: #fff;
+                }
+            }
+            .evnt-prtcpt{
+                margin-bottom: 0;
+                div {
+                    display: inline-block;
+                    @include mobile-max{
+                        display: block;
+                    }
+                    p{
+                        font-size: inherit;
+                        line-height: 20px;
+                        font-size: 13px;
+                    }
+                    &:nth-child(1){
+                        position: relative;
+                        &:after{
+                            content: "";
+                            height: 140px;
+                            width: 0;
+                            border-left: 1.5px dashed #ccc;
+                            position: absolute;
+                            right: -30px;
+                            top: 0;
+                            background-size: 100%;
+                            @include mobile-max{
+                                height: 0;
+                                width: 180px;
+                                border-left: 0;
+                                border-bottom: 1.5px dashed #ccc;
+                                right: 0;
+                                left: 0;
+                                margin: 0 auto;
+                                bottom: -30px;
+                                top: unset;
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        padding-left: 50px;
+                        @include mobile-max{
+                            padding-left: 0;
+                            padding-top: 20px;
+                        }
+                    }
+                    img{
+                        @include mobile-max{
+                            max-width: 140px;
+                        }
+                    }
+                }
+
+            } 
+            .dashedCont-vertical .dashedCont-vertical-in:after{
+                content: none;
+            }
+            ul.list-style-arrow{
+                li{
+                    &:before{
+                        background: url(https://www.wowso.me/hubfs/assets/website/images/event/list-arrow.png) no-repeat 100% !important;
+                    }
+                }
+            }
+            .dashedCont-vertical.dashedCont-vertical-type2 .dashedCont-vertical-in span {
+                width: calc(100% - 90px);
+            }
+            .four-sideCont-blocks {
+                .single-block {
+                    @include mobile-max{
+                        width: 50%;
+                        padding: 0 10px 10px;
+                    }
+                    .single-block-in {
+                        .imgBlock {
+                            width: 60px;
+                            @include mobile-max{
+                                width: 50px;
+                            }
+                        }
+                        .contentBlock {
+                            width: calc(100% - 60px);
+                            @include mobile-max{
+                                width: calc(100% - 50px);
+                                padding: 5px 0 5px 5px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
                 }
             }
         }
