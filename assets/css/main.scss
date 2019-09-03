@@ -595,8 +595,8 @@ textarea:focus {
             }
         }
         p{
-            font-size: 25px;
-            line-height: 34px;
+            font-size: 22px;
+            line-height: 30px;
             width: 80%;
             margin: 0 auto 35px;
             @include mobile-max{
@@ -2843,6 +2843,14 @@ textarea:focus {
                         }
                         &:nth-child(even) {
                             padding-left: 5px;
+                        }
+                    }
+                    @include tablet-min{
+                        &:nth-child(odd) {
+                            padding-right: 10px;
+                        }
+                        &:nth-child(even) {
+                            padding-left: 10px;
                         }
                     }
                 }
