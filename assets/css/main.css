@@ -1227,6 +1227,16 @@ header .overlay .overlay-content {
     top: 60px;
     left: 0;
   }
+  header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .tab-top {
+    margin-bottom: 24px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+  header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .tab-top {
+    margin-bottom: 9px;
+  }
+}
+@media (min-width: 768px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in {
     display: inline-block;
     background: rgba(255, 255, 255, 0.2);
@@ -1265,7 +1275,7 @@ header .overlay .overlay-content {
     -webkit-transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
     max-width: 85px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     max-height: 85px;
   }
 }
@@ -1304,9 +1314,14 @@ header .overlay .overlay-content {
     position: absolute;
     bottom: 5px;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
     white-space: initial;
     line-height: 16px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+  header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div p {
+    font-size: 12px;
   }
 }
 @media (min-width: 768px) {
@@ -1977,6 +1992,7 @@ footer.section.fp-auto-height {
   -webkit-display: flex;
   align-items: center;
   justify-content: center;
+  align-items: initial;
   justify-content: initial;
   flex-wrap: wrap;
 }
@@ -1988,6 +2004,7 @@ footer.section.fp-auto-height {
 .dashedCont-vertical.dashedCont-vertical-type2 .dashedCont-vertical-in img {
   max-width: 80px;
   margin-right: 5px;
+  vertical-align: top;
 }
 .dashedCont-vertical.dashedCont-vertical-type2 .dashedCont-vertical-in span {
   width: calc(100% - 85px);
@@ -2124,7 +2141,7 @@ h2 {
   h2 {
     font-size: 22px;
     margin-bottom: 15px;
-    line-height: 35px;
+    line-height: 26px;
   }
 }
 
@@ -3240,6 +3257,27 @@ nav.nav-split:hover svg.icon {
   background-image: linear-gradient(to right, #2B2B2B 0%, #2B2B2B 100%) !important;
   background-position: center;
 }
+.industry.enm header .overlay .overlay-content .mega-menu .megamenu-item.active h5 a {
+  color: #FFE167;
+}
+.industry.enm header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a:hover p, .industry.enm header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-tabH-in a.active p {
+  color: #FFE167;
+}
+.industry.enm header .overlay .overlay-content .mega-menu .megamenu-item.active .megamenu-sub .megamenu-sub-menu li.active a {
+  color: #FFE167;
+}
+.industry.enm header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li.active > a, .industry.enm header .overlay .overlay-content .mega-menu .megamenu-item:hover .megamenu-sub .megamenu-sub-menu li:hover > a {
+  color: #FFE167;
+}
+.industry.enm header .overlay .overlay-content .mega-menu .megamenu-item:hover a:hover {
+  color: #FFE167;
+}
+.industry.enm header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) h5 a {
+  color: #FFE167;
+}
+.industry.enm header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1) .megamenu-sub .megamenu-sub-menu li:nth-child(1) > a {
+  color: #FFE167;
+}
 .industry #dot-holder .page-nav-dot span.page-nav-dot-current {
   background: #645974;
 }
@@ -4339,6 +4377,63 @@ nav.nav-split:hover svg.icon {
 .business-area .dashedCont-vertical .dashedCont-vertical-in::after {
   content: none;
 }
+.business-area.marketing .dashedCont-vertical {
+  width: 95%;
+  margin-left: 5%;
+}
+@media (max-width: 767px) {
+  .business-area.marketing .dashedCont-vertical {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.business-area.marketing .dashedCont-vertical .dashedCont-vertical-in {
+  width: 50%;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .business-area.marketing .dashedCont-vertical .dashedCont-vertical-in {
+    width: 100%;
+  }
+}
+.business-area.marketing .dashedCont-vertical .dashedCont-vertical-in:last-child {
+  margin-bottom: 0 !important;
+}
+@media (min-width: 480px) {
+  .business-area.marketing .dashedCont-vertical .dashedCont-vertical-in:nth-child(odd) {
+    padding-right: 5px;
+  }
+  .business-area.marketing .dashedCont-vertical .dashedCont-vertical-in:nth-child(even) {
+    padding-left: 5px;
+  }
+}
+.business-area.marketing .section.business-area-bg p {
+  color: #fff;
+}
+.business-area.marketing .case-study .case-study-in .sliderblock-cont a.btn {
+  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
+  background-position: center;
+  color: #fff;
+}
+.business-area.marketing .right60 h3 {
+  text-align: left;
+  margin-bottom: 30px;
+  margin-left: 5%;
+}
+@media (max-width: 1024px) {
+  .business-area.marketing .right60 h3 {
+    margin-left: 0;
+  }
+}
+.business-area.marketing .step_no {
+  background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
+  background-position: center;
+  width: 25px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
 .business-area .smCont-slider #slider-content #slideshow {
   height: 162px !important;
 }
@@ -4788,6 +4883,13 @@ nav.nav-split:hover svg.icon {
   .blog .section {
     padding: 25px 0 !important;
   }
+}
+.blog .hs-search-results li.posts-item {
+  display: block;
+}
+.blog .hs-search-results li.posts-item .hs-search-results__title {
+  display: block;
+  font-weight: bold;
 }
 .blog footer .footer-top {
   background-image: linear-gradient(to right, #f5333f 0%, #ac222b 100%) !important;

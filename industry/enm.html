@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
-<body class="industry enm">
+<body class="industry enm" onload="init();" style="margin:0px;">
     <div class="content">        
         <header class="enm-bg">
             <div class="container">
@@ -199,7 +199,11 @@
                     <div class="section-in bubble">
                         <div class="inline-table">
                             <div class="mb40 text-center max-height300">
-                                <img src="https://www.wowso.me/hubfs/assets/website/images/enm/dataMngmnt-analysis.png" alt="" />
+                                <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:878px; height:397px">
+                                    <canvas id="canvas" width="878" height="397" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+                                    <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:878px; height:397px; position: absolute; left: 0px; top: 0px; display: block;">
+                                    </div>
+                                </div>
                             </div>
                             <p class="text normal-font text-left align-left60">
                                 WOWSOME Immersive solutions help you deliver a memorable experience to your audience 
@@ -672,8 +676,8 @@
     <script type="text/javascript" src="../assets/js/flickity.min.js"></script> 
     <!--banner image animations-->
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script src="../assets/js/banner-animations/home/home.min.js"></script>
-    <script src="../assets/js/banner-animations/home/animation.js"></script>
+    <script src="../assets/js/banner-animations/enm/agmntd_char1.js"></script>
+    <script src="../assets/js/banner-animations/enm/anim1.js"></script>
     <!--scrolling-->
     <script type="text/javascript" src="../assets/page-scrolling/fullpage.js"></script>
     <script type="text/javascript" src="../assets/page-scrolling/scrolloverflow.js"></script>

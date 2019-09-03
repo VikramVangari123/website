@@ -676,6 +676,12 @@ header {
                 position: absolute;
                 top: 60px;
                 left: 0;
+                .tab-top{
+                  margin-bottom: 24px;
+                  @include tablet{
+                    margin-bottom: 9px;
+                  }
+                }
                 .megamenu-tabH-in {
                   display: inline-block;
                   background: rgba(255, 255, 255, 0.2);
@@ -703,7 +709,7 @@ header {
                       margin: 0px;
                       @include transition;
                       max-width: 85px;
-                      margin-bottom: 15px;
+                      margin-bottom: 35px;
                       max-height: 85px;
                       @include tablet{
                         width: auto;   
@@ -735,9 +741,12 @@ header {
                 position: absolute;
                 bottom: 5px;
                 text-align: center;
-                font-size: 14px;
+                font-size: 13px;
                 white-space: initial;
                 line-height: 16px;
+                @include tablet{
+                  font-size: 12px;
+                }
               }
             }   
           }
