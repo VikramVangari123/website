@@ -2831,7 +2831,7 @@ textarea:focus {
                 .dashedCont-vertical-in{
                     width: 50%;
                     margin-bottom: 40px;
-                    @include mobile-max{
+                    @include tablet-max{
                         width: 100%;
                     }
                     &:last-child{

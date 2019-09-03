@@ -4391,7 +4391,7 @@ nav.nav-split:hover svg.icon {
   width: 50%;
   margin-bottom: 40px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .business-area.marketing .dashedCont-vertical .dashedCont-vertical-in {
     width: 100%;
   }
