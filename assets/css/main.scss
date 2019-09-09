@@ -1622,6 +1622,7 @@ textarea:focus {
                                 &:nth-child(1){
                                     > a {
                                         color: $industry-menu-active;
+                                        font-weight: bold;
                                     }
                                 }
                             }
@@ -2779,6 +2780,7 @@ textarea:focus {
                                 &:nth-child(2){
                                     > a {
                                         color: $business-area-menu-active;
+                                        font-weight: bold;
                                     }
                                 }
                             }
@@ -2814,7 +2816,26 @@ textarea:focus {
                     @include business-area-bg; 
                 }
             }
-        }        
+        }    
+        ul.list-style-arrow{
+            li{
+                position: relative;
+                margin-bottom: 15px;
+                padding-left: 20px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &:before{
+                    content: "";
+                    height: 14px;
+                    width: 14px;
+                    background: url(https://www.wowso.me/hubfs/assets/website/images/business-area/list-arrow.png) no-repeat 100% !important;
+                    position: absolute;
+                    left: 0;
+                    top: 6px;
+                }
+            }
+        }    
         .dashedCont-vertical .dashedCont-vertical-in{
             &::after{
                 content: none;
@@ -2920,6 +2941,128 @@ textarea:focus {
                 @include business-area-text-bg;
             }
         } 
+        
+        .three-sideCont-blocks{
+            margin: 0 -10px;
+            margin-top: 20px;
+            .single-block{
+                width: 33.3333%;
+                float: left;
+                padding: 0 10px;
+                @include mobile-max{
+                    margin-bottom: 30px;
+                    width: 50%;
+                }
+                &:nth-child(even) {
+                    @include smartphone{
+                        padding-left: 20px;
+                    }
+                }
+                .single-block-in{
+                    @include flex;
+                    .imgBlock {
+                        width: 100px;
+                        height: 100px;
+                        @include flex;
+                        @include mobile-max{
+                            width: 45px;
+                        }
+                        img{                            
+                            @include mobile-max{
+                                max-width: 45px;
+                            }
+                        }
+                    }
+                    .contentBlock {
+                        padding: 10px;
+                        width: calc(100% - 100px);
+                        max-height: 100px;
+                        overflow: hidden;
+                        @include mobile{
+                            width: auto;
+                        }
+                    }
+                    @include mobile{
+                        width: 160px !important;
+                    }
+                }
+            }
+            +.btn-div{
+                text-align: center;
+                width: 100%;
+                @include mobile-max{
+                    margin-top: 0px !important;
+                }
+            }
+        }
+        &.digital-marketing{
+            .three-sideCont-blocks {
+                .single-block-in{
+                    justify-content: left;
+                    width: 210px;
+                    text-align: left;
+                    margin: 0 auto;
+                }
+            }
+            #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow{
+                @include desktop{
+                    height: 212px !important;
+                }
+                @include laptop{
+                    height: 232px !important;
+                }
+                @include tablet{
+                    height: 208px !important;
+                }
+                @include mobile{
+                    height: 180px !important;
+                }
+                @include smartphone{
+                    height: 212px !important;
+                }
+                li {
+                    .item{
+                        .item-cont{
+                            @include smartphone{
+                                padding: 10px 0;
+                            }
+                            p{
+                                padding-left: 0;
+                            }
+                        }
+                        .imgTitle{
+                            @include mobile-min{
+                                align-items: flex-end;
+                                height: 84px !important;
+                            }
+                            @include smartphone{
+                                height: 80px !important;
+                            }
+                        }
+                        @include laptop{
+                            h3 {
+                                font-size: 18px;
+                            }
+                        }
+                        @include smartphone{
+                            h3 {
+                                font-size: 17px;
+                            }
+                        }
+                    } 
+                    @include laptop{
+                        padding: 0 10px !important;
+                    }
+                    @include tablet{
+                        width: 50% !important;
+                    }
+                    @include mobile-max{
+                        width: 100% !important;
+                    }
+                    height: 100% !important;
+                }
+            } 
+        }
         .sec-sm-cta{
             .sec-sm-cta-in{
                 @include business-area-bg;

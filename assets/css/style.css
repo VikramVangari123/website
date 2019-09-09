@@ -482,6 +482,25 @@ select:invalid {
   color: #666768;
 }
 
+/** hiding play button on iphone **/
+*::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+*::--webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+/* This one works */
+*::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
 /** global **/
 input::placeholder,
 textarea::placeholder,
@@ -611,12 +630,21 @@ h1, h2 {
   float: left;
 }
 
+.flw {
+  float: left;
+  width: 100%;
+}
+
 .upper-case {
   text-transform: uppercase;
 }
 
 .hidden {
   display: none !important;
+}
+
+.normal-font {
+  font-size: 16px;
 }
 
 .sec-in-space {
@@ -757,6 +785,17 @@ h1, h2 {
 
 .industry-text-bg {
   background-image: linear-gradient(to right, #645974 0%, #737AFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.enm-bg {
+  background-image: linear-gradient(to right, #2B2B2B 0%, #2B2B2B 100%) !important;
+  background-position: center;
+}
+
+.enm-text-bg {
+  background-image: linear-gradient(to right, #2B2B2B 0%, #2B2B2B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1114,8 +1153,9 @@ header .overlay .overlay-content {
     min-height: 200px;
   }
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div p {
-    display: block;
+    display: block !important;
     font-size: 17px;
+    -webkit-tap-highlight-color: white;
   }
 }
 @media (min-width: 768px) {
@@ -1127,7 +1167,7 @@ header .overlay .overlay-content {
   }
   header .overlay .overlay-content .mega-menu .megamenu-item {
     display: block !important;
-    width: 300px;
+    width: 230px;
     background-color: transparent;
     padding-left: 16px;
     padding-right: 16px;
@@ -1188,6 +1228,16 @@ header .overlay .overlay-content {
     top: 60px;
     left: 0;
   }
+  header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .tab-top {
+    margin-bottom: 24px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+  header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .tab-top {
+    margin-bottom: 9px;
+  }
+}
+@media (min-width: 768px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in {
     display: inline-block;
     background: rgba(255, 255, 255, 0.2);
@@ -1196,10 +1246,17 @@ header .overlay .overlay-content {
     position: relative;
     vertical-align: top;
   }
+}
+@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+  header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in {
+    margin-right: 5px;
+  }
+}
+@media (min-width: 768px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a {
     font-size: 16px;
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
     display: flex;
     -webkit-display: flex;
     align-items: center;
@@ -1208,8 +1265,9 @@ header .overlay .overlay-content {
 }
 @media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a {
-    width: 130px;
-    height: 150px;
+    width: 90px;
+    height: 130px;
+    min-width: 110px;
   }
 }
 @media (min-width: 768px) {
@@ -1217,12 +1275,15 @@ header .overlay .overlay-content {
     margin: 0px;
     -webkit-transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
-    max-width: 115px;
+    max-width: 85px;
+    margin-bottom: 35px;
+    max-height: 85px;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a img {
-    width: 80px;
+    width: auto;
+    max-height: 70px;
   }
 }
 @media (min-width: 768px) {
@@ -1254,6 +1315,14 @@ header .overlay .overlay-content {
     position: absolute;
     bottom: 5px;
     text-align: center;
+    font-size: 13px;
+    white-space: initial;
+    line-height: 16px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+  header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div p {
+    font-size: 12px;
   }
 }
 @media (min-width: 768px) {
@@ -1261,7 +1330,7 @@ header .overlay .overlay-content {
     display: none;
     top: 0px;
     left: 0px;
-    margin-left: 299px;
+    margin-left: 229px;
     height: 100%;
     border-left: none;
   }
@@ -1298,6 +1367,207 @@ header .overlay .overlay-content {
   }
 }
 
-/************************* content animations on scroll ***************************************/
+/************************* content animations ***************************************/
+/*=== Trigger  ===*/
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/*=== Optional Delays, change values here  ===*/
+.one {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+/*=== Animations start here  ===*/
+/*=== FADE IN  ===*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/*=== FADE IN DOWN ===*/
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+/*==== FADE IN UP ===*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/*=== FADE IN LEFT ===*/
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+/*==== FADE IN RIGHT ===*/
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+/** Bounce **/
+@keyframes bounce1 {
+  0% {
+    bottom: 30px;
+    -webkit-animation-timing-function: linear;
+  }
+  50% {
+    bottom: 40px;
+    -webkit-animation-timing-function: linear;
+  }
+  100% {
+    bottom: 30px;
+    -webkit-animation-timing-function: linear;
+  }
+}
+@keyframes bounce2 {
+  0% {
+    top: -90px;
+    -webkit-animation-timing-function: linear;
+  }
+  50% {
+    top: -80px;
+    -webkit-animation-timing-function: linear;
+  }
+  100% {
+    top: -90px;
+    -webkit-animation-timing-function: linear;
+  }
+}
+@keyframes bounce3 {
+  0% {
+    top: -70px;
+    -webkit-animation-timing-function: linear;
+  }
+  50% {
+    top: -60px;
+    -webkit-animation-timing-function: linear;
+  }
+  100% {
+    top: -70px;
+    -webkit-animation-timing-function: linear;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

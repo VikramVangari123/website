@@ -662,9 +662,6 @@ header {
                   display: block;
                   min-width: 140px;
                   max-width: 300px;
-                  overflow: hidden;
-                  white-space: nowrap;
-                  text-overflow: ellipsis;
                   font-size: 24px;
                   color: #eaeaea;
                 }
@@ -736,16 +733,20 @@ header {
                 min-height: 200px;
               }
               .megamenu-sub-content > div p {
-                display: block;
+                display: block !important;
                 color: $white;
                 position: absolute;
                 bottom: 5px;
                 text-align: center;
                 font-size: 13px;
-                white-space: initial;
                 line-height: 16px;
+                -webkit-tap-highlight-color: rgba(255,255,255,1);
+                white-space: initial;
                 @include tablet{
                   font-size: 12px;
+                }
+                &:hover{
+                  color: #fff;
                 }
               }
             }   
