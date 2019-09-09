@@ -2990,8 +2990,10 @@ textarea:focus {
             +.btn-div{
                 text-align: center;
                 width: 100%;
-                @include mobile-max{
-                    margin-top: 0px !important;
+                .btn{
+                    @include mobile-max{
+                        margin-top: 0px !important;
+                    }
                 }
             }
         }

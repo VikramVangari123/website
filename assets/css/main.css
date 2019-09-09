@@ -4566,7 +4566,7 @@ nav.nav-split:hover svg.icon {
   width: 100%;
 }
 @media (max-width: 767px) {
-  .business-area .three-sideCont-blocks + .btn-div {
+  .business-area .three-sideCont-blocks + .btn-div .btn {
     margin-top: 0px !important;
   }
 }
