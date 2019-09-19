@@ -465,6 +465,11 @@ textarea:focus {
     .mt0{
         margin-top: 0px;
     }
+    .mtm20{
+        @include mobile-max{
+            margin-top: 20px;
+        }
+    }
     .mb0 {
         margin-bottom: 0px;
     }
@@ -2785,6 +2790,7 @@ textarea:focus {
                     }
                 }
                 &.four-blocks-contH{
+                    align-items: baseline;
                     .single-block {
                         @include smartphone{
                             width: 100%;
@@ -2794,6 +2800,11 @@ textarea:focus {
             }
             .two-blocks .single-block {
                 background: #fff;
+                .imgBlock{
+                    @include mobile-min{
+                        width: 110px;
+                    }
+                }
             }
             .blocktitle-sm{
                 font-weight: bold;
@@ -2812,7 +2823,14 @@ textarea:focus {
                 }
             }
             .tab-sec{
-                @include mobile-min{
+                .tabs li{
+                    @include tablet-min{                        
+                        &.active, &:hover{
+                            font-weight: bold;
+                        }
+                    }
+                }
+                @include tablet-min{
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
@@ -2837,6 +2855,30 @@ textarea:focus {
                     }
                     .tab_container{
                         width: 50%;
+                    }
+                }
+                .tab_content{
+                    @include mobile-max{
+                        padding: 20px;
+                    }
+                    img {
+                        @include laptop-min{
+                            max-width: 250px;
+                        }
+                        @include tablet{
+                            max-width: 240px;
+                        }
+                        @include mobile{
+                            max-width: 240px;
+                        }
+                        @include smartphone{
+                            max-width: 200px;
+                        }
+                    }
+                    .btn{
+                        &:hover{
+                            transform: none;
+                        }
                     }
                 }
             }

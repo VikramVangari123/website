@@ -2073,6 +2073,12 @@ footer.section.fp-auto-height {
   margin-top: 0px;
 }
 
+@media (max-width: 767px) {
+  .mtm20 {
+    margin-top: 20px;
+  }
+}
+
 .mb0 {
   margin-bottom: 0px;
 }
@@ -4391,6 +4397,9 @@ nav.nav-split:hover svg.icon {
     width: 33.3333%;
   }
 }
+.industry.real-estate .four-blocks.four-blocks-contH {
+  align-items: baseline;
+}
 @media (max-width: 479px) {
   .industry.real-estate .four-blocks.four-blocks-contH .single-block {
     width: 100%;
@@ -4398,6 +4407,11 @@ nav.nav-split:hover svg.icon {
 }
 .industry.real-estate .two-blocks .single-block {
   background: #fff;
+}
+@media (min-width: 480px) {
+  .industry.real-estate .two-blocks .single-block .imgBlock {
+    width: 110px;
+  }
 }
 .industry.real-estate .blocktitle-sm {
   font-weight: bold;
@@ -4413,7 +4427,12 @@ nav.nav-split:hover svg.icon {
   width: 90%;
   margin: 0 auto;
 }
-@media (min-width: 480px) {
+@media (min-width: 768px) {
+  .industry.real-estate .tab-sec .tabs li.active, .industry.real-estate .tab-sec .tabs li:hover {
+    font-weight: bold;
+  }
+}
+@media (min-width: 768px) {
   .industry.real-estate .tab-sec {
     display: flex;
     flex-wrap: wrap;
@@ -4443,6 +4462,34 @@ nav.nav-split:hover svg.icon {
   .industry.real-estate .tab-sec .tab_container {
     width: 50%;
   }
+}
+@media (max-width: 767px) {
+  .industry.real-estate .tab-sec .tab_content {
+    padding: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .industry.real-estate .tab-sec .tab_content img {
+    max-width: 250px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .industry.real-estate .tab-sec .tab_content img {
+    max-width: 240px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .industry.real-estate .tab-sec .tab_content img {
+    max-width: 240px;
+  }
+}
+@media (max-width: 479px) {
+  .industry.real-estate .tab-sec .tab_content img {
+    max-width: 200px;
+  }
+}
+.industry.real-estate .tab-sec .tab_content .btn:hover {
+  transform: none;
 }
 .industry.real-estate .three-sideCont-blocks {
   margin-top: 0;
