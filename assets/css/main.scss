@@ -2861,6 +2861,12 @@ textarea:focus {
                     @include mobile-max{
                         padding: 20px;
                     }
+                    @include desktop{
+                        height: 394px;
+                    }
+                    @include laptop{
+                        height: 394px;
+                    }
                     img {
                         @include laptop-min{
                             max-width: 250px;
