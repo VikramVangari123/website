@@ -2973,7 +2973,7 @@ textarea:focus {
                 height: 160px !important;
                 li{
                     height: 100%;;
-                    width: 25%;
+                    width: 33.3333%;
                     @include tablet{
                         width: 33.3333%;
                     }
@@ -3376,6 +3376,73 @@ textarea:focus {
                     height: 100% !important;
                 }
             } 
+            
+            .tab-sec{
+                .tabs li{
+                    @include tablet-min{                        
+                        &.active, &:hover{
+                            font-weight: bold;
+                        }
+                    }
+                }
+                @include tablet-min{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    ul.tabs{
+                        width: 50%;
+                        height: auto;
+                        box-shadow: none;
+                        li{
+                            float: none;
+                            font-size: 22px;
+                            width: 300px;
+                            padding: 20px 0;
+                            height: auto;
+                            border-bottom: 1px solid #666768;
+                            &:last-child {
+                                border-bottom: 0;
+                            }
+                            &.active, &:hover{
+                                @include business-area-text-bg;
+                            }
+                        }
+                    }
+                    .tab_container{
+                        width: 50%;
+                    }
+                }
+                .tab_content{
+                    @include mobile-max{
+                        padding: 20px;
+                    }
+                    @include desktop{
+                        height: 394px;
+                    }
+                    @include laptop{
+                        height: 394px;
+                    }
+                    img {
+                        @include laptop-min{
+                            max-height: 190px;
+                        }
+                        @include tablet{
+                            max-height: 210px;
+                        }
+                        @include mobile{
+                            max-height: 210px;
+                        }
+                        @include smartphone{
+                            max-height: 200px;
+                        }
+                    }
+                    .btn{
+                        &:hover{
+                            transform: none;
+                        }
+                    }
+                }
+            }
         }
         .sec-sm-cta{
             .sec-sm-cta-in{

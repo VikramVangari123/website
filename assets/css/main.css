@@ -4599,7 +4599,7 @@ nav.nav-split:hover svg.icon {
 }
 .industry.real-estate #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow li {
   height: 100%;
-  width: 25%;
+  width: 33.3333%;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .industry.real-estate #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow li {
@@ -5000,6 +5000,80 @@ nav.nav-split:hover svg.icon {
   .business-area.digital-marketing #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow li {
     width: 100% !important;
   }
+}
+@media (min-width: 768px) {
+  .business-area.digital-marketing .tab-sec .tabs li.active, .business-area.digital-marketing .tab-sec .tabs li:hover {
+    font-weight: bold;
+  }
+}
+@media (min-width: 768px) {
+  .business-area.digital-marketing .tab-sec {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .business-area.digital-marketing .tab-sec ul.tabs {
+    width: 50%;
+    height: auto;
+    box-shadow: none;
+  }
+  .business-area.digital-marketing .tab-sec ul.tabs li {
+    float: none;
+    font-size: 22px;
+    width: 300px;
+    padding: 20px 0;
+    height: auto;
+    border-bottom: 1px solid #666768;
+  }
+  .business-area.digital-marketing .tab-sec ul.tabs li:last-child {
+    border-bottom: 0;
+  }
+  .business-area.digital-marketing .tab-sec ul.tabs li.active, .business-area.digital-marketing .tab-sec ul.tabs li:hover {
+    background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .business-area.digital-marketing .tab-sec .tab_container {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .business-area.digital-marketing .tab-sec .tab_content {
+    padding: 20px;
+  }
+}
+@media (min-width: 1281px) {
+  .business-area.digital-marketing .tab-sec .tab_content {
+    height: 394px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .business-area.digital-marketing .tab-sec .tab_content {
+    height: 394px;
+  }
+}
+@media (min-width: 1025px) {
+  .business-area.digital-marketing .tab-sec .tab_content img {
+    max-height: 190px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .business-area.digital-marketing .tab-sec .tab_content img {
+    max-height: 210px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .business-area.digital-marketing .tab-sec .tab_content img {
+    max-height: 210px;
+  }
+}
+@media (max-width: 479px) {
+  .business-area.digital-marketing .tab-sec .tab_content img {
+    max-height: 200px;
+  }
+}
+.business-area.digital-marketing .tab-sec .tab_content .btn:hover {
+  transform: none;
 }
 .business-area .sec-sm-cta .sec-sm-cta-in {
   background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
