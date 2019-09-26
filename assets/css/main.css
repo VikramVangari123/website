@@ -4928,6 +4928,12 @@ nav.nav-split:hover svg.icon {
 .business-area.marketing .three-blocks-type2.three-blocks-rightarw .single-block:last-child {
   margin-bottom: 0;
 }
+@media (min-width: 768px) {
+  .business-area.marketing .font24px {
+    width: 80%;
+    margin: 0 auto 40px;
+  }
+}
 .business-area .smCont-slider #slider-content #slideshow {
   height: 162px !important;
 }
@@ -5202,6 +5208,12 @@ nav.nav-split:hover svg.icon {
 }
 .business-area.digital-marketing .tab-sec .tab_content .btn:hover {
   transform: none;
+}
+@media (min-width: 768px) {
+  .business-area.digital-marketing .font24px {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
 }
 .business-area .sec-sm-cta .sec-sm-cta-in {
   background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%) !important;
