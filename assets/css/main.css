@@ -2237,6 +2237,17 @@ h3, h4, h5, h6 {
   line-height: 26px !important;
 }
 
+.font24px {
+  font-size: 24px !important;
+  line-height: 36px !important;
+}
+@media (max-width: 767px) {
+  .font24px {
+    font-size: 22px !important;
+    line-height: 30px !important;
+  }
+}
+
 .sec-full-cta .sec-full-cta-in {
   width: 100%;
   text-align: center;
@@ -5027,7 +5038,12 @@ nav.nav-split:hover svg.icon {
   justify-content: left;
   width: 210px;
   text-align: left;
-  margin: 0 auto;
+  margin: 0px auto;
+}
+@media (min-width: 768px) {
+  .business-area.digital-marketing .three-sideCont-blocks .single-block:nth-child(1), .business-area.digital-marketing .three-sideCont-blocks .single-block:nth-child(2), .business-area.digital-marketing .three-sideCont-blocks .single-block:nth-child(3) {
+    margin-bottom: 40px;
+  }
 }
 @media (min-width: 1281px) {
   .business-area.digital-marketing #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow {

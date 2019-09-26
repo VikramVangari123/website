@@ -592,6 +592,14 @@ textarea:focus {
         font-size: 18px !important;
         line-height: 26px !important;
     }  
+    .font24px{
+        font-size: 24px !important;
+        line-height: 36px !important;
+        @include mobile-max{
+            font-size: 22px !important;
+            line-height: 30px !important;
+        }
+    }  
     .sec-full-cta{
         .sec-full-cta-in{
             width: 100%;
@@ -3399,7 +3407,14 @@ textarea:focus {
                     justify-content: left;
                     width: 210px;
                     text-align: left;
-                    margin: 0 auto;
+                    margin: 0px auto;
+                }
+                .single-block{
+                    &:nth-child(1), &:nth-child(2), &:nth-child(3){
+                        @include tablet-min{
+                            margin-bottom: 40px;
+                        }
+                    }
                 }
             }
             #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow{
