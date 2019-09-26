@@ -4445,7 +4445,7 @@ nav.nav-split:hover svg.icon {
   }
   .industry.real-estate .tab-sec ul.tabs li {
     float: none;
-    font-size: 22px;
+    font-size: 20px;
     width: 350px;
     padding: 20px 0;
     height: auto;
@@ -4459,6 +4459,21 @@ nav.nav-split:hover svg.icon {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .industry.real-estate .tab-sec ul.tabs li.active:before, .industry.real-estate .tab-sec ul.tabs li:hover:before {
+    content: "";
+    position: absolute;
+    right: -8px;
+    background-image: url(https://www.wowso.me/hubfs/assets/website/images/real-estate/tab-arrow.png);
+    top: 36px;
+    width: 20px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 9px;
+  }
+}
+@media (min-width: 768px) {
   .industry.real-estate .tab-sec .tab_container {
     width: 50%;
   }
@@ -4817,6 +4832,91 @@ nav.nav-split:hover svg.icon {
   border-radius: 5px;
   margin-bottom: 10px;
 }
+.business-area.marketing .three-blocks-type2 {
+  margin: 0 -10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.business-area.marketing .three-blocks-type2 .single-block {
+  width: 33.3333%;
+}
+@media (min-width: 768px) {
+  .business-area.marketing .three-blocks-type2 .single-block {
+    border-right: 1px solid #aaaaaa;
+  }
+}
+.business-area.marketing .three-blocks-type2 .single-block:last-child {
+  border-right: 0;
+}
+.business-area.marketing .three-blocks-type2 .single-block h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (max-width: 479px) {
+  .business-area.marketing .three-blocks-type2 .single-block h3 {
+    font-size: 18px;
+  }
+}
+.business-area.marketing .three-blocks-type2 .single-block .btn {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .business-area.marketing .three-blocks-type2 .single-block {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .business-area.marketing .three-blocks-type2 .single-block:last-child {
+    margin-bottom: 0;
+  }
+}
+.business-area.marketing .three-blocks-type2 .single-block .single-block-in {
+  padding: 0 15px;
+}
+@media (min-width: 1281px) {
+  .business-area.marketing .three-blocks-type2 .single-block .single-block-in {
+    padding: 0 45px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .business-area.marketing .three-blocks-type2 .single-block .single-block-in {
+    padding: 0 35px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .business-area.marketing .three-blocks-type2 .single-block .single-block-in {
+    padding: 0 25px;
+  }
+}
+.business-area.marketing .three-blocks-type2 .single-block .single-block-in .img {
+  margin-bottom: 10px;
+}
+.business-area.marketing .three-blocks-type2 .single-block .single-block-in h3 {
+  margin-bottom: 15px;
+}
+@media (min-width: 1281px) {
+  .business-area.marketing .three-blocks-type2 .single-block .single-block-in p {
+    min-height: 130px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .business-area.marketing .three-blocks-type2 .single-block .single-block-in p {
+    min-height: 154px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .business-area.marketing .three-blocks-type2 .single-block .single-block-in p {
+    min-height: 180px;
+  }
+}
+.business-area.marketing .three-blocks-type2.three-blocks-rightarw .single-block {
+  position: relative;
+}
+.business-area.marketing .three-blocks-type2.three-blocks-rightarw .single-block:last-child {
+  margin-bottom: 0;
+}
 .business-area .smCont-slider #slider-content #slideshow {
   height: 162px !important;
 }
@@ -5019,11 +5119,12 @@ nav.nav-split:hover svg.icon {
   }
   .business-area.digital-marketing .tab-sec ul.tabs li {
     float: none;
-    font-size: 22px;
-    width: 300px;
+    font-size: 20px;
+    width: 320px;
     padding: 20px 0;
     height: auto;
     border-bottom: 1px solid #666768;
+    position: relative;
   }
   .business-area.digital-marketing .tab-sec ul.tabs li:last-child {
     border-bottom: 0;
@@ -5032,6 +5133,17 @@ nav.nav-split:hover svg.icon {
     background-image: linear-gradient(to right, #4cbbc4 0%, #3cd3ad 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .business-area.digital-marketing .tab-sec ul.tabs li.active:before, .business-area.digital-marketing .tab-sec ul.tabs li:hover:before {
+    content: "";
+    position: absolute;
+    right: -8px;
+    background-image: url(https://www.wowso.me/hubfs/assets/website/images/business-area/digital-marketing/tab-arrow.png);
+    top: 36px;
+    width: 20px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 9px;
   }
   .business-area.digital-marketing .tab-sec .tab_container {
     width: 50%;
