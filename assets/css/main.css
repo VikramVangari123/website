@@ -4700,7 +4700,10 @@ nav.nav-split:hover svg.icon {
   margin-top: 0;
 }
 .industry.customer-service #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow {
-  height: 215px !important;
+  height: 272px !important;
+}
+.industry.customer-service #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow li {
+  height: 100%;
 }
 @media (max-width: 767px) {
   .industry.customer-service #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow li {
@@ -4720,7 +4723,22 @@ nav.nav-split:hover svg.icon {
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
   .industry.customer-service #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow {
-    height: 190px !important;
+    height: 242px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .industry.customer-service #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow {
+    height: 292px !important;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .industry.customer-service #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow {
+    height: 260px !important;
+  }
+}
+@media (max-width: 479px) {
+  .industry.customer-service #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow {
+    height: 322px !important;
   }
 }
 .industry.customer-service .five-blocks {
