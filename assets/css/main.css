@@ -6888,6 +6888,9 @@ nav.nav-split:hover svg.icon {
   top: 50%;
   transform: translateY(-50%);
 }
+.tab-sec .tab_container .d_active + .tab_content {
+  display: block !important;
+}
 .tab-sec .tab_container .tab_drawer_heading {
   display: none;
 }

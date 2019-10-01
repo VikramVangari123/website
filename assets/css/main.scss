@@ -5458,6 +5458,9 @@ textarea:focus {
                     }
                 }
             }
+            .d_active + .tab_content {
+                display: block !important;
+            }
             .tab_drawer_heading { 
                 display: none;
                 @include mobile-max{                
