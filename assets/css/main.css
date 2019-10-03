@@ -4848,6 +4848,9 @@ nav.nav-split:hover svg.icon {
     width: 160px !important;
   }
 }
+.industry .tab-sec .tab_container .tab_drawer_heading.d_active {
+  background-color: #575bac;
+}
 .industry footer .footer-top {
   background-image: linear-gradient(to right, #645974 0%, #737AFF 100%) !important;
   background-position: center;
@@ -5184,6 +5187,9 @@ nav.nav-split:hover svg.icon {
   .business-area .three-sideCont-blocks + .btn-div .btn {
     margin-top: 0px !important;
   }
+}
+.business-area .tab-sec .tab_container .tab_drawer_heading.d_active {
+  background-color: #42cbb5;
 }
 .business-area.digital-marketing .three-sideCont-blocks .single-block-in {
   justify-content: left;
@@ -5621,6 +5627,150 @@ nav.nav-split:hover svg.icon {
 @media (min-width: 768px) {
   .products.ip-narrative .three-blocks .single-block .single-block-in h3 {
     min-height: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .products.webAR .three-blocks .single-block {
+    margin-bottom: 40px;
+  }
+  .products.webAR .three-blocks .single-block:last-child {
+    margin-bottom: 0;
+  }
+}
+.products.webAR .three-blocks.three-blocks-rightarw {
+  display: flex;
+  flex-wrap: wrap;
+  float: none;
+  margin-top: 0;
+}
+@media (max-width: 767px) {
+  .products.webAR .three-blocks.three-blocks-rightarw .single-block {
+    width: 33.3333%;
+    margin-bottom: 0;
+  }
+  .products.webAR .three-blocks.three-blocks-rightarw .single-block .img img {
+    max-width: 90px;
+  }
+  .products.webAR .three-blocks.three-blocks-rightarw .single-block p {
+    font-size: 12px;
+  }
+  .products.webAR .three-blocks.three-blocks-rightarw .single-block .single-block-in {
+    padding: 0 5px;
+  }
+}
+@media (max-width: 479px) {
+  .products.webAR .three-blocks.three-blocks-rightarw .single-block:after {
+    width: 8px !important;
+  }
+}
+.products.webAR .three-blocks.three-blocks-rightarw .single-block::after {
+  content: "";
+  height: 26px;
+  width: 12px;
+  background: url(https://www.wowso.me/hubfs/assets/website/images/products/webAR/right-arrow.png) no-repeat 100% !important;
+  position: absolute;
+  right: 0px;
+  top: 30px;
+  background-size: 100%;
+}
+.products.webAR .three-blocks.three-blocks-rightarw .single-block:last-child:after {
+  content: none;
+}
+@media (min-width: 768px) {
+  .products.webAR .tab-sec .tabs li.active, .products.webAR .tab-sec .tabs li:hover {
+    font-weight: bold;
+  }
+}
+@media (min-width: 768px) {
+  .products.webAR .tab-sec {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .products.webAR .tab-sec ul.tabs {
+    width: 50%;
+    height: auto;
+    box-shadow: none;
+  }
+  .products.webAR .tab-sec ul.tabs li {
+    float: none;
+    font-size: 20px;
+    width: 320px;
+    padding: 20px 0;
+    height: auto;
+    border-bottom: 1px solid #666768;
+    position: relative;
+  }
+  .products.webAR .tab-sec ul.tabs li:last-child {
+    border-bottom: 0;
+  }
+  .products.webAR .tab-sec ul.tabs li.active, .products.webAR .tab-sec ul.tabs li:hover {
+    background-image: linear-gradient(to right, #bc78ec 0%, #3b2667 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .products.webAR .tab-sec ul.tabs li.active:before, .products.webAR .tab-sec ul.tabs li:hover:before {
+    content: "";
+    position: absolute;
+    right: -8px;
+    background-image: url(https://www.wowso.me/hubfs/assets/website/images/products/tab-arrow.png);
+    top: 36px;
+    width: 20px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 9px;
+  }
+  .products.webAR .tab-sec .tab_container {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .products.webAR .tab-sec .tab_content {
+    padding: 20px;
+  }
+}
+@media (min-width: 1281px) {
+  .products.webAR .tab-sec .tab_content {
+    height: 394px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .products.webAR .tab-sec .tab_content {
+    height: 394px;
+  }
+}
+@media (min-width: 1025px) {
+  .products.webAR .tab-sec .tab_content img {
+    max-height: 190px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .products.webAR .tab-sec .tab_content img {
+    max-height: 210px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .products.webAR .tab-sec .tab_content img {
+    max-height: 210px;
+  }
+}
+@media (max-width: 479px) {
+  .products.webAR .tab-sec .tab_content img {
+    max-height: 200px;
+  }
+}
+.products.webAR .tab-sec .tab_content .btn:hover {
+  transform: none;
+}
+.products.webAR .hr-solid80 {
+  width: 90%;
+  border: 0;
+  border-bottom: 1.5px solid #c8c8c8;
+  margin: 30px 0;
+}
+@media (max-width: 479px) {
+  .products.webAR .hr-solid80 {
+    margin: 20px 0;
   }
 }
 .products footer .footer-top {
@@ -6848,14 +6998,14 @@ nav.nav-split:hover svg.icon {
   border-top: none;
   clear: both;
   float: left;
-  width: 100%;
+  width: calc(100% - 2px);
   background: #fff;
   overflow: auto;
   border-top: 0;
 }
 @media (max-width: 767px) {
   .tab-sec .tab_container {
-    border: 1px solid #9a9a9a;
+    border: 1px solid #d9d9d9;
   }
 }
 .tab-sec .tab_container .tab_content {
@@ -6896,12 +7046,14 @@ nav.nav-split:hover svg.icon {
 }
 @media (max-width: 767px) {
   .tab-sec .tab_container .tab_drawer_heading {
-    background-color: #f7f7f7;
-    border-top: 1px solid #9a9a9a;
+    background-color: #fafafa;
+    border-top: 1px solid #d9d9d9;
+    color: #000;
     margin: 0;
     padding: 12px 20px;
     display: block;
     cursor: pointer;
+    font-size: 20px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -6915,6 +7067,9 @@ nav.nav-split:hover svg.icon {
     background-color: #894ab4;
     color: #fff;
   }
+}
+.tab-sec .tab_container div:nth-child(1) .tab_drawer_heading {
+  border-top: 0;
 }
 
 /******************************* use-cases **************************************/
@@ -7737,7 +7892,8 @@ nav.nav-split:hover svg.icon {
 }
 @media (max-width: 479px) {
   .interactive-kiosk .eng-ppl-products .circle3-blocks .circle3-block {
-    margin-bottom: 60px !important;
+    width: 33.3333%;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 479px) {
@@ -7747,7 +7903,7 @@ nav.nav-split:hover svg.icon {
 }
 @media (max-width: 479px) {
   .interactive-kiosk .eng-ppl-products .circle3-blocks .circle3-block:before {
-    bottom: -30% !important;
+    content: none;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
@@ -7765,8 +7921,43 @@ nav.nav-split:hover svg.icon {
   height: auto;
   object-fit: none;
 }
+@media (max-width: 479px) {
+  .interactive-kiosk .eng-ppl-products .circle3-blocks .circle3-block .circle3-block-img img {
+    object-fit: cover;
+    max-width: 70px;
+  }
+}
+@media (max-width: 479px) {
+  .interactive-kiosk .eng-ppl-products .circle3-blocks .circle3-block .circle3-block-title {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 479px) {
+  .interactive-kiosk .eng-ppl-products .circle3-blocks .circle3-block .circle3-block-title h3 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
 .interactive-kiosk .tab-sec ul.tabs {
   display: flex !important;
+}
+@media (max-width: 767px) {
+  .interactive-kiosk .tab-sec ul.tabs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .interactive-kiosk .tab-sec .tab_content .left50, .interactive-kiosk .tab-sec .tab_content .right50 {
+    width: 49%;
+    display: inline-table;
+    margin-top: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .interactive-kiosk .tab-sec .tab_content img {
+    max-height: 270px;
+    max-width: 280px;
+  }
 }
 
 /******************************* Circle Blocks section ****************************/

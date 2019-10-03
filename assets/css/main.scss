@@ -3183,6 +3183,9 @@ textarea:focus {
                 }
             }
         }
+        .tab-sec .tab_container .tab_drawer_heading.d_active {
+            background-color: #575bac;
+        }
         footer{
             .footer-top{
                 @include industry-bg;
@@ -3480,7 +3483,6 @@ textarea:focus {
                 @include business-area-text-bg;
             }
         } 
-        
         .three-sideCont-blocks{
             margin: 0 -10px;
             margin-top: 20px;
@@ -3535,6 +3537,9 @@ textarea:focus {
                     }
                 }
             }
+        }
+        .tab-sec .tab_container .tab_drawer_heading.d_active {
+            background-color: #42cbb5;
         }
         &.digital-marketing{
             .three-sideCont-blocks {
@@ -3984,6 +3989,146 @@ textarea:focus {
             .three-blocks .single-block .single-block-in h3{
                 @include tablet-min{
                     min-height: 60px;
+                }
+            }
+        }
+        &.webAR{
+            .three-blocks{
+                .single-block {
+                    @include mobile-max{
+                        margin-bottom: 40px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                &.three-blocks-rightarw {
+                    display: flex;
+                    flex-wrap: wrap;
+                    float: none;
+                    margin-top: 0;
+                    .single-block {
+                        @include mobile-max{
+                            width: 33.3333%;
+                            margin-bottom: 0;
+                            .img img {
+                                max-width: 90px;
+                            }
+                            p {
+                                font-size: 12px;
+                            }
+                            .single-block-in{
+                                padding: 0 5px;
+                            }
+                        }
+                        @include smartphone{
+                            &:after{
+                                width: 8px !important;
+                            }
+                        }
+                        &::after{                        
+                            content: "";
+                            height: 26px;
+                            width: 12px;
+                            background: url(https://www.wowso.me/hubfs/assets/website/images/products/webAR/right-arrow.png) no-repeat 100% !important;
+                            position: absolute;
+                            right: 0px;
+                            top: 30px;
+                            background-size: 100%;
+                        }
+                        &:last-child{
+                            &:after{
+                                content: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .tab-sec{
+                .tabs li{
+                    @include tablet-min{                        
+                        &.active, &:hover{
+                            font-weight: bold;
+                        }
+                    }
+                }
+                @include tablet-min{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    ul.tabs{
+                        width: 50%;
+                        height: auto;
+                        box-shadow: none;
+                        li{
+                            float: none;
+                            font-size: 20px;
+                            width: 320px;
+                            padding: 20px 0;
+                            height: auto;
+                            border-bottom: 1px solid #666768;
+                            position: relative;
+                            &:last-child {
+                                border-bottom: 0;
+                            }
+                            &.active, &:hover{
+                                @include products-text-bg;
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    right: -8px;
+                                    background-image: url(https://www.wowso.me/hubfs/assets/website/images/products/tab-arrow.png);
+                                    top: 36px;
+                                    width: 20px;
+                                    height: 16px;
+                                    background-repeat: no-repeat;
+                                    background-size: 9px;
+                                }
+                            }
+                        }
+                    }
+                    .tab_container{
+                        width: 50%;
+                    }
+                }
+                .tab_content{
+                    @include mobile-max{
+                        padding: 20px;
+                    }
+                    @include desktop{
+                        height: 394px;
+                    }
+                    @include laptop{
+                        height: 394px;
+                    }
+                    img {
+                        @include laptop-min{
+                            max-height: 190px;
+                        }
+                        @include tablet{
+                            max-height: 210px;
+                        }
+                        @include mobile{
+                            max-height: 210px;
+                        }
+                        @include smartphone{
+                            max-height: 200px;
+                        }
+                    }
+                    .btn{
+                        &:hover{
+                            transform: none;
+                        }
+                    }
+                }
+            }
+            .hr-solid80 {
+                width: 90%;
+                border: 0;
+                border-bottom: 1.5px solid #c8c8c8;
+                margin: 30px 0;
+                @include smartphone{
+                    margin: 20px 0;
                 }
             }
         }
@@ -5421,12 +5566,12 @@ textarea:focus {
             border-top: none;
             clear: both;
             float: left;
-            width: 100%;
+            width: calc(100% - 2px);
             background: #fff;
             overflow: auto;
             border-top: 0;
             @include mobile-max{            
-                border: 1px solid #9a9a9a;
+                border: 1px solid #d9d9d9;
             }
             .tab_content {
                 padding: 20px 0;
@@ -5464,12 +5609,14 @@ textarea:focus {
             .tab_drawer_heading { 
                 display: none;
                 @include mobile-max{                
-                    background-color: #f7f7f7;
-                    border-top: 1px solid #9a9a9a;
+                    background-color: #fafafa;
+                    border-top: 1px solid #d9d9d9;
+                    color: #000;
                     margin: 0;
                     padding: 12px 20px;
                     display: block;
                     cursor: pointer;
+                    font-size: 20px;
                     -webkit-touch-callout: none;
                     -webkit-user-select: none;
                     -khtml-user-select: none;
@@ -5483,6 +5630,9 @@ textarea:focus {
                         color: #fff;
                     }
                 }
+            }
+            div:nth-child(1) .tab_drawer_heading{
+                border-top:0;
             }
         }
     }
@@ -6193,7 +6343,8 @@ textarea:focus {
                 }
                 .circle3-block {
                     @include smartphone{
-                        margin-bottom: 60px !important;
+                        width: 33.3333%;
+                        margin-bottom: 0;
                     }
                     &:last-child{
                         @include smartphone{
@@ -6202,7 +6353,7 @@ textarea:focus {
                     }
                     &:before{
                         @include smartphone{
-                            bottom: -30% !important;
+                            content: none;
                         }
                         @include mobile{
                             content: none;
@@ -6216,14 +6367,50 @@ textarea:focus {
                             width: auto !important;
                             height: auto;
                             object-fit: none;
+                            @include smartphone{
+                                object-fit: cover;
+                                max-width: 70px;
+                            }
                         }
                     }
+                    .circle3-block-title{
+                        @include smartphone{
+                            margin-top: 10px;
+                        }
+                        h3 {
+                            @include smartphone{
+                                font-size: 14px;
+                                line-height: 22px;
+                            }
+                        }
+                    } 
                 }
             } 
         }
-        .tab-sec ul.tabs {
-            display: flex !important;
-        }
+        .tab-sec{
+            ul.tabs {
+                display: flex !important;
+                @include mobile-max{
+                    display: none !important;
+                }
+    
+            }
+            .tab_content {
+                @include tablet{
+                    .left50, .right50{
+                        width: 49%;
+                        display: inline-table;
+                        margin-top: 0;
+                    }
+                }
+                img{
+                    @include tablet-max{
+                        max-height: 270px;
+                        max-width: 280px;
+                    }
+                }
+            }
+        } 
     }
     
 
