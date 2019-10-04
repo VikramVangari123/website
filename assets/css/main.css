@@ -3569,8 +3569,10 @@ nav.nav-split:hover svg.icon {
 .industry.retail .two-blocks .single-block {
   background: #fff;
 }
-.industry.banking .tab-sec .tab_container {
-  margin-top: 20px;
+@media (min-width: 768px) {
+  .industry.banking .tab-sec .tab_container {
+    margin-top: 20px;
+  }
 }
 @media (min-width: 1025px) {
   .industry.banking .tab-sec .tab_container .tab_content {
@@ -4543,16 +4545,6 @@ nav.nav-split:hover svg.icon {
 @media (max-width: 767px) {
   .industry.real-estate .tab-sec .tab_content {
     padding: 20px;
-  }
-}
-@media (min-width: 1281px) {
-  .industry.real-estate .tab-sec .tab_content {
-    height: 394px;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .industry.real-estate .tab-sec .tab_content {
-    height: 394px;
   }
 }
 @media (min-width: 1025px) {
@@ -7073,6 +7065,10 @@ nav.nav-split:hover svg.icon {
 }
 .tab-sec .tab_container div:nth-child(1) .tab_drawer_heading {
   border-top: 0;
+}
+
+.tabbed-cont-sec {
+  display: block;
 }
 
 /******************************* use-cases **************************************/
