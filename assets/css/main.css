@@ -1684,6 +1684,8 @@ textarea:focus {
   height: 22px;
   margin-top: 20px;
   width: 108px;
+  z-index: 99999;
+  cursor: pointer;
 }
 .title .view-all img {
   margin-left: 10px;
@@ -2543,6 +2545,7 @@ hr {
   position: relative;
   transition: transform 0.2s, -webkit-transform 0.2s;
   border-radius: 6px;
+  cursor: pointer;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .ipAdsList .camp-list-block .camp-list-block-in {

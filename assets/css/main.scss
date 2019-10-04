@@ -101,6 +101,8 @@ textarea:focus {
             height: 22px;
             margin-top: 20px;
             width: 108px;
+            z-index: 99999;
+            cursor: pointer;
             img{
                 margin-left: 10px;
                 vertical-align: text-top;
@@ -863,6 +865,7 @@ textarea:focus {
                 position: relative;
                 transition: transform 0.2s, -webkit-transform 0.2s;
                 border-radius: 6px;   
+                cursor: pointer;
                 @include tablet{
                     height: 365px !important;
                 }       
@@ -1986,7 +1989,9 @@ textarea:focus {
         &.banking{
             .tab-sec {
                 .tab_container{
-                    margin-top: 20px;
+                    @include tablet-min{
+                        margin-top: 20px;
+                    }
                     .tab_content {
                         @include laptop-min{
                             min-height: 260px;
@@ -2935,12 +2940,6 @@ textarea:focus {
                 .tab_content{
                     @include mobile-max{
                         padding: 20px;
-                    }
-                    @include desktop{
-                        height: 394px;
-                    }
-                    @include laptop{
-                        height: 394px;
                     }
                     img {
                         @include laptop-min{
@@ -5521,6 +5520,7 @@ textarea:focus {
           }
       }
     /******************************* Content Tabs ***********************************/
+    
     .tab-sec{
         ul.tabs {
             display: block !important;
@@ -5635,6 +5635,9 @@ textarea:focus {
                 border-top:0;
             }
         }
+    }
+    .tabbed-cont-sec{
+        display: block;
     }
 
     /******************************* use-cases **************************************/ 
