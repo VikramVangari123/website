@@ -1787,6 +1787,11 @@ textarea:focus {
     height: auto !important;
   }
 }
+@media (max-width: 479px) {
+  .fp-tableCell {
+    padding: 0 !important;
+  }
+}
 
 @media (max-width: 479px) {
   .section:nth-child(1) .section-in {

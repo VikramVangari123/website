@@ -159,6 +159,9 @@ textarea:focus {
             padding: 40px 0 !important;
             height: auto !important;
         }
+        @include smartphone{
+            padding: 0 !important;
+        }
     }
     .section{
         &:nth-child(1){
