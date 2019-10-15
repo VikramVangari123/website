@@ -619,10 +619,10 @@ else if (screen.width < 768)
 {
     js.src = "../assets/page-scrolling/scroll_m.js";
 }
-else ((screen.width > 480) && (screen.height < 500 ))
-{
-    js.src = "../assets/page-scrolling/scroll_m.js";
-}
+// else ((screen.width > 480) && (screen.height < 500 ))
+// {
+//     js.src = "../assets/page-scrolling/scroll_m.js";
+// }
 // var query = window.matchMedia("(orientation:landscape)");
 // var toggleGame = function(query) {
 //     if (query.matches) {
