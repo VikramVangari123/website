@@ -1630,7 +1630,7 @@ header {
     right: 0px !important;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   #fp-nav.fp-right {
     right: -5px !important;
     display: none;

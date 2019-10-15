@@ -16,7 +16,7 @@ header{
     @include tablet{
         right: 0px !important;
     }
-    @include mobile-max{
+    @include tablet-max{
         right: -5px !important;
         display: none;
     }
