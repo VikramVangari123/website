@@ -12,6 +12,17 @@ header{
         padding: 12px 0;
     }
 }
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+}
 #fp-nav.fp-right{
     @include tablet{
         right: 0px !important;
@@ -506,6 +517,9 @@ textarea:focus {
             height: auto !important;
         }
     }
+    .hs_error_rollup {
+        display: none;
+    }
     .pb0{
         padding-bottom: 0 !important;
     }
@@ -556,6 +570,12 @@ textarea:focus {
         @include mobile-max{
             margin-bottom: 40px;
         }
+    }
+    .full-width_imp{
+        width: 100%;
+    }
+    .maxwidth300px_imp{
+        max-width: 300px;
     }
     .hide-md{
         @include tablet-max{
@@ -1130,7 +1150,7 @@ textarea:focus {
         input#subscribe-email, .hs_email input{
             position: relative;
             z-index: 2;
-            color: #fff;
+            color: #fff !important;
             float: left;
             margin-bottom: 0;
             display: block;
@@ -1142,9 +1162,9 @@ textarea:focus {
             border: 0;
             border-bottom: 1px solid #fff;
             border-radius: 0px;
-            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            // -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            // -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            // transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
             @include tablet{
                 width: 230px;
             }
@@ -3018,123 +3038,6 @@ textarea:focus {
                 }
             }
         }
-        &.customer-service{
-            .three-sideCont-blocks {
-                margin-top:0;
-                display: flex;
-                flex-wrap: wrap;
-                @include mobile-max{
-                    margin-top: -20px;
-                }
-                .single-block{
-                    margin-bottom: 0;
-                    margin-top: 30px;
-                    @include tablet{
-                        width: 50%;
-                    }
-                    @include smartphone{
-                        padding-left: 10px !important;
-                        width: 100%;
-                        margin-top: 25px;
-                    }
-                    .single-block-in{
-                        @include mobile-max{
-                            width: 100% !important;
-                        }
-                        @include smartphone{
-                            justify-content: flex-start;
-                        }
-                        .imgBlock{                            
-                            @include smartphone{
-                                width: 50px;
-                                img{
-                                    max-width: 50px;
-                                }
-                            }
-                        }
-                        .contentBlock{
-                            width: calc(100% - 60px);
-                            @include mobile{
-                                max-height: 115px;
-                            }
-                        }
-                    }
-                }
-            }
-            #tab-slider {
-                margin-top: 0;
-                .tab-slider-in #slider-content li[id^=tab] #slideshow {
-                    height: 272px !important;
-                    li{
-                        height: 100%;
-                        @include mobile-max{
-                            width: 100%;
-                            height: 100%;
-                        }
-                        @include tablet{
-                            width: 50%;
-                        }
-                        @include laptop{
-                            width: 50%;
-                        }
-                    }
-                    @include laptop{
-                        height: 242px !important;
-                    }
-                    @include tablet{
-                        height: 292px !important;
-                    }
-                    @include mobile{
-                        height: 260px !important;
-                    }
-                    @include smartphone{
-                        height: 322px !important;
-                    }
-                }
-            }
-            .five-blocks{
-                display: flex;
-                flex-wrap: wrap;
-                .single-block {
-                    position: relative;
-                    &:before {
-                        content: "";
-                        height: 25px;
-                        width: 25px;
-                        background: url(https://www.wowso.me/hubfs/assets/website/images/real-estate/arrow.png) no-repeat 100% !important;
-                        position: absolute;
-                        left: 0px;
-                        top: 30px;
-                        background-size: 100%;
-                    }
-                    &:nth-child(1):before{
-                        content: none;
-                    }
-                    @include mobile{
-                        width: 33.3333%;
-                        &:nth-child(4){
-                            margin-left: 45px;
-                        }
-                    }
-                    @include smartphone{
-                        width: 50%;
-                        &:before{
-                            content: none;
-                        }
-                    }
-                    .single-block-in {
-                        @include tablet{
-                            padding: 0 0px 0 15px;
-                        }
-                        .img img {
-                            @include mobile-max{
-                                height: 70px;
-                            }
-                        }
-                    }
-                }
-            }  
-        }
         .three-sideCont-blocks{
             margin: 0 -10px;
             margin-top: 20px;
@@ -3751,6 +3654,124 @@ textarea:focus {
                 @include business-area-bg;
             }
         } 
+        
+        &.customer-service{
+            .three-sideCont-blocks {
+                margin-top:0;
+                display: flex;
+                flex-wrap: wrap;
+                @include mobile-max{
+                    margin-top: -20px;
+                }
+                .single-block{
+                    margin-bottom: 0;
+                    margin-top: 30px;
+                    @include tablet{
+                        width: 50%;
+                    }
+                    @include smartphone{
+                        padding-left: 10px !important;
+                        width: 100%;
+                        margin-top: 25px;
+                    }
+                    .single-block-in{
+                        @include mobile-max{
+                            width: 100% !important;
+                        }
+                        @include smartphone{
+                            justify-content: flex-start;
+                        }
+                        .imgBlock{                            
+                            @include smartphone{
+                                width: 50px;
+                                img{
+                                    max-width: 50px;
+                                }
+                            }
+                        }
+                        .contentBlock{
+                            width: calc(100% - 60px);
+                            @include mobile{
+                                max-height: 115px;
+                            }
+                        }
+                    }
+                }
+            }
+            #tab-slider {
+                margin-top: 0;
+                .tab-slider-in #slider-content li[id^=tab] #slideshow {
+                    height: 272px !important;
+                    li{
+                        height: 100%;
+                        @include mobile-max{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        @include tablet{
+                            width: 50%;
+                        }
+                        @include laptop{
+                            width: 50%;
+                        }
+                    }
+                    @include laptop{
+                        height: 242px !important;
+                    }
+                    @include tablet{
+                        height: 292px !important;
+                    }
+                    @include mobile{
+                        height: 260px !important;
+                    }
+                    @include smartphone{
+                        height: 322px !important;
+                    }
+                }
+            }
+            .five-blocks{
+                display: flex;
+                flex-wrap: wrap;
+                .single-block {
+                    position: relative;
+                    &:before {
+                        content: "";
+                        height: 25px;
+                        width: 25px;
+                        background: url(https://www.wowso.me/hubfs/assets/website/images/real-estate/arrow.png) no-repeat 100% !important;
+                        position: absolute;
+                        left: 0px;
+                        top: 30px;
+                        background-size: 100%;
+                    }
+                    &:nth-child(1):before{
+                        content: none;
+                    }
+                    @include mobile{
+                        width: 33.3333%;
+                        &:nth-child(4){
+                            margin-left: 45px;
+                        }
+                    }
+                    @include smartphone{
+                        width: 50%;
+                        &:before{
+                            content: none;
+                        }
+                    }
+                    .single-block-in {
+                        @include tablet{
+                            padding: 0 0px 0 15px;
+                        }
+                        .img img {
+                            @include mobile-max{
+                                height: 70px;
+                            }
+                        }
+                    }
+                }
+            }  
+        }
         footer{
             .footer-top{
                 @include business-area-bg;
@@ -4861,6 +4882,9 @@ textarea:focus {
                         line-height: 18px !important;
                     }
                 }
+                .hs_error_rollup{
+                    display: none;
+                }
                 .hs-fieldtype-textarea{
                     .hs-error-msgs{
                         top:70px;
@@ -5027,6 +5051,9 @@ textarea:focus {
             margin-top: 20px;
         }
         .hs-form-required {
+            display: none;
+        }
+        label.hs-main-font-element {
             display: none;
         }
     }    
@@ -6666,6 +6693,14 @@ textarea:focus {
                         object-fit: cover;
                     }
                 }
+                @include smartphone{
+                    height: 150px;
+                    img{
+                        height: 100%;
+                        object-fit: cover;
+                        width: 100%;                    
+                    }
+                }
             }
             .sliderblock-cont{
                 width: 300px;
@@ -6685,6 +6720,9 @@ textarea:focus {
                 min-height: auto;
                 margin-left: 0;
                 width: 100%;
+            }
+            @include smartphone{
+                padding: 20px 20px 60px;
             }
             h3{
                 font-size: 20px;
