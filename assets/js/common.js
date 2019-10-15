@@ -615,10 +615,10 @@ if (screen.width > 1024)
 {
     js.src = "../assets/page-scrolling/scroll.js";
 }
-else if(screen.width < 1025)
-{
-    js.src = "../assets/page-scrolling/scroll_m.js";
-}
+// else if(screen.width < 1025)
+// {
+//     js.src = "../assets/page-scrolling/scroll_m.js";
+// }
 
 head.appendChild(js);  
 
