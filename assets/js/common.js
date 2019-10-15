@@ -615,23 +615,27 @@ if (screen.width > 767)
 {
     js.src = "../assets/page-scrolling/scroll.js";
 }
-else (screen.width < 768)
+else if (screen.width < 768)
 {
     js.src = "../assets/page-scrolling/scroll_m.js";
 }
-var query = window.matchMedia("(orientation:landscape)");
-var toggleGame = function(query) {
-    if (query.matches) {
-        js.src = "../assets/page-scrolling/scroll_m.js";
-    }
+else ((screen.width > 480) && (screen.height < 500 ))
+{
+    js.src = "../assets/page-scrolling/scroll_m.js";
 }
+// var query = window.matchMedia("(orientation:landscape)");
+// var toggleGame = function(query) {
+//     if (query.matches) {
+//         js.src = "../assets/page-scrolling/scroll_m.js";
+//     }
+// }
 head.appendChild(js);  
-if($('.ow-videos-in').click(function(){ 
-    $('.our-work').removeClass('active');
-}));
-else ($('.lity-close').click(function(){ 
-    $('.our-work').addClass('active');
-}));
+// if($('.ow-videos-in').click(function(){ 
+//     $('.our-work').removeClass('active');
+// }));
+// else ($('.lity-close').click(function(){ 
+//     $('.our-work').addClass('active');
+// }));
 
 // $('.ow-videos-in').on('click', function(){
 //     $('.section').removeClass('active');
