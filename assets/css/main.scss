@@ -167,7 +167,7 @@ textarea:focus {
         &:nth-child(1){
             .section-in {
                 @include smartphone{
-                    padding: 95px 0 50px 0 !important;
+                    padding: 85px 0 40px 0 !important;
                     h1{
                         margin-bottom: 0;
                     }
@@ -187,19 +187,19 @@ textarea:focus {
             height: auto !important;
         }
     }
-    .fp-enabled .main .fp-section:nth-child(1){
-        .fp-tableCell{
-            @include smartphone {
-                padding: 95px 0 50px 0 !important;
-                h1{
-                    margin-bottom: 0;
-                }
-                h1 + .btn{
-                    margin-top: 20px;
-                }
-            }
-        }
-    }
+    // .fp-enabled .main .fp-section:nth-child(1){
+    //     .fp-tableCell{
+    //         @include smartphone {
+    //             padding: 95px 0 50px 0 !important;
+    //             h1{
+    //                 margin-bottom: 0;
+    //             }
+    //             h1 + .btn{
+    //                 margin-top: 20px;
+    //             }
+    //         }
+    //     }
+    // }
     footer.section{
         .fp-tableCell{
             padding: 0 !important;
