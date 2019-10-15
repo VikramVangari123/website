@@ -619,7 +619,7 @@ else if (screen.width < 768)
 {
     js.src = "../assets/page-scrolling/scroll_m.js";
 }
-else ((screen.width > 320) && (screen.height < 350 ))
+else (screen.height < 350 )
 {
     js.src = "../assets/page-scrolling/scroll_m.js";
 }
