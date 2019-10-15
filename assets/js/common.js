@@ -620,19 +620,19 @@ else (screen.width < 1023)
     js.src = "../assets/page-scrolling/scroll_m.js";
 }
 head.appendChild(js);  
-if($('.ow-videos-in').click(function(){ 
-    $('.our-work').removeClass('active');
-}));
-else ($('.lity-close').click(function(){ 
-    $('.our-work').addClass('active');
-}));
+// if($('.ow-videos-in').click(function(){ 
+//     $('.our-work').removeClass('active');
+// }));
+// else ($('.lity-close').click(function(){ 
+//     $('.our-work').addClass('active');
+// }));
 
 // $('.ow-videos-in').on('click', function(){
 //     $('.section').removeClass('active');
 // }); 
-if ( $('html').hasClass('lity-active') ){
-    $('.section').removeClass('active');
-} 
+// if ( $('html').hasClass('lity-active') ){
+//     $('.section').removeClass('active');
+// } 
 
 });
 
