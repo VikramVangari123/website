@@ -1759,7 +1759,7 @@ textarea:focus {
   transition: 0.8s ease;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .fp-section {
     height: auto !important;
   }
@@ -1781,7 +1781,7 @@ textarea:focus {
 .fp-tableCell {
   padding: 99px 0 40px 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .fp-tableCell {
     padding: 40px 0 !important;
     height: auto !important;

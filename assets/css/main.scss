@@ -12,9 +12,6 @@ header{
         padding: 12px 0;
     }
 }
-@media screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) {
-    
-}
 #fp-nav.fp-right{
     @include tablet{
         right: 0px !important;
@@ -139,7 +136,7 @@ textarea:focus {
         transition: 0.8s ease;
     }
     .fp-section {
-        @include mobile-max{
+        @include tablet-max{
             height: auto !important;
         }
         .fp-scroller {
@@ -158,7 +155,7 @@ textarea:focus {
     }
     .fp-tableCell{
         padding: 99px 0 40px 0;
-        @include mobile-max {
+        @include tablet-max {
             padding: 40px 0 !important;
             height: auto !important;
         }

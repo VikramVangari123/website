@@ -611,19 +611,13 @@ var js = document.createElement("script");
 
 js.type = "text/javascript";
 
-if (screen.width > 767)
+if (screen.width > 1024)
 {
     js.src = "../assets/page-scrolling/scroll.js";
 }
-else (screen.width < 768)
+else (screen.width < 1023)
 {
     js.src = "../assets/page-scrolling/scroll_m.js";
-}
-var query = window.matchMedia("(orientation:landscape)");
-var toggleGame = function(query) {
-    if (query.matches) {
-        js.src = "../assets/page-scrolling/scroll_m.js";
-    }
 }
 head.appendChild(js);  
 if($('.ow-videos-in').click(function(){ 
