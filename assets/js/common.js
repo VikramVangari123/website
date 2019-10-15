@@ -611,7 +611,7 @@ var js = document.createElement("script");
 
 js.type = "text/javascript";
 
-if (screen.width > 767)
+if ((screen.width > 767) && (screen.height > 350 ))
 {
     js.src = "../assets/page-scrolling/scroll.js";
 }
@@ -619,10 +619,10 @@ else if (screen.width < 768)
 {
     js.src = "../assets/page-scrolling/scroll_m.js";
 }
-// else ((screen.width > 480) && (screen.height < 500 ))
-// {
-//     js.src = "../assets/page-scrolling/scroll_m.js";
-// }
+else ((screen.width > 320) && (screen.height < 350 ))
+{
+    js.src = "../assets/page-scrolling/scroll_m.js";
+}
 // var query = window.matchMedia("(orientation:landscape)");
 // var toggleGame = function(query) {
 //     if (query.matches) {
@@ -640,9 +640,9 @@ head.appendChild(js);
 // $('.ow-videos-in').on('click', function(){
 //     $('.section').removeClass('active');
 // }); 
-if ( $('html').hasClass('lity-active') ){
-    $('.section').removeClass('active');
-} 
+// if ( $('html').hasClass('lity-active') ){
+//     $('.section').removeClass('active');
+// } 
 
 });
 
