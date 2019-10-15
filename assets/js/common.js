@@ -615,25 +615,16 @@ if (screen.width > 1024)
 {
     js.src = "../assets/page-scrolling/scroll.js";
 }
-else (screen.width < 1023)
+else if(screen.width < 1025)
 {
     js.src = "../assets/page-scrolling/scroll_m.js";
 }
+
 head.appendChild(js);  
-// if($('.ow-videos-in').click(function(){ 
-//     $('.our-work').removeClass('active');
-// }));
-// else ($('.lity-close').click(function(){ 
-//     $('.our-work').addClass('active');
-// }));
 
-// $('.ow-videos-in').on('click', function(){
-//     $('.section').removeClass('active');
-// }); 
-// if ( $('html').hasClass('lity-active') ){
-//     $('.section').removeClass('active');
-// } 
 
+// $("#hello").click(function () {
+//     fullpage_api.setAllowScrolling(false);
+// });
 });
-
 
