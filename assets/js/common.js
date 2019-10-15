@@ -611,15 +611,15 @@ var js = document.createElement("script");
 
 js.type = "text/javascript";
 
-if ((screen.width > 767) && (screen.height > 350 ))
+if ((window.width > 767) && (window.height > 350 ))
 {
     js.src = "../assets/page-scrolling/scroll.js";
 }
-else if (screen.width < 768)
+else if (window.width < 768)
 {
     js.src = "../assets/page-scrolling/scroll_m.js";
 }
-else (screen.height < 350 )
+else (window.height < 350 )
 {
     js.src = "../assets/page-scrolling/scroll_m.js";
 }
