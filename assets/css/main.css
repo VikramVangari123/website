@@ -543,7 +543,7 @@ input[type=text], textarea, input[type=email], input[type=tel] {
 
 @media (max-width: 767px) {
   .contact-block input[type=text], .contact-block textarea, .contact-block input[type=email], .contact-block input[type=tel] {
-    font: 400 13px Roboto;
+    font: 400 16px Roboto;
   }
 }
 
