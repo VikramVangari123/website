@@ -5376,7 +5376,7 @@ nav.nav-split:hover svg.icon {
   height: 272px !important;
 }
 .business-area.customer-service #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow li {
-  height: 100%;
+  height: 100% !important;
 }
 @media (max-width: 767px) {
   .business-area.customer-service #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow li {
@@ -5411,7 +5411,7 @@ nav.nav-split:hover svg.icon {
 }
 @media (max-width: 479px) {
   .business-area.customer-service #tab-slider .tab-slider-in #slider-content li[id^=tab] #slideshow {
-    height: 322px !important;
+    height: 342px !important;
   }
 }
 .business-area.customer-service .five-blocks {
