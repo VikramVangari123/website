@@ -5,8 +5,8 @@ $(function() {
         $('.content1').addClass("active-tab");
     });
     // menu
-    //  (window width leass than 767px)
-    if ($(window).innerWidth() >= 768) {
+    //  (window width greater than 1024px)
+    if ($(window).innerWidth() >= 1025) {
         // $('.mega-menu').on('mouseover', '.megamenu-item', function() {
         //     $(this).addClass('active').siblings().removeClass('active');
         // });
