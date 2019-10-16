@@ -953,7 +953,7 @@ h1, h2 {
 /*** header *************************/
 header {
   padding: 30px 0 17px 0;
-  height: 60px;
+  height: 58px;
   width: 100%;
   position: fixed;
   z-index: 9999;
@@ -964,12 +964,12 @@ header.fixedheader {
   padding: 17px 0;
   z-index: 999999;
 }
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   header.fixedheader {
     padding: 12px 0;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   header {
     padding: 12px 0;
     height: 45px;
@@ -981,7 +981,7 @@ header .logo {
 header .logo img {
   width: 160px;
 }
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   header .logo img {
     width: 150px;
   }
@@ -1010,7 +1010,7 @@ header .overlay {
   overflow: hidden;
   transition: 0.5s;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   header .overlay {
     background-image: linear-gradient(to right, #79f1a4, #0e5cad);
   }
@@ -1053,10 +1053,10 @@ header .overlay .closebtn {
     right: 15px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   header .overlay .closebtn {
     top: 6px;
-    right: 10px;
+    right: 18px;
     font-size: 30px;
   }
 }
@@ -1067,14 +1067,14 @@ header .overlay .overlay-content {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   header .overlay .overlay-content {
     top: 40px;
     left: 0;
     transform: none;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   header .overlay .overlay-content .mega-menu {
     position: relative;
     display: block;
@@ -1193,7 +1193,7 @@ header .overlay .overlay-content {
     font-size: 17px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   header .overlay .overlay-content .mega-menu {
     position: relative;
     display: block;
@@ -1264,12 +1264,12 @@ header .overlay .overlay-content {
     margin-bottom: 24px;
   }
 }
-@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 1025px) and (min-width: 768px) and (max-width: 1024px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .tab-top {
     margin-bottom: 9px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in {
     display: inline-block;
     background: rgba(255, 255, 255, 0.2);
@@ -1279,12 +1279,12 @@ header .overlay .overlay-content {
     vertical-align: top;
   }
 }
-@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 1025px) and (min-width: 768px) and (max-width: 1024px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in {
     margin-right: 5px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a {
     font-size: 16px;
     height: 150px;
@@ -1295,14 +1295,14 @@ header .overlay .overlay-content {
     justify-content: center;
   }
 }
-@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 1025px) and (min-width: 768px) and (max-width: 1024px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a {
     width: 90px;
     height: 130px;
     min-width: 110px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a img {
     margin: 0px;
     -webkit-transition: transform 0.2s ease-in-out;
@@ -1312,20 +1312,20 @@ header .overlay .overlay-content {
     max-height: 85px;
   }
 }
-@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 1025px) and (min-width: 768px) and (max-width: 1024px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a img {
     width: auto;
     max-height: 70px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content .megamenu-tabH-in a:hover img {
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
     transform: scale(1.05);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div {
     position: relative;
     padding: 5px;
@@ -1333,14 +1333,14 @@ header .overlay .overlay-content {
     height: 100%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div.view {
     display: block;
     width: 100%;
     min-height: 200px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div p {
     display: block !important;
     color: #fff;
@@ -1353,17 +1353,17 @@ header .overlay .overlay-content {
     white-space: initial;
   }
 }
-@media (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 1025px) and (min-width: 768px) and (max-width: 1024px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div p {
     font-size: 12px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub ul.megamenu-sub-menu .megamenu-sub-content > div p:hover {
     color: #fff;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   header .overlay .overlay-content .mega-menu .megamenu-item .megamenu-sub {
     display: none;
     top: 0px;
@@ -1388,12 +1388,12 @@ header .overlay .overlay-content {
     z-index: 99;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(1):hover .megamenu-sub {
     display: block;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   header .overlay .overlay-content .mega-menu .megamenu-item:nth-child(3):hover .megamenu-sub {
     display: block;
   }
@@ -1783,17 +1783,12 @@ textarea:focus {
 }
 @media (max-width: 1024px) {
   .fp-tableCell {
-    padding: 40px 0 !important;
+    padding: 0 !important;
     height: auto !important;
   }
 }
-@media (max-width: 479px) {
-  .fp-tableCell {
-    padding: 0 !important;
-  }
-}
 
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   .section:nth-child(1) .section-in {
     padding: 85px 0 40px 0 !important;
   }
@@ -1804,9 +1799,20 @@ textarea:focus {
     margin-top: 20px;
   }
 }
-@media (max-width: 479px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section:nth-child(1) .section-in {
+    padding: 108px 0 50px 0 !important;
+  }
+}
+@media (max-width: 767px) {
   .section .section-in {
     padding: 40px 0 !important;
+    height: auto !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section .section-in {
+    padding: 50px 0 !important;
     height: auto !important;
   }
 }

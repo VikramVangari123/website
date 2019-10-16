@@ -425,7 +425,7 @@ h1, h2{
 
 header {
   padding: 30px 0 17px 0;
-  height: 60px;
+  height: 58px;
   width: 100%;
   position: fixed;
   z-index: 9999;
@@ -434,11 +434,11 @@ header {
     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);    
     padding: 17px 0;
     z-index: 999999;
-    @include smartphone{
+    @include mobile-max{
       padding: 12px 0;
     }
   }
-  @include smartphone{
+  @include mobile-max{
     padding: 12px 0;
     height: 45px;
   }
@@ -446,7 +446,7 @@ header {
     text-transform: uppercase;
     img{
       width: 160px;
-      @include smartphone{
+      @include mobile-max{
         width: 150px;
       }
     }
@@ -472,7 +472,7 @@ header {
     background-color: rgba(0,0,0, 0.9);
     overflow: hidden;
     transition: 0.5s;
-    @include mobile-max{
+    @include tablet-max{
       background-image: linear-gradient(to right, #79f1a4, #0e5cad);
     }
     @include max-height450px{
@@ -504,9 +504,9 @@ header {
         top: 15px;
         right: 15px;
       }
-      @include mobile-max{
+      @include tablet-max{
         top: 6px;
-        right: 10px;
+        right: 18px;
         font-size: 30px;    
       }
     }
@@ -516,12 +516,12 @@ header {
       width: 100%;
       left: 50%;
       transform: translate(-50%, -50%);
-      @include mobile-max{
+      @include tablet-max{
         top: 40px;
         left: 0;
         transform: none;
       }
-      @include mobile-max{
+      @include tablet-max{
       .mega-menu {
         position: relative;
         display: block;
@@ -656,7 +656,7 @@ header {
         } 
       }
       }
-      @include tablet-min{
+      @include laptop-min{
       .mega-menu {
         position: relative;
         display: block;
