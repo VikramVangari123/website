@@ -127,11 +127,9 @@ input:-internal-autofill-selected {
 input[type="text"], textarea, input[type="email"], input[type="tel"]{
   border-radius: 0;
 }
-.contact-block {
-  input[type="text"], textarea, input[type="email"], input[type="tel"]{
-    @include mobile-max{
-      font: 400 16px Roboto;
-    }
+input[type="text"], textarea, input[type="email"], input[type="tel"]{
+  @include mobile-max{
+    font: 400 16px Roboto;
   }
 }
 ul {
