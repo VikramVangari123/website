@@ -521,7 +521,7 @@
                     // Rotate the camera by 180 degrees to the front of the asset.
                     scene.activeCamera.alpha += Math.PI;
                 });
-
+                    scene.clearColor= new BABYLON.Color4(0,0,0,0.00000001); 
                 return scene;
             };
             __createScene = delayCreateScene;
