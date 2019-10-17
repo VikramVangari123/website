@@ -504,6 +504,28 @@
         window.addEventListener('DOMContentLoaded', function() 
         {
             var canvas = document.getElementById('renderCanvas');
+            BABYLON.DefaultLoadingScreen.prototype.displayLoadingUI = function () {
+                this._loadingDiv = document.createElement("div");
+                this._loadingDiv.id = "customLoadingScreenDiv";
+                var customLoadingScreenCss = document.createElement('style');
+                customLoadingScreenCss.type = 'text/css';
+                customLoadingScreenCss.innerHTML = `
+                #customLoadingScreenDiv{
+                    background-color: #FFFFFF;
+                    color: white;
+                    font-size:50px;
+                    text-align:center;
+                }
+                `;
+                document.getElementsByTagName('head')[0].appendChild(customLoadingScreenCss);
+                this._resizeLoadingUI();
+                window.addEventListener("resize", this._resizeLoadingUI);
+                document.body.appendChild(this._loadingDiv);
+                };
+            BABYLON.DefaultLoadingScreen.prototype.hideLoadingUI = function(){
+                this._loadingDiv.style.display = "none";
+                console.log("scene is now loaded");
+                }
             var delayCreateScene = function () {
                 // Create a scene.
                 var scene = new BABYLON.Scene(engine);
