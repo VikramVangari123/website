@@ -1626,12 +1626,16 @@ header .overlay .overlay-content {
 }
 
 .coveringCanvas {
-  width: 311px;
-  height: 410px;
+  width: 400px;
+  height: 400px;
   background-color: transparent;
   outline: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   /* mobile webkit */
+}
+
+#renderCanvas {
+  background: transparent;
 }
 
 header {
