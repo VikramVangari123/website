@@ -18,14 +18,25 @@ body {
     font-size: 13px;
     line-height: 20px;
   }
+  // @include tabletMax-landscape{
+  //   font-size: 13px;
+  //   line-height: 20px;;
+  // }
 }
 // body.home, body.industry, body.business-area, body.about, body.contact, body.how-we-work
 html, body{
+  -webkit-text-size-adjust: 100%;
   &::-webkit-scrollbar{
     width: 0 !important;
   }
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
+    overflow-x: hidden;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+  html {
+     -webkit-text-size-adjust: none;
+  }
 }
 img {
   max-width: 100%;
@@ -73,24 +84,24 @@ select:invalid{
 .all { color: $placeholder;}
 
 /** hiding play button on iphone **/
-*::-webkit-media-controls-panel {
-  display: none!important;
- -webkit-appearance: none;
-}
+// *::-webkit-media-controls-panel {
+//   display: none!important;
+//  -webkit-appearance: none;
+// }
 
 /* Old shadow dom for play button */
 
-*::--webkit-media-controls-play-button {
-  display: none!important;
-  -webkit-appearance: none;
-}
+// *::--webkit-media-controls-play-button {
+//   display: none!important;
+//   -webkit-appearance: none;
+// }
 
 /* New shadow dom for play button */
 
 /* This one works */
 
 *::-webkit-media-controls-start-playback-button {
-  display: none!important;
+  display: none !important;
   -webkit-appearance: none;
 }
 /** global **/

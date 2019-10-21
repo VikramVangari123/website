@@ -493,6 +493,11 @@ $subscription-menu-active: #653235;
     @content;
 }
 }
+@mixin tabletMax-landscape {
+@media (max-width: 1024px) and (orientation: landscape) {
+    @content;
+}
+}
 
 /* 
 ##Device = Low Resolution Tablets, Mobiles (Landscape)

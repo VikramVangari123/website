@@ -15,7 +15,7 @@
 	width:400px; height:400px; 
 	background-color: transparent;
 	outline: none;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
 }
 #renderCanvas{
     background: transparent;
@@ -117,7 +117,6 @@ textarea:focus {
             height: 22px;
             margin-top: 20px;
             width: 108px;
-            z-index: 99999;
             cursor: pointer;
             img{
                 margin-left: 10px;
@@ -203,7 +202,7 @@ textarea:focus {
                 height: auto !important;
             }
         }
-        @include smartphone{
+        @include tablet-max{
             height: auto !important;
         }
     }
@@ -2897,6 +2896,21 @@ textarea:focus {
                     }
                 }
             }
+            .five-blocks {
+                display: flex;
+                flex-wrap: wrap;
+                .single-block{
+                    @include mobile{
+                        width: 33.3333%;
+                        &:nth-child(4){
+                            margin-bottom: 0;
+                        }
+                    }
+                    @include smartphone{
+                        width: 50%;
+                    }
+                }
+            }
             .two-blocks .single-block {
                 background: #fff;
                 .imgBlock{
@@ -3721,7 +3735,7 @@ textarea:focus {
                             height: 100%;
                         }
                         @include tablet{
-                            width: 50%;
+                            width: 50% !important;
                         }
                         @include laptop{
                             width: 50%;
@@ -7136,11 +7150,11 @@ textarea:focus {
             @include mobile{
                 width: 80%;
             }
-            a{
-                width: calc(50% - 11px);
+            .ow_videoSrc{
+                width: 50%;
                 height: auto;
-                display: inline-block;
                 position: relative;
+                max-width: 280px;
                 &:hover{
                     video{
                         @include image-scale;
@@ -7173,8 +7187,9 @@ textarea:focus {
             }
             .ow-videos-in-top{
                 width: 100%;
-                float: left;
-                a{                    
+                display: flex;
+                align-items: flex-end;
+                .ow_videoSrc{                    
                     &:nth-child(1){
                         margin: 0 8px 5px 0;
                         video{
@@ -7217,47 +7232,170 @@ textarea:focus {
             }
             .ow-videos-in-btm{
                 width: 100%;
-                float: left;
-                a{                    
-                &:nth-child(1){
-                    margin: 5px 8px 0 0;
-                    vertical-align: top;
-                    text-align: right;
-                    video{
-                        width: 80%;
-                        height: auto;
-                    }
-                    &:after{
-                        right: 10px;
+                display: flex;
+                align-items: flex-start;
+                .ow_videoSrc{                    
+                    &:nth-child(1){
+                        margin: 5px 8px 0 0;
+                        vertical-align: top;
+                        text-align: right;
+                        video{
+                            width: 80%;
+                            height: auto;
+                        }
+                        &:after{
+                            right: 10px;
+                            @include smartphone{
+                                right: 5px;
+                                bottom: 10px;
+                            }
+                        }
                         @include smartphone{
-                            right: 5px;
-                            bottom: 10px;
+                            margin: 3px 0 0 0; 
                         }
                     }
-                    @include smartphone{
-                        margin: 3px 0 0 0; 
-                    }
-                }
-                &:nth-child(2){
-                    margin: 5px 0 0 8px;
-                    vertical-align: top;
-                    text-align: right;
-                    video{                        
-                        width: 100%;
-                        height: auto;
-                    }
-                    &:after{
-                        right: 10px;
+                    &:nth-child(2){
+                        margin: 5px 0 0 8px;
+                        vertical-align: top;
+                        text-align: right;
+                        video{                        
+                            width: 100%;
+                            height: auto;
+                        }
+                        &:after{
+                            right: 10px;
+                            @include smartphone{
+                                right: 5px;
+                            }
+                        }
                         @include smartphone{
-                            right: 5px;
+                            margin: 3px 0 0 5px; 
                         }
                     }
-                    @include smartphone{
-                        margin: 3px 0 0 5px; 
-                    }
-                }
                 }
             }
+            // a{
+            //     width: calc(50% - 11px);
+            //     height: auto;
+            //     display: inline-block;
+            //     position: relative;
+            //     &:hover{
+            //         video{
+            //             @include image-scale;
+            //         }
+            //     }
+            //     video{
+            //         @include box-shadow;
+            //         @include transition;
+            //         object-fit: initial;
+            //         border-radius: 5px;
+            //     }
+            //     &:after{
+            //         content: " ";
+            //         display: block;
+            //         position: absolute;
+            //         background-position: bottom right;
+            //         bottom: 15px;
+            //         width: 100%;
+            //         height: 100%;
+            //         z-index: 1;
+            //         opacity: 1;
+            //         background-image: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/play.png);
+            //         background-repeat: no-repeat;
+            //         background-size: 35px;
+            //         @include smartphone{
+            //             background-size: 25px;
+            //             bottom: 10px;
+            //         }
+            //     }
+            // }
+            // .ow-videos-in-top{
+            //     width: 100%;
+            //     float: left;
+            //     a{                    
+            //         &:nth-child(1){
+            //             margin: 0 8px 5px 0;
+            //             video{
+            //                 width: 100%;
+            //                 height: auto;
+            //             }
+            //             @include smartphone{
+            //                 margin: 0;
+            //             }
+            //             &:after{
+            //                 right: 10px;
+            //                 @include smartphone{
+            //                     right: 5px;
+            //                 }
+            //             }
+            //         }
+            //         &:nth-child(2){
+            //             margin: 0 0 5px 8px;
+            //             vertical-align: bottom;
+            //             text-align: left;
+            //             video{
+            //                 width: 80%;
+            //                 height: auto;
+            //                 margin-top: 18px;
+            //             }
+            //             @include smartphone{
+            //                 margin: 0 0 0px 6px;
+            //             }
+            //             &:after{
+            //                 background-position: bottom right;
+            //                 right: calc(20% + 10px);
+            //                 bottom: 15px;
+            //                 @include smartphone{
+            //                     right: calc(20% + 5px);
+            //                     bottom: 10px;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
+            // .ow-videos-in-btm{
+            //     width: 100%;
+            //     float: left;
+            //     a{                    
+            //     &:nth-child(1){
+            //         margin: 5px 8px 0 0;
+            //         vertical-align: top;
+            //         text-align: right;
+            //         video{
+            //             width: 80%;
+            //             height: auto;
+            //         }
+            //         &:after{
+            //             right: 10px;
+            //             @include smartphone{
+            //                 right: 5px;
+            //                 bottom: 10px;
+            //             }
+            //         }
+            //         @include smartphone{
+            //             margin: 3px 0 0 0; 
+            //         }
+            //     }
+            //     &:nth-child(2){
+            //         margin: 5px 0 0 8px;
+            //         vertical-align: top;
+            //         text-align: right;
+            //         video{                        
+            //             width: 100%;
+            //             height: auto;
+            //         }
+            //         &:after{
+            //             right: 10px;
+            //             @include smartphone{
+            //                 right: 5px;
+            //             }
+            //         }
+            //         @include smartphone{
+            //             margin: 3px 0 0 5px; 
+            //         }
+            //     }
+            //     }
+            // }
         }  
         .campaigns-main-list {
             margin-left: -10px;
