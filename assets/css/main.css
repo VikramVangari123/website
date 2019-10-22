@@ -8840,6 +8840,7 @@ nav.nav-split:hover svg.icon {
   height: auto;
   position: relative;
   max-width: 280px;
+  cursor: pointer;
 }
 .our-work .ow-videos-in .ow_videoSrc:hover video {
   -webkit-transform: scale(1.05);

@@ -7155,6 +7155,7 @@ textarea:focus {
                 height: auto;
                 position: relative;
                 max-width: 280px;
+                cursor: pointer;
                 &:hover{
                     video{
                         @include image-scale;
