@@ -9,56 +9,6 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/video-popup.css" />     
     <link rel="stylesheet" type="text/css" href="../assets/page-scrolling/fullpage.css" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <style>
-        /* The Modal (background) */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 99999; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-        }
-
-        /* Modal Content/Box */
-        .modal-content {
-            background-color: transparent;
-            padding: 20px;
-            width: 80%;
-            top: 50%;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 700px;
-        }
-        .modal-content video{
-            width: 100%;
-            outline: none;
-        }
-        /* The Close Button */
-        .close {
-            color: #fff;
-            float: right;
-            font-size: 34px;
-            font-weight: bold;
-            margin-top: -40px;
-            margin-right: -10px;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .ow-videos-in video{
-            width: 200px;
-        }
-    </style>
 </head>
 <body class="home" onload="init();" style="margin:0px;">
     <div class="content">
@@ -553,20 +503,20 @@
     
         
         <!-- The Modal -->
-        <div id="myModal" class="modal">
+        <div id="ow-modal" class="ow-videos-modal ow-modal">
             <!-- Modal content -->
-            <div class="modal-content">
+            <div class="ow-modal-content">
                 <span class="close">&times;</span>
-                <video id="ow_video1Mdl" class="ow_videoMdl" controls="controls" autoplay style="display: none;">
+                <video id="ow_video1Mdl" class="ow_videoMdl" controls="controls" style="display: none;">
                     <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" type="video/mp4">
                 </video>
-                <video id="ow_video2Mdl" class="ow_videoMdl" controls="controls" autoplay style="display: none;">
+                <video id="ow_video2Mdl" class="ow_videoMdl" controls="controls" style="display: none;">
                     <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4" type="video/mp4">
                 </video>
-                <video id="ow_video3Mdl" class="ow_videoMdl" controls="controls" autoplay style="display: none;">
+                <video id="ow_video3Mdl" class="ow_videoMdl" controls="controls" style="display: none;">
                     <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/RCB+-+IPL+2018.mp4" type="video/mp4">
                 </video>
-                <video id="ow_video4Mdl" class="ow_videoMdl" controls="controls" autoplay style="display: none;">
+                <video id="ow_video4Mdl" class="ow_videoMdl" controls="controls" style="display: none;">
                     <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/Marketing+video+final+version.mp4" type="video/mp4">
                 </video>
             </div>
@@ -582,7 +532,7 @@
         </script>
         <script>
             // Get the modal
-            var modal = document.getElementById('myModal');
+            var modal = document.getElementById('ow-modal');
             // Get the video that opens the modal
             var ow_videos_in = document.getElementById("ow_videos_in");
             var ow_video1Src = document.getElementById("ow_video1Src");
@@ -608,15 +558,19 @@
             }
             ow_video1Src.onclick = function() {
                 ow_video1Mdl.style.display = "block";
+                ow_video1Mdl.play();  
             }
             ow_video2Src.onclick = function() {
                 ow_video2Mdl.style.display = "block";
+                ow_video2Mdl.play();  
             }
             ow_video3Src.onclick = function() {
                 ow_video3Mdl.style.display = "block";
+                ow_video3Mdl.play();  
             }
             ow_video4Src.onclick = function() {
                 ow_video4Mdl.style.display = "block";
+                ow_video4Mdl.play();  
             }
 
             // When the user clicks on <span> (x), close the modal
