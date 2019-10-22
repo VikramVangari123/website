@@ -7150,6 +7150,9 @@ textarea:focus {
             @include mobile{
                 width: 80%;
             }
+            @include smartphone{
+                max-width: 287px;
+            }
             .ow_videoSrc{
                 width: 50%;
                 height: auto;
@@ -7193,10 +7196,6 @@ textarea:focus {
                         video{
                             width: 100%;
                             height: auto;
-                            @include smartphone{
-                                width: 139px;
-                                height: 78px;
-                            }
                         }
                         @include smartphone{
                             margin: 0;
@@ -7216,10 +7215,6 @@ textarea:focus {
                             width: 80%;
                             height: auto;
                             margin-top: 18px;
-                            @include smartphone{
-                                width: 111px;
-                                height: 67px;
-                            }
                         }
                         @include smartphone{
                             margin: 0 0 0px 6px;
@@ -7248,10 +7243,6 @@ textarea:focus {
                         video{
                             width: 80%;
                             height: auto;
-                            @include smartphone{
-                                width: 111px;
-                                height: 67px;
-                            }
                         }
                         &:after{
                             right: 10px;
@@ -7271,10 +7262,6 @@ textarea:focus {
                         video{                        
                             width: 100%;
                             height: auto;
-                            @include smartphone{
-                                width: 139px;
-                                height: 78px;
-                            }
                         }
                         &:after{
                             right: 10px;
