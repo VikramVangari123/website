@@ -598,6 +598,7 @@
                     this.pause();
                 });
                 $('.ow_videoMdl').get(0).pause();
+                $('.our-work').addClass('active');
             });
             $(window).click(function(event){
                 if (event.target == modal) {
@@ -606,7 +607,11 @@
                         this.pause();
                     });
                     $('.ow_videoMdl').get(0).pause();
+                    $('.our-work').addClass('active');
                 }
+            });
+            $('#ow_videos_in').click(function(event){
+                $('.our-work').removeClass('active');
             });
         </script>
         <!-- JavaScripts -->
