@@ -521,16 +521,9 @@
                 </video>
             </div>
         </div>
-        <script>                             
-            jQuery('.slider').lbSlider({
-                leftBtn: '.sa-left',
-                rightBtn: '.sa-right',
-                visible: 3,
-                autoPlay: true,
-                autoPlayDelay: 5
-            });
-        </script>
         <script>
+            // Our work videos section
+    
             // Get the modal
             var modal = document.getElementById('ow-modal');
             // Get the video that opens the modal
@@ -540,39 +533,43 @@
             var ow_video3Src = document.getElementById("ow_video3Src");
             var ow_video4Src = document.getElementById("ow_video4Src");
             //var ow_videoSrc  = document.getElementsByClassName("ow_videoSrc");
-
+    
             // modal videos
             var ow_video1Mdl = document.getElementById("ow_video1Mdl");
             var ow_video2Mdl = document.getElementById("ow_video2Mdl");
             var ow_video3Mdl = document.getElementById("ow_video3Mdl");
             var ow_video4Mdl = document.getElementById("ow_video4Mdl");
             var ow_videoMdl = document.getElementsByClassName("ow_videoMdl");
-
+    
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
-
+    
             // When the user clicks on the button, open the modal 
-            ow_videos_in.onclick = function() {
-                modal.style.display = "block";
-                ow_videoMdl.get(0).play();  
-            }
             ow_video1Src.onclick = function() {
                 ow_video1Mdl.style.display = "block";
                 ow_video1Mdl.play();  
+                modal.style.display = "block";
+                ow_videoMdl.get(0).play(); 
             }
             ow_video2Src.onclick = function() {
                 ow_video2Mdl.style.display = "block";
-                ow_video2Mdl.play();  
+                ow_video2Mdl.play();
+                modal.style.display = "block";
+                ow_videoMdl.get(0).play();   
             }
             ow_video3Src.onclick = function() {
                 ow_video3Mdl.style.display = "block";
                 ow_video3Mdl.play();  
+                modal.style.display = "block";
+                ow_videoMdl.get(0).play(); 
             }
             ow_video4Src.onclick = function() {
                 ow_video4Mdl.style.display = "block";
                 ow_video4Mdl.play();  
+                modal.style.display = "block";
+                ow_videoMdl.get(0).play(); 
             }
-
+    
             // When the user clicks on <span> (x), close the modal
             span.onclick = function() {
                 modal.style.display = "none";
@@ -581,7 +578,7 @@
                 ow_video3Mdl.style.display = "none";
                 ow_video4Mdl.style.display = "none";  
             }
-
+    
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
                 if (event.target == modal) {
@@ -612,6 +609,16 @@
             });
             $('#ow_videos_in').click(function(event){
                 $('.our-work').removeClass('active');
+            });
+        </script>
+
+        <script>                             
+            jQuery('.slider').lbSlider({
+                leftBtn: '.sa-left',
+                rightBtn: '.sa-right',
+                visible: 3,
+                autoPlay: true,
+                autoPlayDelay: 5
             });
         </script>
         <!-- JavaScripts -->
