@@ -682,30 +682,30 @@
                         </div>
 
                         <div class="right50 text-center">
-                            <div class="ow-videos-in align-right50">
+                            <div class="ow-videos-in" id="ow_videos_in">
                                 <div class="ow-videos-in-top">                                
-                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" data-lity data-aos="fade-right">
-                                        <video>
+                                    <div id="ow_video1Src" class="ow_videoSrc">
+                                        <video width="200">
                                             <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4#t=5" type="video/mp4">
                                         </video>
-                                    </a>
-                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4" data-lity data-aos="slide-down">
+                                    </div>
+                                    <div id="ow_video2Src" class="ow_videoSrc">
                                         <video>
-                                            <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4#t=4" type="video/mp4">
+                                            <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4#t=5" type="video/mp4">
                                         </video>
-                                    </a>
+                                    </div>
                                 </div>
                                 <div class="ow-videos-in-btm">  
-                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/RCB+-+IPL+2018.mp4" data-lity data-aos="fade-up">
+                                    <div id="ow_video3Src" class="ow_videoSrc">
                                         <video>
                                             <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/RCB+-+IPL+2018.mp4#t=51" type="video/mp4">
                                         </video>
-                                    </a>
-                                    <a href="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/Marketing+video+final+version.mp4" data-lity data-aos="fade-left">
+                                    </div>
+                                    <div id="ow_video4Src" class="ow_videoSrc">
                                         <video>
                                             <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/Marketing+video+final+version.mp4#t=8" type="video/mp4">
                                         </video>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -837,7 +837,25 @@
                     </div>
                 </div>
             </footer>
-
+            <!-- The Modal -->
+            <div id="ow-modal" class="ow-videos-modal ow-modal">
+                <!-- Modal content -->
+                <div class="ow-modal-content">
+                    <span class="close">&times;</span>
+                    <video id="ow_video1Mdl" class="ow_videoMdl" controls="controls" style="display: none;">
+                        <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/%23WOWSOMEFRIDAY%2C+a+mixed+reality+party+-+WEWORK+BKC.mp4" type="video/mp4">
+                    </video>
+                    <video id="ow_video2Mdl" class="ow_videoMdl" controls="controls" style="display: none;">
+                        <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/THPrintPlay.mp4" type="video/mp4">
+                    </video>
+                    <video id="ow_video3Mdl" class="ow_videoMdl" controls="controls" style="display: none;">
+                        <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/RCB+-+IPL+2018.mp4" type="video/mp4">
+                    </video>
+                    <video id="ow_video4Mdl" class="ow_videoMdl" controls="controls" style="display: none;">
+                        <source src="https://s3.ap-south-1.amazonaws.com/website-wowsome/videos/Marketing+video+final+version.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
         </div>
     </div>
     <script>                             
