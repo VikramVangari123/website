@@ -8841,11 +8841,8 @@ nav.nav-split:hover svg.icon {
   position: relative;
   max-width: 280px;
   cursor: pointer;
-}
-.our-work .ow-videos-in .ow_videoSrc:hover video {
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  transform: scale(1.05);
+  display: block;
+  overflow: hidden;
 }
 .our-work .ow-videos-in .ow_videoSrc video {
   -webkit-box-shadow: 0 0 12px -4px rgba(0, 0, 0, 0.3);
@@ -9000,6 +8997,70 @@ nav.nav-split:hover svg.icon {
   .our-work .campaigns-main-list .camp-list-block .camp-list-block-in {
     height: 142px;
   }
+}
+.our-work .ow-videos-in video {
+  width: 200px;
+}
+
+/* The Modal (background) */
+.ow-modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 99999;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.ow-modal-content {
+  background-color: transparent;
+  padding: 20px;
+  width: 80%;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+}
+@media (max-width: 767px) {
+  .ow-modal-content {
+    width: 95%;
+  }
+}
+
+.ow-modal-content video {
+  width: 100%;
+  outline: none;
+}
+
+/* The Close Button */
+.close {
+  color: #fff;
+  float: right;
+  font-size: 34px;
+  font-weight: bold;
+  margin-top: -40px;
+  margin-right: -10px;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /******************************* our work gallery *********************************/
