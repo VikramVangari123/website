@@ -576,36 +576,42 @@
             }
     
             // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                    ow_video1Mdl.style.display = "none";
-                    ow_video2Mdl.style.display = "none";
-                    ow_video3Mdl.style.display = "none";
-                    ow_video4Mdl.style.display = "none";
+            if (screen.width > 1024){
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                        ow_video1Mdl.style.display = "none";
+                        ow_video2Mdl.style.display = "none";
+                        ow_video3Mdl.style.display = "none";
+                        ow_video4Mdl.style.display = "none";
+                    }
                 }
             }
-            // $('.close').click(function(event){
-            //     $('.ow_videoMdl').each(function(){ 
-            //         this.currentTime = 0;
-            //         this.pause();
-            //     });
-            //     $('.ow_videoMdl').get(0).pause();
-            //     $('.our-work').addClass('active');
-            // });
-            // $(window).click(function(event){
-            //     if (event.target == modal) {
-            //         $('.ow_videoMdl').each(function(){ 
-            //             this.currentTime = 0;
-            //             this.pause();
-            //         });
-            //         $('.ow_videoMdl').get(0).pause();
-            //         $('.our-work').addClass('active');
-            //     }
-            // });
-            // $('#ow_videos_in').click(function(event){
-            //     $('.our-work').removeClass('active');
-            // });
+            $('.close').click(function(event){
+                $('.ow_videoMdl').each(function(){ 
+                    this.currentTime = 0;
+                    this.pause();
+                });
+                if (screen.width > 1024){
+                    $('.our-work').addClass('active');
+                }
+            });
+            $(window).click(function(event){
+                if (event.target == modal) {
+                    $('.ow_videoMdl').each(function(){ 
+                        this.currentTime = 0;
+                        this.pause();
+                    });
+                    if (screen.width > 1024){
+                        $('.our-work').addClass('active');
+                    }
+                }
+            });
+            if (screen.width > 1024){
+                $('#ow_videos_in').click(function(event){
+                    $('.our-work').removeClass('active');
+                });
+            }
         </script>
 
         <script>                             
