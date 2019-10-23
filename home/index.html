@@ -503,7 +503,7 @@
     
         
         <!-- The Modal -->
-        <div id="ow-modal" class="ow-videos-modal ow-modal">
+        <div id="ow-modal" class="ow-videos-modal ow-modal" style="display: none;">
             <!-- Modal content -->
             <div class="ow-modal-content">
                 <span class="close">&times;</span>
@@ -596,17 +596,18 @@
                     $('.our-work').addClass('active');
                 }
             });
-            $(window).click(function(event){
-                if (event.target == modal) {
-                    $('.ow_videoMdl').each(function(){ 
-                        this.currentTime = 0;
-                        this.pause();
-                    });
-                    if (screen.width > 1024){
-                        $('.our-work').addClass('active');
+            
+            if (screen.width > 1024){
+                $(window).click(function(event){
+                    if (event.target == modal) {
+                        $('.ow_videoMdl').each(function(){ 
+                            this.currentTime = 0;
+                            this.pause();
+                        });
+                            $('.our-work').addClass('active');
                     }
-                }
-            });
+                });
+            }
             if (screen.width > 1024){
                 $('#ow_videos_in').click(function(event){
                     $('.our-work').removeClass('active');
