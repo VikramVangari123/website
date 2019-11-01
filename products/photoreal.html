@@ -540,12 +540,13 @@
                     // The default camera looks at the back of the asset.
                     // Rotate the camera by 180 degrees to the front of the asset.
                     scene.activeCamera.alpha += Math.PI;
+                    scene.activeCamera.lowerRadiusLimit= scene.activeCamera.upperRadiusLimit= scene.activeCamera.radius=1;
                 });
                     scene.clearColor= new BABYLON.Color4(0,0,0,0.00000001); 
                 return scene;
             };
             __createScene = delayCreateScene;
-
+            
             var engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true });	
 
             var scene = delayCreateScene();
