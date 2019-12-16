@@ -12,7 +12,7 @@
 	position:absolute; top:0px; left:0px;
 }
 .coveringCanvas{ 
-	width:400px; height:400px; 
+	width:100%; height:100%; 
 	background-color: transparent;
 	outline: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
@@ -118,6 +118,7 @@ textarea:focus {
             margin-top: 20px;
             width: 108px;
             cursor: pointer;
+            text-align: right;
             img{
                 margin-left: 10px;
                 vertical-align: text-top;
@@ -982,13 +983,14 @@ textarea:focus {
             }  
         }
     }
-    body .main .copy-right {
+    body .copy-right {
         text-align: center;
         color: $white;
         background-color: #c8c8c8;
         padding: 10px 0 !important; 
         div div{
             padding-top: 3px;
+            color: #fff;
         }
     }
 
@@ -3864,7 +3866,7 @@ textarea:focus {
                 color: #fff;
             }
             .tab_container .tab_content img {
-                max-height: 380px;
+                max-height: 250px;
             }
         }
         .features-benefits {
@@ -3945,6 +3947,70 @@ textarea:focus {
                     }
                     .imgTitle{
                         height: auto !important;
+                    }
+                }
+            }
+        }
+        &.products-index{
+            .use-cases{
+                #tab-slider .tab-slider-in #slider-content li[id^=tab]{
+                    #nex, #prev{
+                        @include desktop{
+                            top: 120px !important;
+                        }
+                        @include laptop{
+                            top: 90px !important;
+                        }
+                    }
+                    #slideshow{
+                        @include laptop{
+                            height: 325px;
+                        }
+                        li{
+                            height: calc(100% + 8px);
+                            .imgTitle{
+                                @include laptop{
+                                    height: 110px;
+                                    img{
+                                        max-width: 100px;
+                                    }
+                                }
+                            }
+                            .item {
+                                .item-in{
+                                    position: relative;
+                                    .item-cont {
+                                        height: 210px;
+                                    }
+                                    .learnmore{
+                                        -webkit-transition: all .5s ease; 
+                                        -moz-transition: all .5s ease; 
+                                        -o-transition: all .5s ease;  
+                                        transition: all .5s ease; 
+                                        position: absolute; top:0; left:0; right:0; margin:0 auto; 
+                                        text-align: center; opacity: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: rgba(59,38,1030,0.5);
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        a{
+                                            color: #fff;
+                                            font-size: 12px;
+                                            min-width: 120px;
+                                            height: 32px;
+                                            line-height: 32px;
+                                        }
+                                    }
+                                }
+                                &:hover, :focus{
+                                    .learnmore{
+                                        opacity: 1;
+                                    }
+                                }
+                            } 
+                        }
                     }
                 }
             }
@@ -5834,7 +5900,8 @@ textarea:focus {
                         background: #fff;
                         margin: 2px 0 2px 0;
                         border-radius: 5px;
-                        @include box-shadow;
+                        -webkit-box-shadow: 0 0 7px -4px rgba(0, 0, 0, 0.3);
+                        box-shadow: 0 0 7px -4px rgba(0, 0, 0, 0.3);
                         float: left;
                         width: 100%;
                         .item-cont{
@@ -6387,6 +6454,14 @@ textarea:focus {
                 }
             }
         }  
+        .int-print-ads{
+            .title .view-all{
+                font-size: 15px;
+                line-height: 30px;
+                min-width: 120px;
+                display: inline-table;
+            }
+        }
     }
 
     /****************************** interactive kiosk ******************************/
@@ -6979,20 +7054,16 @@ textarea:focus {
     /************** recent blog posts ***********/
     .recent-blog-posts{
         .post-grid{
-            .section-in{
-                margin: 0 -10px;
-                width: calc(100% + 20px);
-                @include tablet-max{
-                    margin: 0;
-                    width: 100%;
-                }
-            }
-            .recent-blog-posts-in{
-                margin: 0 -10px;
+            margin: 0 -10px;
+            width: calc(100% + 20px);
+            @include mobile-max{
+                margin: 0;
+                width: 100%;
             }
             .post-left, .post-right-top, .post-right-btm {
                 background: #eeeeee;
                 position: relative;
+                border: 1px solid #f6f6f6;
                 .post-img{
                     overflow: hidden;
                     height: 100%;
@@ -7161,7 +7232,7 @@ textarea:focus {
                 cursor: pointer;
                 display: block;
                 overflow: hidden;
-                video{
+                img{
                     @include box-shadow;
                     @include transition;
                     object-fit: initial;
@@ -7193,7 +7264,7 @@ textarea:focus {
                 .ow_videoSrc{                    
                     &:nth-child(1){
                         margin: 0 8px 5px 0;
-                        video{
+                        img{
                             width: 100%;
                             height: auto;
                         }
@@ -7211,7 +7282,7 @@ textarea:focus {
                         margin: 0 0 5px 8px;
                         vertical-align: bottom;
                         text-align: left;
-                        video{
+                        img{
                             width: 80%;
                             height: auto;
                             margin-top: 18px;
@@ -7240,7 +7311,7 @@ textarea:focus {
                         margin: 5px 8px 0 0;
                         vertical-align: top;
                         text-align: right;
-                        video{
+                        img{
                             width: 80%;
                             height: auto;
                         }
@@ -7253,13 +7324,13 @@ textarea:focus {
                         }
                         @include smartphone{
                             margin: 3px 0 0 0; 
-                        }
+                        } 
                     }
                     &:nth-child(2){
                         margin: 5px 0 0 8px;
                         vertical-align: top;
                         text-align: right;
-                        video{                        
+                        img{                        
                             width: 100%;
                             height: auto;
                         }
@@ -7275,128 +7346,6 @@ textarea:focus {
                     }
                 }
             }
-            // a{
-            //     width: calc(50% - 11px);
-            //     height: auto;
-            //     display: inline-block;
-            //     position: relative;
-            //     &:hover{
-            //         video{
-            //             @include image-scale;
-            //         }
-            //     }
-            //     video{
-            //         @include box-shadow;
-            //         @include transition;
-            //         object-fit: initial;
-            //         border-radius: 5px;
-            //     }
-            //     &:after{
-            //         content: " ";
-            //         display: block;
-            //         position: absolute;
-            //         background-position: bottom right;
-            //         bottom: 15px;
-            //         width: 100%;
-            //         height: 100%;
-            //         z-index: 1;
-            //         opacity: 1;
-            //         background-image: url(https://cdn2.hubspot.net/hubfs/1635524/assets/website/images/play.png);
-            //         background-repeat: no-repeat;
-            //         background-size: 35px;
-            //         @include smartphone{
-            //             background-size: 25px;
-            //             bottom: 10px;
-            //         }
-            //     }
-            // }
-            // .ow-videos-in-top{
-            //     width: 100%;
-            //     float: left;
-            //     a{                    
-            //         &:nth-child(1){
-            //             margin: 0 8px 5px 0;
-            //             video{
-            //                 width: 100%;
-            //                 height: auto;
-            //             }
-            //             @include smartphone{
-            //                 margin: 0;
-            //             }
-            //             &:after{
-            //                 right: 10px;
-            //                 @include smartphone{
-            //                     right: 5px;
-            //                 }
-            //             }
-            //         }
-            //         &:nth-child(2){
-            //             margin: 0 0 5px 8px;
-            //             vertical-align: bottom;
-            //             text-align: left;
-            //             video{
-            //                 width: 80%;
-            //                 height: auto;
-            //                 margin-top: 18px;
-            //             }
-            //             @include smartphone{
-            //                 margin: 0 0 0px 6px;
-            //             }
-            //             &:after{
-            //                 background-position: bottom right;
-            //                 right: calc(20% + 10px);
-            //                 bottom: 15px;
-            //                 @include smartphone{
-            //                     right: calc(20% + 5px);
-            //                     bottom: 10px;
-            //                 }
-            //             }
-            //         }
-            //     }
-            // }
-            // .ow-videos-in-btm{
-            //     width: 100%;
-            //     float: left;
-            //     a{                    
-            //     &:nth-child(1){
-            //         margin: 5px 8px 0 0;
-            //         vertical-align: top;
-            //         text-align: right;
-            //         video{
-            //             width: 80%;
-            //             height: auto;
-            //         }
-            //         &:after{
-            //             right: 10px;
-            //             @include smartphone{
-            //                 right: 5px;
-            //                 bottom: 10px;
-            //             }
-            //         }
-            //         @include smartphone{
-            //             margin: 3px 0 0 0; 
-            //         }
-            //     }
-            //     &:nth-child(2){
-            //         margin: 5px 0 0 8px;
-            //         vertical-align: top;
-            //         text-align: right;
-            //         video{                        
-            //             width: 100%;
-            //             height: auto;
-            //         }
-            //         &:after{
-            //             right: 10px;
-            //             @include smartphone{
-            //                 right: 5px;
-            //             }
-            //         }
-            //         @include smartphone{
-            //             margin: 3px 0 0 5px; 
-            //         }
-            //     }
-            //     }
-            // }
         }  
         .campaigns-main-list {
             margin-left: -10px;
@@ -7456,7 +7405,7 @@ textarea:focus {
             outline: none;
         }
         /* The Close Button */
-        .close {
+        .ow-modal .close {
             color: #fff;
             float: right;
             font-size: 34px;
@@ -7465,8 +7414,8 @@ textarea:focus {
             margin-right: -10px;
         }
 
-        .close:hover,
-        .close:focus {
+        .ow-modal .close:hover,
+        .ow-modal .close:focus {
             color: #fff;
             text-decoration: none;
             cursor: pointer;
@@ -7658,7 +7607,6 @@ textarea:focus {
                 &.flex{
                     display: flex;
                     flex-wrap: wrap;
-                    width: 100%;
                     .selected{
                         order: 1;
                     }
@@ -9122,8 +9070,12 @@ textarea:focus {
             .subscribe {
                 width: 49%;
                 @include inline-block;
+                color: #fff;
                 h3{
                     margin-bottom: 20px;
+                }
+                label.hs-error-msg{
+                    color: #fff;  
                 }
             }
             .followus {
@@ -9133,6 +9085,7 @@ textarea:focus {
                 float: right;                
                 h3{
                     margin-bottom: 20px;
+                    color: #fff;
                     @include mobile-max{
                         margin-top: 15px;
                     }
