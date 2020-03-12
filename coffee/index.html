@@ -1,0 +1,456 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>CXO | WOWSOME</title>
+
+		<!--babylon js files -->		
+        <script src="https://preview.babylonjs.com/babylon.js"></script>
+        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+        <script src="https://code.jquery.com/pep/0.4.1/pep.js"></script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/nice-select.css">					
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">
+			<link rel="stylesheet" href="css/main.css">
+			<link rel="stylesheet" href="css/timer.css">
+			<style>
+				canvas {
+					width: 400px;
+					height: 400px;
+					outline:none;
+				}
+				#page_reset{
+				  display: none;
+				}
+				@media (max-width: 540px) {
+				  
+				  canvas {
+					  width: auto !important;
+					  height: 100% !important;
+					  touch-action: none !important;
+				  }
+				  #page_reset{
+					display: block;
+					position: absolute;
+					bottom: 10px;
+					right: 20px;
+					font-family: sans-serif;
+					font-size: 16px;
+					color: blue;
+					cursor: pointer;
+					padding: 10px;
+					outline: none;
+				  }
+				}
+			  </style>
+		</head>
+		<body>
+
+			<!-- start banner Area -->
+			<section class="banner-area" id="home">	
+				<div class="container">
+					<div class="row fullscreen d-flex align-items-center justify-content-start">
+						<div class="banner-content col-lg-6 col-md-7">
+							<h1 class="text-white text-uppercase">Can EVERYONE be an EXPERT?</h1>
+							<h5 class="text-white">
+								Everyone loves Coffee. <br>But can one make the best coffee, consistently, time after time, without training?				
+							</h5>
+							
+						</div>											
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+
+			<!-- Start video-sec Area -->
+			<section class="video-sec-area pb-100 pt-40" id="about">
+				<div class="container">
+					<div class="row justify-content-start align-items-center">
+						<div class="col-lg-12 justify-content-center align-items-center d-flex">
+							<!-- <div class="overlay overlay-bg"></div> -->
+							
+							<div class="timer">
+								<div class="time"></div>
+								<div class="sidebar">
+									<div class="saved-time-info">Total Time</div>
+									<!-- <div class="no-times">no times</div> -->
+								</div>
+								
+								<div class="timer-info genric-btn primary circle arrow" id="element1">Click to experience
+									<span class="lnr lnr-arrow-right"></span>
+								</div>
+								<div id="element2">
+									Element 2
+								</div>
+								<div id="element3">
+									Element 3
+								</div>
+							</div>
+							<div class="content">
+								<canvas id="renderCanvas" stop class="coveringCanvas" style="height: 400px; width: 400px;"></canvas>
+							</div>
+							
+						</div>	
+					</div>
+				</div>	
+			</section>
+			<!-- End video-sec Area -->
+			
+			<!-- Start menu Area -->
+			<section class="menu-area section-gap" id="coffee">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-10">
+							<div class="title text-center">
+								<h1 class="mb-10">How is this possible?</h1>
+								<p>Augmented Reality software that captures and transfers front line procedures, step-by-step in Real Time.</p>
+							</div>
+						</div>
+					</div>						
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="single-menu">
+								<div class="title-div justify-content-between d-flex">
+									<h4>Increase time to productivity</h4>
+									<p class="price float-right">
+										icon
+									</p>
+								</div>							
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-menu">
+								<div class="title-div justify-content-between d-flex">
+									<h4>Lower training costs</h4>
+									<p class="price float-right">
+										icon
+									</p>
+								</div>							
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-menu">
+								<div class="title-div justify-content-between d-flex">
+									<h4>Reduce scrap & unscheduled downtime</h4>
+									<p class="price float-right">
+										icon
+									</p>
+								</div>								
+							</div>
+						</div>	
+						<div class="col-lg-4">
+							<div class="single-menu">
+								<div class="title-div justify-content-between d-flex">
+									<h4>Minimise injuries and safety related penalties</h4>
+									<p class="price float-right">
+										icon
+									</p>
+								</div>								
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-menu">
+								<div class="title-div justify-content-between d-flex">
+									<h4>Improve first-time-fix-rates & SLA compliance</h4>
+									<p class="price float-right">
+										icon
+									</p>
+								</div>								
+							</div>
+						</div>														
+					</div>
+				</div>	
+			</section>
+			<!-- End menu Area -->
+
+			<!-- Form -->
+			<section class="section-gap form">
+				<div class="container">
+					<div class="row text-center">
+						<div class="col-lg-12 col-md-12">
+							<h3 class="mb-30">Sign-up for an exclusive invitation.</h3>
+							<div class="col-lg-12 col-md-12 form-desc">
+								<div>Sponsored CXO Self Discovery Workshop</div>
+								<div>Derive actionable productivity improvement solutions for your foremost problems</div>
+								<div>Quick after-work session. 30 minutes. 15 luxury seats</div>
+							</div>
+							<div class="form-in">
+								<form action="#">
+									<div class="mt-10">
+										<input type="text" name="first_name" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required class="single-input">
+									</div>
+									<div class="mt-10">
+										<input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
+									</div>
+									<div class="mt-10">
+										<input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
+									</div>
+									<div class="mt-10">
+										<input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required class="single-input">
+									</div>
+									<div class="input-group-icon mt-10">
+										<div class="icon"><i class="fa fa-thumb-tack" aria-hidden="true"></i></div>
+										<input type="text" name="address" placeholder="Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'" required class="single-input">
+									</div>
+									<div class="input-group-icon mt-10">
+										<div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
+										<div class="form-select" id="default-select"">
+											<select>
+												<option value="1">City</option>
+												<option value="1">Dhaka</option>
+												<option value="1">Dilli</option>
+												<option value="1">Newyork</option>
+												<option value="1">Islamabad</option>
+											</select>
+										</div>
+									</div>
+									<div class="input-group-icon mt-10">
+										<div class="icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
+										<div class="form-select" id="default-select"">
+											<select>
+												<option value="1">Country</option>
+												<option value="1">Bangladesh</option>
+												<option value="1">India</option>
+												<option value="1">England</option>
+												<option value="1">Srilanka</option>
+											</select>
+										</div>
+									</div>
+									
+									<div class="mt-10">
+										<textarea class="single-textarea" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required></textarea>
+									</div>
+									<!-- For Gradient Border Use -->
+									<!-- <div class="mt-10">
+										<div class="primary-input">
+											<input id="primary-input" type="text" name="first_name" placeholder="Primary color" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'">
+											<label for="primary-input"></label>
+										</div>
+									</div> -->
+									<div class="mt-10">
+										<input type="text" name="first_name" placeholder="Primary color" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" required class="single-input-primary">
+									</div>
+									<div class="mt-10">
+										<input type="text" name="first_name" placeholder="Accent color" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" required class="single-input-accent">
+									</div>
+									<div class="mt-10">
+										<input type="text" name="first_name" placeholder="Secondary color" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Secondary color'" required class="single-input-secondary">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Form // -->
+
+			<!-- End gallery Area -->
+			
+			<!-- Start locations Area -->
+			<section class="locations section-gap" id="review">
+				<div class="container">
+					<div class="row text-center">
+						<div class="single-counter">
+							<!-- <h1 class="counter">2536</h1> -->
+							<img src="img/r1.png" alt="">
+							<div class="title">
+								<h4>Delhi</h4>
+							</div>
+						</div>
+						<div class="single-counter">
+							<img src="img/r1.png" alt="">
+							<div class="title">
+								<h4>Mumbai</h4>
+							</div>
+						</div>
+						<div class="single-counter">
+							<img src="img/r1.png" alt="">
+							<div class="title">
+								<h4>Hyderabad</h4>
+							</div>
+						</div>
+						<div class="single-counter">
+							<img src="img/r1.png" alt="">
+							<div class="title">
+								<h4>Bangalore</h4>
+							</div>
+						</div>	
+						<div class="single-counter">
+							<img src="img/r1.png" alt="">
+							<div class="title">
+								<h4>Chennai</h4>
+							</div>
+						</div>																		
+					</div>
+				</div>	
+			</section>
+			<!-- End locations Area -->
+
+			<!-- Start Productivity Area -->
+			<section class="section-gap productivity">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-10">
+							<div class="title text-center">
+								<h1 class="mb-10">Transformational Workforce Productivity</h1>
+							</div>
+						</div>
+					</div>						
+					<div class="row text-center">
+						<div class="col-lg-4 col-md-4 single-review">
+							<img src="img/play-icon.png" alt="">
+							<div class="title">
+								<h4>QUICKLY</h4>
+							</div>
+						</div>	
+						<div class="col-lg-4 col-md-4 single-review">
+							<img src="img/play-icon.png" alt="">
+							<div class="title">
+								<h4>ACCURATELY</h4>
+							</div>
+						</div>	
+						<div class="col-lg-4 col-md-4 single-review">
+							<img src="img/play-icon.png" alt="">
+							<div class="title">
+								<h4>SAFELY</h4>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End Productivity Area -->
+				
+
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="js/easing.min.js"></script>			
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>	
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>	
+			<script src="js/owl.carousel.min.js"></script>			
+			<script src="js/jquery.sticky.js"></script>
+			<script src="js/jquery.nice-select.min.js"></script>			
+			<script src="js/parallax.min.js"></script>	
+			<script src="js/waypoints.min.js"></script>
+			<script src="js/jquery.counterup.min.js"></script>					
+			<script src="js/mail-script.js"></script>	
+			<script src="js/main.js"></script>	
+			<script src="js/timer.js"></script>
+			<!-- 3dmodel -->
+			<script>
+				window.addEventListener('DOMContentLoaded', function() 
+				{
+					var canvas = document.getElementById('renderCanvas');
+					BABYLON.DefaultLoadingScreen.prototype.displayLoadingUI = function () {
+						this._loadingDiv = document.createElement("div");
+						this._loadingDiv.id = "customLoadingScreenDiv";
+						var customLoadingScreenCss = document.createElement('style');
+						customLoadingScreenCss.type = 'text/css';
+						customLoadingScreenCss.innerHTML = `
+						#customLoadingScreenDiv{
+							background-color: transparent;
+						}
+						`;
+						document.getElementsByTagName('head')[0].appendChild(customLoadingScreenCss);
+						this._resizeLoadingUI();
+						window.addEventListener("resize", this._resizeLoadingUI);
+						document.body.appendChild(this._loadingDiv);
+						};
+					BABYLON.DefaultLoadingScreen.prototype.hideLoadingUI = function(){
+						this._loadingDiv.style.display = "none";
+						// console.log("scene is now loaded");
+						}
+					var delayCreateScene = function () {
+						// Create a scene.
+						var scene = new BABYLON.Scene(engine);
+						//Uncomment the lines below to create a new environment	
+						// Create a default skybox with an environment.
+						// var hdrTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("environment.dds", scene);
+						// var currentSkybox = scene.createDefaultSkybox(hdrTexture, true);
+		
+						// Append glTF model to scene.
+						BABYLON.SceneLoader.Append("", "coffee.glb", scene, function (scene) {
+							// Create a default arc rotate camera and light.
+							scene.createDefaultCameraOrLight(true, true, true);
+							scene.activeCamera.beta -= Math.PI/6;
+							scene.activeCamera.alpha -= Math.PI/6;
+							// The default camera looks at the back of the asset.
+							// Rotate the camera by 180 degrees to the front of the asset.
+							scene.activeCamera.alpha += Math.PI;
+							scene.activeCamera.upperBetaLimit=Math.PI/2;
+							scene.activeCamera.radius = scene.activeCamera.radius*0.9;
+							scene.activeCamera.lowerRadiusLimit= scene.activeCamera.upperRadiusLimit= scene.activeCamera.radius;
+							var pickResult = scene.animationsEnabled = false;
+
+							// animation pause and play
+							//When click event is raised
+							var element1 = document.getElementById('element1');
+							element1.addEventListener("click", function (evt) {
+								// We try to pick an object
+								var pickResult = scene.animationsEnabled = true;
+								setTimeout(timer, 5000);
+							});							
+							function timer() {
+								var pickResult = scene.animationsEnabled = false;
+							}
+							
+							var element2 = document.getElementById('element2');
+							element2.addEventListener("click", function (evt) {
+								// We try to pick an object
+								var pickResult = scene.animationsEnabled = true;
+								setTimeout(timer, 10000);
+							});							
+							function timer() {
+								var pickResult = scene.animationsEnabled = false;
+							}
+
+						});
+							scene.clearColor= new BABYLON.Color4(0,0,0,0.00000001); 
+						return scene;
+					};
+					__createScene = delayCreateScene;
+					
+					var engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true });	
+		
+					var scene = delayCreateScene();
+					scene.createDefaultCamera();
+					engine.runRenderLoop(function()
+					{
+						scene.render();
+					});
+					window.addEventListener('resize', function()
+					{
+						engine.resize();
+					});
+				});
+			</script>
+		</body>
+	</html>
+
+
+
