@@ -451,19 +451,7 @@
 							scene.activeCamera.upperBetaLimit=Math.PI;
 							scene.activeCamera.radius = scene.activeCamera.radius*0.95;
 							scene.activeCamera.lowerRadiusLimit= scene.activeCamera.upperRadiusLimit= scene.activeCamera.radius;
-							//remove grab
-							var renderCanvas = document.getElementById('renderCanvas');
-							renderCanvas.addEventListener('touchmove', function(event) {
-							// If there's exactly one finger inside this element
-							if (event.targetTouches.length == 2) {
-								scene.createDefaultCameraOrLight(true, true, false);
 							
-							}
-							}, );
-							renderCanvas.addEventListener('touchstart', function(event) {
-							// If there's exactly one finger inside this element
-								scene.createDefaultCameraOrLight(true, true, true);
-							}, );
 							
 							
 							// set the light
@@ -481,7 +469,10 @@
 							var element5 = document.getElementById('element5');
 							var element6 = document.getElementById('element6');
 							var element7 = document.getElementById('element7');		
-							
+							//remove grab
+							canvas.addEventListener('touchStart', function(event) {
+								element2.style.display = "block";
+							}, );
 							//When click event is raised
 	
 							element1.addEventListener("click", function (evt) {
