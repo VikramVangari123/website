@@ -112,7 +112,7 @@
 							
 							<div class="modelCanvas">
 								<div class="canvasDiv">
-									<canvas id="renderCanvas" stop class="coveringCanvas" style="height: 100%; width: 100%;flex:1;"></canvas>
+									<canvas id="renderCanvas" stop ontouchstart="onTouch()" class="coveringCanvas" style="height: 100%; width: 100%;flex:1;"></canvas>
 																
 									<div class="timer-info genric-btn primary circle arrow" id="element1">Click to experience
 										<span class="lnr lnr-arrow-right"></span>
@@ -469,7 +469,9 @@
 							var element6 = document.getElementById('element6');
 							var element7 = document.getElementById('element7');		
 							//remove grab
-							
+							function onTouch() {
+								element2.style.display = "block";
+							}
 							//When click event is raised
 	
 							element1.addEventListener("click", function (evt) {
