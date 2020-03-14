@@ -40,28 +40,34 @@
 					width: 400px;
 					height: 400px;
 					outline:none;
+					position: relative;
+					left: 50%;
+					transform: translateX(-50%);
 				}
-				#page_reset{
-				  display: none;
+				.elements {
+					position: absolute;
+					left: 0;    
+					top: 80px;
 				}
+				.elements div{
+					cursor: pointer;
+					margin-bottom: 10px;
+				}
+				.elements img {
+					height: 100px;
+				}
+				[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
+				[touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto; }
+				[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }
+				[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }
+				[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
+
 				@media (max-width: 540px) {
 				  
 				  canvas {
 					  width: auto !important;
 					  height: 100% !important;
 					  touch-action: none !important;
-				  }
-				  #page_reset{
-					display: block;
-					position: absolute;
-					bottom: 10px;
-					right: 20px;
-					font-family: sans-serif;
-					font-size: 16px;
-					color: blue;
-					cursor: pointer;
-					padding: 10px;
-					outline: none;
 				  }
 				}
 			  </style>
@@ -84,39 +90,64 @@
 			</section>
 			<!-- End banner Area -->	
 
-			<!-- Start video-sec Area -->
+			<!-- Start 3dmodel Area -->
 			<section class="video-sec-area pb-100 pt-40" id="about">
 				<div class="container">
 					<div class="row justify-content-start align-items-center">
 						<div class="col-lg-12 justify-content-center align-items-center d-flex">
 							<!-- <div class="overlay overlay-bg"></div> -->
 							
-							<div class="timer">
-								<div class="time"></div>
-								<div class="sidebar">
-									<div class="saved-time-info">Total Time</div>
-									<!-- <div class="no-times">no times</div> -->
+							<div class="modelCanvas">
+								<div class="canvasDiv" style="width: 600px; height : 600px;">
+									<canvas id="renderCanvas" stop class="coveringCanvas" style="height: 500px; width: 600px;"></canvas>
+																
+									<div class="timer-info genric-btn primary circle arrow" id="element1">Click to experience
+										<span class="lnr lnr-arrow-right"></span>
+									</div>
+
+									<div class="timerDiv">	
+	
+										<div class="timer" id="timer" style="display: none;">
+											<div class="time"></div>
+										</div>
+										
+										<div class="saved-time-info" id="savedTimeInfo" style="display: none;">
+											You have taken <span class="sidebar"></span> secs to make the coffee
+											<!-- <div class="no-times">no times</div> -->
+										</div>
+									</div>
 								</div>
-								
-								<div class="timer-info genric-btn primary circle arrow" id="element1">Click to experience
-									<span class="lnr lnr-arrow-right"></span>
+								<div class="elements">
+									<div id="element2" style="display: none;">
+										<img src="img/label/label1.png" alt="" />
+										<!-- <span class="primary-checkbox">
+											<input type="checkbox" id="default-checkbox">
+											<label for="default-checkbox"></label>
+										</span> -->
+									</div>
+									<div id="element3" style="display: none;">
+										<img src="img/label/label2.png" alt="" />
+									</div>
+									<div id="element4" style="display: none;">
+										<img src="img/label/label3.png" alt="" />
+									</div>
+									<div id="element5" style="display: none;">
+										<img src="img/label/label4.png" alt="" />
+									</div>
+									<div id="element6" style="display: none;">
+										<img src="img/label/label5.png" alt="" />
+									</div>
+									<div id="element7" style="display: none;">
+										<img src="img/label/label6.png" alt="" />
+									</div>
 								</div>
-								<div id="element2">
-									Element 2
-								</div>
-								<div id="element3">
-									Element 3
-								</div>
-							</div>
-							<div class="content">
-								<canvas id="renderCanvas" stop class="coveringCanvas" style="height: 400px; width: 400px;"></canvas>
 							</div>
 							
 						</div>	
 					</div>
 				</div>	
 			</section>
-			<!-- End video-sec Area -->
+			<!-- End 3dmodel Area -->
 			
 			<!-- Start menu Area -->
 			<section class="menu-area section-gap" id="coffee">
@@ -402,31 +433,95 @@
 							// The default camera looks at the back of the asset.
 							// Rotate the camera by 180 degrees to the front of the asset.
 							scene.activeCamera.alpha += Math.PI;
-							scene.activeCamera.upperBetaLimit=Math.PI/2;
-							scene.activeCamera.radius = scene.activeCamera.radius*0.9;
+							scene.activeCamera.upperBetaLimit=Math.PI;
+							scene.activeCamera.radius = scene.activeCamera.radius*0.75;
 							scene.activeCamera.lowerRadiusLimit= scene.activeCamera.upperRadiusLimit= scene.activeCamera.radius;
-							var pickResult = scene.animationsEnabled = false;
+							//remove grab
+							
 
+							// set the light
+							let light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 1.5), scene);
+                        	light.intensity = 0.7;
+							
 							// animation pause and play
-							//When click event is raised
+							var pickResult = scene.animationsEnabled = false;
+							var timer = document.getElementById('timer');
+							var savedTimeInfo = document.getElementById('savedTimeInfo');
 							var element1 = document.getElementById('element1');
+							var element2 = document.getElementById('element2');
+							var element3 = document.getElementById('element3');	
+							var element4 = document.getElementById('element4');
+							var element5 = document.getElementById('element5');
+							var element6 = document.getElementById('element6');
+							var element7 = document.getElementById('element7');		
+							
+							//When click event is raised
+
 							element1.addEventListener("click", function (evt) {
 								// We try to pick an object
 								var pickResult = scene.animationsEnabled = true;
-								setTimeout(timer, 5000);
+								element1.style.display = "none";
+								timer.style.display = "block";
+								setTimeout(timer1, 416);
 							});							
-							function timer() {
+							function timer1() {
 								var pickResult = scene.animationsEnabled = false;
+								element2.style.display = "block";
 							}
 							
-							var element2 = document.getElementById('element2');
 							element2.addEventListener("click", function (evt) {
-								// We try to pick an object
 								var pickResult = scene.animationsEnabled = true;
-								setTimeout(timer, 10000);
-							});							
-							function timer() {
+								setTimeout(timer2, 1000);
+							});						
+							function timer2() {
 								var pickResult = scene.animationsEnabled = false;
+								element3.style.display = "block";
+							}
+							
+							element3.addEventListener("click", function (evt) {
+								var pickResult = scene.animationsEnabled = true;
+								setTimeout(timer3, 1000);
+							});						
+							function timer3() {
+								var pickResult = scene.animationsEnabled = false;
+								element4.style.display = "block";
+							}
+
+							element4.addEventListener("click", function (evt) {
+								var pickResult = scene.animationsEnabled = true;
+								setTimeout(timer4, 1000);
+							});						
+							function timer4() {
+								var pickResult = scene.animationsEnabled = false;
+								element5.style.display = "block";
+							}
+
+							element5.addEventListener("click", function (evt) {
+								var pickResult = scene.animationsEnabled = true;
+								setTimeout(timer5, 1000);
+							});						
+							function timer5() {
+								var pickResult = scene.animationsEnabled = false;
+								element6.style.display = "block";
+							}
+
+							element6.addEventListener("click", function (evt) {
+								var pickResult = scene.animationsEnabled = true;
+								setTimeout(timer6, 1000);
+							});						
+							function timer6() {
+								var pickResult = scene.animationsEnabled = false;
+								element7.style.display = "block";
+							}
+
+							element7.addEventListener("click", function (evt) {
+								var pickResult = scene.animationsEnabled = true;
+								setTimeout(timer7, 1000);
+							});						
+							function timer7() {
+								var pickResult = scene.animationsEnabled = false;
+								savedTimeInfo.style.display = "block";
+								timer.style.display = "none";
 							}
 
 						});

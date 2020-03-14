@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>CXO | WOWSOME</title>
+
+    <!--babylon js files -->		
+    <!-- babylon.min.js v3.3.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/babylonjs@3.3.0/babylon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/babylonjs-loaders@3.3.0/babylonjs.loaders.min.js"></script>
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+        <!--
+        CSS
+        ============================================= -->
+        <link rel="stylesheet" href="css/linearicons.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/nice-select.css">					
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/timer.css">
+        <style>
+            canvas {
+                width: 400px;
+                height: 400px;
+                outline:none;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .elements {
+                position: absolute;
+                left: 0;    
+                top: 80px;
+            }
+            .elements div{
+                cursor: pointer;
+            }
+            .elements img {
+                width: 250px;
+            }
+            @media (max-width: 540px) {
+              
+              canvas {
+                  width: auto !important;
+                  height: 100% !important;
+                  touch-action: none !important;
+              }
+            }
+          </style>
+    </head>
+    <body>
+
+        <!-- start banner Area -->
+        <section class="banner-area" id="home">	
+            <div class="container">
+                <div class="row fullscreen d-flex align-items-center justify-content-start">
+                    <div class="banner-content col-lg-6 col-md-7">
+                        <h1 class="text-white text-uppercase">Can EVERYONE be an EXPERT?</h1>
+                        <h5 class="text-white">
+                            Everyone loves Coffee. <br>But can one make the best coffee, consistently, time after time, without training?				
+                        </h5>
+                        
+                    </div>											
+                </div>
+            </div>
+        </section>
+        <!-- End banner Area -->	
+
+        <!-- Start 3dmodel Area -->
+        <section class="video-sec-area pb-100 pt-40" id="about">
+            <div class="container">
+                <div class="row justify-content-start align-items-center">
+                    <div class="col-lg-12 justify-content-center align-items-center d-flex">
+                        <!-- <div class="overlay overlay-bg"></div> -->
+                        
+                        <div class="modelCanvas">
+                            <div class="canvasDiv" style="width: 600px; height : 600px;">
+                                <canvas id="renderCanvas"></canvas>
+                                <div class="timer-info genric-btn primary circle arrow" id="element1">Click to experience
+                                    <span class="lnr lnr-arrow-right"></span>
+                                </div>
+
+                                <div class="timerDiv">	
+
+                                    <div class="timer" id="timer" style="display: none;">
+                                        <div class="time"></div>
+                                    </div>
+                                    
+                                    <div class="saved-time-info" id="savedTimeInfo" style="display: none;">
+                                        You have taken <span class="sidebar"></span> secs to make the coffee
+                                        <!-- <div class="no-times">no times</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elements">
+                                <div id="element2" style="display: none;">
+                                    <img src="img/label/waterlevel.png" alt="" />
+                                    <!-- <span class="primary-checkbox">
+                                        <input type="checkbox" id="default-checkbox">
+                                        <label for="default-checkbox"></label>
+                                    </span> -->
+                                </div>
+                                <div id="element3" style="display: none;">
+                                    <img src="img/label/waterlevel.png" alt="" />
+                                </div>
+                                <div id="element4" style="display: none;">
+                                    <img src="img/label/waterlevel.png" alt="" />
+                                </div>
+                                <div id="element5" style="display: none;">
+                                    <img src="img/label/waterlevel.png" alt="" />
+                                </div>
+                                <div id="element6" style="display: none;">
+                                    <img src="img/label/waterlevel.png" alt="" />
+                                </div>
+                                <div id="element7" style="display: none;">
+                                    <img src="img/label/waterlevel.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>	
+                </div>
+            </div>	
+        </section>
+        <!-- End 3dmodel Area -->
+        
+        <!-- Start menu Area -->
+        <section class="menu-area section-gap" id="coffee">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="menu-content pb-60 col-lg-10">
+                        <div class="title text-center">
+                            <h1 class="mb-10">How is this possible?</h1>
+                            <p>Augmented Reality software that captures and transfers front line procedures, step-by-step in Real Time.</p>
+                        </div>
+                    </div>
+                </div>						
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Increase time to productivity</h4>
+                                <p class="price float-right">
+                                    icon
+                                </p>
+                            </div>							
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Lower training costs</h4>
+                                <p class="price float-right">
+                                    icon
+                                </p>
+                            </div>							
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Reduce scrap & unscheduled downtime</h4>
+                                <p class="price float-right">
+                                    icon
+                                </p>
+                            </div>								
+                        </div>
+                    </div>	
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Minimise injuries and safety related penalties</h4>
+                                <p class="price float-right">
+                                    icon
+                                </p>
+                            </div>								
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-menu">
+                            <div class="title-div justify-content-between d-flex">
+                                <h4>Improve first-time-fix-rates & SLA compliance</h4>
+                                <p class="price float-right">
+                                    icon
+                                </p>
+                            </div>								
+                        </div>
+                    </div>														
+                </div>
+            </div>	
+        </section>
+        <!-- End menu Area -->
+
+        <!-- Form -->
+        <section class="section-gap form">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-12 col-md-12">
+                        <h3 class="mb-30">Sign-up for an exclusive invitation.</h3>
+                        <div class="col-lg-12 col-md-12 form-desc">
+                            <div>Sponsored CXO Self Discovery Workshop</div>
+                            <div>Derive actionable productivity improvement solutions for your foremost problems</div>
+                            <div>Quick after-work session. 30 minutes. 15 luxury seats</div>
+                        </div>
+                        <div class="form-in">
+                            <form action="#">
+                                <div class="mt-10">
+                                    <input type="text" name="first_name" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required class="single-input">
+                                </div>
+                                <div class="mt-10">
+                                    <input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
+                                </div>
+                                <div class="mt-10">
+                                    <input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
+                                </div>
+                                <div class="mt-10">
+                                    <input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required class="single-input">
+                                </div>
+                                <div class="input-group-icon mt-10">
+                                    <div class="icon"><i class="fa fa-thumb-tack" aria-hidden="true"></i></div>
+                                    <input type="text" name="address" placeholder="Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'" required class="single-input">
+                                </div>
+                                <div class="input-group-icon mt-10">
+                                    <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
+                                    <div class="form-select" id="default-select"">
+                                        <select>
+                                            <option value="1">City</option>
+                                            <option value="1">Dhaka</option>
+                                            <option value="1">Dilli</option>
+                                            <option value="1">Newyork</option>
+                                            <option value="1">Islamabad</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-group-icon mt-10">
+                                    <div class="icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
+                                    <div class="form-select" id="default-select"">
+                                        <select>
+                                            <option value="1">Country</option>
+                                            <option value="1">Bangladesh</option>
+                                            <option value="1">India</option>
+                                            <option value="1">England</option>
+                                            <option value="1">Srilanka</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-10">
+                                    <textarea class="single-textarea" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required></textarea>
+                                </div>
+                                <!-- For Gradient Border Use -->
+                                <!-- <div class="mt-10">
+                                    <div class="primary-input">
+                                        <input id="primary-input" type="text" name="first_name" placeholder="Primary color" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'">
+                                        <label for="primary-input"></label>
+                                    </div>
+                                </div> -->
+                                <div class="mt-10">
+                                    <input type="text" name="first_name" placeholder="Primary color" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" required class="single-input-primary">
+                                </div>
+                                <div class="mt-10">
+                                    <input type="text" name="first_name" placeholder="Accent color" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" required class="single-input-accent">
+                                </div>
+                                <div class="mt-10">
+                                    <input type="text" name="first_name" placeholder="Secondary color" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Secondary color'" required class="single-input-secondary">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Form // -->
+
+        <!-- End gallery Area -->
+        
+        <!-- Start locations Area -->
+        <section class="locations section-gap" id="review">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="single-counter">
+                        <!-- <h1 class="counter">2536</h1> -->
+                        <img src="img/r1.png" alt="">
+                        <div class="title">
+                            <h4>Delhi</h4>
+                        </div>
+                    </div>
+                    <div class="single-counter">
+                        <img src="img/r1.png" alt="">
+                        <div class="title">
+                            <h4>Mumbai</h4>
+                        </div>
+                    </div>
+                    <div class="single-counter">
+                        <img src="img/r1.png" alt="">
+                        <div class="title">
+                            <h4>Hyderabad</h4>
+                        </div>
+                    </div>
+                    <div class="single-counter">
+                        <img src="img/r1.png" alt="">
+                        <div class="title">
+                            <h4>Bangalore</h4>
+                        </div>
+                    </div>	
+                    <div class="single-counter">
+                        <img src="img/r1.png" alt="">
+                        <div class="title">
+                            <h4>Chennai</h4>
+                        </div>
+                    </div>																		
+                </div>
+            </div>	
+        </section>
+        <!-- End locations Area -->
+
+        <!-- Start Productivity Area -->
+        <section class="section-gap productivity">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="menu-content pb-60 col-lg-10">
+                        <div class="title text-center">
+                            <h1 class="mb-10">Transformational Workforce Productivity</h1>
+                        </div>
+                    </div>
+                </div>						
+                <div class="row text-center">
+                    <div class="col-lg-4 col-md-4 single-review">
+                        <img src="img/play-icon.png" alt="">
+                        <div class="title">
+                            <h4>QUICKLY</h4>
+                        </div>
+                    </div>	
+                    <div class="col-lg-4 col-md-4 single-review">
+                        <img src="img/play-icon.png" alt="">
+                        <div class="title">
+                            <h4>ACCURATELY</h4>
+                        </div>
+                    </div>	
+                    <div class="col-lg-4 col-md-4 single-review">
+                        <img src="img/play-icon.png" alt="">
+                        <div class="title">
+                            <h4>SAFELY</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>	
+        </section>
+        <!-- End Productivity Area -->
+            
+
+        <script src="js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>			
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+          <script src="js/easing.min.js"></script>			
+        <script src="js/hoverIntent.js"></script>
+        <script src="js/superfish.min.js"></script>	
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>	
+        <script src="js/owl.carousel.min.js"></script>			
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>			
+        <script src="js/parallax.min.js"></script>	
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>					
+        <script src="js/mail-script.js"></script>	
+        <script src="js/main.js"></script>	
+        <script src="js/timer.js"></script>
+        <!-- 3dmodel -->
+        <script>
+
+            var canvas = document.getElementById("renderCanvas");
+
+            var createScene = function () {
+                var scene = new BABYLON.Scene(engine);
+                scene.clearColor = new BABYLON.Color3(0, 1, 1);
+                
+                //Adding a light
+                var light = new BABYLON.HemisphericLight();
+                
+                //Adding an Arc Rotate Camera
+                var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0.8, 10, BABYLON.Vector3.Zero(), scene);
+                camera.attachControl(canvas, false);
+                
+                // The first parameter can be used to specify which mesh to import. Here we import all meshes
+                BABYLON.SceneLoader.Append("", "coffee.glb", scene, function (newMeshes) {
+
+                    var mesh = scene.meshes[0];
+
+                    mesh.position.y  =  0;
+                    mesh.position.z  =  2;
+                    mesh.rotation  = new BABYLON.Vector3(0, Math.PI, 0); 
+                    //mesh.scaling = new BABYLON.Vector3(0.05, 0.05, 0.05);  
+                    
+                    scene.activeCamera = null;
+                    scene.createDefaultCameraOrLight(true);
+                    scene.activeCamera.attachControl(canvas, false);
+                    
+                });
+                
+                return scene;
+            }
+
+            var engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true });
+            var scene = createScene();
+
+            engine.runRenderLoop(function () {
+                if (scene) {
+                    scene.render();
+                }
+            });
+
+            // Resize
+            window.addEventListener("resize", function () {
+                engine.resize();
+            });
+        </script>
+    </body>
+</html>
+
+
+
