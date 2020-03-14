@@ -17,10 +17,6 @@
 		<title>CXO | WOWSOME</title>
 
 		<!--babylon js files -->		
-        <script src="https://preview.babylonjs.com/babylon.js"></script>
-        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
-        <script src="https://code.jquery.com/pep/0.4.1/pep.js"></script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -37,17 +33,18 @@
 			<link rel="stylesheet" href="css/timer.css">
 			<style>
 				canvas {
-					width: 400px;
-					height: 400px;
 					outline:none;
 					position: relative;
-					left: 50%;
-					transform: translateX(-50%);
 				}
-				.elements {
+				.elements.elements_left{
 					position: absolute;
 					left: 0;    
-					top: 80px;
+					top: 90px;
+				}
+				.elements.elements_right {
+					position: absolute;
+					right: 0; 
+					top: 90px;
 				}
 				.elements div{
 					cursor: pointer;
@@ -55,6 +52,14 @@
 				}
 				.elements img {
 					height: 100px;
+				}
+				.canvasDiv {
+					width: 600px !important;
+					height: 600px !important;
+				}
+				.canvasDiv #renderCanvas{
+					width: 600px !important;
+					height: 500px !important;
 				}
 				[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
 				[touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto; }
@@ -71,6 +76,15 @@
 				  }
 				}
 			  </style>
+			  <script src="https://preview.babylonjs.com/viewer/babylon.viewer.js"></script> 
+			<style>
+				nav-bar .nav-container{
+					display: none !important;
+				}
+				.loading-screen {
+					display: none !important;
+				}
+			</style>
 		</head>
 		<body>
 
@@ -88,8 +102,7 @@
 					</div>
 				</div>
 			</section>
-			<!-- End banner Area -->	
-
+			<!-- End banner Area -->
 			<!-- Start 3dmodel Area -->
 			<section class="video-sec-area pb-100 pt-40" id="about">
 				<div class="container">
@@ -98,26 +111,25 @@
 							<!-- <div class="overlay overlay-bg"></div> -->
 							
 							<div class="modelCanvas">
-								<div class="canvasDiv" style="width: 600px; height : 600px;">
-									<canvas id="renderCanvas" stop class="coveringCanvas" style="height: 500px; width: 600px;"></canvas>
+								<div class="canvasDiv">
+									<canvas id="renderCanvas" stop class="coveringCanvas" style="height: 100%; width: 100%;flex:1;"></canvas>
 																
 									<div class="timer-info genric-btn primary circle arrow" id="element1">Click to experience
 										<span class="lnr lnr-arrow-right"></span>
 									</div>
+										
+									<div class="saved-time-info" id="savedTimeInfo" style="display: none;">
+										You have taken <span class="sidebar"></span> secs to make the coffee
+										<!-- <div class="no-times">no times</div> -->
+									</div>
 
-									<div class="timerDiv">	
-	
+									<div class="timerDiv">
 										<div class="timer" id="timer" style="display: none;">
 											<div class="time"></div>
 										</div>
-										
-										<div class="saved-time-info" id="savedTimeInfo" style="display: none;">
-											You have taken <span class="sidebar"></span> secs to make the coffee
-											<!-- <div class="no-times">no times</div> -->
-										</div>
 									</div>
 								</div>
-								<div class="elements">
+								<div class="elements elements_left">
 									<div id="element2" style="display: none;">
 										<img src="img/label/label1.png" alt="" />
 										<!-- <span class="primary-checkbox">
@@ -131,6 +143,8 @@
 									<div id="element4" style="display: none;">
 										<img src="img/label/label3.png" alt="" />
 									</div>
+								</div>
+								<div class="elements elements_right">
 									<div id="element5" style="display: none;">
 										<img src="img/label/label4.png" alt="" />
 									</div>
@@ -141,6 +155,7 @@
 										<img src="img/label/label6.png" alt="" />
 									</div>
 								</div>
+							</div>
 							</div>
 							
 						</div>	
@@ -434,14 +449,25 @@
 							// Rotate the camera by 180 degrees to the front of the asset.
 							scene.activeCamera.alpha += Math.PI;
 							scene.activeCamera.upperBetaLimit=Math.PI;
-							scene.activeCamera.radius = scene.activeCamera.radius*0.75;
+							scene.activeCamera.radius = scene.activeCamera.radius*0.95;
 							scene.activeCamera.lowerRadiusLimit= scene.activeCamera.upperRadiusLimit= scene.activeCamera.radius;
 							//remove grab
-							
-
+							var renderCanvas = document.getElementById('renderCanvas');
+							renderCanvas.addEventListener('touchmove', function(event) {
+							// If there's exactly one finger inside this element
+							if (event.targetTouches.length == 2) {
+								scene.createDefaultCameraOrLight(true, true, false);
+								var touch = event.targetTouches[0];
+								// Place element where the finger is
+								obj.style.left = touch.pageX + 'px';
+								obj.style.top = touch.pageY + 'px';
 							// set the light
 							let light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 1.5), scene);
-                        	light.intensity = 0.7;
+							light.intensity = 0.7;
+							}
+							}, false);
+							
+							
 							
 							// animation pause and play
 							var pickResult = scene.animationsEnabled = false;
@@ -456,7 +482,7 @@
 							var element7 = document.getElementById('element7');		
 							
 							//When click event is raised
-
+	
 							element1.addEventListener("click", function (evt) {
 								// We try to pick an object
 								var pickResult = scene.animationsEnabled = true;
@@ -468,62 +494,81 @@
 								var pickResult = scene.animationsEnabled = false;
 								element2.style.display = "block";
 							}
-							
-							element2.addEventListener("click", function (evt) {
+
+							element2.addEventListener('click',method2);
+							function method2(){
 								var pickResult = scene.animationsEnabled = true;
-								setTimeout(timer2, 1000);
-							});						
+								setTimeout(timer2, 416);
+							}					
 							function timer2() {
 								var pickResult = scene.animationsEnabled = false;
 								element3.style.display = "block";
+								element2.removeEventListener('click', method2);
+								element2.style.cursor = "initial";
 							}
 							
-							element3.addEventListener("click", function (evt) {
+							element3.addEventListener('click',method3);
+							function method3(){
 								var pickResult = scene.animationsEnabled = true;
-								setTimeout(timer3, 1000);
-							});						
+								setTimeout(timer3, 300);
+							}					
 							function timer3() {
 								var pickResult = scene.animationsEnabled = false;
 								element4.style.display = "block";
+								element3.removeEventListener('click', method3);
+								element3.style.cursor = "initial";
 							}
-
-							element4.addEventListener("click", function (evt) {
+							
+							element4.addEventListener('click',method4);
+							function method4(){
 								var pickResult = scene.animationsEnabled = true;
-								setTimeout(timer4, 1000);
-							});						
+								setTimeout(timer4, 5000);
+							}					
 							function timer4() {
 								var pickResult = scene.animationsEnabled = false;
 								element5.style.display = "block";
+								element4.removeEventListener('click', method4);
+								element4.style.cursor = "initial";
 							}
-
-							element5.addEventListener("click", function (evt) {
+							
+							element5.addEventListener('click',method5);
+							function method5(){
 								var pickResult = scene.animationsEnabled = true;
-								setTimeout(timer5, 1000);
-							});						
+								setTimeout(timer5, 216);
+							}					
 							function timer5() {
 								var pickResult = scene.animationsEnabled = false;
 								element6.style.display = "block";
+								element5.removeEventListener('click', method5);
+								element5.style.cursor = "initial";
 							}
-
-							element6.addEventListener("click", function (evt) {
+							
+							element6.addEventListener('click',method6);
+							function method6(){
 								var pickResult = scene.animationsEnabled = true;
 								setTimeout(timer6, 1000);
-							});						
+							}					
 							function timer6() {
 								var pickResult = scene.animationsEnabled = false;
 								element7.style.display = "block";
+								element6.removeEventListener('click', method6);
+								element6.style.cursor = "initial";
 							}
-
-							element7.addEventListener("click", function (evt) {
+							
+							element7.addEventListener('click',method7);
+							function method7(){
 								var pickResult = scene.animationsEnabled = true;
 								setTimeout(timer7, 1000);
-							});						
+							}					
 							function timer7() {
 								var pickResult = scene.animationsEnabled = false;
+								element7.style.display = "block";
+								element7.removeEventListener('click', method7);
+								element7.style.cursor = "initial";
 								savedTimeInfo.style.display = "block";
 								timer.style.display = "none";
 							}
-
+	
 						});
 							scene.clearColor= new BABYLON.Color4(0,0,0,0.00000001); 
 						return scene;

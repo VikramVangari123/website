@@ -20,8 +20,8 @@
         }
         .modelCanvas .timerDiv {
             position: absolute;
-            right: -140px;
-            top: 180px;
+            right: 26%;
+            top: 110px;
             font-size: 17px;
             color: #b68834;
         }
@@ -30,11 +30,15 @@
         }
         .timer {
             font-family: "Arial", sans-serif;
-            width: 200px;
             text-align: left;
         }
         div#savedTimeInfo{
             width: 220px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #b68834;
         }
         div#savedTimeInfo .saved-time{
             font-weight: 600;
