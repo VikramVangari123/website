@@ -5,26 +5,39 @@
         
         }
 
+        .modelCanvas .canvasDiv{
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+        }
+        .modelCanvas .canvasDiv #element1 {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .modelCanvas .timerDiv {
+            position: absolute;
+            right: -140px;
+            top: 180px;
+            font-size: 17px;
+            color: #b68834;
+        }
+        .modelCanvas .timerDiv .time{
+            color: #b68834;
+        }
         .timer {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        flex: 1;
-        font-family: "Arial", sans-serif;
+            font-family: "Arial", sans-serif;
+            width: 200px;
+            text-align: left;
         }
-
-        .saved-time-info{
-            font-size: 1.5rem
+        div#savedTimeInfo{
+            width: 220px;
         }
-        .sidebar {
-        box-sizing: border-box;
-        padding: 20px 0 0 20px;
-        }
-
-        .sidebar-info {
-        margin: 20px 0;
+        div#savedTimeInfo .saved-time{
+            font-weight: 600;
         }
 
         .closed-sidebar-q {
@@ -41,32 +54,24 @@
 
         .saved-time {
         animation-name: created;
-        animation-duration: 3s;
+        animation-duration: 2s;
         display: none;
         }
-        .saved-time-info + .saved-time {
-            display: block;
+        .sidebar  .saved-time:last-child {
+            display: initial;
         }
-
+        
         @keyframes created {
         from {
-            background-color: #fffbff;
+            color: #fffbff;
         }
 
         to {
-            background-color: #30aadb;
+            color: #b68834;
         }
         }
 
         @media (max-width: 700px) {
-
-        .time {
-            font-size: 3rem;
-        }
-
-        .sidebar {
-            padding: 5px 0 0 5px;
-        }
 
         .closed-sidebar-q {
             top: 20%;
@@ -75,9 +80,6 @@
         }
 
         @media (min-width: 701px) and (max-width: 1400px) {
-        .sidebar {
-            padding: 10px 0 0 10px;
-        }
 
         .closed-sidebar-q {
             top: 20%;

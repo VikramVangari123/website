@@ -2241,6 +2241,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   .form .form-desc{
     flex-wrap: wrap;
+  }  
+  .canvasDiv {
+    width: 500px !important;
+    height: 500px !important;
+  }
+  .canvasDiv #renderCanvas{
+    width: 500px !important;
+    height: 400px !important;
+  }
+  .elements img {
+    width: 180px !important;
   }
 }
 
