@@ -463,10 +463,19 @@
 								// renderCanvas.style.top = touch.pageY + 'px';
 							
 							}
-							else{
+							}, );
+							renderCanvas.addEventListener('touchstart', function(event) {
+							// If there's exactly one finger inside this element
+							if (event.targetTouches.length == 2) {
 								scene.createDefaultCameraOrLight(true, true, true);
+								// var touch = event.targetTouches[0];
+								// // Place element where the finger is
+								// renderCanvas.style.left = touch.pageX + 'px';
+								// renderCanvas.style.top = touch.pageY + 'px';
+							
 							}
-							}, false);
+							}, );
+							
 							
 							// set the light
 							let light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 1.5), scene);
