@@ -36,6 +36,9 @@
 					outline:none;
 					position: relative;
 				}
+				#element1{
+					display: none;
+				}
 				.elements.elements_left{
 					position: absolute;
 					left: 0;    
@@ -54,12 +57,12 @@
 					height: 100px;
 				}
 				.canvasDiv {
-					width: 600px !important;
-					height: 600px !important;
+					width: 600px;
+					height: 600px;
 				}
 				.canvasDiv #renderCanvas{
-					width: 600px !important;
-					height: 500px !important;
+					width: 600px;
+					height: 500px;
 				}
 				[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
 				[touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto; }
@@ -67,13 +70,31 @@
 				[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }
 				[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
 
-				@media (max-width: 540px) {
-				  
-				  canvas {
-					  width: auto !important;
-					  height: 100% !important;
-					  touch-action: none !important;
-				  }
+				@media (max-width: 540px) {		  
+					.canvasDiv {
+						width: 450px !important;
+						height: 450px !important;
+					}
+					.canvasDiv #renderCanvas{
+						width: 450px !important;
+						height: 350px !important;
+					}
+					.elements img {
+						height: 70px;
+					}
+				}
+				@media (max-width: 480px) {		  
+					.canvasDiv {
+						width: 240px !important;
+						height: 400px !important;
+					}
+					.canvasDiv #renderCanvas{
+						width: 240px !important;
+						height: 300px !important;
+					}
+					.elements img {
+						height: 60px;
+					}
 				}
 			  </style>
 			  <script src="https://preview.babylonjs.com/viewer/babylon.viewer.js"></script> 
@@ -83,6 +104,24 @@
 				}
 				.loading-screen {
 					display: none !important;
+				}
+				#modelPopupSec {
+					position: fixed;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background: rgba(0,0,0,0.4);
+					z-index: 999999;
+					visibility: hidden;
+				}
+				#closePopup{
+					z-index: 99999999;
+					position: absolute;
+					top: 15px;
+					right: 15px;
+					width: 20px;
+					cursor: pointer;
 				}
 			</style>
 		</head>
@@ -104,6 +143,11 @@
 			</section>
 			<!-- End banner Area -->
 			<!-- Start 3dmodel Area -->
+			<section id="modelPopupSec">				
+				<babylon id="popupmodel" model="https://vikramvangari123.github.io/website/coffee/coffee.glb" templates.main.params.fill-screen="true"></babylon>
+				<img id="closePopup" src="img/close.png" alt="close" title="Close" />
+			</section>
+
 			<section class="video-sec-area pb-100 pt-40" id="about">
 				<div class="container">
 					<div class="row justify-content-start align-items-center">
@@ -112,7 +156,7 @@
 							
 							<div class="modelCanvas">
 								<div class="canvasDiv">
-									<canvas id="renderCanvas" stop ontouchstart="onTouch()" class="coveringCanvas" style="height: 100%; width: 100%;flex:1;"></canvas>
+									<canvas id="renderCanvas" stop class="coveringCanvas" style="height: 600px; width: 500px;flex:1;"></canvas>
 																
 									<div class="timer-info genric-btn primary circle arrow" id="element1">Click to experience
 										<span class="lnr lnr-arrow-right"></span>
@@ -438,7 +482,7 @@
 						// Create a default skybox with an environment.
 						// var hdrTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("environment.dds", scene);
 						// var currentSkybox = scene.createDefaultSkybox(hdrTexture, true);
-		
+						
 						// Append glTF model to scene.
 						BABYLON.SceneLoader.Append("", "coffee.glb", scene, function (scene) {
 							// Create a default arc rotate camera and light.
@@ -452,7 +496,9 @@
 							scene.activeCamera.radius = scene.activeCamera.radius*0.95;
 							scene.activeCamera.lowerRadiusLimit= scene.activeCamera.upperRadiusLimit= scene.activeCamera.radius;
 							
+							//change camera radius in mobile devices
 							
+														
 							// set the light
 							let light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 1.5), scene);
 							light.intensity = 0.7;
@@ -467,11 +513,20 @@
 							var element4 = document.getElementById('element4');
 							var element5 = document.getElementById('element5');
 							var element6 = document.getElementById('element6');
-							var element7 = document.getElementById('element7');		
-							//remove grab
-							function onTouch() {
-								element2.style.display = "block";
+							var element7 = document.getElementById('element7');	
+							
+						element1.style.display = "block";
+							//enable popup ontouch
+							var closePopup = document.getElementById('closePopup');	
+							var modelPopupSec = document.getElementById('modelPopupSec');	
+							canvas.addEventListener("touchstart", touchStart);
+							function touchStart() {
+								modelPopupSec.style.visibility = "visible";
 							}
+							closePopup.addEventListener("click", function (evt) {
+								modelPopupSec.style.visibility = "hidden";								
+							});	
+
 							//When click event is raised
 	
 							element1.addEventListener("click", function (evt) {

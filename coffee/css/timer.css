@@ -17,13 +17,17 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
+            width: 170px;
+            padding: 0 10px;
+            line-height: 35px;
         }
         .modelCanvas .timerDiv {
             position: absolute;
-            right: 26%;
-            top: 110px;
+            left: 50%;
+            top: 60px;
             font-size: 17px;
             color: #b68834;
+            transform: translateX(-50%);
         }
         .modelCanvas .timerDiv .time{
             color: #b68834;
