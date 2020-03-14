@@ -455,19 +455,22 @@
 							var renderCanvas = document.getElementById('renderCanvas');
 							renderCanvas.addEventListener('touchmove', function(event) {
 							// If there's exactly one finger inside this element
-							if (event.targetTouches.length == 2) {
+							if (event.targetTouches.length > 1) {
 								scene.createDefaultCameraOrLight(true, true, false);
-								var touch = event.targetTouches[0];
-								// Place element where the finger is
-								obj.style.left = touch.pageX + 'px';
-								obj.style.top = touch.pageY + 'px';
-							// set the light
-							let light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 1.5), scene);
-							light.intensity = 0.9;
+								// var touch = event.targetTouches[0];
+								// // Place element where the finger is
+								// renderCanvas.style.left = touch.pageX + 'px';
+								// renderCanvas.style.top = touch.pageY + 'px';
+							
+							}
+							else{
+								scene.createDefaultCameraOrLight(true, true, true);
 							}
 							}, false);
 							
-							
+							// set the light
+							let light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 1.5), scene);
+							light.intensity = 0.7;
 							
 							// animation pause and play
 							var pickResult = scene.animationsEnabled = false;
