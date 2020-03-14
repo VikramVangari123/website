@@ -457,7 +457,7 @@
 							// If there's exactly one finger inside this element
 							if (event.targetTouches.length == 2) {
 								scene.createDefaultCameraOrLight(true, true, false);
-								var touch = event.targetTouches[0];
+								var touch = event.targetTouches[1];
 								// Place element where the finger is
 								renderCanvas.style.left = touch.pageX + 'px';
 								renderCanvas.style.top = touch.pageY + 'px';
@@ -466,14 +466,7 @@
 							}, );
 							renderCanvas.addEventListener('touchstart', function(event) {
 							// If there's exactly one finger inside this element
-							if (event.targetTouches.length == 1) {
 								scene.createDefaultCameraOrLight(true, true, true);
-								// var touch = event.targetTouches[0];
-								// // Place element where the finger is
-								// renderCanvas.style.left = touch.pageX + 'px';
-								// renderCanvas.style.top = touch.pageY + 'px';
-							
-							}
 							}, );
 							
 							
