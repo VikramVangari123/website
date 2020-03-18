@@ -2039,6 +2039,75 @@ h1, h2, h3, h4, h5, h6 {
   content: "\f105";
 }
 
+/* hubspot form */
+
+.hs-custom-style fieldset input:not([type="image"]):not([type="submit"]):not([type="button"]):not([type="radio"]):not([type="checkbox"]):not([type="file"]), .hs-custom-style>div input:not([type="image"]):not([type="submit"]):not([type="button"]):not([type="radio"]):not([type="checkbox"]):not([type="file"]) {
+    box-sizing: border-box;
+    padding: 0 15px;
+    min-height: 27px;
+}
+.hs-custom-style fieldset>div:last-of-type .hs-input:not([type=checkbox]):not([type=radio]), .hs-custom-style>div>div:last-of-type .hs-input:not([type=checkbox]):not([type=radio]) {
+    width: 100%;
+    max-width: 100%;
+}
+.hs-button, .hs-form-field input[type="text"], .hs-form-field input[type="email"], .hs-form-field input[type="phone"], .hs-form-field input[type="number"], .hs-form-field input[type="tel"], .hs-form-field input[type="date"], .hs-form-field textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+input.hs-input.error, div.field.error input, div.field.error textarea, div.field.error .chzn-choices, textarea.hs-input.error, select.hs-input.error {
+    border-color: #c87872;
+}
+.hs-custom-style fieldset, .hs-custom-style .hs-input {
+    max-width: 100%;
+}
+.hs-input {
+    display: inline-block;
+    width: 90%;
+    max-width: 500px;
+    height: 40px;
+    padding: 9px 10px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #33475b;
+    background-color: #f5f8fa;
+    border: 1px solid #cbd6e2;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+}
+.inputs-list {
+  margin: 0 0 5px;
+  width: 100%;
+  padding-left: 5px;
+}
+.inputs-list>li {
+  display: block;
+  padding: 0;
+  width: 100%;
+  padding-top: 0;
+}
+.hs-form-e45899de-d723-444c-a02e-04dfbbe2bb4c_76a1fba2-2385-4847-9655-f633d170f2a5 .hs-form-field label {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 13px;
+}
+.inputs-list label {
+  display: block;
+  float: none;
+  width: auto;
+  padding: 0;
+  line-height: 18px;
+  text-align: left;
+  white-space: normal;
+  font-weight: normal;
+}
+.hs-error-msgs label {
+  color: #f2545b;
+}
+
 /* Nav Meu Container */
 #nav-menu-container {
   margin: 0;
@@ -2246,7 +2315,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     width: 500px !important;
     height: 500px !important;
   }
-  .canvasDiv #renderCanvas{
+  .canvasDiv .renderCanvas{
     width: 500px !important;
     height: 400px !important;
   }
@@ -2492,6 +2561,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 .single-menu .title-div{
   width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .single-menu .title-div h4{
   padding-right: 20px;
@@ -2518,12 +2589,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .locations {
-  background-color: #b68834;
+  background-color: #434343;
   color: #fff;
 }
 
 .locations h1, .locations h4 {
   color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .locations .title{
