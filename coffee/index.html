@@ -97,6 +97,10 @@
 				.banner-area .container{
 					position: relative;
 				}
+				.embedModel iframe{
+					width: 100%;
+					height: 500px;
+				}
 				@media (max-width: 540px) {		  
 					.canvasDiv {
 						width: 450px !important;
@@ -121,6 +125,16 @@
 					div#savedTimeInfo{
 						bottom: 30px;
 					}
+				}
+				@media (max-width: 992px){
+					.banner-area .fullscreen {
+						height: 790px !important;
+					}
+				}
+				@media (max-width: 768px){
+					/* section.embedModel.section-gap{
+						padding-top:0;
+					} */
 				}
 				@media (max-width: 480px) {		  
 					.canvasDiv {
@@ -154,9 +168,13 @@
 					.productivity img {
 						width: 60px;
 					}
+					section.embedModel.section-gap{
+						padding-top: 0 !important;
+					}
+
 				}
 			  </style>
-			  <script src="https://preview.babylonjs.com/viewer/babylon.viewer.js"></script> 
+			  
 			<style>
 				nav-bar .nav-container{
 					display: none !important;
@@ -209,72 +227,15 @@
 			</section>
 			<!-- End banner Area -->
 			<!-- Start 3dmodel Area -->
-			<section id="modelPopupSec">				
-				<babylon id="popupmodel" model="https://vikramvangari123.github.io/website/coffee/coffee.glb" templates.main.params.fill-screen="true"></babylon>
-				<img id="closePopup" src="img/close.png" alt="close" title="Close" />
-			</section>
 
-			<section class="video-sec-area pb-100 pt-40" id="about">
+			<section class="embedModel section-gap">
 				<div class="container">
-					<div class="row justify-content-start align-items-center">
-						<div class="col-lg-12 justify-content-center align-items-center d-flex">
-							<!-- <div class="overlay overlay-bg"></div> -->
-							
-							<div class="modelCanvas">
-								<div class="canvasDiv">
-									<canvas id="renderCanvas" stop class="coveringCanvas" style="visibility:visible; height: 600px; width: 500px;flex:1;"></canvas>
-									<!-- <canvas id="renderCanvas2" class="coveringCanvas" style="visibility:hidden; height: 600px; width: 500px;flex:1;"></canvas> -->
-																
-									<div class="timer-info genric-btn primary circle arrow" id="element1">Click to experience
-										<span class="lnr lnr-arrow-right"></span>
-									</div>
-										
-									<div class="saved-time-info" id="savedTimeInfo" style="display: none;">
-										You have taken <span class="sidebar"></span> secs to make the coffee
-										<!-- <div class="no-times">no times</div> -->
-									</div>
-
-									<div class="timerDiv">
-										<div class="timer" id="timer" style="display: none;">
-											<div class="time"></div>
-										</div>
-									</div>
-								</div>
-								<div class="elements">
-									<div class="elements_left">
-										<div id="element2" style="display: none;">
-											<img src="img/label/label1.png" alt="" />
-											<!-- <span class="primary-checkbox">
-												<input type="checkbox" id="default-checkbox">
-												<label for="default-checkbox"></label>
-											</span> -->
-										</div>
-										<div id="element3" style="display: none;">
-											<img src="img/label/label2.png" alt="" />
-										</div>
-										<div id="element4" style="display: none;">
-											<img src="img/label/label3.png" alt="" />
-										</div>
-									</div>
-									<div class="elements_right">
-										<div id="element5" style="display: none;">
-											<img src="img/label/label4.png" alt="" />
-										</div>
-										<div id="element6" style="display: none;">
-											<img src="img/label/label5.png" alt="" />
-										</div>
-										<div id="element7" style="display: none;">
-											<img src="img/label/label6.png" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-							</div>
-							
-						</div>	
+					<div class="row">
+						<iframe src="http://3d.cl3ver.com/QucOR?tryitlocation=2"></iframe>
 					</div>
-				</div>	
+				</div>
 			</section>
+
 			<!-- End 3dmodel Area -->
 			
 			<!-- Start menu Area -->
@@ -283,7 +244,7 @@
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-10">
 							<div class="title text-center">
-								<h1 class="mb-10">How is this possible?</h1>
+								<h2 class="mb-10">How is this possible?</h2>
 								<p>Digitalize your operational instructions. Enhanced with an Augmented Reality interface that captures and transfers front line procedures, step-by-step in Real Time.</p>
 							</div>
 						</div>
@@ -349,7 +310,7 @@
 				<div class="container">
 					<div class="row text-center">
 						<div class="col-lg-12 col-md-12">
-							<h3 class="mb-30">Sign-up for an exclusive invitation.</h3>
+							<h2 class="mb-30">Sign-up for an exclusive invitation.</h2>
 							<div class="col-lg-12 col-md-12 form-desc">
 								<div>Sponsored CXO Self Discovery Workshop</div>
 								<div>Derive actionable productivity improvement solutions for your foremost problems</div>
@@ -378,7 +339,40 @@
 			</section>
 			<!-- Form // -->
 
-			<!-- End gallery Area -->
+			<!-- Start Productivity Area -->
+			<section class="section-gap productivity pt-0">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-10">
+							<div class="title text-center">
+								<h2 class="mb-10">Transformational Workforce Productivity</h2>
+							</div>
+						</div>
+					</div>						
+					<div class="row text-center">
+						<div class="col-lg-4 col-md-4 single-review">
+							<img src="img/workforce/quickly.png" alt="">
+							<div class="title">
+								<h4>QUICKLY</h4>
+							</div>
+						</div>	
+						<div class="col-lg-4 col-md-4 single-review">
+							<img src="img/workforce/accurately.png" alt="">
+							<div class="title">
+								<h4>ACCURATELY</h4>
+							</div>
+						</div>	
+						<div class="col-lg-4 col-md-4 single-review">
+							<img src="img/workforce/safely.png" alt="">
+							<div class="title">
+								<h4>SAFELY</h4>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End Productivity Area -->
+				
 			
 			<!-- Start locations Area -->
 			<section class="locations section-gap" id="review">
@@ -420,41 +414,6 @@
 			</section>
 			<!-- End locations Area -->
 
-			<!-- Start Productivity Area -->
-			<section class="section-gap productivity">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-10">
-							<div class="title text-center">
-								<h1 class="mb-10">Transformational Workforce Productivity</h1>
-							</div>
-						</div>
-					</div>						
-					<div class="row text-center">
-						<div class="col-lg-4 col-md-4 single-review">
-							<img src="img/workforce/quickly.png" alt="">
-							<div class="title">
-								<h4>QUICKLY</h4>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-4 single-review">
-							<img src="img/workforce/accurately.png" alt="">
-							<div class="title">
-								<h4>ACCURATELY</h4>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-4 single-review">
-							<img src="img/workforce/safely.png" alt="">
-							<div class="title">
-								<h4>SAFELY</h4>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End Productivity Area -->
-				
-
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>			
@@ -473,190 +432,7 @@
 			<script src="js/mail-script.js"></script>	
 			<script src="js/main.js"></script>	
 			<script src="js/timer.js"></script>
-			<!-- 3dmodel -->
-			<script>
-				window.addEventListener('DOMContentLoaded', function() 
-            {
-                var canvas = document.getElementById('renderCanvas');
-                BABYLON.DefaultLoadingScreen.prototype.displayLoadingUI = function () {
-                    this._loadingDiv = document.createElement("div");
-                    this._loadingDiv.id = "customLoadingScreenDiv";
-                    var customLoadingScreenCss = document.createElement('style');
-                    customLoadingScreenCss.type = 'text/css';
-                    customLoadingScreenCss.innerHTML = `
-                    #customLoadingScreenDiv{
-                        background-color: transparent;
-                    }
-                    `;
-                    document.getElementsByTagName('head')[0].appendChild(customLoadingScreenCss);
-                    this._resizeLoadingUI();
-                    window.addEventListener("resize", this._resizeLoadingUI);
-                    document.body.appendChild(this._loadingDiv);
-                    };
-                BABYLON.DefaultLoadingScreen.prototype.hideLoadingUI = function(){
-                    this._loadingDiv.style.display = "none";
-                    // console.log("scene is now loaded");
-                    }
-                var delayCreateScene = function () {
-                    // Create a scene.
-                    var scene = new BABYLON.Scene(engine);
-                    //Uncomment the lines below to create a new environment	
-                    // Create a default skybox with an environment.
-                    // var hdrTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("environment.dds", scene);
-                    // var currentSkybox = scene.createDefaultSkybox(hdrTexture, true);
-                    
-                    // Append glTF model to scene.
-                    BABYLON.SceneLoader.Append("", "coffee.glb", scene, function (scene) {
-                        // Create a default arc rotate camera and light.
-                        scene.createDefaultCameraOrLight(true, true, true);
-                        scene.activeCamera.beta -= Math.PI/6;
-                        scene.activeCamera.alpha -= Math.PI/6;
-                        // The default camera looks at the back of the asset.
-                        // Rotate the camera by 180 degrees to the front of the asset.
-                        scene.activeCamera.alpha += Math.PI;
-                        scene.activeCamera.upperBetaLimit=Math.PI;
-                        scene.activeCamera.radius = scene.activeCamera.radius*0.95;
-                        scene.activeCamera.lowerRadiusLimit= scene.activeCamera.upperRadiusLimit= scene.activeCamera.radius;
-                        
-                        //change camera radius in mobile devices
-                        
-                                                    
-                        // set the light
-                        let light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 1.5), scene);
-                        light.intensity = 0.7;
-                        
-                        // animation pause and play
-                        var pickResult = scene.animationsEnabled = false;
-                        var timer = document.getElementById('timer');
-                        var savedTimeInfo = document.getElementById('savedTimeInfo');
-                        var element1 = document.getElementById('element1');
-                        var element2 = document.getElementById('element2');
-                        var element3 = document.getElementById('element3');	
-                        var element4 = document.getElementById('element4');
-                        var element5 = document.getElementById('element5');
-                        var element6 = document.getElementById('element6');
-                        var element7 = document.getElementById('element7');	
-                        
-                    element1.style.display = "block";
-                        //enable popup ontouch
-                        var closePopup = document.getElementById('closePopup');	
-                        var modelPopupSec = document.getElementById('modelPopupSec');	
-                        canvas.addEventListener("touchstart", touchStart);
-                        function touchStart() {
-                            modelPopupSec.style.visibility = "visible";
-                        }
-                        closePopup.addEventListener("click", function (evt) {
-                            modelPopupSec.style.visibility = "hidden";								
-                        });	
-
-                        //When click event is raised
-
-                        element1.addEventListener("click", function (evt) {
-                            // We try to pick an object
-                            var pickResult = scene.animationsEnabled = true;
-                            element1.style.display = "none";
-                            timer.style.display = "block";
-                            setTimeout(timer1, 400);
-                        });							
-                        function timer1() {
-                            var pickResult = scene.animationsEnabled = false;
-                            element2.style.display = "block";
-                        }
-
-                        element2.addEventListener('click',method2);
-                        function method2(){
-                            var pickResult = scene.animationsEnabled = true;
-                            setTimeout(timer2, 783);
-                        }					
-                        function timer2() {
-                            var pickResult = scene.animationsEnabled = false;
-                            element3.style.display = "block";
-                            element2.removeEventListener('click', method2);
-                            element2.style.cursor = "initial";
-                        }
-                        
-                        element3.addEventListener('click',method3);
-                        function method3(){
-                            var pickResult = scene.animationsEnabled = true;
-                            setTimeout(timer3, 800);
-                        }					
-                        function timer3() {
-                            var pickResult = scene.animationsEnabled = false;
-                            element4.style.display = "block";
-                            element3.removeEventListener('click', method3);
-                            element3.style.cursor = "initial";
-                        }
-                        
-                        element4.addEventListener('click',method4);
-                        function method4(){
-                            var pickResult = scene.animationsEnabled = true;
-                            setTimeout(timer4, 2400);
-                        }					
-                        function timer4() {
-                            var pickResult = scene.animationsEnabled = false;
-                            element5.style.display = "block";
-                            element4.removeEventListener('click', method4);
-                            element4.style.cursor = "initial";
-                        }
-                        
-                        element5.addEventListener('click',method5);
-                        function method5(){
-                            var pickResult = scene.animationsEnabled = true;
-                            setTimeout(timer5, 383);
-                        }					
-                        function timer5() {
-                            var pickResult = scene.animationsEnabled = false;
-                            element6.style.display = "block";
-                            element5.removeEventListener('click', method5);
-                            element5.style.cursor = "initial";
-                        }
-                        
-                        element6.addEventListener('click',method6);
-                        function method6(){
-                            var pickResult = scene.animationsEnabled = true;
-                            setTimeout(timer6, 1983);
-                        }					
-                        function timer6() {
-                            var pickResult = scene.animationsEnabled = false;
-                            element7.style.display = "block";
-                            element6.removeEventListener('click', method6);
-                            element6.style.cursor = "initial";
-                        }
-                        
-                        element7.addEventListener('click',method7);
-                        function method7(){
-                            var pickResult = scene.animationsEnabled = true;
-                            setTimeout(timer7, 1000);
-                        }					
-                        function timer7() {
-                            var pickResult = scene.animationsEnabled = false;
-                            element7.style.display = "block";
-                            element7.removeEventListener('click', method7);
-                            element7.style.cursor = "initial";
-                            savedTimeInfo.style.display = "block";
-                            timer.style.display = "none";
-                        }
-
-                    });
-                        scene.clearColor= new BABYLON.Color4(0,0,0,0.00000001); 
-                    return scene;
-                };
-                __createScene = delayCreateScene;
-                
-                var engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true });	
-    
-                var scene = delayCreateScene();
-                scene.createDefaultCamera();
-                engine.runRenderLoop(function()
-                {
-                    scene.render();
-                });
-                window.addEventListener('resize', function()
-                {
-                    engine.resize();
-                });
-            });
-			</script>
+			
 		</body>
 	</html>
 

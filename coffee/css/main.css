@@ -123,7 +123,7 @@ h4, h5, h6 {
   line-height: 1.2em !important;
   margin-bottom: 0;
   margin-top: 0;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .h1, .h2, .h3,
@@ -2424,7 +2424,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-content {
-  margin-top: -250px;
+  margin-top: -160px;
 }
 
 .banner-content h1 {
