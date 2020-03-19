@@ -101,6 +101,9 @@
 					width: 100%;
 					height: 500px;
 				}
+				.topContent img {
+					max-height: 30px;
+				}
 				@media (max-width: 540px) {		  
 					.canvasDiv {
 						width: 450px !important;
@@ -132,9 +135,28 @@
 					}
 				}
 				@media (max-width: 768px){
-					/* section.embedModel.section-gap{
-						padding-top:0;
-					} */
+					.topContent .text {
+						width: 100%;
+						text-align: center;
+						font-size: 11px;
+						position: absolute;
+						top: 40px;
+						margin: 0 auto;
+						left: 0;
+						right: 0;
+					}
+					.embedModel iframe {
+						width: 100%;
+						height: 400px;
+						margin: 0 auto;
+					}
+				}
+				@media (min-width: 576px){
+					.embedModel iframe {
+						width: 90%;
+						height: 360px;
+						margin: 0 auto;
+					}
 				}
 				@media (max-width: 480px) {		  
 					.canvasDiv {
@@ -157,10 +179,19 @@
 						text-align: center;
 						font-size: 11px;
 						position: absolute;
-						top: 34px;
+						top: 40px;
 						margin: 0 auto;
 						left: 0;
 						right: 0;
+					}
+					.topContent img {
+						max-height: 20px;
+					}
+					h2 {
+						font-size: 26px;
+					}
+					h4 {
+						font-size: 16px;
 					}
 					.locations img {
 						width: 50px;
@@ -171,7 +202,17 @@
 					section.embedModel.section-gap{
 						padding-top: 0 !important;
 					}
-
+					.productivity .single-review:last-child {
+						margin-bottom: 0;
+					}
+					.productivity .single-review:last-child .title {
+						margin-bottom: 0;
+					}
+					.embedModel iframe {
+						width: 90%;
+						height: 330px;
+						margin: 0 auto;
+					}
 				}
 			  </style>
 			  
@@ -210,9 +251,9 @@
 					<div class="row fullscreen d-flex align-items-center justify-content-start">
 						<div>
 							<div class="topContent">
-								<div class="brand1">PTC</div>
+								<div class="brand1"><img src="img/logo/ptc.png" alt="PTC" /></div>
 								<div class="text col-lg-8">This is a hyper-targeted message about transforming workforce productivity with the application of immersive technology in your organization.</div>
-								<div class="brand2">WOWSOME</div>
+								<div class="brand2"><img src="img/logo/wowsome.png" alt="WOWSOME" /></div>
 							</div>
 						</div>
 						<div class="banner-content col-lg-6 col-md-7">
