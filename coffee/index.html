@@ -4,7 +4,7 @@
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
+		<link rel="shortcut icon" href="https://www.wowso.me/hubfs/assets/website/images/favicon.png">
 		<!-- Author Meta -->
 		<meta name="author" content="">
 		<!-- Meta Description -->
@@ -103,6 +103,19 @@
 				}
 				.topContent img {
 					max-height: 30px;
+				}
+				.menu-area {
+					position: relative;
+				}
+				#bgVideo {
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					min-width: 100%; 
+					min-height: 100%;
+				}
+				.menu-area h2, .menu-area p {
+					color: #fff;
 				}
 				@media (max-width: 540px) {		  
 					.canvasDiv {
@@ -259,7 +272,7 @@
 						<div class="banner-content col-lg-6 col-md-7">
 							<h1 class="text-white text-uppercase">Can EVERYONE be an EXPERT?</h1>
 							<h5 class="text-white">
-								Everyone loves Coffee. <br>But can one make the best coffee, consistently, time after time, without training?				
+								We go an extra mile for that perfect cup<br>Can one, make that perfect cup,<br/> consistently, time after time, without training?				
 							</h5>
 							
 						</div>											
@@ -282,6 +295,10 @@
 			<!-- Start menu Area -->
 			<section class="menu-area section-gap" id="coffee">
 				<div class="container">
+					<video autoplay muted loop id="bgVideo">
+						<source src="vuforia.mp4" type="video/mp4">
+						Your browser does not support HTML5 video.
+					  </video>
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-10">
 							<div class="title text-center">
@@ -473,7 +490,7 @@
 			<script src="js/jquery.counterup.min.js"></script>					
 			<script src="js/mail-script.js"></script>	
 			<script src="js/main.js"></script>	
-			<script src="js/timer.js"></script>
+			<!-- <script src="js/timer.js"></script> -->
 			
 		</body>
 	</html>
