@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
+   <!-- Link to main style sheet -->
+   <link rel="stylesheet" href="style.css">
+   <style>
+     #snap{
+       width: 200px;
+       background-color: black;
+       color: white;
+       font-size: 16px;
+       border-radius: 30px;
+       border: none;
+       padding: 15px 20px;
+       text-align: center;
+       box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+       position: fixed;
+       bottom: 30px;
+       left: calc(50% - 100px);
+       outline: none;
+     }
+     #save{
+       width: 200px;
+       background-color: black;
+       color: white;
+       font-size: 16px;
+       border-radius: 30px;
+       border: none;
+       padding: 15px 20px;
+       text-align: center;
+       box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+       position: fixed;
+       bottom: 30px;
+       left: calc(50% - 300px);
+       outline: none;
+     }
+     #img_static {
+         position: absolute;
+         right: 0;
+         text-align: right;
+         bottom: 0;
+     }
+     #img_static img{
+       width: 50%;
+     }
+   </style> 
+  </head>
+<body>
+
+ <video id="camera--view" autoplay playsinline>
+   
+ </video>
+ <div id="img_static" style="display: none;">
+   <img id="img_static_in" src="honeySingh.png" alt="" />
+ </div>
+ <canvas id="canvas" style="position: absolute;"></canvas>
+ <button id="snap" onclick="snap()" style="display: none">Snap</button>
+ <!-- <button id="save" onclick="save()">Save Photo</button> -->
+ <!-- Camera trigger -->
+ <button id="camera--trigger" style="display: none">Take a picture</button>
+ <!-- start the script ... within that declare variables as follows... -->
+ <script>
+ var video=document.querySelector('video');
+ var canvas=document.querySelector('canvas');
+ var context=canvas.getContext('2d');
+ var w,h,ratio, type;
+
+ //add loadedmetadata which will helps to identify video attributes
+
+ video.addEventListener('loadedmetadata', function() {
+   ratio = video.videoWidth/video.videoHeight;
+   windowRatio=window.innerHeight/window.innerWidth;
+   w = video.videoWidth-100;
+   h = parseInt(w/ratio,10);
+   ht=window.innerHeight/3;
+   wt=window.innerWidth/4;
+   wp=document.getElementById('img_static_in').width;
+   hp=document.getElementById('img_static_in').height;
+   console.log(video.videoWidth,video.videoHeight,w,h,window.innerHeight,window.innerWidth)
+   canvas.width = wt;
+   canvas.height = ht;
+   document.getElementById('img_static').style.display="block";
+   document.getElementById('snap').style.display="block";
+   console.log(document.getElementById('img_static_in').height)
+ },false);
+ var imageObj2 = new Image();
+ imageObj2.crossOrigin = "anonymous";
+ imageObj2.src = "honeySingh.png"
+
+function snap() {
+   context.fillRect(0,0,wt,ht);
+   context.translate(canvas.width, 0);
+   context.scale(-1, 1);
+   context.drawImage(video,0,0,wt,ht);
+   context.translate(canvas.width, 0);
+   context.scale(-1, 1);
+   context.drawImage(imageObj2,wt-wp/6,ht-hp/6,wp/3,hp/3);
+ }
+ function save() {
+   const linkSource = Canvas2Image.convertToPNG(canvas, 300, 400).src;
+  const downloadLink = document.createElement("a");
+  const fileName = "selfie.png";
+  downloadLink.href = linkSource;
+  downloadLink.download = fileName;
+  downloadLink.click();  
+    //console.log(Canvas2Image.convertToPNG(canvas, 300, 400).src)
+ }
+ </script>
+
+   <!-- Reference to your JavaScript file -->
+   <script src="app.js"></script> 
+   <script src="canvas2image.js"></script> 
+</body>
+</html>
