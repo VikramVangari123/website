@@ -333,7 +333,7 @@
 #theme-main-banner.camera_wrap .camera_pag .camera_pag_ul {
   position: absolute;
   text-align: center;
-  top:50%;
+  top:40%;
   left:38px;
   z-index: 99;
   -webkit-transform: translateY(-50%);
